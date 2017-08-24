@@ -1,0 +1,436 @@
+08:48:50,079  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 08:48:50 CST 2017]; root of context hierarchy
+08:48:50,171  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+08:53:03,553  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 08:53:03 CST 2017]; root of context hierarchy
+08:53:03,616  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+08:56:16,957  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 08:56:16 CST 2017]; root of context hierarchy
+08:56:16,997  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+08:59:11,291  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 08:59:11 CST 2017]; root of context hierarchy
+08:59:11,331  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+08:59:11,452  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+08:59:11,667  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:03:04,639  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@61f8bee4: startup date [Thu Aug 17 09:03:04 CST 2017]; root of context hierarchy
+09:03:04,695  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:03:04,869  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:03:05,147  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:03:47,514  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:03:47 CST 2017]; root of context hierarchy
+09:03:47,602  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:03:47,853  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:03:48,108  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:09:17,275  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:09:17 CST 2017]; root of context hierarchy
+09:09:17,323  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:09:17,547  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:09:17,741  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:13:47,141  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:13:47 CST 2017]; root of context hierarchy
+09:13:47,189  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:13:47,350  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:13:47,550  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:16:34,937  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:16:34 CST 2017]; root of context hierarchy
+09:16:35,002  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:16:35,183  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:16:35,381  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:18:57,908  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:18:57 CST 2017]; root of context hierarchy
+09:18:57,980  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:18:58,169  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:18:58,375  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:22:38,880  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:22:38 CST 2017]; root of context hierarchy
+09:22:38,942  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:22:39,125  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:22:39,403  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:27:54,683  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:27:54 CST 2017]; root of context hierarchy
+09:27:54,768  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:27:54,911  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:27:55,257  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:35:36,754  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:35:36 CST 2017]; root of context hierarchy
+09:35:36,825  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:35:36,954  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:35:37,206  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:54:18,975  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 09:54:18 CST 2017]; root of context hierarchy
+09:54:19,069  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:54:19,206  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:54:19,501  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:54:36,646  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@61f8bee4: startup date [Thu Aug 17 09:54:36 CST 2017]; root of context hierarchy
+09:54:36,703  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:54:36,854  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:54:37,082  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+09:59:39,933  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@61f8bee4: startup date [Thu Aug 17 09:59:39 CST 2017]; root of context hierarchy
+09:59:39,990  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:59:40,116  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:59:40,376  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+10:00:09,876  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 10:00:09 CST 2017]; root of context hierarchy
+10:00:09,922  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:00:10,049  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:00:10,254  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+10:00:54,191  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 10:00:54 CST 2017]; root of context hierarchy
+10:00:54,263  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:00:54,390  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:00:54,638  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+10:02:15,818  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 10:02:15 CST 2017]; root of context hierarchy
+10:02:15,895  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:02:16,038  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:02:16,302  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+10:03:13,849  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 10:03:13 CST 2017]; root of context hierarchy
+10:03:13,916  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:03:14,031  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:03:14,233  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+10:04:43,437  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@76ccd017: startup date [Thu Aug 17 10:04:43 CST 2017]; root of context hierarchy
+10:04:43,501  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:04:43,626  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:04:44,047  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+10:24:55,498  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 10:24:55 CST 2017]; root of context hierarchy
+10:24:55,544  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:24:55,657  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:24:55,864  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc_url' in value "${jdbc_url}"
+10:27:40,278  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 10:27:40 CST 2017]; root of context hierarchy
+10:27:40,332  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:27:40,485  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:27:40,862  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"
+10:28:51,259  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2401f4c3: startup date [Thu Aug 17 10:28:51 CST 2017]; root of context hierarchy
+10:28:51,331  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:28:51,504  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:28:51,802  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"
+10:31:42,310  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 10:31:42 CST 2017]; root of context hierarchy
+10:31:42,375  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:31:42,511  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:31:42,754  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"
+10:32:06,480  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 10:32:06 CST 2017]; root of context hierarchy
+10:32:06,537  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:32:06,674  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:32:06,900  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"
+10:35:48,472  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 10:35:48 CST 2017]; root of context hierarchy
+10:35:48,529  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:35:48,686  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:35:48,931  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.driverClassName' in value "${jdbc.driverClassName}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.driverClassName' in value "${jdbc.driverClassName}"
+10:57:58,329  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 10:57:58 CST 2017]; root of context hierarchy
+10:57:58,386  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:57:58,513  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:57:58,756  WARN ClassPathMapperScanner:158 - No MyBatis mapper was found in '[com.wuyi.wcrawler.mapper]' package. Please check your configuration.
+10:57:58,799  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"
+10:58:37,694  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 10:58:37 CST 2017]; root of context hierarchy
+10:58:37,734  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:58:37,989  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:58:38,340  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.url' in value "${jdbc.url}"
+11:01:39,177  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:01:39 CST 2017]; root of context hierarchy
+11:01:39,245  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:01:39,397  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:02:50,094  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:02:50 CST 2017]; root of context hierarchy
+11:02:50,146  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:02:50,306  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:02:50,593  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"
+11:03:42,156  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:03:42 CST 2017]; root of context hierarchy
+11:03:42,205  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:03:42,344  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:03:43,479  INFO DruidDataSource:847 - {dataSource-1} inited
+11:06:01,821  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:06:01 CST 2017]; root of context hierarchy
+11:06:01,913  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:06:02,037  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:06:02,265  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"
+11:08:00,653  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4361bd48: startup date [Thu Aug 17 11:08:00 CST 2017]; root of context hierarchy
+11:08:00,710  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:08:00,834  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:08:01,080  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"
+11:11:05,527  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:11:05 CST 2017]; root of context hierarchy
+11:11:05,567  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:11:05,679  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:11:06,002  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"
+11:14:12,633  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:14:12 CST 2017]; root of context hierarchy
+11:14:12,690  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:14:12,812  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:14:13,020  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"
+11:17:10,977  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:17:10 CST 2017]; root of context hierarchy
+11:17:11,078  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:17:11,210  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:17:11,495  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"
+11:21:07,848  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:21:07 CST 2017]; root of context hierarchy
+11:21:07,951  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:21:08,076  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:21:08,379  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"
+11:32:00,983  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 11:32:00 CST 2017]; root of context hierarchy
+11:32:01,047  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:32:01,199  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:32:01,428  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'dataSource' defined in class path resource [mybatis-druid.xml]: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jdbc.username' in value "${jdbc.username}"
+13:42:35,218  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 13:42:35 CST 2017]; root of context hierarchy
+13:42:35,287  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+13:42:36,161  INFO DruidDataSource:847 - {dataSource-1} inited
+13:44:08,562  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 13:44:08 CST 2017]; root of context hierarchy
+13:44:08,660  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+13:44:09,508  INFO DruidDataSource:847 - {dataSource-1} inited
+13:44:42,763  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 13:44:42 CST 2017]; root of context hierarchy
+13:44:42,806  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+13:44:43,047  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+13:44:43,216  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'regCenter' defined in null: Could not resolve placeholder 'baseSleepTimeMilliseconds' in value "${baseSleepTimeMilliseconds}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'baseSleepTimeMilliseconds' in value "${baseSleepTimeMilliseconds}"
+13:48:23,429  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 13:48:23 CST 2017]; root of context hierarchy
+13:48:23,474  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+13:48:23,699  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+13:48:24,440  INFO DruidDataSource:847 - {dataSource-1} inited
+13:59:46,207  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 13:59:46 CST 2017]; root of context hierarchy
+13:59:46,255  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+13:59:46,461  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+13:59:46,772  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Invalid bean definition with name 'regCenter' defined in null: Could not resolve placeholder 'baseSleepTimeMilliseconds' in value "${baseSleepTimeMilliseconds}"; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'baseSleepTimeMilliseconds' in value "${baseSleepTimeMilliseconds}"
+14:00:51,418  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:00:51 CST 2017]; root of context hierarchy
+14:00:51,475  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:00:51,659  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:00:52,351  INFO DruidDataSource:847 - {dataSource-1} inited
+14:08:11,952  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:08:11 CST 2017]; root of context hierarchy
+14:08:12,022  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:08:12,246  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:08:13,006  INFO DruidDataSource:847 - {dataSource-1} inited
+14:09:00,532  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:09:00 CST 2017]; root of context hierarchy
+14:09:00,578  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:09:00,785  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:09:01,495  INFO DruidDataSource:847 - {dataSource-1} inited
+14:11:23,194  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:11:23 CST 2017]; root of context hierarchy
+14:11:23,281  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:11:23,466  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:11:24,267  INFO DruidDataSource:847 - {dataSource-1} inited
+14:12:20,914  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:12:20 CST 2017]; root of context hierarchy
+14:12:20,967  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:12:21,163  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:12:21,892  INFO DruidDataSource:847 - {dataSource-1} inited
+14:15:41,451  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:15:41 CST 2017]; root of context hierarchy
+14:15:41,508  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:15:41,713  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:15:42,407  INFO DruidDataSource:847 - {dataSource-1} inited
+14:15:42,471  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [mybatis-druid.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.logging.LogException: Error setting Log implementation.  Cause: java.lang.reflect.InvocationTargetException
+14:15:42,474  INFO DruidDataSource:1608 - {dataSource-1} closed
+14:25:18,302  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:25:18 CST 2017]; root of context hierarchy
+14:25:18,360  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:25:18,546  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:25:19,286  INFO DruidDataSource:847 - {dataSource-1} inited
+14:25:19,356  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [mybatis-druid.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.logging.LogException: Error setting Log implementation.  Cause: java.lang.reflect.InvocationTargetException
+14:25:19,358  INFO DruidDataSource:1608 - {dataSource-1} closed
+14:28:02,972  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:28:02 CST 2017]; root of context hierarchy
+14:28:03,043  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:28:03,258  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:28:03,911  INFO DruidDataSource:847 - {dataSource-1} inited
+14:28:03,982  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [mybatis-druid.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace\IdeaProjects\wcrawler\target\classes\com\wuyi\mapper\CrawlerUrlMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'BaseResultMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: BaseResultMap
+14:28:03,984  INFO DruidDataSource:1608 - {dataSource-1} closed
+14:29:43,139  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:29:43 CST 2017]; root of context hierarchy
+14:29:43,190  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:29:43,384  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:29:44,070  INFO DruidDataSource:847 - {dataSource-1} inited
+14:29:44,161  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [mybatis-druid.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\workspace\IdeaProjects\wcrawler\target\classes\com\wuyi\mapper\CrawlerUrlMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'BaseResultMap'.  Cause: java.lang.ClassNotFoundException: Cannot find class: BaseResultMap
+14:29:44,164  INFO DruidDataSource:1608 - {dataSource-1} closed
+14:31:26,440  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:31:26 CST 2017]; root of context hierarchy
+14:31:26,519  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:31:26,733  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:31:27,429  INFO DruidDataSource:847 - {dataSource-1} inited
+14:38:51,316  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:38:51 CST 2017]; root of context hierarchy
+14:38:51,376  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:38:51,551  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:38:52,236  INFO DruidDataSource:847 - {dataSource-1} inited
+14:44:05,343  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:44:05 CST 2017]; root of context hierarchy
+14:44:05,396  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:44:05,594  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:44:06,300  INFO DruidDataSource:847 - {dataSource-1} inited
+14:44:16,106  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'regCenter': Invocation of init method failed; nested exception is com.dangdang.ddframe.job.reg.exception.RegException: org.apache.zookeeper.KeeperException$OperationTimeoutException: KeeperErrorCode = OperationTimeout
+14:44:16,113  INFO DruidDataSource:1608 - {dataSource-1} closed
+14:47:23,487  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:47:23 CST 2017]; root of context hierarchy
+14:47:23,601  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:47:23,790  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:47:24,480  INFO DruidDataSource:847 - {dataSource-1} inited
+14:47:30,096  INFO CrawlerUrlJob:19 - ShardingItem(0)
+14:47:30,097  INFO CrawlerUrlJob:19 - ShardingItem(1)
+14:47:30,097  INFO CrawlerUrlJob:19 - ShardingItem(2)
+14:47:40,028  INFO CrawlerUrlJob:19 - ShardingItem(0)
+14:47:40,029  INFO CrawlerUrlJob:19 - ShardingItem(1)
+14:47:40,029  INFO CrawlerUrlJob:19 - ShardingItem(2)
+14:48:22,398  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 14:48:22 CST 2017]; root of context hierarchy
+14:48:22,448  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:48:22,613  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:48:23,358  INFO DruidDataSource:847 - {dataSource-1} inited
+14:48:30,086  INFO CrawlerUrlJob:19 - ShardingItem(0)
+14:48:30,086  INFO CrawlerUrlJob:19 - ShardingItem(1)
+14:48:30,087  INFO CrawlerUrlJob:19 - ShardingItem(2)
+14:48:30,214  INFO CrawlerUrlJob:20 - [CrawlerUrl{id=0, name='黄继新', url='https://www.zhihu.com/people/jixin/answers', parent=0, status=0}, CrawlerUrl{id=1, name='1', url='1', parent=1, status=0}]
+14:48:30,214  INFO CrawlerUrlJob:20 - [CrawlerUrl{id=0, name='黄继新', url='https://www.zhihu.com/people/jixin/answers', parent=0, status=0}, CrawlerUrl{id=1, name='1', url='1', parent=1, status=0}]
+14:48:30,214  INFO CrawlerUrlJob:20 - [CrawlerUrl{id=0, name='黄继新', url='https://www.zhihu.com/people/jixin/answers', parent=0, status=0}, CrawlerUrl{id=1, name='1', url='1', parent=1, status=0}]
+15:12:24,196  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:12:24 CST 2017]; root of context hierarchy
+15:12:24,328  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:12:24,508  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:12:25,264  INFO DruidDataSource:847 - {dataSource-1} inited
+15:12:30,095  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:12:30,095  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:12:30,096  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:12:40,029  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:12:40,041  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:12:40,045  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:13:15,641  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:13:15 CST 2017]; root of context hierarchy
+15:13:15,693  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:13:15,931  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:13:16,712  INFO DruidDataSource:847 - {dataSource-1} inited
+15:13:22,238  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:13:22,239  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:13:22,240  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:13:22,325  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:13:22,326  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:13:22,326  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:13:22,337  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:13:22,337  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:13:22,337  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:13:30,025  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:13:30,027  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:13:30,028  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:18:42,860  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:18:42 CST 2017]; root of context hierarchy
+15:18:42,929  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:18:43,155  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:18:43,854  INFO DruidDataSource:847 - {dataSource-1} inited
+15:18:50,083  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:18:50,084  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:18:50,084  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:24:33,431  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:24:33 CST 2017]; root of context hierarchy
+15:24:33,479  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:24:33,675  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:24:34,414  INFO DruidDataSource:847 - {dataSource-1} inited
+15:24:40,092  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:24:40,093  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:24:40,094  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:24:50,021  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:24:50,021  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:24:50,022  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:25:00,019  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:25:00,019  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:25:00,019  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:25:10,022  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:25:10,022  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:25:10,022  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:25:20,008  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:25:20,008  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:25:20,008  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:26:25,048  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:26:25 CST 2017]; root of context hierarchy
+15:26:25,107  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:26:25,309  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:26:26,165  INFO DruidDataSource:847 - {dataSource-1} inited
+15:26:30,093  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:26:30,094  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:26:30,094  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:26:40,025  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:26:40,026  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:26:40,027  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:26:50,025  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:26:50,025  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:26:50,025  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:30:27,243  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:30:27 CST 2017]; root of context hierarchy
+15:30:27,304  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:30:27,543  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:30:28,333  INFO DruidDataSource:847 - {dataSource-1} inited
+15:30:30,072  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:30:30,072  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:30:30,073  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:35:28,841  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:35:28 CST 2017]; root of context hierarchy
+15:35:28,896  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:35:29,141  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:35:29,980  INFO DruidDataSource:847 - {dataSource-1} inited
+15:35:40,080  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:35:40,080  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:35:40,080  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:36:54,809  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:36:54 CST 2017]; root of context hierarchy
+15:36:54,853  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:36:55,144  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:36:56,011  INFO DruidDataSource:847 - {dataSource-1} inited
+15:37:00,078  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:37:00,078  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:37:00,078  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:37:10,026  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:37:10,028  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:37:10,028  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:37:20,026  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:37:20,027  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:37:20,027  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:37:39,751  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:37:39 CST 2017]; root of context hierarchy
+15:37:39,812  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:37:40,033  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:37:40,824  INFO DruidDataSource:847 - {dataSource-1} inited
+15:38:02,195  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:38:02,195  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:38:02,196  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:38:02,352  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+15:38:02,372  INFO SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+15:38:02,419  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:38:02,419  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:38:02,420  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:38:02,432  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:38:02,432  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:38:02,432  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:38:10,013  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:38:10,013  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:38:10,014  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:38:20,025  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:38:20,026  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:38:20,026  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:38:30,022  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:38:30,022  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:38:30,022  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:38:40,021  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:38:40,021  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:38:40,021  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:38:50,021  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:38:50,022  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:38:50,022  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:38:53,998  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:38:53 CST 2017]; root of context hierarchy
+15:38:54,049  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:38:54,269  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:38:55,056  INFO DruidDataSource:847 - {dataSource-1} inited
+15:39:00,083  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:39:00,083  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:39:00,163  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:39:00,309  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+15:39:00,331  INFO SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+15:39:10,046  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:39:10,052  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:39:10,053  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:39:20,029  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:39:20,046  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:39:20,050  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:39:35,336  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:39:35 CST 2017]; root of context hierarchy
+15:39:35,412  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:39:35,615  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:39:36,538  INFO DruidDataSource:847 - {dataSource-1} inited
+15:40:02,150  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:40:02,150  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:40:02,150  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:40:02,345  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:40:02,346  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:40:02,346  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:40:02,369  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:40:02,369  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:40:02,369  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:41:03,846  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 15:41:03 CST 2017]; root of context hierarchy
+15:41:03,891  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:41:04,132  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:41:04,881  INFO DruidDataSource:847 - {dataSource-1} inited
+15:41:10,074  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:41:10,074  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:41:10,075  INFO CrawlerUrlJob:28 - ShardingItem(2)
+15:41:20,025  INFO CrawlerUrlJob:28 - ShardingItem(0)
+15:41:20,026  INFO CrawlerUrlJob:28 - ShardingItem(1)
+15:41:20,026  INFO CrawlerUrlJob:28 - ShardingItem(2)
+17:03:54,940  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 17:03:54 CST 2017]; root of context hierarchy
+17:03:55,001  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+17:03:55,234  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+17:03:55,937  INFO DruidDataSource:847 - {dataSource-1} inited
+17:04:00,086  INFO CrawlerUrlJob:28 - ShardingItem(0)
+17:04:00,086  INFO CrawlerUrlJob:28 - ShardingItem(1)
+17:04:00,086  INFO CrawlerUrlJob:28 - ShardingItem(2)
+17:09:14,025  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 17:09:14 CST 2017]; root of context hierarchy
+17:09:14,102  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+17:09:14,341  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+17:09:15,024  INFO DruidDataSource:847 - {dataSource-1} inited
+17:09:20,073  INFO CrawlerUrlJob:28 - ShardingItem(0)
+17:09:20,073  INFO CrawlerUrlJob:28 - ShardingItem(1)
+17:09:20,073  INFO CrawlerUrlJob:28 - ShardingItem(2)
+17:17:45,396  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@53bd815b: startup date [Thu Aug 17 17:17:45 CST 2017]; root of context hierarchy
+17:17:45,471  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+17:17:45,675  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+17:17:46,535  INFO DruidDataSource:847 - {dataSource-1} inited
+17:17:50,079  INFO CrawlerUrlJob:28 - ShardingItem(0)
+17:17:50,079  INFO CrawlerUrlJob:28 - ShardingItem(1)
+17:17:50,079  INFO CrawlerUrlJob:28 - ShardingItem(2)
+17:18:00,024  INFO CrawlerUrlJob:28 - ShardingItem(0)
+17:18:00,025  INFO CrawlerUrlJob:28 - ShardingItem(2)
+17:18:00,026  INFO CrawlerUrlJob:28 - ShardingItem(1)
+19:26:42,730  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7637f22: startup date [Thu Aug 17 19:26:42 CST 2017]; root of context hierarchy
+19:26:42,814  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+19:26:43,003  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+19:26:43,768  INFO DruidDataSource:847 - {dataSource-1} inited
+19:26:43,863  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'crawlerUrlServiceImpl': Unsatisfied dependency expressed through field 'urlCrawler'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.wuyi.crawler.UrlCrawler' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+19:26:43,865  INFO DruidDataSource:1608 - {dataSource-1} closed

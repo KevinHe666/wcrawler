@@ -1,0 +1,160 @@
+10:25:01,149  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7637f22: startup date [Tue Aug 22 10:25:01 CST 2017]; root of context hierarchy
+10:25:01,200  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:25:01,319  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:25:01,360  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+10:25:02,411  INFO DruidDataSource:847 - {dataSource-1} inited
+10:25:10,081  INFO CrawlerUrlJob:28 - ShardingItem(0)
+10:25:10,082  INFO CrawlerUrlJob:28 - ShardingItem(1)
+10:25:10,082  INFO CrawlerUrlJob:28 - ShardingItem(2)
+10:25:10,275  INFO UrlCrawler:23 - CrawlerUrl{id=0, name='黄继新', url='https://www.zhihu.com/people/jixin/answers', parent=0, status=0}
+10:25:11,786  INFO UrlCrawler:32 - https://www.zhihu.com/people/jixin/following
+10:25:12,617  INFO UrlCrawler:40 - <div class="List-item">
+ <div class="ContentItem">
+  <div class="ContentItem-main">
+   <div class="ContentItem-image">
+    <span class="UserLink UserItem-avatar">
+     <div class="Popover">
+      <div id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content">
+       <a class="UserLink-link" data-za-detail-view-element_name="User" target="_blank" href="/people/itscassandra"><img class="Avatar Avatar--large UserLink-avatar" width="60" height="60" src="https://pic1.zhimg.com/v2-250e7fbf3a48b8c78231f3584c01b91c_im.jpg" srcset="https://pic1.zhimg.com/v2-250e7fbf3a48b8c78231f3584c01b91c_xl.jpg 2x" alt="就是李雨帆啊"></a>
+      </div>
+     </div></span>
+   </div>
+   <div class="ContentItem-head">
+    <h2 class="ContentItem-title">
+     <div class="UserItem-title">
+      <span class="UserLink UserItem-name">
+       <div class="Popover">
+        <div id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content">
+         <a class="UserLink-link" data-za-detail-view-element_name="User" target="_blank" href="/people/itscassandra">就是李雨帆啊</a>
+        </div>
+       </div></span>
+     </div></h2>
+    <div class="ContentItem-meta">
+     <div>
+      <div class="RichText">
+       DINK
+      </div>
+      <div class="ContentItem-status">
+       <span class="ContentItem-statusItem">3 回答</span>
+       <span class="ContentItem-statusItem">0 文章</span>
+       <span class="ContentItem-statusItem">455 关注者</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="ContentItem-extra">
+    <button class="Button FollowButton Button--primary Button--blue" type="button">
+     <svg viewbox="0 0 12 12" class="Icon FollowButton-icon Icon--plus" style="height:16px;width:12px;" width="12" height="16" aria-hidden="true">
+      <title></title>
+      <g>
+       <path d="M6.994 4.994s-.008-3.593 0-4C6.97-.33 4.97-.33 4.996.994c-.025 1.275 0 4 0 4H1C-.334 5-.334 7 1 7c1.332 0 3.996-.006 3.996-.006v4c0 1.346 2.004 1.346 1.998 0-.006-1.347 0-4 0-4S9.658 7 10.997 7c1.338 0 1.338-2-.007-2.006H6.994z" />
+      </g>
+     </svg>关注她</button>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="List-item">
+ <div class="ContentItem">
+  <div class="ContentItem-main">
+   <div class="ContentItem-image">
+    <span class="UserLink UserItem-avatar">
+     <div class="Popover">
+      <div id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content">
+       <a class="UserLink-link" data-za-detail-view-element_name="User" target="_blank" href="/people/junxiaoxiao"><img class="Avatar Avatar--large UserLink-avatar" width="60" height="60" src="https://pic2.zhimg.com/v2-3de53b29cf049e449b9e359fe14ff7e5_im.jpg" srcset="https://pic2.zhimg.com/v2-3de53b29cf049e449b9e359fe14ff7e5_xl.jpg 2x" alt="晓晓菌"></a>
+      </div>
+     </div></span>
+   </div>
+   <div class="ContentItem-head">
+    <h2 class="ContentItem-title">
+     <div class="UserItem-title">
+      <span class="UserLink UserItem-name">
+       <div class="Popover">
+        <div id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content">
+         <a class="UserLink-link" data-za-detail-view-element_name="User" target="_blank" href="/people/junxiaoxiao">晓晓菌</a>
+        </div>
+       </div></span>
+     </div></h2>
+    <div class="ContentItem-meta">
+     <div>
+      <div class="RichText">
+       MIT博后ing/科研/生物菌群
+      </div>
+      <div class="ContentItem-status">
+       <span class="ContentItem-statusItem">3 回答</span>
+       <span class="ContentItem-statusItem">0 文章</span>
+       <span class="ContentItem-statusItem">575 关注者</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="ContentItem-extra">
+    <button class="Button FollowButton Button--primary Button--blue" type="button">
+     <svg viewbox="0 0 12 12" class="Icon FollowButton-icon Icon--plus" style="height:16px;width:12px;" width="12" height="16" aria-hidden="true">
+      <title></title>
+      <g>
+       <path d="M6.994 4.994s-.008-3.593 0-4C6.97-.33 4.97-.33 4.996.994c-.025 1.275 0 4 0 4H1C-.334 5-.334 7 1 7c1.332 0 3.996-.006 3.996-.006v4c0 1.346 2.004 1.346 1.998 0-.006-1.347 0-4 0-4S9.658 7 10.997 7c1.338 0 1.338-2-.007-2.006H6.994z" />
+      </g>
+     </svg>关注</button>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="List-item">
+ <div class="ContentItem">
+  <div class="ContentItem-main">
+   <div class="ContentItem-image">
+    <span class="UserLink UserItem-avatar">
+     <div class="Popover">
+      <div id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content">
+       <a class="UserLink-link" data-za-detail-view-element_name="User" target="_blank" href="/people/shang-xiao-6"><img class="Avatar Avatar--large UserLink-avatar" width="60" height="60" src="https://pic4.zhimg.com/ef034c8cf048532a463e526889aaa037_im.jpg" srcset="https://pic4.zhimg.com/ef034c8cf048532a463e526889aaa037_xl.jpg 2x" alt="不江北"></a>
+      </div>
+     </div></span>
+   </div>
+   <div class="ContentItem-head">
+    <h2 class="ContentItem-title">
+     <div class="UserItem-title">
+      <span class="UserLink UserItem-name">
+       <div class="Popover">
+        <div id="null-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="null-content">
+         <a class="UserLink-link" data-za-detail-view-element_name="User" target="_blank" href="/people/shang-xiao-6">不江北</a>
+        </div>
+       </div></span>
+     </div></h2>
+    <div class="ContentItem-meta">
+     <div>
+      <div class="RichText">
+       别拦我，我要当学阀
+      </div>
+      <div class="ContentItem-status">
+       <span class="ContentItem-statusItem">58 回答</span>
+       <span class="ContentItem-statusItem">1 文章</span>
+       <span class="ContentItem-statusItem">1700 关注者</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="ContentItem-extra">
+    <button class="Button FollowButton Button--primary Button--blue" type="button">
+     <svg viewbox="0 0 12 12" class="Icon FollowButton-icon Icon--plus" style="height:16px;width:12px;" width="12" height="16" aria-hidden="true">
+      <title></title>
+      <g>
+       <path d="M6.994 4.994s-.008-3.593 0-4C6.97-.33 4.97-.33 4.996.994c-.025 1.275 0 4 0 4H1C-.334 5-.334 7 1 7c1.332 0 3.996-.006 3.996-.006v4c0 1.346 2.004 1.346 1.998 0-.006-1.347 0-4 0-4S9.658 7 10.997 7c1.338 0 1.338-2-.007-2.006H6.994z" />
+      </g>
+     </svg>关注他</button>
+   </div>
+  </div>
+ </div>
+</div>
+<div class="Pagination">
+ <button class="Button PaginationButton PaginationButton--current Button--plain" disabled type="button">1</button>
+ <button class="Button PaginationButton Button--plain" type="button">2</button>
+ <button class="Button PaginationButton Button--plain" type="button">3</button>
+ <button class="Button PaginationButton Button--plain" type="button">4</button>
+ <span class="PaginationButton PaginationButton--fake">...</span>
+ <button class="Button PaginationButton Button--plain" type="button">484</button>
+ <button class="Button PaginationButton PaginationButton-next Button--plain" type="button">下一页</button>
+</div>
+10:25:20,023  INFO CrawlerUrlJob:28 - ShardingItem(0)
+10:25:20,023  INFO CrawlerUrlJob:28 - ShardingItem(1)
+10:25:20,024  INFO CrawlerUrlJob:28 - ShardingItem(2)
