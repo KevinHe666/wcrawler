@@ -35,7 +35,9 @@ public class ProxyPool {
     public Proxy getProxy() {
         return proxyQueue.poll();
     }
-
+    public void addProxy(Proxy proxy) {
+    		proxyQueue.add(proxy);
+    }
 
     public int getProxyPoolSize() {
         return proxyQueue.size();

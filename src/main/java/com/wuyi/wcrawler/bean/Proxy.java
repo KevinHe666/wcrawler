@@ -13,27 +13,19 @@ public class Proxy {
      * */
     private double quality;
     /**
-     * 真实访问网页成功次数
+     * 访问网页成功次数
      * */
-    private int realSuccessTimes;
-    /**
-     * 测试访问网页成功次数
-     * */
-    private int testSuccessTimes;
+    private int successTimes;
     /**
      * 真实访问网页失败次数
      * */
-    private int realFailureTimes;
+    private int failureTimes;
     /**
-     * 测试访问网页失败次数
-     * */
-    private int testFailureTimes;
-    /**
-     * 最近一次真实访问成功时间
+     * 最近一次访问成功时间
      * */
     private long lastSuccessTimeStamp;
     /**
-     * 最近一次真实访问成功时间消耗
+     * 最近一次访问成功时间消耗
      * */
     private long lastSuccessTimeConsume;
     /**
@@ -73,36 +65,20 @@ public class Proxy {
         this.quality = quality;
     }
 
-    public int getRealSuccessTimes() {
-        return realSuccessTimes;
+    public int getSuccessTimes() {
+        return successTimes;
     }
 
-    public void setRealSuccessTimes(int realSuccessTimes) {
-        this.realSuccessTimes = realSuccessTimes;
+    public void setSuccessTimes(int realSuccessTimes) {
+        this.successTimes = realSuccessTimes;
     }
 
-    public int getTestSuccessTimes() {
-        return testSuccessTimes;
+    public int getFailureTimes() {
+        return failureTimes;
     }
 
-    public void setTestSuccessTimes(int testSuccessTimes) {
-        this.testSuccessTimes = testSuccessTimes;
-    }
-
-    public int getRealFailureTimes() {
-        return realFailureTimes;
-    }
-
-    public void setRealFailureTimes(int realFailureTimes) {
-        this.realFailureTimes = realFailureTimes;
-    }
-
-    public int getTestFailureTimes() {
-        return testFailureTimes;
-    }
-
-    public void setTestFailureTimes(int testFailureTimes) {
-        this.testFailureTimes = testFailureTimes;
+    public void seFailureTimes(int realFailureTimes) {
+        this.failureTimes = realFailureTimes;
     }
 
     public long getLastSuccessTimeStamp() {
@@ -136,10 +112,8 @@ public class Proxy {
                 ", ip='" + ip + '\'' +
                 ", port='" + port + '\'' +
                 ", quality=" + quality +
-                ", realSuccessTimes=" + realSuccessTimes +
-                ", testSuccessTimes=" + testSuccessTimes +
-                ", realFailureTimes=" + realFailureTimes +
-                ", testFailureTimes=" + testFailureTimes +
+                ", successTimes=" + successTimes +
+                ", failureTimes=" + failureTimes +
                 ", lastSuccessTimeStamp=" + lastSuccessTimeStamp +
                 ", lastSuccessTimeConsume=" + lastSuccessTimeConsume +
                 ", avgSuccessTimeConsume=" + avgSuccessTimeConsume +

@@ -18,5 +18,11 @@ public class WProxyUtil {
 	public static Proxy getProxy() {
 		return proxyPool.getProxy();
 	}
+	public static void addProxyToPool(Proxy proxy) {
+		proxyPool.addProxy(proxy);
+	}
+	public static void addProxyToDB(Proxy proxy) {
+		
+	}
 	
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wuyi.wcrawler.dao.ProxyDao">
+    <resultMap id="BaseResultMap" type="com.wuyi.wcrawler.bean.Proxy">
+        <!--注意这里的property对应了bean字段名称-->
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="ip" property="ip" jdbcType="VARCHAR"/>
+        <result column="port" property="port" jdbcType="VARCHAR"/>
+        <result column="quality" property="quality" jdbcType="DOUBLE"/>
+        <result column="successTimes" property="successTimes" jdbcType="INTEGER"/>
+        <result column="failureTimes" property="failureTimes" jdbcType="INTEGER"/>
+        <result column="lastSuccessTimeStamp" property="lastSuccessTimeStamp" jdbcType="INTEGER"/>
+        <result column="lastSuccessTimeConsume" property="lastSuccessTimeConsume" jdbcType="INTEGER"/>
+        <result column="avgSuccessTimeConsume" property="avgSuccessTimeConsume" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <insert id="insert" parameterType="com.wuyi.wcrawler.bean.Proxy">
+        insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimeStamp, avgSuccessTimeConsume)
+        values(#{ip}, #{port}, #{quality}, #{successTimes}, #{failureTimes}, #{lastSuccessTimeStamp}, #{avgSuccessTimeConsume})
+    </insert>
+
+</mapper>
