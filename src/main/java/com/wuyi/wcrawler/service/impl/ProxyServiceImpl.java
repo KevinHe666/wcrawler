@@ -14,7 +14,7 @@ public class ProxyServiceImpl implements ProxyService {
 		for(ProxySite proxySite : ProxySite.values()) {
 			Constructor<?> constructor;
 			try {
-				constructor = proxySite.getClass().getConstructor(String.class);
+				constructor = proxySite.getParserClass().getConstructor(String.class);
 				try {
 					SiteParser parser = (SiteParser) constructor.newInstance(proxySite.getSite());
 					parser.parser();

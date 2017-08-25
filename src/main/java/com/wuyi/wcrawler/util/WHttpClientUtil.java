@@ -5,9 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.InterruptedIOException;
-import java.io.Reader;
 import java.net.ConnectException;
-import java.net.Socket;
 import java.net.UnknownHostException;
 import java.security.KeyManagementException;
 import java.security.KeyStore;
@@ -19,14 +17,15 @@ import java.security.cert.X509Certificate;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLException;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpEntityEnclosingRequest;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
+import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.proxy.WProxyUtil;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpRequestRetryHandler;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.config.Registry;
 import org.apache.http.config.RegistryBuilder;
 import org.apache.http.config.SocketConfig;
@@ -40,10 +39,11 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.ssl.SSLContexts;
 import org.apache.http.ssl.TrustStrategy;
-import org.apache.zookeeper.common.IOUtils;
+import org.apache.http.util.EntityUtils;
 
 
 public class WHttpClientUtil {
+	private static Log LOG = LogFactory.getLog(WHttpClientUtil.class);
 	public static CloseableHttpClient httpClient;
 	public static PoolingHttpClientConnectionManager cm;
 	private static final int MAX_RETYR = 3;
@@ -117,7 +117,7 @@ public class WHttpClientUtil {
 					HttpClients.custom().setConnectionManager(cm)
 					.setRetryHandler(retryHandler).setUserAgent(USER_AGENT);
 			
-			httpClient = httpClientBuilder.build();	
+			httpClient = httpClientBuilder.build();
 		} catch (KeyManagementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -129,7 +129,92 @@ public class WHttpClientUtil {
 			e.printStackTrace();
 		}
 	}
-	
+	public static CloseableHttpClient getHttpClient() {
+		if(httpClient == null) {
+			init();
+		}
+		return httpClient;
+	}
+
+	public static void setProxy(HttpRequestBase requestBase, Proxy proxy) {
+//		requestBase.setConfig(RequestConfig.custom().setProxy(new HttpHost(proxy.getIp(), proxy.getPort())));
+	}
+	public static String getPage(CloseableHttpClient httpClient, String url, boolean proxyFlag) {
+		HttpGet get = new HttpGet(url);
+		if(proxyFlag) {
+			/**
+			 * 设置代理
+			 * */
+			setProxy(get, WProxyUtil.getProxy());
+		}
+		return getPage(httpClient, get, proxyFlag);
+	}
+
+	public static String getPage(CloseableHttpClient httpClient, HttpRequestBase requestBase, boolean proxyFlag) {
+		HttpResponse response = getHttpResponse(httpClient, requestBase);
+		if(response != null && isResponseOK(response)) {
+			try {
+				return EntityUtils.toString(response.getEntity());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} else {
+			/**
+			 * 失败重试
+			 * */
+			return getPageRetry(httpClient, requestBase, proxyFlag);
+		}
+		return null;
+	}
+
+
+
+	public static String getPageRetry(CloseableHttpClient httpClient, HttpRequestBase requestBase, boolean proxyFlag) {
+		int tries = 0;
+		boolean ok = false;
+		HttpResponse response = null;
+		/**
+		 * 如果之前未使用代理,则重试时用代理
+		 * */
+		if(!proxyFlag) {
+			setProxy(requestBase, WProxyUtil.getProxy());
+		}
+		while (tries < MAX_RETYR) {
+			if((response = getHttpResponse(httpClient, requestBase)) != null && isResponseOK(response)) {
+				ok = true;
+				break;
+			}
+		}
+		/**
+		 * 如果3次重试后,还是没有返回OK(200状态码)
+		 * */
+		if(!ok) {
+			return null;
+		} else {
+			try {
+				return EntityUtils.toString(response.getEntity());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+
+	}
+
+	public static HttpResponse getHttpResponse(CloseableHttpClient httpClient, HttpRequestBase requestBase) {
+		try {
+			return httpClient.execute(requestBase);
+		} catch (IOException e) {
+			LOG.error("get Response failed");
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public static boolean isResponseOK(HttpResponse response) {
+		return response.getStatusLine().getStatusCode() == HttpStatus.SC_OK;
+	}
+
 	public static String getPageTest(String url) {
 		if(httpClient == null) {
 			init();
@@ -167,6 +252,4 @@ public class WHttpClientUtil {
 		}
 		return null;
 	}
-			
-	
 }

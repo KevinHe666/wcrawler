@@ -1,8 +1,11 @@
 package com.wuyi.wcrawler;
 
+import com.wuyi.wcrawler.util.WHttpClientUtil;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
 
 /**
  * Unit test for simple App.
@@ -30,6 +33,12 @@ public class WcrawlerTest extends TestCase
      */
 
     public void testApp() {
+        CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
+        String url = "http://www.xicidaili.com";
+//        String url = "http://www.mimiip.com/gnpu/";
+
+        String page = WHttpClientUtil.getPage(httpClient, url, false);
+        System.out.println(page);
         assertTrue( true );
     }
 

@@ -1,7 +1,7 @@
 package com.wuyi.wcrawler.proxy.parser;
 
 public class SiteParser {
-	private String site;
+	public String site;
 	public SiteParser() {
 		
 	}
@@ -11,5 +11,12 @@ public class SiteParser {
 	
 	public void parser() {
 		System.out.println("SITEPARSER");	
+	}
+
+	public String getFullSite(String prefix, String domain) {
+		if (domain == null) {
+			return  prefix;
+		}
+		return prefix + "/" + domain;
 	}
 }
