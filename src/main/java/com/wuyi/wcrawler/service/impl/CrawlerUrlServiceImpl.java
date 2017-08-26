@@ -29,9 +29,9 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
 	private static final Log LOG = LogFactory.getLog(CrawlerUrlServiceImpl.class);
 			
 	@Autowired
-    CrawlerUrlDao crawlerUrlDao;
+    private CrawlerUrlDao crawlerUrlDao;
     @Autowired
-    UrlCrawler urlCrawler;
+    private UrlCrawler urlCrawler;
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, rollbackFor = Exception.class)
     public List<CrawlerUrlBean> fetchUrl(int shardingItem, int shardingTotalCount) {
         Map<String, Object> url_param_map = new HashMap<String, Object>();

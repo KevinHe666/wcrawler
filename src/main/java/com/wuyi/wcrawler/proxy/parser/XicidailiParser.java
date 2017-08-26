@@ -48,10 +48,15 @@ public class XicidailiParser extends SiteParser {
 					proxy.setIp(ip);
 					proxy.setPort(tds.get(2).text());
 					proxyPool.addProxy(proxy);
-//					System.out.println(proxy.getIp() + " " + proxy.getPort());
+					System.out.println(proxy.getIp() + " " + proxy.getPort());
 				}
 			}
 		}
+	}
+	
+	public static void main(String[] args) {
+		XicidailiParser xp = new XicidailiParser();
+		xp.parser();
 	}
 
 }

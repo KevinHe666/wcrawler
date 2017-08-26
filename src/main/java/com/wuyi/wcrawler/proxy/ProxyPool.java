@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
-import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -41,17 +40,22 @@ public class ProxyPool {
     class CacheMonitor implements Runnable {
 
         public void run() {
-            try {
-                cacheLock.lock();
-                while(proxyCache.size() > DEFAULT_PROXY_CACHE_LOW_THRESHOLD)
-                    cacheLowest.await();
+        	while(true) {
+        		cacheLock.lock();
+        		   /**
+        		    * 这里有个bug 线程刚启动的时候，while条件肯定成立啦，但是逻辑是一开始不能去数据库里读
+        		    * */
+                while(proxyCache.size() > DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
+					try {
+						cacheLowest.await();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+                }
                 fillCache();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } finally {
                 cacheLock.unlock();
-            }
-
+        	}
         }
     }
 
@@ -71,12 +75,13 @@ public class ProxyPool {
         queueLock = new ReentrantLock();
         cacheLock = new ReentrantLock();
         cacheLowest = cacheLock.newCondition();
+        new Thread(new CacheMonitor()).start();
     }
 
     public Proxy getProxy() {
         Proxy proxy;
+        queueLock.lock();
         try {
-            queueLock.lock();
             proxy = proxyQueue.poll();
             /**
              * 如果proxyQueue的size小于阈值了,就去proxyCache取proxy
@@ -92,36 +97,66 @@ public class ProxyPool {
     }
 
     public void fillPool() {
-        Iterator<Proxy> it = proxyCache.iterator();
-        while(!isFullProxyPool() && it.hasNext()) {
-            proxyQueue.add(it.next());
-            it.remove();
-        }
-        /**
-         * 这里size()的获取没有加锁,可能有问题
-         * condition不能在这儿判断,应该放到proxyCache自己的读写方法中(循环判断)
-         * */
-        if(proxyCache.size() < DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
-            cacheLowest.signal();
-        }
-
+		cacheLock.lock();
+    	try{
+            Iterator<Proxy> it = proxyCache.iterator();
+            while(!isFullProxyPool() && it.hasNext()) {
+                proxyQueue.add(it.next());
+                it.remove();
+            }
+            if(proxyCache.size() < DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
+                cacheLowest.signal();
+            }
+    	} finally {
+			cacheLock.unlock();
+		}
+    	
     }
 
     public void fillCache() {
-
+    	List<Integer> ids = new ArrayList<Integer>();
+    	for(Proxy proxy : proxyCache) {
+    		ids.add(proxy.getId());
+    	}
+    	proxyDao.selectExclude(ids, PROXY_CACHE_MAX_SIZE / 2);
+    }
+    
+    public void flushCache() {
+    	List<Proxy> saveDBProxys = new ArrayList<Proxy>();
+        Iterator<Proxy> it = proxyCache.iterator();
+        while (it.hasNext()) {
+            Proxy p = it.next();
+            /**
+             * 如果proxy刚从proxyQueue里出来,说明它刚被使用过(成功?失败?),
+             * 则将其写入到DB中
+             * */
+            if (p.getStoreStatus() == STORE_QUEUE) {
+                p.setStoreStatus(STORE_DB);
+                saveDBProxys.add(p);
+                it.remove();
+            }
+        }
+        saveProxyToDB(saveDBProxys);
     }
 
     public void addProxy(Proxy proxy) {
-
         queueLock.lock();
         if(proxy.getStoreStatus() == STORE_CLEAN && proxyQueue.size() != QUEUE_FULL) {
             proxy.setStoreStatus(STORE_QUEUE);
             proxyQueue.add(proxy);
-            queueLock.unlock();
+            /**
+             * if条件里的unlock
+             * */
+            queueLock.unlock(); 
 
         } else {
+        	/**
+             * else条件里的unlock
+             * */
+        	queueLock.unlock();
+        	
+            cacheLock.lock();
             try {
-                cacheLock.lock();
                 if(proxyCache.size() < PROXY_CACHE_MAX_SIZE) {
                     proxyCache.add(proxy);
                     /**
@@ -129,21 +164,7 @@ public class ProxyPool {
                      * 保留存储状态为STORE_CLEAN或STORE_DB的proxy,存储状态为STORE_QUEUE的proxy写入db
                      * */
                     if (proxyCache.size() >= DEFAULT_PROXY_CACHE_HIGH_THRESHOLD) {
-                        List<Proxy> saveDBProxys = new ArrayList<Proxy>();
-                        Iterator<Proxy> it = proxyCache.iterator();
-                        while (it.hasNext()) {
-                            Proxy p = it.next();
-                            /**
-                             * 如果proxy刚从proxyQueue里出来,说明它刚被使用过(成功?失败?),
-                             * 则将其写入到DB中
-                             * */
-                            if (p.getStoreStatus() == STORE_QUEUE) {
-                                p.setStoreStatus(STORE_DB);
-                                saveDBProxys.add(p);
-                                it.remove();
-                            }
-                        }
-                        saveProxyToDB(saveDBProxys);
+                        flushCache();
                     }
                 }
             } finally {
@@ -153,7 +174,7 @@ public class ProxyPool {
     }
 
     public void saveProxyToDB(List<Proxy> proxies) {
-        proxyDao.insert(proxies);
+        proxyDao.insertAll(proxies);
     }
 
     public int getProxyPoolSize() {

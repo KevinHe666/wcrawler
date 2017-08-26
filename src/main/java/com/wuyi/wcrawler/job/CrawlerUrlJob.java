@@ -16,9 +16,7 @@ import java.util.List;
  */
 public class CrawlerUrlJob implements SimpleJob {
     private static final Log LOG = LogFactory.getLog(CrawlerUrlJob.class);
-
-    @Autowired
-    private CrawlerUrlDao crawlerUrlDao;
+    
     @Autowired
     private CrawlerUrlServiceImpl crawlerUrlService;
     public void execute(ShardingContext shardingContext) {
