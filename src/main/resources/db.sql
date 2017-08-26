@@ -21,6 +21,7 @@ CREATE TABLE `proxy` (
   `lastSuccessTimeStamp` bigint(20) DEFAULT NULL,
   `lastSuccessTimeConsume` bigint(20) DEFAULT NULL,
   `avgSuccessTimeConsume` bigint(20) DEFAULT NULL,
+  `storeStatus` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

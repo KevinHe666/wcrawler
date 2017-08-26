@@ -12,6 +12,7 @@
         <result column="lastSuccessTimeStamp" property="lastSuccessTimeStamp" jdbcType="INTEGER"/>
         <result column="lastSuccessTimeConsume" property="lastSuccessTimeConsume" jdbcType="INTEGER"/>
         <result column="avgSuccessTimeConsume" property="avgSuccessTimeConsume" jdbcType="INTEGER"/>
+        <result column="storeStatus" property="storeStatus" jdbcType="INTEGER"/>
     </resultMap>
 
     <insert id="insert" parameterType="com.wuyi.wcrawler.bean.Proxy">

@@ -32,6 +32,13 @@ public class Proxy {
      * 平均真实访问成功时间消耗
      * */
     private long avgSuccessTimeConsume;
+    /**
+     * 标记该proxy的存储状态:
+     * 0: proxyCache存储过该proxy,proxyQueue和database未存储过该proxy;
+     * 1: proxyQueue存储过该poxy;
+     * 2: database存储过该proxy;
+     * */
+    private int storeStatus;
 
     public int getId() {
         return id;
@@ -69,16 +76,16 @@ public class Proxy {
         return successTimes;
     }
 
-    public void setSuccessTimes(int realSuccessTimes) {
-        this.successTimes = realSuccessTimes;
+    public void setSuccessTimes(int successTimes) {
+        this.successTimes = successTimes;
     }
 
     public int getFailureTimes() {
         return failureTimes;
     }
 
-    public void seFailureTimes(int realFailureTimes) {
-        this.failureTimes = realFailureTimes;
+    public void setFailureTimes(int failureTimes) {
+        this.failureTimes = failureTimes;
     }
 
     public long getLastSuccessTimeStamp() {
@@ -105,6 +112,14 @@ public class Proxy {
         this.avgSuccessTimeConsume = avgSuccessTimeConsume;
     }
 
+    public int getStoreStatus() {
+        return storeStatus;
+    }
+
+    public void setStoreStatus(int storeStatus) {
+        this.storeStatus = storeStatus;
+    }
+
     @Override
     public String toString() {
         return "Proxy{" +
@@ -117,6 +132,7 @@ public class Proxy {
                 ", lastSuccessTimeStamp=" + lastSuccessTimeStamp +
                 ", lastSuccessTimeConsume=" + lastSuccessTimeConsume +
                 ", avgSuccessTimeConsume=" + avgSuccessTimeConsume +
+                ", storeStatus=" + storeStatus +
                 '}';
     }
 }
