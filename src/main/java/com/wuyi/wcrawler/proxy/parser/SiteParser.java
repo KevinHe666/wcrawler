@@ -17,10 +17,10 @@ public class SiteParser {
 		System.out.println("SITEPARSER");	
 	}
 
-	public String getFullSite(String prefix, String domain) {
+	public String getFullSite(String prefix, String domain, int page) {
 		if (domain == null) {
 			return  prefix;
 		}
-		return prefix + "/" + domain;
+		return prefix + "/" + domain + "/" + page;
 	}
 }

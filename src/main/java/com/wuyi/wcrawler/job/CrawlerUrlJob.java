@@ -25,6 +25,6 @@ public class CrawlerUrlJob implements SimpleJob {
         LOG.info("ShardingItem(" + shardingItem + ")");
         List<CrawlerUrlBean> urls = crawlerUrlService.fetchUrl(shardingItem, shardingTotalCount);
         System.out.println(urls);
-        crawlerUrlService.crawler(urls);
+//        crawlerUrlService.crawler(urls);
     }
 }

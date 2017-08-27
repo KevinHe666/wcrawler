@@ -16,7 +16,7 @@ public class Ip181Parser extends SiteParser {
 		String full_site;
 		domains = ProxySite.IP181.getDomains();
 		if(domains == null || domains.length == 0) {
-			full_site = getFullSite(this.site, null);
+			full_site = getFullSite(this.site, null, 0);
 		}
 
 	}

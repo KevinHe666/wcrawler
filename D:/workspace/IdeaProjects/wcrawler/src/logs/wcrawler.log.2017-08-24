@@ -1,0 +1,20 @@
+20:08:54,361  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1175e2db: startup date [Thu Aug 24 20:08:54 CST 2017]; root of context hierarchy
+20:08:54,517  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+20:08:54,945  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+20:08:55,018  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+20:08:56,894  INFO DruidDataSource:847 - {dataSource-1} inited
+20:09:00,137  INFO CrawlerUrlJob:27 - ShardingItem(1)
+20:09:00,137  INFO CrawlerUrlJob:27 - ShardingItem(2)
+20:09:00,137  INFO CrawlerUrlJob:27 - ShardingItem(0)
+20:09:00,667  INFO UrlCrawler:23 - CrawlerUrl{id=1, name='黄继新', url='https://www.zhihu.com/people/jixin/answers', parent=1, status=0}
+20:38:06,967  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@26f0a63f: startup date [Thu Aug 24 20:38:06 CST 2017]; root of context hierarchy
+20:38:07,076  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+20:38:07,284  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+20:38:07,340  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+20:38:08,880  INFO DruidDataSource:847 - {dataSource-1} inited
+20:38:20,099  INFO CrawlerUrlJob:27 - ShardingItem(1)
+20:38:20,099  INFO CrawlerUrlJob:27 - ShardingItem(2)
+20:38:20,099  INFO CrawlerUrlJob:27 - ShardingItem(0)
+20:38:30,022  INFO CrawlerUrlJob:27 - ShardingItem(0)
+20:38:30,023  INFO CrawlerUrlJob:27 - ShardingItem(1)
+20:38:30,023  INFO CrawlerUrlJob:27 - ShardingItem(2)

@@ -2,6 +2,9 @@ package com.wuyi.wcrawler.proxy;
 
 import com.wuyi.wcrawler.bean.Proxy;
 import com.wuyi.wcrawler.dao.ProxyDao;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,17 +19,18 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 @Component
 public class ProxyPool {
-    private static final int STORE_CLEAN = 0;
+    private Log LOG = LogFactory.getLog(ProxyPool.class);
+	private static final int STORE_CLEAN = 0;
     private static final int STORE_QUEUE = 1;
     private static final int STORE_DB = 2;
-    private static final int DEFAULT_PROXY_QUEUE_SIZE = 512;
+    private static final int DEFAULT_PROXY_QUEUE_SIZE = 32; /* 512 */
     private static final int DEFAULT_PROXY_QUEUE_THRESHOLD = DEFAULT_PROXY_QUEUE_SIZE / 8;
-    private static final int PROXY_CACHE_MAX_SIZE = 1024;
+    private static final int PROXY_CACHE_MAX_SIZE = 64; /* 1024 */
     private static final int DEFAULT_PROXY_CACHE_HIGH_THRESHOLD =  PROXY_CACHE_MAX_SIZE / 8 * 7;
     private static final int DEFAULT_PROXY_CACHE_LOW_THRESHOLD = PROXY_CACHE_MAX_SIZE / 8;
     private final int QUEUE_EMPTY = 0;
     private final int QUEUE_FULL = DEFAULT_PROXY_QUEUE_SIZE;
-    private static ProxyPool instance;
+//    private static ProxyPool instance;
     private PriorityQueue<Proxy> proxyQueue;
     private LinkedList<Proxy> proxyCache;
     private ReentrantLock queueLock;
@@ -34,47 +38,51 @@ public class ProxyPool {
     private Condition cacheLowest;
     private CacheMonitor cm;
     @Autowired
-    ProxyDao proxyDao;
-
+    private WProxyUtil proxyUtil;
 
     class CacheMonitor implements Runnable {
 
         public void run() {
-        	while(true) {
-        		cacheLock.lock();
-        		   /**
-        		    * 这里有个bug 线程刚启动的时候，while条件肯定成立啦，但是逻辑是一开始不能去数据库里读
-        		    * */
-                while(proxyCache.size() > DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
-					try {
-						cacheLowest.await();
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-                }
-                fillCache();
-                cacheLock.unlock();
-        	}
+        		/**
+        		 * 线程刚启动时，要等第一次proxyCache达到上限阈值时，才能再监控下限阈值
+        		 * */
+        		while(proxyCache.size() < DEFAULT_PROXY_CACHE_HIGH_THRESHOLD) {}
+	        	while(true) {
+	        		cacheLock.lock();
+	        		   /**
+	        		    * 如果没有上面的while，这里有个bug 线程刚启动的时候，while条件肯定不成立啦，然后就会fillCache，但是逻辑是一开始不能去数据库里读
+	        		    * */
+	                while(proxyCache.size() > DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
+						try {
+							cacheLowest.await();
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+	                }
+	                fillCache();
+	                cacheLock.unlock();
+	        	}
         }
     }
 
-    public static ProxyPool getInstance() {
-        if(instance == null) {
-            synchronized (ProxyPool.class) {
-                if(instance == null) {
-                    instance = new ProxyPool();
-                }
-            }
-        }
-        return instance;
-    }
+//    public static ProxyPool getInstance() {
+//        if(instance == null) {
+//            synchronized (ProxyPool.class) {
+//                if(instance == null) {
+//                    instance = new ProxyPool();
+//                }
+//            }
+//        }
+//        return instance;
+//    }
     private ProxyPool() {
         proxyQueue = new PriorityQueue<Proxy>(DEFAULT_PROXY_QUEUE_SIZE);
         proxyCache = new LinkedList<Proxy>();
         queueLock = new ReentrantLock();
         cacheLock = new ReentrantLock();
         cacheLowest = cacheLock.newCondition();
+//        proxyUtil = new WProxyUtil();
         new Thread(new CacheMonitor()).start();
     }
 
@@ -114,15 +122,21 @@ public class ProxyPool {
     }
 
     public void fillCache() {
-    	List<Integer> ids = new ArrayList<Integer>();
-    	for(Proxy proxy : proxyCache) {
-    		ids.add(proxy.getId());
-    	}
-    	proxyDao.selectExclude(ids, PROXY_CACHE_MAX_SIZE / 2);
+	    	Set<Integer> ids = new HashSet<Integer>();
+	    	for(Proxy proxy : proxyCache) {
+	    		ids.add(proxy.getId());
+	    	}
+	    List<Proxy> proxies = proxyUtil.fetchProxy(PROXY_CACHE_MAX_SIZE / 2);
+	    	for(Proxy proxy : proxies) {
+	    		if(!ids.contains(Integer.valueOf(proxy.getId()))) {
+	    			proxyCache.add(proxy);
+	    		}
+	    	}
+	    	
     }
     
     public void flushCache() {
-    	List<Proxy> saveDBProxys = new ArrayList<Proxy>();
+    	List<Proxy> saveDBProxies = new ArrayList<Proxy>();
         Iterator<Proxy> it = proxyCache.iterator();
         while (it.hasNext()) {
             Proxy p = it.next();
@@ -130,28 +144,34 @@ public class ProxyPool {
              * 如果proxy刚从proxyQueue里出来,说明它刚被使用过(成功?失败?),
              * 则将其写入到DB中
              * */
-            if (p.getStoreStatus() == STORE_QUEUE) {
-                p.setStoreStatus(STORE_DB);
-                saveDBProxys.add(p);
-                it.remove();
-            }
+//            if (p.getStoreStatus() == STORE_QUEUE) {
+//                p.setStoreStatus(STORE_DB);
+//                saveDBProxies.add(p);
+//                it.remove();
+//            }
+            saveDBProxies.add(p);
         }
-        saveProxyToDB(saveDBProxys);
+        saveProxyToDB(saveDBProxies);
     }
+    public void saveProxyToDB(List<Proxy> proxies) {
+        proxyUtil.saveProxy(proxies);
+    }
+
 
     public void addProxy(Proxy proxy) {
         queueLock.lock();
         if(proxy.getStoreStatus() == STORE_CLEAN && proxyQueue.size() != QUEUE_FULL) {
             proxy.setStoreStatus(STORE_QUEUE);
             proxyQueue.add(proxy);
+            LOG.info(getProxyPoolSize());
             /**
-             * if条件里的unlock
+             * if条件里的unlock, 写法好奇怪
              * */
             queueLock.unlock(); 
 
         } else {
         	/**
-             * else条件里的unlock
+             * else条件里的unlock， 写法好奇怪
              * */
         	queueLock.unlock();
         	
@@ -171,10 +191,6 @@ public class ProxyPool {
                 cacheLock.unlock();
             }
         }
-    }
-
-    public void saveProxyToDB(List<Proxy> proxies) {
-        proxyDao.insertAll(proxies);
     }
 
     public int getProxyPoolSize() {

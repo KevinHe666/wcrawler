@@ -29,8 +29,8 @@
         </foreach>
     </insert>
 	
- 	<select id = "selectExclude" resultType = "com.wuyi.wcrawler.bean.Proxy">
- 		select * from proxy where id not in (#{ids}) order by rand() limit #{limit}
+ 	<select id = "selectRand" resultType = "java.util.List">
+ 		select * from proxy order by rand() limit #{limit}
 	</select>
 
 </mapper>

@@ -9,5 +9,5 @@ import org.apache.ibatis.annotations.Param;
 public interface ProxyDao {
 	void insert(Proxy proxy);
 	void insertAll(List<Proxy> proxys);
-	void selectExclude(@Param("ids")List<Integer> ids, @Param("limit")int limit);
+	List<Proxy> selectRand(@Param("limit")int limit);
 }
