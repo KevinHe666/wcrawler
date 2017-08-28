@@ -1,5 +1,7 @@
 package com.wuyi.wcrawler.proxy.parser;
 
+import java.util.regex.Pattern;
+
 public class SiteParser {
 	public final String ipPattern = "^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\."
 									+"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
@@ -13,7 +15,7 @@ public class SiteParser {
 		this.site = site;
 	}
 	
-	public void parser() {
+	public void parse() {
 		System.out.println("SITEPARSER");	
 	}
 
@@ -22,5 +24,9 @@ public class SiteParser {
 			return  prefix;
 		}
 		return prefix + "/" + domain + "/" + page;
+	}
+
+	public boolean isIpOk(String ip) {
+		return Pattern.matches(ipPattern, ip);
 	}
 }

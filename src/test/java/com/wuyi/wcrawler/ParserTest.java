@@ -7,6 +7,6 @@ import junit.framework.TestCase;
 public class ParserTest extends TestCase{
 	public void testParser() {
 		XicidailiParser xicidailiParser = new XicidailiParser();
-		xicidailiParser.parser();
+		xicidailiParser.parse();
 	}
 }

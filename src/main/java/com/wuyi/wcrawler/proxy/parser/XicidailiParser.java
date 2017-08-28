@@ -3,10 +3,7 @@ package com.wuyi.wcrawler.proxy.parser;
 import com.wuyi.wcrawler.bean.Proxy;
 import com.wuyi.wcrawler.proxy.ProxyPool;
 import com.wuyi.wcrawler.proxy.ProxySite;
-import com.wuyi.wcrawler.proxy.WProxyUtil;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
-
-import java.util.regex.Pattern;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -35,43 +32,30 @@ public class XicidailiParser extends SiteParser {
 	}
 
 	@Override
-	public void parser() {
-		System.out.println("XICIDAILI");
-		String full_site;
+	public void parse() {
+		LOG.info("XICIDAILI");
+		String fullSite;
 		String [] domains = ProxySite.XICIDAILI.getDomains();
 		for(String domain : domains) {
 			LOG.info(domain);
 			for(int page = 1; page <= pages;  page++){
-				full_site = getFullSite(this.site, domain, page);
+				fullSite = getFullSite(this.site, domain, page);
 				CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
-//				String html = WHttpClientUtil.getPage(httpClient, full_site, false);
-				/**
-				 * 代理测试，记得复原
-				 * */
-				String html = WHttpClientUtil.getPage(httpClient, full_site, true);
+				String html = WHttpClientUtil.getPage(httpClient, fullSite, false);
 				Document doc = Jsoup.parse(html);
 				Elements trs = doc.getElementsByTag("tr");
 				for(Element tr : trs) {
 					Elements tds = tr.children();
 					String ip = tds.get(1).text();
-					if(Pattern.matches(ipPattern, ip)) {
+					if(isIpOk(ip)) {
 						Proxy proxy = new Proxy();
 						proxy.setIp(ip);
 						proxy.setPort(tds.get(2).text());
-						LOG.info(proxy.getIp() + " " + proxy.getPort());
+//						LOG.info(proxy.getIp() + " " + proxy.getPort());
 						proxyPool.addProxy(proxy);
 					}
 				}
 			}
 		}
 	}
-	
-	public static void main(String[] args) {
-		new ClassPathXmlApplicationContext("classpath:mybatis-druid.xml",
-				"classpath:mybatis-config.xml", "classpath:spring.xml");
-		XicidailiParser xp = new XicidailiParser();
-		xp.parser();
-		LOG.info("XicidailiParser ended");
-	}
-
 }

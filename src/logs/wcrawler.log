@@ -4484,3 +4484,37 @@
 15:52:02,009  INFO MimiParser:53 - 113.107.112.209 8101
 15:52:02,009  INFO MimiParser:53 - 59.40.59.116 9797
 15:52:02,009  INFO MimiParser:53 - 59.34.18.151 3128
+16:32:03,584  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Mon Aug 28 16:32:03 CST 2017]; root of context hierarchy
+16:32:03,626  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+16:32:03,745  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+16:32:03,771  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+16:32:04,572  INFO DruidDataSource:847 - {dataSource-1} inited
+16:32:05,267  WARN AutowiredAnnotationBeanPostProcessor:440 - Autowired annotation is not supported on static fields: private static com.wuyi.wcrawler.util.ApplicationContextUtil com.wuyi.wcrawler.proxy.parser.Ip181Parser.applicationContextUtil
+16:32:52,238  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Mon Aug 28 16:32:52 CST 2017]; root of context hierarchy
+16:32:52,281  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+16:32:52,394  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+16:32:52,424  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+16:32:53,214  INFO DruidDataSource:847 - {dataSource-1} inited
+16:32:53,977  INFO Ip181Parser:33 - IP181
+16:32:53,977  INFO Ip181Parser:35 - http://www.ip181.com
+16:34:53,420  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Mon Aug 28 16:34:53 CST 2017]; root of context hierarchy
+16:34:53,476  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+16:34:53,579  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+16:34:53,606  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+16:34:54,338  INFO DruidDataSource:847 - {dataSource-1} inited
+16:34:55,076  INFO Ip181Parser:33 - IP181
+16:34:55,076  INFO Ip181Parser:35 - http://www.ip181.com
+16:36:15,378  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Mon Aug 28 16:36:15 CST 2017]; root of context hierarchy
+16:36:15,429  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+16:36:15,535  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+16:36:15,569  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+16:36:16,443  INFO DruidDataSource:847 - {dataSource-1} inited
+16:36:17,209  INFO Ip181Parser:33 - IP181
+16:36:17,209  INFO Ip181Parser:35 - http://www.ip181.com
+16:38:01,220  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Mon Aug 28 16:38:01 CST 2017]; root of context hierarchy
+16:38:01,266  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+16:38:01,390  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+16:38:01,431  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+16:38:02,223  INFO DruidDataSource:847 - {dataSource-1} inited
+16:38:03,022  INFO Ip181Parser:33 - IP181
+16:38:03,022  INFO Ip181Parser:35 - http://www.ip181.com

@@ -16,8 +16,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import java.util.regex.Pattern;
-
 @Component(value = "mimi")
 public class MimiParser extends SiteParser {
 	private static Log LOG = LogFactory.getLog(MimiParser.class);
@@ -31,26 +29,26 @@ public class MimiParser extends SiteParser {
 		super(site);
 	}
 	@Override
-	public void parser() {
+	public void parse() {
 		LOG.info("MINIIP");
-		String full_site;
+		String fullSite;
 		String [] domains = ProxySite.MIMIIP.getDomains();
 		for(String domain : domains) {
-			LOG.info(domain);
 			for(int page = 1; page <= pages;  page++){
-				full_site = getFullSite(this.site, domain, page);
+				fullSite = getFullSite(this.site, domain, page);
+				LOG.info(fullSite);
 				CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
-				String html = WHttpClientUtil.getPage(httpClient, full_site, false);
+				String html = WHttpClientUtil.getPage(httpClient, fullSite, false);
 				Document doc = Jsoup.parse(html);
 				Elements trs = doc.getElementsByTag("tr");
 				for(Element tr : trs) {
 					Elements tds = tr.children();
 					String ip = tds.get(0).text();
-					if(Pattern.matches(ipPattern, ip)) {
+					if(isIpOk(ip)) {
 						Proxy proxy = new Proxy();
 						proxy.setIp(ip);
 						proxy.setPort(tds.get(1).text());
-						LOG.info(proxy.getIp() + " " + proxy.getPort());
+//						LOG.info(proxy.getIp() + " " + proxy.getPort());
 						proxyPool.addProxy(proxy);
 					}
 				}
@@ -62,7 +60,7 @@ public class MimiParser extends SiteParser {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:mybatis-druid.xml",
 				"classpath:spring.xml");
 		MimiParser xp = (MimiParser) ctx.getBean("mimi");
-		xp.parser();
+		xp.parse();
 		LOG.info("MimiParser ended");
 	}
 }
