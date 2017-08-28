@@ -32,12 +32,13 @@ public class WcrawlerTest extends TestCase
      * Rigourous Test :-)
      */
 
-    public void testApp() {
+    public void testProxySite() {
         CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
-        String url = "http://www.xicidaili.com";
-//        String url = "http://www.mimiip.com/gnpu/";
+        String xicidailiUrl = "http://www.xicidaili.com"; // not open
+        String miniipUrl = "http://www.mimiip.com/gnpu/"; // ok
+        String ip181Url = "http://www.ip181.com"; // not open
 
-        String page = WHttpClientUtil.getPage(httpClient, url, false);
+        String page = WHttpClientUtil.getPage(httpClient, ip181Url, false);
         System.out.println(page);
         assertTrue( true );
     }

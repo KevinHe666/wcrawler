@@ -1,7 +1,9 @@
 package com.wuyi.wcrawler.proxy.parser;
 
 import com.wuyi.wcrawler.proxy.ProxySite;
+import org.springframework.stereotype.Component;
 
+@Component(value = "ip181")
 public class Ip181Parser extends SiteParser {
 	private String [] domains;
 	public Ip181Parser() {

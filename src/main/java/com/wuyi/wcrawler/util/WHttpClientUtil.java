@@ -161,14 +161,14 @@ public class WHttpClientUtil {
 			 *
 			 * */
 			/**********************代理测试*****************************/
-			Proxy proxy = new Proxy();
-			proxy.setIp("124.90.104.245");
-			proxy.setPort("8998");
-//			setProxy(get, proxyPool.getProxy());
-//			setProxy(get, proxy);
-			get.setConfig(RequestConfig.custom().setProxy(new HttpHost("112.82.148.175", 8118)).build());
+//			Proxy proxy = new Proxy();
+//			proxy.setIp("124.90.104.245");
+//			proxy.setPort("8998");
+//			get.setConfig(RequestConfig.custom().setProxy(new HttpHost("112.82.148.175", 8118)).build());
 
 			/**********************代理测试:记得复原*****************************/
+			setProxy(get, proxyPool.getProxy());
+
 
 		}
 		return getPage(httpClient, get, proxyFlag);

@@ -11,7 +11,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
 
     <!-- 引入属性文件 -->
-    <context:property-placeholder location="classpath:db.properties, classpath:app.properties" />
+    <context:property-placeholder location="classpath:db.properties, classpath:application.properties" />
 
     <!-- spring扫描范围 -->
     <context:component-scan base-package="com.wuyi.wcrawler"/>
@@ -19,6 +19,6 @@
     <aop:aspectj-autoproxy expose-proxy="true" proxy-target-class="true"/>
 
     <bean id="crawlerUrl" class="com.wuyi.wcrawler.crawler.UrlCrawler"></bean>
-    <bean id="mimiParser" class="com.wuyi.wcrawler.proxy.parser.MimiParser"></bean>
+    <!--<bean id="mimiParser" class="com.wuyi.wcrawler.proxy.parser.MimiParser"></bean>-->
 
 </beans>

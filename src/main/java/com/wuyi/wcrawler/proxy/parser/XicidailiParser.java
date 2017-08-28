@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
+@Component(value = "xicidaili")
 public class XicidailiParser extends SiteParser {
 	private static Log LOG = LogFactory.getLog(XicidailiParser.class);
 	private final int pages = 10;

@@ -23,20 +23,18 @@ public class ProxyPool {
 	private static final int STORE_CLEAN = 0;
     private static final int STORE_QUEUE = 1;
     private static final int STORE_DB = 2;
-    private static final int DEFAULT_PROXY_QUEUE_SIZE = 32; /* 512 */
+    private static final int DEFAULT_PROXY_QUEUE_SIZE = 8; /* 512 */
     private static final int DEFAULT_PROXY_QUEUE_THRESHOLD = DEFAULT_PROXY_QUEUE_SIZE / 8;
-    private static final int PROXY_CACHE_MAX_SIZE = 64; /* 1024 */
+    private static final int PROXY_CACHE_MAX_SIZE = 32; /* 1024 */
     private static final int DEFAULT_PROXY_CACHE_HIGH_THRESHOLD =  PROXY_CACHE_MAX_SIZE / 8 * 7;
     private static final int DEFAULT_PROXY_CACHE_LOW_THRESHOLD = PROXY_CACHE_MAX_SIZE / 8;
     private final int QUEUE_EMPTY = 0;
     private final int QUEUE_FULL = DEFAULT_PROXY_QUEUE_SIZE;
-//    private static ProxyPool instance;
     private PriorityQueue<Proxy> proxyQueue;
     private LinkedList<Proxy> proxyCache;
     private ReentrantLock queueLock;
     private ReentrantLock cacheLock;
     private Condition cacheLowest;
-    private CacheMonitor cm;
     @Autowired
     private WProxyUtil proxyUtil;
 
@@ -66,23 +64,12 @@ public class ProxyPool {
         }
     }
 
-//    public static ProxyPool getInstance() {
-//        if(instance == null) {
-//            synchronized (ProxyPool.class) {
-//                if(instance == null) {
-//                    instance = new ProxyPool();
-//                }
-//            }
-//        }
-//        return instance;
-//    }
-    private ProxyPool() {
+    public ProxyPool() {
         proxyQueue = new PriorityQueue<Proxy>(DEFAULT_PROXY_QUEUE_SIZE);
         proxyCache = new LinkedList<Proxy>();
         queueLock = new ReentrantLock();
         cacheLock = new ReentrantLock();
         cacheLowest = cacheLock.newCondition();
-//        proxyUtil = new WProxyUtil();
         new Thread(new CacheMonitor()).start();
     }
 
@@ -122,10 +109,10 @@ public class ProxyPool {
     }
 
     public void fillCache() {
-	    	Set<Integer> ids = new HashSet<Integer>();
-	    	for(Proxy proxy : proxyCache) {
-	    		ids.add(proxy.getId());
-	    	}
+        Set<Integer> ids = new HashSet<Integer>();
+        for(Proxy proxy : proxyCache) {
+            ids.add(proxy.getId());
+        }
 	    List<Proxy> proxies = proxyUtil.fetchProxy(PROXY_CACHE_MAX_SIZE / 2);
 	    	for(Proxy proxy : proxies) {
 	    		if(!ids.contains(Integer.valueOf(proxy.getId()))) {
@@ -149,21 +136,17 @@ public class ProxyPool {
 //                saveDBProxies.add(p);
 //                it.remove();
 //            }
+            /***************************测试******************************/
             saveDBProxies.add(p);
         }
-        saveProxyToDB(saveDBProxies);
+        proxyUtil.saveProxy(saveDBProxies);
     }
-    public void saveProxyToDB(List<Proxy> proxies) {
-        proxyUtil.saveProxy(proxies);
-    }
-
 
     public void addProxy(Proxy proxy) {
         queueLock.lock();
         if(proxy.getStoreStatus() == STORE_CLEAN && proxyQueue.size() != QUEUE_FULL) {
             proxy.setStoreStatus(STORE_QUEUE);
             proxyQueue.add(proxy);
-            LOG.info(getProxyPoolSize());
             /**
              * if条件里的unlock, 写法好奇怪
              * */
@@ -184,6 +167,7 @@ public class ProxyPool {
                      * 保留存储状态为STORE_CLEAN或STORE_DB的proxy,存储状态为STORE_QUEUE的proxy写入db
                      * */
                     if (proxyCache.size() >= DEFAULT_PROXY_CACHE_HIGH_THRESHOLD) {
+                        LOG.info(proxyCache.size() + "--flushCache");
                         flushCache();
                     }
                 }

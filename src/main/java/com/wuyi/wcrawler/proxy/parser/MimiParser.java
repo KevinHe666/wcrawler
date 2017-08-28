@@ -18,9 +18,10 @@ import org.springframework.stereotype.Component;
 
 import java.util.regex.Pattern;
 
+@Component(value = "mimi")
 public class MimiParser extends SiteParser {
 	private static Log LOG = LogFactory.getLog(MimiParser.class);
-	private final int pages = 10;
+	private final int pages = 3;
 	@Autowired
 	private ProxyPool proxyPool;
 	public MimiParser() {
@@ -28,11 +29,10 @@ public class MimiParser extends SiteParser {
 	}
 	public MimiParser(String site) {
 		super(site);
-//		proxyPool = ProxyPool.getInstance();
 	}
 	@Override
 	public void parser() {
-		System.out.println("MINIIP");
+		LOG.info("MINIIP");
 		String full_site;
 		String [] domains = ProxySite.MIMIIP.getDomains();
 		for(String domain : domains) {
@@ -40,10 +40,6 @@ public class MimiParser extends SiteParser {
 			for(int page = 1; page <= pages;  page++){
 				full_site = getFullSite(this.site, domain, page);
 				CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
-//				String html = WHttpClientUtil.getPage(httpClient, full_site, false);
-				/**
-				 * 代理测试，记得复原
-				 * */
 				String html = WHttpClientUtil.getPage(httpClient, full_site, false);
 				Document doc = Jsoup.parse(html);
 				Elements trs = doc.getElementsByTag("tr");
@@ -64,9 +60,9 @@ public class MimiParser extends SiteParser {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:mybatis-druid.xml",
-				"classpath:mybatis-config.xml", "classpath:spring.xml");
-		MimiParser xp = (MimiParser) ctx.getBean("mimiParser");
+				"classpath:spring.xml");
+		MimiParser xp = (MimiParser) ctx.getBean("mimi");
 		xp.parser();
-		LOG.info("XicidailiParser ended");
+		LOG.info("MimiParser ended");
 	}
 }
