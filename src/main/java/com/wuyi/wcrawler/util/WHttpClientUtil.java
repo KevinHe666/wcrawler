@@ -137,23 +137,22 @@ public class WHttpClientUtil {
 		 * */
 //		proxyPool = ProxyPool.getInstance();
 	}
-	public static CloseableHttpClient getHttpClient() {
+	public static CloseableHttpClient createHttpClient() {
 		if(httpClient == null) {
 			init();
 		}
 		return httpClient;
 	}
 
-	public static void setProxy(HttpRequestBase request, Proxy proxy) {
-		String ip = proxy.getIp();
-		int port = Integer.valueOf(proxy.getPort());
-		request.setConfig(RequestConfig.custom().setProxy(new HttpHost(ip, port)).build());
+	public static void setProxy(HttpRequestBase requestBase, Proxy proxy) {
+		requestBase.setConfig(RequestConfig.custom().setProxy(new HttpHost(proxy.getIp(), Integer.valueOf(proxy.getPort()))).build());
 	}
 
-	public static void setUserAgent(HttpRequestBase request, String value) {
-		request.setHeader("User-Agent", value);
+	public static void setUserAgent(HttpRequestBase requestBase, String value) {
+		requestBase.setHeader("User-Agent", value);
 	}
-	public static String getPage(CloseableHttpClient httpClient, String url, boolean proxyFlag) {
+
+	public static HttpRequestBase createGet(String url, boolean proxyFlag) {
 		HttpGet get = new HttpGet(url);
 		setUserAgent(get, UserAgent.getUA());
 		if(proxyFlag) {
@@ -162,6 +161,12 @@ public class WHttpClientUtil {
 			 * */
 			setProxy(get, proxyPool.getProxy());
 		}
+		return get;
+	}
+
+	public static String getPage(String url, boolean proxyFlag) {
+		httpClient = createHttpClient();
+		HttpGet get = (HttpGet) createGet(url, proxyFlag);
 		return getPage(httpClient, get, proxyFlag);
 	}
 

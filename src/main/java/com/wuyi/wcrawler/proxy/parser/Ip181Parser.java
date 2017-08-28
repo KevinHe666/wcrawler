@@ -33,8 +33,7 @@ public class Ip181Parser extends SiteParser {
 		LOG.info("IP181");
 		String fullSite = getFullSite(this.site, null, 0);
 		LOG.info(fullSite);
-		CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
-		String html = WHttpClientUtil.getPage(httpClient, fullSite, false);
+		String html = WHttpClientUtil.getPage(fullSite, false);
 		Document doc = Jsoup.parse(html);
 		Elements trs = doc.getElementsByTag("tr");
 		for(Element tr : trs) {

@@ -37,8 +37,7 @@ public class MimiParser extends SiteParser {
 			for(int page = 1; page <= pages;  page++){
 				fullSite = getFullSite(this.site, domain, page);
 				LOG.info(fullSite);
-				CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
-				String html = WHttpClientUtil.getPage(httpClient, fullSite, false);
+				String html = WHttpClientUtil.getPage(fullSite, false);
 				Document doc = Jsoup.parse(html);
 				Elements trs = doc.getElementsByTag("tr");
 				for(Element tr : trs) {

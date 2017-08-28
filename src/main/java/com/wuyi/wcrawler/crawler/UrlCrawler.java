@@ -16,9 +16,9 @@ import java.io.IOException;
 public class UrlCrawler implements Crawler {
 
     private static final Log LOG = LogFactory.getLog(UrlCrawler.class);
-    static {
-        System.setProperty("javax.net.ssl.trustStore", "D:\\workspace\\IdeaProjects\\wcrawler\\src\\main\\resources\\zhihu.jks");
-    }
+//    static {
+//        System.setProperty("javax.net.ssl.trustStore", "D:\\workspace\\IdeaProjects\\wcrawler\\src\\main\\resources\\zhihu.jks");
+//    }
     public void run(CrawlerUrlBean url) {
         LOG.info(url);
         Document home_page = null, following_page = null;

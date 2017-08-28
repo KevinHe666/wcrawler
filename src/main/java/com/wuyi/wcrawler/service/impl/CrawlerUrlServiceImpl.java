@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Created by wuyi5 on 2017/8/17.
@@ -56,11 +57,15 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
     }
 
     public void crawler(List<CrawlerUrlBean> urls) {
-    		if (urls.size() == 0 || urls == null) {
-    			LOG.error("url is emppty or null. urls is not available.");
-    		}
+        if (urls.size() == 0 || urls == null) {
+            LOG.error("url is empty or null. urls is not available.");
+        }
+        /**
+         * 利用线程池，并把urlCrawler实现Runable接口
+         * */
+//        ThreadPoolExecutor
         for (CrawlerUrlBean url: urls) {
-        		WHttpClientUtil.getPageTest(url.getUrl());
+            urlCrawler.run(url);
         }
     }
 }
