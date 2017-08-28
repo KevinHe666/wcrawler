@@ -56,7 +56,6 @@ public class WHttpClientUtil {
 	private static final int DEFAULT_MAXPERROUTE = 20;
 	private static final int DEFAULT_SOCKET_TIMEOUT = 3000;
 	private static final boolean TCP_NO_DEALY = false;
-	private static final String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8";
 	public static void init() {
 		init(DEFAULT_MAXTOTAL, DEFAULT_MAXPERROUTE);
 	}
@@ -120,7 +119,7 @@ public class WHttpClientUtil {
 			};
 			HttpClientBuilder httpClientBuilder = 
 					HttpClients.custom().setConnectionManager(cm)
-					.setRetryHandler(retryHandler).setUserAgent(USER_AGENT);
+					.setRetryHandler(retryHandler);
 			
 			httpClient = httpClientBuilder.build();
 		} catch (KeyManagementException e) {
@@ -152,6 +151,7 @@ public class WHttpClientUtil {
 	}
 	public static String getPage(CloseableHttpClient httpClient, String url, boolean proxyFlag) {
 		HttpGet get = new HttpGet(url);
+
 		if(proxyFlag) {
 			/**
 			 * 设置代理
