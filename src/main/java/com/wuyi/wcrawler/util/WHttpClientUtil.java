@@ -144,32 +144,23 @@ public class WHttpClientUtil {
 		return httpClient;
 	}
 
-	public static void setProxy(HttpRequestBase requestBase, Proxy proxy) {
+	public static void setProxy(HttpRequestBase request, Proxy proxy) {
 		String ip = proxy.getIp();
 		int port = Integer.valueOf(proxy.getPort());
-		requestBase.setConfig(RequestConfig.custom().setProxy(new HttpHost(ip, port)).build());
+		request.setConfig(RequestConfig.custom().setProxy(new HttpHost(ip, port)).build());
+	}
+
+	public static void setUserAgent(HttpRequestBase request, String value) {
+		request.setHeader("User-Agent", value);
 	}
 	public static String getPage(CloseableHttpClient httpClient, String url, boolean proxyFlag) {
 		HttpGet get = new HttpGet(url);
-
+		setUserAgent(get, UserAgent.getUA());
 		if(proxyFlag) {
 			/**
 			 * 设置代理
 			 * */
-			/**
-			 *
-			 *
-			 * */
-			/**********************代理测试*****************************/
-//			Proxy proxy = new Proxy();
-//			proxy.setIp("124.90.104.245");
-//			proxy.setPort("8998");
-//			get.setConfig(RequestConfig.custom().setProxy(new HttpHost("112.82.148.175", 8118)).build());
-
-			/**********************代理测试:记得复原*****************************/
 			setProxy(get, proxyPool.getProxy());
-
-
 		}
 		return getPage(httpClient, get, proxyFlag);
 	}

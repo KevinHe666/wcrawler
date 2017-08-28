@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff38697a-0ae6-4d34-829e-dc92d0d7a973" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/UserAgent.java" afterPath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/UserAgent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/WHttpClientUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/WHttpClientUtil.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/parser/Ip181Parser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="313">
-              <caret line="47" column="28" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,21 +42,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WHttpClientUtil.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WHttpClientUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/WHttpClientUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="39">
+              <caret line="152" column="30" lean-forward="false" selection-start-line="152" selection-start-column="30" selection-end-line="152" selection-end-column="30" />
+              <folding>
+                <element signature="e#5430#5431#0" expanded="true" />
+                <element signature="e#5475#5476#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="133" column="23" lean-forward="true" selection-start-line="120" selection-start-column="4" selection-end-line="133" selection-end-column="23" />
+            <state relative-caret-position="316">
+              <caret line="134" column="0" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="134" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -186,8 +186,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/ProxySite.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/parser/Ip181Parser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/UserAgent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/WHttpClientUtil.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/WHttpClientUtil.java" />
       </list>
     </option>
   </component>
@@ -1218,6 +1218,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1286,6 +1287,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1333,16 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/WProxyUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1426,7 +1418,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/parser/Ip181Parser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
-          <caret line="47" column="28" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1441,19 +1433,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/WHttpClientUtil.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state relative-caret-position="316">
+          <caret line="134" column="0" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="134" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/WProxyUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="133" column="23" lean-forward="true" selection-start-line="120" selection-start-column="4" selection-end-line="133" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="40">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/util/WHttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="152" column="30" lean-forward="false" selection-start-line="152" selection-start-column="30" selection-end-line="152" selection-end-column="30" />
+          <folding>
+            <element signature="e#5430#5431#0" expanded="true" />
+            <element signature="e#5475#5476#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
