@@ -16,9 +16,13 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 public class XicidailiParser extends SiteParser {
-	Log LOG = LogFactory.getLog(XicidailiParser.class);
+	private static Log LOG = LogFactory.getLog(XicidailiParser.class);
+	private final int pages = 10;
+	@Autowired
 	private ProxyPool proxyPool;
 	public XicidailiParser() {
 		this(ProxySite.XICIDAILI.getSite());
@@ -26,7 +30,7 @@ public class XicidailiParser extends SiteParser {
 	
 	public XicidailiParser(String site) {
 		super(site);
-		proxyPool = ProxyPool.getInstance();
+//		proxyPool = ProxyPool.getInstance();
 	}
 
 	@Override
@@ -35,23 +39,38 @@ public class XicidailiParser extends SiteParser {
 		String full_site;
 		String [] domains = ProxySite.XICIDAILI.getDomains();
 		for(String domain : domains) {
-			full_site = getFullSite(this.site, domain);
-			CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
-			String html = WHttpClientUtil.getPage(httpClient, full_site, false);
-			Document doc = Jsoup.parse(html);
-			Elements trs = doc.getElementsByTag("tr");
-			for(Element tr : trs) {
-				Elements tds = tr.children();
-				String ip = tds.get(1).text();
-				if(Pattern.matches(ipPattern, ip)) {
-					Proxy proxy = new Proxy();
-					proxy.setIp(ip);
-					proxy.setPort(tds.get(2).text());
-					proxyPool.addProxy(proxy);
-//					System.out.println(proxy.getIp() + " " + proxy.getPort());
+			LOG.info(domain);
+			for(int page = 1; page <= pages;  page++){
+				full_site = getFullSite(this.site, domain, page);
+				CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
+//				String html = WHttpClientUtil.getPage(httpClient, full_site, false);
+				/**
+				 * 代理测试，记得复原
+				 * */
+				String html = WHttpClientUtil.getPage(httpClient, full_site, true);
+				Document doc = Jsoup.parse(html);
+				Elements trs = doc.getElementsByTag("tr");
+				for(Element tr : trs) {
+					Elements tds = tr.children();
+					String ip = tds.get(1).text();
+					if(Pattern.matches(ipPattern, ip)) {
+						Proxy proxy = new Proxy();
+						proxy.setIp(ip);
+						proxy.setPort(tds.get(2).text());
+						LOG.info(proxy.getIp() + " " + proxy.getPort());
+						proxyPool.addProxy(proxy);
+					}
 				}
 			}
 		}
+	}
+	
+	public static void main(String[] args) {
+		new ClassPathXmlApplicationContext("classpath:mybatis-druid.xml",
+				"classpath:mybatis-config.xml", "classpath:spring.xml");
+		XicidailiParser xp = new XicidailiParser();
+		xp.parser();
+		LOG.info("XicidailiParser ended");
 	}
 
 }

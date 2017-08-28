@@ -16,9 +16,7 @@ import java.util.List;
  */
 public class CrawlerUrlJob implements SimpleJob {
     private static final Log LOG = LogFactory.getLog(CrawlerUrlJob.class);
-
-    @Autowired
-    private CrawlerUrlDao crawlerUrlDao;
+    
     @Autowired
     private CrawlerUrlServiceImpl crawlerUrlService;
     public void execute(ShardingContext shardingContext) {
@@ -27,6 +25,6 @@ public class CrawlerUrlJob implements SimpleJob {
         LOG.info("ShardingItem(" + shardingItem + ")");
         List<CrawlerUrlBean> urls = crawlerUrlService.fetchUrl(shardingItem, shardingTotalCount);
         System.out.println(urls);
-        crawlerUrlService.crawler(urls);
+//        crawlerUrlService.crawler(urls);
     }
 }

@@ -3,7 +3,7 @@ package com.wuyi.wcrawler.bean;
 /**
  * Created by wuyi5 on 2017/8/25.
  */
-public class Proxy {
+public class Proxy implements Comparable<Proxy>{
     private int id;
     private String ip;
     private String port;
@@ -135,4 +135,70 @@ public class Proxy {
                 ", storeStatus=" + storeStatus +
                 '}';
     }
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (avgSuccessTimeConsume ^ (avgSuccessTimeConsume >>> 32));
+		result = prime * result + failureTimes;
+		result = prime * result + id;
+		result = prime * result + ((ip == null) ? 0 : ip.hashCode());
+		result = prime * result + (int) (lastSuccessTimeConsume ^ (lastSuccessTimeConsume >>> 32));
+		result = prime * result + (int) (lastSuccessTimeStamp ^ (lastSuccessTimeStamp >>> 32));
+		result = prime * result + ((port == null) ? 0 : port.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(quality);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + storeStatus;
+		result = prime * result + successTimes;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Proxy other = (Proxy) obj;
+		if (avgSuccessTimeConsume != other.avgSuccessTimeConsume)
+			return false;
+		if (failureTimes != other.failureTimes)
+			return false;
+		if (id != other.id)
+			return false;
+		if (ip == null) {
+			if (other.ip != null)
+				return false;
+		} else if (!ip.equals(other.ip))
+			return false;
+		if (lastSuccessTimeConsume != other.lastSuccessTimeConsume)
+			return false;
+		if (lastSuccessTimeStamp != other.lastSuccessTimeStamp)
+			return false;
+		if (port == null) {
+			if (other.port != null)
+				return false;
+		} else if (!port.equals(other.port))
+			return false;
+		if (Double.doubleToLongBits(quality) != Double.doubleToLongBits(other.quality))
+			return false;
+		if (storeStatus != other.storeStatus)
+			return false;
+		if (successTimes != other.successTimes)
+			return false;
+		return true;
+	}
+
+	public int compareTo(Proxy o) {
+		// TODO Auto-generated method stub
+		if(quality > o.getQuality()) {
+			return 1;
+		}
+		return 0;
+	}
+    
 }

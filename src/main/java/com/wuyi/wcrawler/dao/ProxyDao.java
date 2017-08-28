@@ -4,8 +4,10 @@ import com.wuyi.wcrawler.bean.Proxy;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 public interface ProxyDao {
 	void insert(Proxy proxy);
-	void insert(List<Proxy> proxys);
-	void select();
+	void insertAll(List<Proxy> proxys);
+	List<Proxy> selectRand(@Param("limit")int limit);
 }

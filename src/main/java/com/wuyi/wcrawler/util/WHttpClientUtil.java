@@ -18,12 +18,14 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLException;
 
 import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.proxy.ProxyPool;
 import com.wuyi.wcrawler.proxy.WProxyUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpRequestRetryHandler;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.config.Registry;
@@ -40,10 +42,13 @@ import org.apache.http.protocol.HttpContext;
 import org.apache.http.ssl.SSLContexts;
 import org.apache.http.ssl.TrustStrategy;
 import org.apache.http.util.EntityUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 public class WHttpClientUtil {
 	private static Log LOG = LogFactory.getLog(WHttpClientUtil.class);
+	@Autowired
+	public static ProxyPool proxyPool;
 	public static CloseableHttpClient httpClient;
 	public static PoolingHttpClientConnectionManager cm;
 	private static final int MAX_RETYR = 3;
@@ -128,6 +133,10 @@ public class WHttpClientUtil {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		/**
+		 * 获取代理池实例
+		 * */
+//		proxyPool = ProxyPool.getInstance();
 	}
 	public static CloseableHttpClient getHttpClient() {
 		if(httpClient == null) {
@@ -137,7 +146,9 @@ public class WHttpClientUtil {
 	}
 
 	public static void setProxy(HttpRequestBase requestBase, Proxy proxy) {
-//		requestBase.setConfig(RequestConfig.custom().setProxy(new HttpHost(proxy.getIp(), proxy.getPort())));
+		String ip = proxy.getIp();
+		int port = Integer.valueOf(proxy.getPort());
+		requestBase.setConfig(RequestConfig.custom().setProxy(new HttpHost(ip, port)).build());
 	}
 	public static String getPage(CloseableHttpClient httpClient, String url, boolean proxyFlag) {
 		HttpGet get = new HttpGet(url);
@@ -145,7 +156,20 @@ public class WHttpClientUtil {
 			/**
 			 * 设置代理
 			 * */
-			setProxy(get, WProxyUtil.getProxy());
+			/**
+			 *
+			 *
+			 * */
+			/**********************代理测试*****************************/
+			Proxy proxy = new Proxy();
+			proxy.setIp("124.90.104.245");
+			proxy.setPort("8998");
+//			setProxy(get, proxyPool.getProxy());
+//			setProxy(get, proxy);
+			get.setConfig(RequestConfig.custom().setProxy(new HttpHost("112.82.148.175", 8118)).build());
+
+			/**********************代理测试:记得复原*****************************/
+
 		}
 		return getPage(httpClient, get, proxyFlag);
 	}
@@ -177,7 +201,7 @@ public class WHttpClientUtil {
 		 * 如果之前未使用代理,则重试时用代理
 		 * */
 		if(!proxyFlag) {
-			setProxy(requestBase, WProxyUtil.getProxy());
+			setProxy(requestBase, proxyPool.getProxy());
 		}
 		while (tries < MAX_RETYR) {
 			if((response = getHttpResponse(httpClient, requestBase)) != null && isResponseOK(response)) {

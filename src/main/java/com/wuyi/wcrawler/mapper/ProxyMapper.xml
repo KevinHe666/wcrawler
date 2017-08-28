@@ -16,8 +16,21 @@
     </resultMap>
 
     <insert id="insert" parameterType="com.wuyi.wcrawler.bean.Proxy">
-        insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimeStamp, avgSuccessTimeConsume)
-        values(#{ip}, #{port}, #{quality}, #{successTimes}, #{failureTimes}, #{lastSuccessTimeStamp}, #{avgSuccessTimeConsume})
+        insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimeStamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
+        values(#{ip}, #{port}, #{quality}, #{successTimes}, #{failureTimes}, #{lastSuccessTimeStamp}, #{lastSuccessTimeConsume}, #{avgSuccessTimeConsume}, #{storeStatus})
     </insert>
+	
+	<insert id="insertAll" parameterType="java.util.List">
+        insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimeStamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
+        values
+        <foreach collection ="list" item="item" index= "index" separator =",">
+        (#{item.ip}, #{item.port}, #{item.quality}, #{item.successTimes}, #{item.failureTimes}, 
+        #{item.lastSuccessTimeStamp}, #{item.lastSuccessTimeConsume}, #{item.avgSuccessTimeConsume}, #{item.storeStatus})
+        </foreach>
+    </insert>
+	
+ 	<select id = "selectRand" resultType = "java.util.List">
+ 		select * from proxy order by rand() limit #{limit}
+	</select>
 
 </mapper>
