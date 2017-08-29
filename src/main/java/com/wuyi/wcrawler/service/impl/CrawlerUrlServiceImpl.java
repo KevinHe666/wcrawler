@@ -1,11 +1,9 @@
 package com.wuyi.wcrawler.service.impl;
 
 import com.wuyi.wcrawler.bean.CrawlerUrlBean;
-import com.wuyi.wcrawler.crawler.Crawler;
 import com.wuyi.wcrawler.crawler.UrlCrawler;
 import com.wuyi.wcrawler.dao.CrawlerUrlDao;
 import com.wuyi.wcrawler.service.CrawlerUrlService;
-import com.wuyi.wcrawler.util.WHttpClientUtil;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -19,7 +17,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by wuyi5 on 2017/8/17.
@@ -58,14 +57,16 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
 
     public void crawler(List<CrawlerUrlBean> urls) {
         if (urls.size() == 0 || urls == null) {
-            LOG.error("url is empty or null. urls is not available.");
+            LOG.error("list<url> is empty or null.");
         }
         /**
-         * 利用线程池，并把urlCrawler实现Runable接口
+         * 利用线程池，执行爬虫任务
          * */
-//        ThreadPoolExecutor
+        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(urls.size() / 2);
         for (CrawlerUrlBean url: urls) {
-            urlCrawler.run(url);
+            UrlCrawler urlCrawler = new UrlCrawler();
+            urlCrawler.setUrl(url.getUrl());
+            fixedThreadPool.execute(urlCrawler);
         }
     }
 }

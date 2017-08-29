@@ -4,15 +4,19 @@ package com.wuyi.wcrawler.bean;
  * Created by wuyi5 on 2017/8/16.
  */
 public class CrawlerUrlBean {
+
+    private static final int CREATED = 0;
+    private static final int USED = 1;
+    private static final int UNUSED = 2;
+
     private int id;
     private String name;
     private String url;
     private int parent;
     /**
      * 0: 初始状态
-     * 1: 正在爬取
-     * 2: 爬取正常结束
-     * 3: 爬取异常结束
+     * 1: 已使用
+     * 2: 未使用
      * */
     private int status;
 

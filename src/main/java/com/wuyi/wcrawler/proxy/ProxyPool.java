@@ -41,6 +41,14 @@ public class ProxyPool {
     class CacheMonitor implements Runnable {
 
         public void run() {
+                /*******************BUG注意*****************/
+                /**
+                 *
+                 * 在多线程环境下,如果第一个while循环条件一直运行不到那就完了
+                 *
+                 *
+                 *
+                 * ***/
         		/**
         		 * 线程刚启动时，要等第一次proxyCache达到上限阈值时，才能再监控下限阈值
         		 * */

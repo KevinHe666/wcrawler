@@ -13,17 +13,22 @@ import java.io.IOException;
 /**
  * Created by wuyi5 on 2017/8/17.
  */
-public class UrlCrawler implements Crawler {
+public class UrlCrawler extends Crawler {
 
     private static final Log LOG = LogFactory.getLog(UrlCrawler.class);
-//    static {
-//        System.setProperty("javax.net.ssl.trustStore", "D:\\workspace\\IdeaProjects\\wcrawler\\src\\main\\resources\\zhihu.jks");
-//    }
-    public void run(CrawlerUrlBean url) {
+
+    public UrlCrawler() { super();}
+
+    public void run() {
+        crawl(this.getUrl());
+    }
+
+    @Override
+    public void crawl(String url) {
         LOG.info(url);
         Document home_page = null, following_page = null;
         try {
-            home_page = Jsoup.connect(url.getUrl()).get();
+            home_page = Jsoup.connect(url).get();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -38,6 +43,6 @@ public class UrlCrawler implements Crawler {
 
         Elements items = following_page.getElementById("Profile-following").child(1).children();
         LOG.info(items.toString());
-
     }
+
 }
