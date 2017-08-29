@@ -33,12 +33,11 @@ public class WcrawlerTest extends TestCase
      */
 
     public void testProxySite() {
-        CloseableHttpClient httpClient = WHttpClientUtil.getHttpClient();
         String xicidailiUrl = "http://www.xicidaili.com"; // not open
         String miniipUrl = "http://www.mimiip.com/gnpu/"; // ok
         String ip181Url = "http://www.ip181.com"; // not open
 
-        String page = WHttpClientUtil.getPage(httpClient, ip181Url, false);
+        String page = WHttpClientUtil.getPage(ip181Url, false);
         System.out.println(page);
         assertTrue( true );
     }

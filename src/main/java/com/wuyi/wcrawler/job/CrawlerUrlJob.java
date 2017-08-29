@@ -20,11 +20,16 @@ public class CrawlerUrlJob implements SimpleJob {
     @Autowired
     private CrawlerUrlServiceImpl crawlerUrlService;
     public void execute(ShardingContext shardingContext) {
+        LOG.info("CrawlerUrlJob started.");
         int shardingItem = shardingContext.getShardingItem();
         int shardingTotalCount = shardingContext.getShardingTotalCount();
         LOG.info("ShardingItem(" + shardingItem + ")");
         List<CrawlerUrlBean> urls = crawlerUrlService.fetchUrl(shardingItem, shardingTotalCount);
-        System.out.println(urls);
-//        crawlerUrlService.crawler(urls);
+        if (urls.size() == 0 || urls == null) {
+            LOG.error("list<CrawlerUrlBean> is empty or null.");
+            System.exit(-1);
+        }
+        LOG.info("List<CrawlerUrlBean> 's  size() is " + urls.size());
+        crawlerUrlService.crawler(urls);
     }
 }

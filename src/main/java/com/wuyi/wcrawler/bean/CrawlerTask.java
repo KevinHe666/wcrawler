@@ -5,10 +5,10 @@ package com.wuyi.wcrawler.bean;
  */
 public class CrawlerTask {
 
-    private static final int CREATED = 0;
-    private static final int CRAWLING = 1;
-    private static final int NORMALEND = 2;
-    private static final int ABNORMALEND = 3;
+    public static final int CREATED = 0;
+    public static final int CRAWLING = 1;
+    public static final int NORMALEND = 2;
+    public static final int ABNORMALEND = 3;
 
     private int id;
     private String url;

@@ -14,6 +14,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
+import javax.annotation.PostConstruct;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLException;
 
@@ -43,12 +44,12 @@ import org.apache.http.ssl.SSLContexts;
 import org.apache.http.ssl.TrustStrategy;
 import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-
+@Component("wHttpClientUtil")
 public class WHttpClientUtil {
 	private static Log LOG = LogFactory.getLog(WHttpClientUtil.class);
-	@Autowired
-	public static ProxyPool proxyPool;
+	private static ProxyPool proxyPool;
 	public static CloseableHttpClient httpClient;
 	public static PoolingHttpClientConnectionManager cm;
 	private static final int MAX_RETYR = 3;
@@ -56,6 +57,11 @@ public class WHttpClientUtil {
 	private static final int DEFAULT_MAXPERROUTE = 20;
 	private static final int DEFAULT_SOCKET_TIMEOUT = 3000;
 	private static final boolean TCP_NO_DEALY = false;
+	@Autowired
+	public void setProxyPool(ProxyPool proxyPool) {
+		WHttpClientUtil.proxyPool = proxyPool;
+	}
+
 	public static void init() {
 		init(DEFAULT_MAXTOTAL, DEFAULT_MAXPERROUTE);
 	}
@@ -156,9 +162,7 @@ public class WHttpClientUtil {
 		HttpGet get = new HttpGet(url);
 		setUserAgent(get, UserAgent.getUA());
 		if(proxyFlag) {
-			/**
-			 * 设置代理
-			 * */
+			/** 设置代理 */
 			setProxy(get, proxyPool.getProxy());
 		}
 		return get;
@@ -178,13 +182,9 @@ public class WHttpClientUtil {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		} else {
-			/**
-			 * 失败重试
-			 * */
-			return getPageRetry(httpClient, requestBase, proxyFlag);
 		}
-		return null;
+		/** 失败重试 */
+		return getPageRetry(httpClient, requestBase, proxyFlag);
 	}
 
 
@@ -200,6 +200,7 @@ public class WHttpClientUtil {
 			setProxy(requestBase, proxyPool.getProxy());
 		}
 		while (tries < MAX_RETYR) {
+			LOG.info(String.format("getPageRetry()--" + tries));
 			if((response = getHttpResponse(httpClient, requestBase)) != null && isResponseOK(response)) {
 				ok = true;
 				break;
@@ -218,7 +219,6 @@ public class WHttpClientUtil {
 			}
 		}
 		return null;
-
 	}
 
 	public static HttpResponse getHttpResponse(CloseableHttpClient httpClient, HttpRequestBase requestBase) {

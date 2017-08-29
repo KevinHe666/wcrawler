@@ -18,7 +18,7 @@
 
     <aop:aspectj-autoproxy expose-proxy="true" proxy-target-class="true"/>
 
-    <bean id="crawlerUrl" class="com.wuyi.wcrawler.crawler.UrlCrawler"></bean>
+    <bean id="crawlerUrl" class="com.wuyi.wcrawler.crawler.ZHCrawler"></bean>
     <!--<bean id="mimiParser" class="com.wuyi.wcrawler.proxy.parse.MimiParser"></bean>-->
 
 </beans>
