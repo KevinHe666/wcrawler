@@ -138,10 +138,6 @@ public class WHttpClientUtil {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		/**
-		 * 获取代理池实例
-		 * */
-//		proxyPool = ProxyPool.getInstance();
 	}
 	public static CloseableHttpClient createHttpClient() {
 		if(httpClient == null) {
@@ -168,6 +164,22 @@ public class WHttpClientUtil {
 			get = (HttpGet) setProxy(get, proxyPool.getProxy());
 		}
 		return get;
+	}
+
+	/** only for test */
+	public static String getPage(String url, Proxy proxy) {
+		httpClient = createHttpClient();
+		HttpGet get = (HttpGet) setProxy(new HttpGet(url), proxy);
+		HttpResponse response = getHttpResponse(httpClient, get);
+		if(response != null && isResponseOK(response)) {
+			try {
+				return EntityUtils.toString(response.getEntity());
+			} catch (IOException e) {
+				LOG.error("test getPage() failed...");
+				e.printStackTrace();
+			}
+		}
+		return null;
 	}
 
 	public static String getPage(String url, boolean proxyFlag) {

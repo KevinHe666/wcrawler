@@ -2,7 +2,6 @@ package com.wuyi.wcrawler.job;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
-import com.wuyi.wcrawler.proxy.ProxySite;
 import com.wuyi.wcrawler.service.ProxyService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

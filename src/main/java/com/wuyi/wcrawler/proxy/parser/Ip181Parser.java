@@ -2,12 +2,9 @@ package com.wuyi.wcrawler.proxy.parser;
 
 import com.wuyi.wcrawler.bean.Proxy;
 import com.wuyi.wcrawler.proxy.ProxyPool;
-import com.wuyi.wcrawler.proxy.ProxySite;
-import com.wuyi.wcrawler.util.ApplicationContextUtil;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.impl.client.CloseableHttpClient;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
