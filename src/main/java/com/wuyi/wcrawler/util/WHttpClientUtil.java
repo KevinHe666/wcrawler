@@ -150,20 +150,22 @@ public class WHttpClientUtil {
 		return httpClient;
 	}
 
-	public static void setProxy(HttpRequestBase requestBase, Proxy proxy) {
+	public static HttpRequestBase setProxy(HttpRequestBase requestBase, Proxy proxy) {
 		requestBase.setConfig(RequestConfig.custom().setProxy(new HttpHost(proxy.getIp(), Integer.valueOf(proxy.getPort()))).build());
+		return requestBase;
 	}
 
-	public static void setUserAgent(HttpRequestBase requestBase, String value) {
+	public static HttpRequestBase setUserAgent(HttpRequestBase requestBase, String value) {
 		requestBase.setHeader("User-Agent", value);
+		return requestBase;
 	}
 
 	public static HttpRequestBase createGet(String url, boolean proxyFlag) {
 		HttpGet get = new HttpGet(url);
-		setUserAgent(get, UserAgent.getUA());
+		get = (HttpGet) setUserAgent(get, UserAgent.getUA());
 		if(proxyFlag) {
 			/** 设置代理 */
-			setProxy(get, proxyPool.getProxy());
+			get = (HttpGet) setProxy(get, proxyPool.getProxy());
 		}
 		return get;
 	}
@@ -187,20 +189,17 @@ public class WHttpClientUtil {
 		return getPageRetry(httpClient, requestBase, proxyFlag);
 	}
 
-
-
 	public static String getPageRetry(CloseableHttpClient httpClient, HttpRequestBase requestBase, boolean proxyFlag) {
 		int tries = 0;
 		boolean ok = false;
 		HttpResponse response = null;
-		/**
-		 * 如果之前未使用代理,则重试时用代理
-		 * */
-		if(!proxyFlag) {
-			setProxy(requestBase, proxyPool.getProxy());
-		}
-		while (tries < MAX_RETYR) {
+
+		while ((tries++) < MAX_RETYR) {
 			LOG.info(String.format("getPageRetry()--" + tries));
+			/**
+			 * 每次重试,都重新获取代理
+			 * */
+			requestBase = setProxy(requestBase, proxyPool.getProxy());
 			if((response = getHttpResponse(httpClient, requestBase)) != null && isResponseOK(response)) {
 				ok = true;
 				break;
