@@ -1,2 +1,0 @@
-16:02:51,967  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1c4af82c: startup date [Wed Aug 16 16:02:51 CST 2017]; root of context hierarchy
-16:02:52,016  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
