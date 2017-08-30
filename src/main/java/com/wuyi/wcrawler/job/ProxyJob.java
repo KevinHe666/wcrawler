@@ -2,7 +2,6 @@ package com.wuyi.wcrawler.job;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
-import com.wuyi.wcrawler.proxy.ProxySite;
 import com.wuyi.wcrawler.service.ProxyService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -23,7 +22,7 @@ public class ProxyJob implements SimpleJob {
         LOG.info(String.format("ProxyJob handling on site %d.", item));
         /******这里分片有一个很奇怪的问题,只有0,2分片,没有1********/
         /*****************only for test********************/
-        if(siteParser.equals("mimi"))
+        if(siteParser.equals("xicidaili"))
             proxyService.downLoadProxyIp(siteParser);
     }
 }
