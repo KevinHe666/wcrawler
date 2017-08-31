@@ -1,16 +1,18 @@
-package com.wuyi.wcrawler.proxy.test;
+package com.wuyi.wcrawler.proxy;
 
 import com.wuyi.wcrawler.bean.Proxy;
-import com.wuyi.wcrawler.proxy.ProxyPool;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
  * Created by wuyi5 on 2017/8/30.
  */
-@Component("proxyTest")
+@Component(value = "proxyTest")
+@Scope("prototype")
 public class ProxyTest implements Runnable {
+    public static final String SITE = "https://www.zhihu.com/";
     @Autowired
     ProxyCollector proxyCollector;
     @Autowired
@@ -18,12 +20,9 @@ public class ProxyTest implements Runnable {
     public void run() {
         /** 循环检测下载的代理是否可用 */
         while(true) {
-            while(!proxyCollector.isEmpty()) {
-                Proxy proxy = proxyCollector.getProxy();
-                if(testProxy(ProxyTestSite.SITE0.SITE, proxy)) {
-                    /** 修改addProxy方法 */
-                    proxyPool.addProxy(proxy);
-                }
+            Proxy proxy = proxyCollector.getProxy();
+            if(testProxy(SITE, proxy)) {
+                proxyPool.getProxyCache().add(proxy);
             }
         }
     }

@@ -1,7 +1,7 @@
 package com.wuyi.wcrawler.proxy.parser;
 
 import com.wuyi.wcrawler.bean.Proxy;
-import com.wuyi.wcrawler.proxy.ProxyPool;
+import com.wuyi.wcrawler.proxy.ProxyCollector;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,11 +17,12 @@ import org.springframework.stereotype.Component;
 @Component(value = "mimi")
 public class MimiParser extends SiteParser {
 	private static Log LOG = LogFactory.getLog(MimiParser.class);
-	private final int pages = 3;
+	private final int pages = 5;
 	@Autowired
-	private ProxyPool proxyPool;
+	private ProxyCollector pCollector;
 	public MimiParser() {
 		this(ProxySite.MIMIIP.getSite());
+
 	}
 	public MimiParser(String site) {
 		super(site);
@@ -46,7 +47,7 @@ public class MimiParser extends SiteParser {
 						proxy.setIp(ip);
 						proxy.setPort(tds.get(1).text());
 //						LOG.info(proxy.getIp() + " " + proxy.getPort());
-						proxyPool.addProxy(proxy);
+						pCollector.addProxy(proxy);
 					}
 				}
 			}

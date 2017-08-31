@@ -1,7 +1,7 @@
 package com.wuyi.wcrawler.proxy.parser;
 
 import com.wuyi.wcrawler.bean.Proxy;
-import com.wuyi.wcrawler.proxy.ProxyPool;
+import com.wuyi.wcrawler.proxy.ProxyCollector;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 
 import org.apache.commons.logging.Log;
@@ -16,9 +16,9 @@ import org.springframework.stereotype.Component;
 @Component(value = "xicidaili")
 public class XicidailiParser extends SiteParser {
 	private static Log LOG = LogFactory.getLog(XicidailiParser.class);
-	private final int pages = 10;
+	private final int pages = 5;
 	@Autowired
-	private ProxyPool proxyPool;
+	private ProxyCollector pCollector;
 	public XicidailiParser() {
 		this(ProxySite.XICIDAILI.getSite());
 	}
@@ -48,7 +48,7 @@ public class XicidailiParser extends SiteParser {
 						proxy.setIp(ip);
 						proxy.setPort(tds.get(2).text());
 //						LOG.info(proxy.getIp() + " " + proxy.getPort());
-						proxyPool.addProxy(proxy);
+						pCollector.addProxy(proxy);
 					}
 				}
 			}
