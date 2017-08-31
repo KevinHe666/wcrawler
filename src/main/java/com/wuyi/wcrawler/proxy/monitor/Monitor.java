@@ -13,9 +13,6 @@ public class Monitor {
     private long runningTime;
     private String monitorName;
 
-    @Autowired
-    public ProxyPool proxyPool;
-
     public Monitor(String monitorName) {
         this.monitorName = monitorName;
     }
