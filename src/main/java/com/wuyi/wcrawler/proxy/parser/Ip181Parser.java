@@ -1,7 +1,7 @@
 package com.wuyi.wcrawler.proxy.parser;
 
 import com.wuyi.wcrawler.bean.Proxy;
-import com.wuyi.wcrawler.proxy.ProxyPool;
+import com.wuyi.wcrawler.proxy.ProxyCollector;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 public class Ip181Parser extends SiteParser {
 	Log LOG = LogFactory.getLog(Ip181Parser.class);
 	@Autowired
-	private ProxyPool proxyPool;
+	private ProxyCollector pCollecotr;
 	public Ip181Parser() {
 		this(ProxySite.IP181.getSite());
 	}
@@ -42,7 +42,7 @@ public class Ip181Parser extends SiteParser {
 				proxy.setIp(ip);
 				proxy.setPort(tds.get(1).text());
 //				LOG.info(proxy.getIp() + " " + proxy.getPort());
-				proxyPool.addProxy(proxy);
+				pCollecotr.addProxy(proxy);
 			}
 		}
 	}

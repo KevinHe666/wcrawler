@@ -2,75 +2,90 @@ package com.wuyi.wcrawler.proxy;
 
 import com.wuyi.wcrawler.bean.Proxy;
 
+import com.wuyi.wcrawler.proxy.monitor.cache.CacheHighLimitMonitor;
 import com.wuyi.wcrawler.proxy.monitor.cache.CacheMonitor;
+import com.wuyi.wcrawler.proxy.monitor.cache.CacheLowLimitMonitor;
+import com.wuyi.wcrawler.proxy.monitor.cache.CacheSyncMonitor;
+import com.wuyi.wcrawler.proxy.monitor.core.CoreLowLimitMonitor;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by wuyi5 on 2017/8/25.
  *
- * ProxyPool作为可作为请求和数据库之间的代理缓存池
+ * 代理池
  */
 @Component
 public class ProxyPool {
     private Log LOG = LogFactory.getLog(ProxyPool.class);
-	private static final int STORE_CLEAN = 0;
-    private static final int STORE_CORE = 1;
-    private static final int STORE_DB = 2;
-//    private static final int DEFAULT_PROXY_CORE_SIZE = 8; /* 512 */
-//    private static final int DEFAULT_PROXY_CORE_THRESHOLD = DEFAULT_PROXY_CORE_SIZE / 8;
-
-//    private final int CORE_EMPTY = 0;
-//    private final int CORE_FULL = DEFAULT_PROXY_CORE_SIZE;
-//    private PriorityQueue<Proxy> proxyCore;
-//    private LinkedList<Proxy> proxyCache;
-//    private ReentrantLock queueLock;
-//    private ReentrantLock cacheLock;
-
-//    @Autowired
-//    private WProxyUtil proxyUtil;
-
+    public static final int monitorNum = 4;
     @Autowired
     private ProxyCache proxyCache;
     @Autowired
     private ProxyCore proxyCore;
+    @Autowired
+    CoreLowLimitMonitor coreLowLimitMonitor;
+    @Autowired
+    CacheLowLimitMonitor cacheLowLimitMonitor;
+    @Autowired
+    CacheHighLimitMonitor cacheHighLimitMonitor;
+    @Autowired
+    CacheSyncMonitor cacheSyncMonitor;
+    private ExecutorService monitorService;
+
+    public ProxyPool() {
+        monitorService = Executors.newFixedThreadPool(monitorNum);
+        monitorService.execute(coreLowLimitMonitor);
+        monitorService.execute(cacheLowLimitMonitor);
+        monitorService.execute(cacheHighLimitMonitor);
+        monitorService.execute(cacheSyncMonitor);
+    }
+
     @Component(value = "proxyCache")
     public static class ProxyCache {
         public static final int PROXY_CACHE_MAX_SIZE = 32; /* 1024 */
         public static final int DEFAULT_PROXY_CACHE_HIGH_THRESHOLD =  PROXY_CACHE_MAX_SIZE / 8 * 7;
         public static final int DEFAULT_PROXY_CACHE_LOW_THRESHOLD = PROXY_CACHE_MAX_SIZE / 8;
-        private LinkedList<Proxy> proxyCache;
+        @Autowired
+        private WProxyUtil proxyUtil;
+        private LinkedList<Proxy> pCache;
         private ReentrantLock cacheLock;
         private Condition notFull;
         private Condition notEmpty;
+        private Condition notLowLevel;
+        private Condition notHighLevel;
 
-        public ProxyCache(){
-            proxyCache = new LinkedList<Proxy>();
+        public ProxyCache() {
+            pCache = new LinkedList<Proxy>();
             cacheLock = new ReentrantLock();
             notFull = cacheLock.newCondition();
             notEmpty = cacheLock.newCondition();
+            notLowLevel = cacheLock.newCondition();
+            notHighLevel = cacheLock.newCondition();
         }
 
-        public int size() {
+        public int cacheSize() {
             cacheLock.lock();
             try {
-                return proxyCache.size();
+                return pCache.size();
             } finally {
                 cacheLock.unlock();
             }
         }
 
         public boolean isEmpty() {
-            return size() == 0;
+            return cacheSize() == 0;
         }
         public boolean isFull() {
-            return size() == PROXY_CACHE_MAX_SIZE;
+            return cacheSize() == PROXY_CACHE_MAX_SIZE;
         }
 
         public void add(Proxy proxy) {
@@ -79,8 +94,11 @@ public class ProxyPool {
                 while(isFull()) {
                     notFull.await();
                 }
-                proxyCache.add(proxy);
-                notEmpty.signal();
+                pCache.add(proxy);
+                notEmpty.signalAll();
+                if(pCache.size() > DEFAULT_PROXY_CACHE_HIGH_THRESHOLD) {
+                    notHighLevel.signal();
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
@@ -88,7 +106,7 @@ public class ProxyPool {
             }
         }
 
-        public List<Proxy> get(int num) {
+        public List<Proxy> get(int fillNum) {
             cacheLock.lock();
             List<Proxy> proxies = null;
             try{
@@ -96,14 +114,14 @@ public class ProxyPool {
                     notEmpty.await();
                 }
                 proxies = new ArrayList<Proxy>();
-                Iterator it = proxyCache.iterator();
-                while(proxies.size() < num && it.hasNext()) {
+                Iterator it = pCache.iterator();
+                while(proxies.size() < fillNum && it.hasNext()) {
                     proxies.add((Proxy) it.next());
                     it.remove();
                 }
-                notFull.signal();
-                if(proxyCache.size() < DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
-                    /************/
+                notFull.signalAll();
+                if(pCache.size() <= DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
+                    notLowLevel.signalAll();
                 }
 
             } catch (InterruptedException e) {
@@ -113,37 +131,95 @@ public class ProxyPool {
             }
             return proxies;
         }
+
+        public void fillCache() {
+            cacheLock.lock();
+            try {
+                while (cacheSize() > DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
+                    notLowLevel.await();
+                }
+                Set<Integer> ids = new HashSet<Integer>();
+                for(Proxy proxy : pCache) {
+                    ids.add(proxy.getId());
+                }
+                List<Proxy> proxies = proxyUtil.fetchProxy(CacheMonitor.PROXY_CACHE_MAX_SIZE / 2);
+                for(Proxy proxy : proxies) {
+                    if(!ids.contains(Integer.valueOf(proxy.getId()))) {
+                        pCache.add(proxy);
+                    }
+                }
+                notEmpty.signalAll();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                cacheLock.unlock();
+            }
+        }
+
+        public void flushCache() {
+            cacheLock.lock();
+            try {
+                while (pCache.size() <= DEFAULT_PROXY_CACHE_HIGH_THRESHOLD) {
+                    notHighLevel.await();
+                }
+                List<Proxy> saveDBProxies = new ArrayList<Proxy>();
+                Iterator<Proxy> it = pCache.iterator();
+                while (it.hasNext()) {
+                    Proxy p = it.next();
+                    saveDBProxies.add(p);
+                }
+                proxyUtil.saveProxy(saveDBProxies);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                cacheLock.unlock();
+            }
+        }
+
+        public void flushTimer() {
+            cacheLock.lock();
+            try {
+                List<Proxy> saveDBProxies = new ArrayList<Proxy>();
+                Iterator<Proxy> it = pCache.iterator();
+                while (it.hasNext()) {
+                    Proxy p = it.next();
+                    saveDBProxies.add(p);
+                }
+                proxyUtil.saveProxy(saveDBProxies);
+            } finally {
+                cacheLock.unlock();
+            }
+        }
+
     }
     @Component(value = "proxyCore")
     public static class ProxyCore {
         private static final int DEFAULT_PROXY_CORE_SIZE = 8; /* 512 */
         private static final int DEFAULT_PROXY_CORE_THRESHOLD = DEFAULT_PROXY_CORE_SIZE / 8;
 
-        private PriorityQueue<Proxy> proxyCore;
+        private PriorityQueue<Proxy> pCore;
         private ReentrantLock coreLock;
         private Condition notLowLevel;
         private Condition notEmpty;
         public ProxyCore() {
-            proxyCore = new PriorityQueue<Proxy>();
+            pCore = new PriorityQueue<Proxy>();
             coreLock = new ReentrantLock();
             notLowLevel = coreLock.newCondition();
             notEmpty = coreLock.newCondition();
         }
-        public int size() {
+        public int coreSize() {
             coreLock.lock();
             try {
-                return proxyCore.size();
+                return pCore.size();
             } finally {
                 coreLock.unlock();
             }
         }
 
-//        public boolean isLowLevel
-
         public boolean isEmpty() {
             coreLock.lock();
             try {
-                return size() == 0;
+                return coreSize() == 0;
             } finally {
                 coreLock.unlock();
             }
@@ -152,7 +228,7 @@ public class ProxyPool {
         public boolean isFull() {
             coreLock.lock();
             try {
-                return size() == DEFAULT_PROXY_CORE_SIZE;
+                return coreSize() == DEFAULT_PROXY_CORE_SIZE;
             } finally {
                 coreLock.unlock();
             }
@@ -165,9 +241,9 @@ public class ProxyPool {
                 while(isEmpty()) {
                     notEmpty.await();
                 }
-                proxy = proxyCore.poll();
-                if(proxyCore.size() <= DEFAULT_PROXY_CORE_THRESHOLD) {
-                    notLowLevel.signal();
+                proxy = pCore.poll();
+                if(pCore.size() <= DEFAULT_PROXY_CORE_THRESHOLD) {
+                    notLowLevel.signalAll();
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -177,116 +253,74 @@ public class ProxyPool {
             return proxy;
         }
 
+        public void addProxy(List<Proxy> proxies) {
+            coreLock.lock();
+            try {
+                for (Proxy proxy : proxies) {
+                    pCore.add(proxy);
+                }
+            } finally {
+                coreLock.unlock();
+            }
+        }
+
         public void fillCore(ProxyCache cache) {
             coreLock.lock();
             try{
-                while(proxyCore.size() > DEFAULT_PROXY_CORE_THRESHOLD) {
+                while(pCore.size() > DEFAULT_PROXY_CORE_THRESHOLD) {
                     notLowLevel.await();
                 }
 //                /** 一个静态内部类的私有变量在另一个静态内部类的方法中居然可见... **/
 //                Iterator<Proxy> it = cache.proxyCache.iterator();
-                int fillNum = DEFAULT_PROXY_CORE_SIZE - proxyCore.size();
-                List<Proxy> proxies = cache.get(fillNum);
+
+                List<Proxy> proxies = cache.get(DEFAULT_PROXY_CORE_SIZE - pCore.size());
                 addProxy(proxies);
-                notEmpty.signal();
+                notEmpty.signalAll();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
                 coreLock.unlock();
             }
         }
-
-        public void addProxy(List<Proxy> proxies) {
-            coreLock.lock();
-            try {
-                for (Proxy proxy : proxies) {
-                    proxyCore.add(proxy);
-                }
-            } finally {
-                coreLock.unlock();
-            }
-        }
     }
 
-    public void fillPool() {
-		cacheLock.lock();
-    	try{
-            Iterator<Proxy> it = proxyCache.iterator();
-            while(!isFullProxyPool() && it.hasNext()) {
-                proxyCore.add(it.next());
-                it.remove();
-            }
-            if(proxyCache.size() < CacheMonitor.DEFAULT_PROXY_CACHE_LOW_THRESHOLD) {
-                cacheLowest.signal();
-            }
-    	} finally {
-			cacheLock.unlock();
-		}
-    	
-    }
-
-    public void fillCache() {
-        Set<Integer> ids = new HashSet<Integer>();
-        for(Proxy proxy : proxyCache) {
-            ids.add(proxy.getId());
-        }
-	    List<Proxy> proxies = proxyUtil.fetchProxy(CacheMonitor.PROXY_CACHE_MAX_SIZE / 2);
-	    	for(Proxy proxy : proxies) {
-	    		if(!ids.contains(Integer.valueOf(proxy.getId()))) {
-	    			proxyCache.add(proxy);
-	    		}
-	    	}
-	    	
-    }
-    
-    public void flushCache() {
-    	List<Proxy> saveDBProxies = new ArrayList<Proxy>();
-        Iterator<Proxy> it = proxyCache.iterator();
-        while (it.hasNext()) {
-            Proxy p = it.next();
-            saveDBProxies.add(p);
-        }
-        proxyUtil.saveProxy(saveDBProxies);
+    public Proxy getProxy() {
+        return proxyCore.getProxy();
     }
 
     public void addProxy(Proxy proxy) {
         proxyCache.add(proxy);
     }
-
     public int getProxyPoolSize() {
-        try{
-            queueLock.lock();
-            return proxyCore.size();
-        } finally {
-            queueLock.unlock();
-        }
-
+        return proxyCore.coreSize();
     }
 
     public boolean isEmptyProxyPool() {
-        try{
-            queueLock.lock();
-            return proxyCore.isEmpty();
-        } finally {
-            queueLock.unlock();
-        }
+        return proxyCore.isEmpty();
     }
 
     public boolean isFullProxyPool() {
-        try{
-            queueLock.lock();
-            return proxyCore.size() == CORE_FULL;
-        } finally {
-            queueLock.unlock();
-        }
+        return proxyCore.isFull();
     }
 
     public int getProxyCacheSize() {
-        try {
-            cacheLock.lock();
-            return proxyCache.size();
-        } finally {
-            cacheLock.unlock();
-        }
+        return proxyCache.cacheSize();
     }
+
+    public boolean isEmptyProxyCache() {
+        return proxyCache.isEmpty();
+    }
+
+    public boolean isFullProxyCache() {
+        return proxyCache.isFull();
+    }
+
+    public ProxyCore getProxyCore() {
+        return this.proxyCore;
+    }
+
+    public ProxyCache getProxyCache() {
+        return this.proxyCache;
+    }
+
 }

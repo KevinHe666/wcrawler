@@ -1,18 +1,31 @@
 package com.wuyi.wcrawler.proxy.parser;
 
+import com.wuyi.wcrawler.proxy.ProxyTest;
+import com.wuyi.wcrawler.util.ApplicationContextUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.regex.Pattern;
 
 public class SiteParser {
+	private final int testNums = 3;
 	public final String ipPattern = "^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\."
 									+"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
 									+"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
 									+"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$";
 	public String site;
-	public SiteParser() {
-		
-	}
+	public ExecutorService testService;
+	@Autowired
+	private ApplicationContextUtil applicationContextUtil;
+
 	public SiteParser(String site) {
 		this.site = site;
+		testService = Executors.newFixedThreadPool(testNums);
+		for(int i = 0; i < testNums; i++) {
+			ProxyTest pt = (ProxyTest) applicationContextUtil.getBean("proxyTest");
+			testService.execute(pt);
+		}
 	}
 	
 	public void parse() {
