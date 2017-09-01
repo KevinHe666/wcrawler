@@ -15,17 +15,12 @@ public class SiteParser {
 									+"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)\\."
 									+"(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|\\d)$";
 	public String site;
-	public ExecutorService testService;
+
 	@Autowired
 	private ApplicationContextUtil applicationContextUtil;
 
 	public SiteParser(String site) {
 		this.site = site;
-		testService = Executors.newFixedThreadPool(testNums);
-		for(int i = 0; i < testNums; i++) {
-			ProxyTest pt = (ProxyTest) applicationContextUtil.getBean("proxyTest");
-			testService.execute(pt);
-		}
 	}
 	
 	public void parse() {

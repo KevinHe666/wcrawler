@@ -1,0 +1,230 @@
+09:38:56,485  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Wed Aug 30 09:38:56 CST 2017]; root of context hierarchy
+09:38:56,531  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:38:56,764  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:38:56,793  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+09:38:57,715  INFO DruidDataSource:847 - {dataSource-1} inited
+09:39:00,061  INFO ProxyJob:20 - ProxyJob started.
+09:39:00,061  INFO ProxyJob:20 - ProxyJob started.
+09:39:00,061  INFO ProxyJob:23 - ProxyJob handling on site 0.
+09:39:00,062  INFO ProxyJob:20 - ProxyJob started.
+09:39:00,061  INFO ProxyJob:23 - ProxyJob handling on site 1.
+09:39:00,062  INFO ProxyJob:23 - ProxyJob handling on site 2.
+09:39:00,062  INFO ProxyServiceImpl:17 - mimi downloading...
+09:39:00,062  INFO MimiParser:33 - MINIIP
+09:39:00,062  INFO MimiParser:39 - http://www.mimiip.com/gngao/1
+09:39:03,436  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.mimiip.com:80: Read timed out
+09:39:03,437  INFO RetryExec:113 - Retrying request to {}->http://www.mimiip.com:80
+09:39:06,440  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.mimiip.com:80: Read timed out
+09:39:06,440  INFO RetryExec:113 - Retrying request to {}->http://www.mimiip.com:80
+09:39:09,442  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.mimiip.com:80: Read timed out
+09:39:09,442  INFO RetryExec:113 - Retrying request to {}->http://www.mimiip.com:80
+09:39:12,445 ERROR WHttpClientUtil:225 - get Response failed
+09:39:12,446  INFO WHttpClientUtil:196 - getPageRetry()--0
+09:40:00,059  INFO CrawlerUrlJob:23 - CrawlerUrlJob started.
+09:40:00,059  INFO CrawlerUrlJob:26 - ShardingItem(0)
+09:40:00,305  INFO CrawlerUrlJob:32 - List<CrawlerUrlBean> 's  size() is 1
+09:40:00,306  INFO ZHCrawler:30 - https://www.zhihu.com/people/jixin/answers
+09:54:44,337  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Wed Aug 30 09:54:44 CST 2017]; root of context hierarchy
+09:54:44,385  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+09:54:44,494  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+09:54:44,530  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+09:54:45,359  INFO DruidDataSource:847 - {dataSource-1} inited
+09:55:00,117  INFO ProxyJob:20 - ProxyJob started.
+09:55:00,117  INFO ProxyJob:23 - ProxyJob handling on site 1.
+09:55:00,117  INFO ProxyJob:20 - ProxyJob started.
+09:55:00,117  INFO ProxyJob:23 - ProxyJob handling on site 0.
+09:55:00,117  INFO ProxyJob:20 - ProxyJob started.
+09:55:00,118  INFO ProxyJob:23 - ProxyJob handling on site 2.
+09:55:00,118  INFO ProxyServiceImpl:17 - mimi downloading...
+09:55:00,118  INFO MimiParser:33 - MINIIP
+09:55:00,118  INFO MimiParser:39 - http://www.mimiip.com/gngao/1
+09:55:00,853  INFO ProxyPool:178 - 28--flushCache
+09:55:01,009  INFO ProxyPool:178 - 29--flushCache
+09:55:01,036  INFO ProxyPool:178 - 30--flushCache
+09:55:01,054  INFO ProxyPool:178 - 31--flushCache
+09:55:01,072  INFO ProxyPool:178 - 32--flushCache
+09:55:01,089  INFO MimiParser:39 - http://www.mimiip.com/gngao/2
+09:55:01,590  INFO MimiParser:39 - http://www.mimiip.com/gngao/3
+09:55:02,208  INFO MimiParser:39 - http://www.mimiip.com/gnpu/1
+09:55:02,628  INFO MimiParser:39 - http://www.mimiip.com/gnpu/2
+09:55:02,953  INFO MimiParser:39 - http://www.mimiip.com/gnpu/3
+09:57:00,021  INFO CrawlerUrlJob:23 - CrawlerUrlJob started.
+09:57:00,021  INFO CrawlerUrlJob:26 - ShardingItem(0)
+09:57:00,128  INFO CrawlerUrlJob:32 - List<CrawlerUrlBean> 's  size() is 1
+09:57:00,131  INFO ZHCrawler:30 - https://www.zhihu.com/people/jixin/answers
+09:57:01,217  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443: Connect to 119.29.103.13:8888 [/119.29.103.13] failed: Connection refused: connect
+09:57:01,218  INFO RetryExec:113 - Retrying request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443
+09:57:02,312  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443: Connect to 119.29.103.13:8888 [/119.29.103.13] failed: Connection refused: connect
+09:57:02,312  INFO RetryExec:113 - Retrying request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443
+09:57:03,391  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443: Connect to 119.29.103.13:8888 [/119.29.103.13] failed: Connection refused: connect
+09:57:03,391  INFO RetryExec:113 - Retrying request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443
+09:57:04,474 ERROR WHttpClientUtil:226 - get Response failed
+09:57:04,475  INFO WHttpClientUtil:197 - getPageRetry()--0
+09:57:25,530  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443: Connect to 222.181.61.1:8998 [/222.181.61.1] failed: Connection timed out: connect
+09:57:25,530  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443
+09:57:46,533  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443: Connect to 222.181.61.1:8998 [/222.181.61.1] failed: Connection timed out: connect
+09:57:46,533  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443
+09:58:07,540  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443: Connect to 222.181.61.1:8998 [/222.181.61.1] failed: Connection timed out: connect
+09:58:07,540  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443
+09:58:28,600 ERROR WHttpClientUtil:226 - get Response failed
+09:58:28,600  INFO WHttpClientUtil:197 - getPageRetry()--0
+09:58:49,600  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection timed out: connect
+09:58:49,600  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+09:59:10,600  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection timed out: connect
+09:59:10,600  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+09:59:31,598  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection timed out: connect
+09:59:31,598  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+09:59:52,690 ERROR WHttpClientUtil:226 - get Response failed
+09:59:52,690  INFO WHttpClientUtil:197 - getPageRetry()--0
+09:59:53,796  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused: connect
+09:59:53,796  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+09:59:54,884  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused: connect
+09:59:54,884  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+09:59:56,118  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused: connect
+09:59:56,118  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+09:59:57,323 ERROR WHttpClientUtil:226 - get Response failed
+09:59:57,324  INFO WHttpClientUtil:197 - getPageRetry()--0
+10:00:00,007  INFO CrawlerUrlJob:23 - CrawlerUrlJob started.
+10:00:00,007  INFO CrawlerUrlJob:26 - ShardingItem(0)
+10:00:00,013  INFO ProxyJob:20 - ProxyJob started.
+10:00:00,013  INFO ProxyJob:23 - ProxyJob handling on site 0.
+10:00:00,014  INFO ProxyJob:20 - ProxyJob started.
+10:00:00,014  INFO ProxyJob:23 - ProxyJob handling on site 1.
+10:00:00,015  INFO ProxyJob:20 - ProxyJob started.
+10:00:00,015  INFO ProxyJob:23 - ProxyJob handling on site 2.
+10:00:00,015  INFO ProxyServiceImpl:17 - mimi downloading...
+10:00:00,015  INFO MimiParser:33 - MINIIP
+10:00:00,015  INFO MimiParser:39 - http://www.mimiip.com/gngao/1
+10:00:01,513  INFO MimiParser:39 - http://www.mimiip.com/gngao/2
+10:00:02,160  INFO MimiParser:39 - http://www.mimiip.com/gngao/3
+10:00:02,661  INFO MimiParser:39 - http://www.mimiip.com/gnpu/1
+10:00:02,958  INFO MimiParser:39 - http://www.mimiip.com/gnpu/2
+10:00:03,174  INFO MimiParser:39 - http://www.mimiip.com/gnpu/3
+10:00:18,328  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443: Connect to 123.84.13.240:8118 [/123.84.13.240] failed: Connection timed out: connect
+10:00:18,328  INFO RetryExec:113 - Retrying request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443
+10:00:39,420  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443: Connect to 123.84.13.240:8118 [/123.84.13.240] failed: Connection timed out: connect
+10:00:39,420  INFO RetryExec:113 - Retrying request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443
+10:01:00,430  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443: Connect to 123.84.13.240:8118 [/123.84.13.240] failed: Connection timed out: connect
+10:01:00,430  INFO RetryExec:113 - Retrying request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443
+10:01:21,440 ERROR WHttpClientUtil:226 - get Response failed
+10:01:21,440  INFO WHttpClientUtil:197 - getPageRetry()--0
+10:01:22,460  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused: connect
+10:01:22,460  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+10:01:23,494  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused: connect
+10:01:23,494  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+10:01:24,542  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused: connect
+10:01:24,542  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+10:01:25,573 ERROR WHttpClientUtil:226 - get Response failed
+10:01:25,573  INFO WHttpClientUtil:197 - getPageRetry()--0
+10:01:46,576  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443: Connect to 123.84.13.240:8118 [/123.84.13.240] failed: Connection timed out: connect
+10:01:46,576  INFO RetryExec:113 - Retrying request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443
+10:02:07,579  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443: Connect to 123.84.13.240:8118 [/123.84.13.240] failed: Connection timed out: connect
+10:02:07,579  INFO RetryExec:113 - Retrying request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443
+10:02:28,580  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443: Connect to 123.84.13.240:8118 [/123.84.13.240] failed: Connection timed out: connect
+10:02:28,580  INFO RetryExec:113 - Retrying request to {tls}->http://123.84.13.240:8118->https://www.zhihu.com:443
+10:02:49,620 ERROR WHttpClientUtil:226 - get Response failed
+10:02:49,620  INFO WHttpClientUtil:197 - getPageRetry()--0
+10:02:50,695  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused: connect
+10:02:50,695  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+10:02:51,899  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused: connect
+10:02:51,899  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+10:02:52,990  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused: connect
+10:02:52,990  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+10:02:54,029 ERROR WHttpClientUtil:226 - get Response failed
+10:02:54,029  INFO WHttpClientUtil:197 - getPageRetry()--0
+10:13:22,091  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Wed Aug 30 10:13:22 CST 2017]; root of context hierarchy
+10:13:22,144  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+10:13:22,254  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+10:13:22,287  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+10:13:23,104  INFO DruidDataSource:847 - {dataSource-1} inited
+10:14:00,082  INFO ProxyJob:20 - ProxyJob started.
+10:14:00,083  INFO ProxyJob:23 - ProxyJob handling on site 0.
+10:14:00,083  INFO ProxyJob:20 - ProxyJob started.
+10:14:00,083  INFO ProxyJob:23 - ProxyJob handling on site 1.
+10:14:00,083  INFO ProxyJob:20 - ProxyJob started.
+10:14:00,083  INFO ProxyJob:23 - ProxyJob handling on site 2.
+10:14:00,083  INFO ProxyServiceImpl:17 - mimi downloading...
+10:14:00,084  INFO MimiParser:33 - MINIIP
+10:14:00,084  INFO MimiParser:39 - http://www.mimiip.com/gngao/1
+10:14:00,546  INFO ProxyPool:178 - 28--flushCache
+10:14:00,701  INFO ProxyPool:178 - 29--flushCache
+10:14:00,723  INFO ProxyPool:178 - 30--flushCache
+10:14:00,744  INFO ProxyPool:178 - 31--flushCache
+10:14:00,758  INFO ProxyPool:178 - 32--flushCache
+10:14:00,768  INFO MimiParser:39 - http://www.mimiip.com/gngao/2
+10:14:01,018  INFO MimiParser:39 - http://www.mimiip.com/gngao/3
+10:14:01,347  INFO MimiParser:39 - http://www.mimiip.com/gnpu/1
+10:14:01,683  INFO MimiParser:39 - http://www.mimiip.com/gnpu/2
+10:14:01,812  INFO MimiParser:39 - http://www.mimiip.com/gnpu/3
+10:15:00,021  INFO CrawlerUrlJob:23 - CrawlerUrlJob started.
+10:15:00,021  INFO CrawlerUrlJob:26 - ShardingItem(0)
+10:15:00,133  INFO CrawlerUrlJob:32 - List<CrawlerUrlBean> 's  size() is 1
+10:15:00,134  INFO ZHCrawler:30 - https://www.zhihu.com/people/jixin/answers
+10:15:03,494  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443: Read timed out
+10:15:03,495  INFO RetryExec:113 - Retrying request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443
+10:15:06,599  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443: Read timed out
+10:15:06,599  INFO RetryExec:113 - Retrying request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443
+10:15:09,710  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443: Read timed out
+10:15:09,710  INFO RetryExec:113 - Retrying request to {tls}->http://119.29.103.13:8888->https://www.zhihu.com:443
+10:15:13,980 ERROR WHttpClientUtil:226 - get Response failed
+10:15:13,980  INFO WHttpClientUtil:197 - getPageRetry()--1
+10:15:34,986  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443: Connect to 222.181.61.1:8998 [/222.181.61.1] failed: Connection timed out: connect
+10:15:34,986  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443
+10:15:55,986  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443: Connect to 222.181.61.1:8998 [/222.181.61.1] failed: Connection timed out: connect
+10:15:55,986  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443
+10:16:16,985  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443: Connect to 222.181.61.1:8998 [/222.181.61.1] failed: Connection timed out: connect
+10:16:16,985  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.61.1:8998->https://www.zhihu.com:443
+10:16:37,986 ERROR WHttpClientUtil:226 - get Response failed
+10:16:37,987  INFO WHttpClientUtil:197 - getPageRetry()--2
+10:16:58,989  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection timed out: connect
+10:16:58,989  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+10:17:19,985  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection timed out: connect
+10:17:19,985  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+10:17:40,986  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection timed out: connect
+10:17:40,986  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+10:18:02,036 ERROR WHttpClientUtil:226 - get Response failed
+10:18:02,036  INFO WHttpClientUtil:197 - getPageRetry()--3
+10:18:03,140  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused: connect
+10:18:03,140  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+10:18:04,258  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused: connect
+10:18:04,258  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+10:18:05,360  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused: connect
+10:18:05,361  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+10:18:06,452 ERROR WHttpClientUtil:226 - get Response failed
+10:28:00,008  INFO ProxyJob:20 - ProxyJob started.
+10:28:00,008  INFO ProxyJob:23 - ProxyJob handling on site 0.
+10:28:00,008  INFO ProxyJob:20 - ProxyJob started.
+10:28:00,008  INFO ProxyJob:23 - ProxyJob handling on site 1.
+10:28:00,009  INFO ProxyJob:20 - ProxyJob started.
+10:28:00,009  INFO ProxyJob:23 - ProxyJob handling on site 2.
+10:28:00,009  INFO ProxyServiceImpl:17 - mimi downloading...
+10:28:00,009  INFO MimiParser:33 - MINIIP
+10:28:00,009  INFO MimiParser:39 - http://www.mimiip.com/gngao/1
+10:28:00,281  INFO MimiParser:39 - http://www.mimiip.com/gngao/2
+10:28:00,618  INFO MimiParser:39 - http://www.mimiip.com/gngao/3
+10:28:00,945  INFO MimiParser:39 - http://www.mimiip.com/gnpu/1
+10:28:01,063  INFO MimiParser:39 - http://www.mimiip.com/gnpu/2
+10:28:01,444  INFO MimiParser:39 - http://www.mimiip.com/gnpu/3
+10:30:00,006  INFO CrawlerUrlJob:23 - CrawlerUrlJob started.
+10:30:00,006  INFO CrawlerUrlJob:26 - ShardingItem(0)
+11:11:38,112  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@39ed3c8d: startup date [Wed Aug 30 11:11:38 CST 2017]; root of context hierarchy
+11:11:38,157  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:11:38,274  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:11:38,304  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+11:11:39,221  INFO DruidDataSource:847 - {dataSource-1} inited
+11:12:00,065  INFO ProxyJob:20 - ProxyJob started.
+11:12:00,065  INFO ProxyJob:23 - ProxyJob handling on site 0.
+11:12:00,065  INFO ProxyJob:20 - ProxyJob started.
+11:12:00,065  INFO ProxyJob:23 - ProxyJob handling on site 1.
+11:12:00,065  INFO ProxyServiceImpl:17 - xicidaili downloading...
+11:12:00,065  INFO ProxyJob:20 - ProxyJob started.
+11:12:00,066  INFO ProxyJob:23 - ProxyJob handling on site 2.
+11:12:00,066  INFO XicidailiParser:36 - XICIDAILI
+11:12:00,066  INFO XicidailiParser:40 - nn
+11:12:00,531  INFO XicidailiParser:40 - nt
+11:12:00,776  INFO XicidailiParser:40 - wn
+11:12:00,957  INFO XicidailiParser:40 - wt
+11:13:00,024  INFO CrawlerUrlJob:23 - CrawlerUrlJob started.
+11:13:00,024  INFO CrawlerUrlJob:26 - ShardingItem(0)
+11:13:00,205  INFO CrawlerUrlJob:32 - List<CrawlerUrlBean> 's  size() is 1
+11:13:00,207  INFO ZHCrawler:30 - https://www.zhihu.com/people/jixin/answers

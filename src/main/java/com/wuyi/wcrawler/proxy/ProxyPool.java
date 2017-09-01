@@ -31,22 +31,9 @@ public class ProxyPool {
     private ProxyCache proxyCache;
     @Autowired
     private ProxyCore proxyCore;
-    @Autowired
-    CoreLowLimitMonitor coreLowLimitMonitor;
-    @Autowired
-    CacheLowLimitMonitor cacheLowLimitMonitor;
-    @Autowired
-    CacheHighLimitMonitor cacheHighLimitMonitor;
-    @Autowired
-    CacheSyncMonitor cacheSyncMonitor;
-    private ExecutorService monitorService;
 
     public ProxyPool() {
-        monitorService = Executors.newFixedThreadPool(monitorNum);
-        monitorService.execute(coreLowLimitMonitor);
-        monitorService.execute(cacheLowLimitMonitor);
-        monitorService.execute(cacheHighLimitMonitor);
-        monitorService.execute(cacheSyncMonitor);
+
     }
 
     @Component(value = "proxyCache")

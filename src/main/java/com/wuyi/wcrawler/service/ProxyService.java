@@ -1,5 +1,6 @@
 package com.wuyi.wcrawler.service;
 
 public interface ProxyService {
-	public void downLoadProxyIp(String siteParser);
+	public void init();
+	public void downLoadProxy (String siteParser);
 }

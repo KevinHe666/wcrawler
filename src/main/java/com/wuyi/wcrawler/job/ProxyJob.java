@@ -20,6 +20,8 @@ public class ProxyJob implements SimpleJob {
 //        int item = shardingContext.getShardingItem();
         String siteParser = shardingContext.getShardingParameter();
         LOG.info(String.format("ProxyJob handling on site %d.", siteParser));
-        proxyService.downLoadProxyIp(siteParser);
+        /** 难道每个分片执行一次init(),究竟什么是分布式??? */
+        proxyService.init();
+        proxyService.downLoadProxy(siteParser);
     }
 }
