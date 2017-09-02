@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 @Component(value = "xicidaili")
 public class XicidailiParser extends SiteParser {
 	private static Log LOG = LogFactory.getLog(XicidailiParser.class);
-	private final int pages = 5;
+	private final int pages = 10;
 	@Autowired
 	private ProxyCollector pCollector;
 	public XicidailiParser() {

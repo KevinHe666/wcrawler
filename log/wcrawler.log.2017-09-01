@@ -1,0 +1,9 @@
+11:52:45,995  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4d591d15: startup date [Sat Sep 02 11:52:45 CST 2017]; root of context hierarchy
+11:52:46,198  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+11:52:46,692  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+11:52:46,835  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+11:52:48,887  INFO DruidDataSource:847 - {dataSource-1} inited
+11:53:00,108  INFO ProxyJob:19 - ProxyJob started.
+11:53:00,108  INFO ProxyJob:19 - ProxyJob started.
+11:53:00,124  INFO ProxyJob:19 - ProxyJob started.
+11:53:00,124  INFO ProxyJob:19 - ProxyJob started.

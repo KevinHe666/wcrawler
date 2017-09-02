@@ -1,0 +1,37 @@
+22:49:38,371  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4d591d15: startup date [Thu Aug 31 22:49:38 CST 2017]; root of context hierarchy
+22:49:38,567  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+22:49:39,041  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+22:49:39,191  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+22:49:41,209  INFO DruidDataSource:847 - {dataSource-1} inited
+22:49:51,308  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'regCenter': Invocation of init method failed; nested exception is com.dangdang.ddframe.job.reg.exception.RegException: org.apache.zookeeper.KeeperException$OperationTimeoutException: KeeperErrorCode = OperationTimeout
+22:49:51,315  INFO DruidDataSource:1608 - {dataSource-1} closed
+22:52:01,507  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4d591d15: startup date [Thu Aug 31 22:52:01 CST 2017]; root of context hierarchy
+22:52:01,635  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+22:52:01,991  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+22:52:02,104  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+22:52:04,070  INFO DruidDataSource:847 - {dataSource-1} inited
+22:52:05,872  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'monitor' defined in file [/Users/wuyi/workspace/wcrawler/target/classes/com/wuyi/wcrawler/proxy/monitor/Monitor.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+22:52:05,880  INFO DruidDataSource:1608 - {dataSource-1} closed
+23:00:00,594  INFO ProxyJob:19 - ProxyJob started.
+23:00:00,594  INFO ProxyJob:19 - ProxyJob started.
+23:00:00,594  INFO ProxyJob:19 - ProxyJob started.
+23:38:17,044  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4d591d15: startup date [Thu Aug 31 23:38:17 CST 2017]; root of context hierarchy
+23:38:17,155  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+23:38:17,551  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+23:38:17,652  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+23:38:19,774  INFO DruidDataSource:847 - {dataSource-1} inited
+23:38:21,683  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'proxyPool' defined in file [/Users/wuyi/workspace/wcrawler/target/classes/com/wuyi/wcrawler/proxy/ProxyPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.wuyi.wcrawler.proxy.ProxyPool]: Constructor threw exception; nested exception is java.lang.NullPointerException
+23:38:21,689  INFO DruidDataSource:1608 - {dataSource-1} closed
+23:39:00,052  INFO ProxyJob:19 - ProxyJob started.
+23:39:00,052  INFO ProxyJob:19 - ProxyJob started.
+23:39:00,053  INFO ProxyJob:19 - ProxyJob started.
+23:39:14,937  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4d591d15: startup date [Thu Aug 31 23:39:14 CST 2017]; root of context hierarchy
+23:39:15,058  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+23:39:15,446  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+23:39:15,528  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+23:39:17,232  INFO DruidDataSource:847 - {dataSource-1} inited
+23:39:18,447  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'proxyPool' defined in file [/Users/wuyi/workspace/wcrawler/target/classes/com/wuyi/wcrawler/proxy/ProxyPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.wuyi.wcrawler.proxy.ProxyPool]: Constructor threw exception; nested exception is java.lang.NullPointerException
+23:39:18,456  INFO DruidDataSource:1608 - {dataSource-1} closed
+23:40:00,055  INFO ProxyJob:19 - ProxyJob started.
+23:40:00,056  INFO ProxyJob:19 - ProxyJob started.
+23:40:00,056  INFO ProxyJob:19 - ProxyJob started.

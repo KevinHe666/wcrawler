@@ -36,7 +36,6 @@ public class Ip181Parser extends SiteParser {
 		for(Element tr : trs) {
 			Elements tds = tr.children();
 			String ip = tds.get(0).text();
-			LOG.info(ip);
 			if(isIpOk(ip)) {
 				Proxy proxy = new Proxy();
 				proxy.setIp(ip);
@@ -45,12 +44,5 @@ public class Ip181Parser extends SiteParser {
 				pCollecotr.addProxy(proxy);
 			}
 		}
-	}
-
-	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:mybatis-druid.xml", "classpath:elastic-job-lite.xml",
-				"spring.xml");
-		Ip181Parser ip = (Ip181Parser) ctx.getBean("ip181");
-		ip.parse();
 	}
 }

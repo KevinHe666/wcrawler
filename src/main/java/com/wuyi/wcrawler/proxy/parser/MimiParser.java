@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 @Component(value = "mimi")
 public class MimiParser extends SiteParser {
 	private static Log LOG = LogFactory.getLog(MimiParser.class);
-	private final int pages = 5;
+	private final int pages = 10;
 	@Autowired
 	private ProxyCollector pCollector;
 	public MimiParser() {

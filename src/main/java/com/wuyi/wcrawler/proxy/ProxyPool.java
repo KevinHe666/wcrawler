@@ -172,7 +172,9 @@ public class ProxyPool {
                     Proxy p = it.next();
                     saveDBProxies.add(p);
                 }
-                proxyUtil.saveProxy(saveDBProxies);
+                if (saveDBProxies.size() > 0) {
+                    proxyUtil.saveProxy(saveDBProxies);
+                }
             } finally {
                 cacheLock.unlock();
             }
