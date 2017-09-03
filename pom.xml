@@ -132,7 +132,13 @@
       <version>4.4.6</version>
     </dependency>
     <!-- httpcore e -->
-
+    <!-- guava b -->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>23.0</version>
+    </dependency>
+    <!-- guava e -->
   </dependencies>
 
 

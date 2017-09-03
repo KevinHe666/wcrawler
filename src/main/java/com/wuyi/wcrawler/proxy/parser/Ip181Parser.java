@@ -40,6 +40,7 @@ public class Ip181Parser extends SiteParser {
 				Proxy proxy = new Proxy();
 				proxy.setIp(ip);
 				proxy.setPort(tds.get(1).text());
+
 //				LOG.info(proxy.getIp() + " " + proxy.getPort());
 				pCollecotr.addProxy(proxy);
 			}
