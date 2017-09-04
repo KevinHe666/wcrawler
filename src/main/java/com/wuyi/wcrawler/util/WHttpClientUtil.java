@@ -14,13 +14,12 @@ import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 
-import javax.annotation.PostConstruct;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLException;
 
 import com.wuyi.wcrawler.bean.Proxy;
 import com.wuyi.wcrawler.proxy.ProxyPool;
-import com.wuyi.wcrawler.proxy.WProxyUtil;
+import com.wuyi.wcrawler.proxy.util.UserAgent;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.*;

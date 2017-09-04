@@ -2,19 +2,14 @@ package com.wuyi.wcrawler.proxy;
 
 import com.wuyi.wcrawler.bean.Proxy;
 
-import com.wuyi.wcrawler.proxy.monitor.cache.CacheHighLimitMonitor;
 import com.wuyi.wcrawler.proxy.monitor.cache.CacheMonitor;
-import com.wuyi.wcrawler.proxy.monitor.cache.CacheLowLimitMonitor;
-import com.wuyi.wcrawler.proxy.monitor.cache.CacheSyncMonitor;
-import com.wuyi.wcrawler.proxy.monitor.core.CoreLowLimitMonitor;
+import com.wuyi.wcrawler.proxy.util.WProxyUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 

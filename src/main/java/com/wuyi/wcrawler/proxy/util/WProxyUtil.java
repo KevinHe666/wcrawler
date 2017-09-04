@@ -1,4 +1,4 @@
-package com.wuyi.wcrawler.proxy;
+package com.wuyi.wcrawler.proxy.util;
 
 import com.wuyi.wcrawler.bean.Proxy;
 import com.wuyi.wcrawler.dao.ProxyDao;

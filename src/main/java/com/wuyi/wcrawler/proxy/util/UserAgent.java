@@ -1,4 +1,4 @@
-package com.wuyi.wcrawler.util;
+package com.wuyi.wcrawler.proxy.util;
 
 import java.util.Random;
 

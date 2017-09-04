@@ -132,13 +132,21 @@
       <version>4.4.6</version>
     </dependency>
     <!-- httpcore e -->
-    <!-- guava b -->
+    <!-- jedis b -->
     <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>23.0</version>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.9.0</version>
     </dependency>
-    <!-- guava e -->
+    <!-- jedis e -->
+    <!-- redisson b -->
+    <dependency>
+      <groupId>org.redisson</groupId>
+      <artifactId>redisson</artifactId>
+      <version>3.5.1</version>
+    </dependency>
+    <!-- redisson e -->
+
   </dependencies>
 
 
