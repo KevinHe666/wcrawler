@@ -3,10 +3,23 @@ package com.wuyi.wcrawler.bean;
 /**
  * Created by wuyi5 on 2017/8/25.
  */
-public class Proxy implements Comparable<Proxy>{
+public class Proxy implements Comparable<Proxy> {
+    public static final int STORE_COLLECTOR = 0;
+    public static final int STORE_CACHE = 1;
+    public static final int STORE_CORE = 2;
+    public static final int STORE_DB = 3;
+
+
     private int id;
     private String ip;
     private String port;
+
+    public Proxy() {}
+
+    public Proxy(String ip, String port) {
+        this.ip = ip;
+        this.port = port;
+    }
 
     /**
      * 代理的质量评分
@@ -34,8 +47,8 @@ public class Proxy implements Comparable<Proxy>{
     private long avgSuccessTimeConsume;
     /**
      * 标记该proxy的存储状态:
-     * 0: proxyCache存储过该proxy,proxyQueue和database未存储过该proxy;
-     * 1: proxyQueue存储过该poxy;
+     * 0: proxyCache存储过该proxy,proxyCore和database未存储过该proxy;
+     * 1: proxyCore存储过该poxy;
      * 2: database存储过该proxy;
      * */
     private int storeStatus;

@@ -3,6 +3,7 @@ package com.wuyi.wcrawler.proxy;
 import com.wuyi.wcrawler.bean.Proxy;
 
 import com.wuyi.wcrawler.proxy.monitor.cache.CacheMonitor;
+import com.wuyi.wcrawler.proxy.util.ProxyFilterUtil;
 import com.wuyi.wcrawler.proxy.util.WProxyUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -124,6 +125,7 @@ public class ProxyPool {
                 for(Proxy proxy : pCache) {
                     ids.add(proxy.getId());
                 }
+                /** 这里从数据库中取Proxy时，limit会有一个问题：cache需要的数量可能大于数据库中有的proxy数量 */
                 List<Proxy> proxies = proxyUtil.fetchProxy(CacheMonitor.PROXY_CACHE_MAX_SIZE / 2);
                 for(Proxy proxy : proxies) {
                     if(!ids.contains(Integer.valueOf(proxy.getId()))) {
@@ -147,8 +149,10 @@ public class ProxyPool {
                 List<Proxy> saveDBProxies = new ArrayList<Proxy>();
                 Iterator<Proxy> it = pCache.iterator();
                 while (it.hasNext()) {
-                    Proxy p = it.next();
-                    saveDBProxies.add(p);
+                    Proxy proxy = it.next();
+                    if(proxy.getStoreStatus() != Proxy.STORE_DB) {
+                        saveDBProxies.add(proxy);
+                    }
                 }
                 proxyUtil.saveProxy(saveDBProxies);
             } catch (InterruptedException e) {
@@ -164,8 +168,12 @@ public class ProxyPool {
                 List<Proxy> saveDBProxies = new ArrayList<Proxy>();
                 Iterator<Proxy> it = pCache.iterator();
                 while (it.hasNext()) {
-                    Proxy p = it.next();
-                    saveDBProxies.add(p);
+                    Proxy proxy = it.next();
+                    /** 如果该proxy从未写入过数据库，则写入到数据库 */
+                    if(proxy.getStoreStatus() != Proxy.STORE_DB) {
+                        proxy.setStoreStatus(Proxy.STORE_DB);
+                        saveDBProxies.add(proxy);
+                    }
                 }
                 if (saveDBProxies.size() > 0) {
                     proxyUtil.saveProxy(saveDBProxies);

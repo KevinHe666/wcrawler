@@ -9,9 +9,11 @@ import org.redisson.api.RSet;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -43,12 +45,19 @@ public class ProxyFilterUtil {
         try {
             Config config = new Config();
             config.useSingleServer().setAddress("redis://" + IP + ":" + PORT);
+            /** 注意：这里连接完成后，会一直保持连接不断开，可以用shutdown()断开 */
             client = Redisson.create(config);
             LOG.info("Redis connect: " + client);
         } catch (Exception e) {
             LOG.error("Redis connect failed.");
         }
     }
+
+    @PreDestroy
+    public static void destroy() {
+        client.shutdown();
+    }
+
     public static boolean contains(Proxy proxy) {
         rwLock = client.getReadWriteLock("ProxyFilterLock");
         rwLock.readLock().lock();
@@ -91,4 +100,20 @@ public class ProxyFilterUtil {
         byte[] hashProxy = md5.digest(simpleProxy.getBytes("utf-8"));
         return hashProxy;
     }
+
+//    public static void main(String[] args) {
+//        new ClassPathXmlApplicationContext("classpath:mybatis-druid.xml",
+//                "spring.xml");
+//        if(ProxyFilterUtil.contains(new Proxy("58.22.61.211", "3128"))) {
+//            LOG.info("true");
+//        } else {
+//            LOG.info("false");
+//        }
+//        if(ProxyFilterUtil.contains(new Proxy("58.22.61.212", "3128"))) {
+//            LOG.info("true");
+//        } else {
+//            LOG.info("false");
+//        }
+//    }
+
 }

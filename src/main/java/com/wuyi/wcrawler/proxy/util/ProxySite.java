@@ -1,4 +1,4 @@
-package com.wuyi.wcrawler.proxy.parser;
+package com.wuyi.wcrawler.proxy.util;
 
 import com.wuyi.wcrawler.proxy.parser.Ip181Parser;
 import com.wuyi.wcrawler.proxy.parser.MimiParser;

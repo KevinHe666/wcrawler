@@ -5,11 +5,14 @@ import com.wuyi.wcrawler.dao.ProxyDao;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Component(value = "wProxyUtil")
 public class WProxyUtil {
 	private static Log LOG = LogFactory.getLog(WProxyUtil.class);
 

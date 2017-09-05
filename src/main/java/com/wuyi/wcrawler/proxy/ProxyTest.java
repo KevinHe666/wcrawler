@@ -1,6 +1,7 @@
 package com.wuyi.wcrawler.proxy;
 
 import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.proxy.util.ProxyFilterUtil;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -26,7 +27,11 @@ public class ProxyTest implements Runnable {
             Proxy proxy = proxyCollector.getProxy();
             if(testProxy(SITE, proxy)) {
                 LOG.info(String.format("Test Success: ip %s port %s", proxy.getIp(), proxy.getPort()));
-                proxyPool.getProxyCache().add(proxy);
+                /** 再次检测是否已经下载了该proxy  */
+                if(!ProxyFilterUtil.contains(proxy)) {
+                    ProxyFilterUtil.add(proxy);
+                    proxyPool.getProxyCache().add(proxy);
+                }
             }
         }
     }
