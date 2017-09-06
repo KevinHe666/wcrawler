@@ -29,11 +29,26 @@
         </foreach>
     </insert>
 	
- 	<select id = "selectRand" resultType = "java.util.List">
- 		select * from proxy order by rand() limit #{limit}
-	</select>
+ 	<select id = "selectRand" resultType = "com.wuyi.wcrawler.bean.Proxy">
+        SELECT *
+        FROM proxy t1
+            JOIN (SELECT ROUND(RAND() * ((
+                SELECT MAX(id)
+                FROM proxy
+                ) - (
+                SELECT MIN(id)
+                FROM proxy
+                )) + (
+                SELECT MIN(id)
+                FROM proxy
+                )) AS id
+                ) t2
+        WHERE t1.id >= t2.id
+        ORDER BY t1.id
+        LIMIT #{limit};
+    </select>
 
-    <select id="count" resultType="java.util.Integer">
+    <select id="count" resultType="java.lang.Integer">
       SELECT COUNT(*) FROM proxy;
     </select>
 

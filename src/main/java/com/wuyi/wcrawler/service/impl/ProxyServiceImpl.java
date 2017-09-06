@@ -62,12 +62,13 @@ public class ProxyServiceImpl implements ProxyService {
 	}
 
 	public void downLoadProxy(String siteParser) throws InterruptedException {
-		LOG.info(siteParser + " downloading...");
+		LOG.info(siteParser + " download start.");
 		SiteParser sp = (SiteParser) applicationContextUtil.getBean(siteParser);
 		sp.parse();
 
-		TimeUnit.MINUTES.sleep(3);
+		TimeUnit.MINUTES.sleep(5);
 		threadPool.shutdown();
+		LOG.info(siteParser + " download ended.");
 	}
 
 }

@@ -19,7 +19,7 @@ public class WProxyUtil {
 	private static ProxyDao proxyDao;
 
 	@Autowired
-	public static void setProxyDao(ProxyDao proxyDao) {
+	public  void setProxyDao(ProxyDao proxyDao) {
 		WProxyUtil.proxyDao = proxyDao;
 	}
 
