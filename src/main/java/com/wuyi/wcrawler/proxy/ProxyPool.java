@@ -152,6 +152,7 @@ public class ProxyPool {
                 while (it.hasNext()) {
                     Proxy proxy = it.next();
                     if(proxy.getStoreStatus() != Proxy.STORE_DB) {
+                        proxy.setStoreStatus(Proxy.STORE_DB);
                         saveDBProxies.add(proxy);
                     }
                 }
