@@ -10,4 +10,5 @@ public interface ProxyDao {
 	void insert(Proxy proxy);
 	void insertAll(List<Proxy> proxys);
 	List<Proxy> selectRand(@Param("limit")int limit);
+	Integer count();
 }

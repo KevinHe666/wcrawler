@@ -33,4 +33,8 @@
  		select * from proxy order by rand() limit #{limit}
 	</select>
 
+    <select id="count" resultType="java.util.Integer">
+      SELECT COUNT(*) FROM proxy;
+    </select>
+
 </mapper>

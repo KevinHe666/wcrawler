@@ -19,10 +19,9 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * 代理池
  */
-@Component
+@Component(value = "proxyPool")
 public class ProxyPool {
     private Log LOG = LogFactory.getLog(ProxyPool.class);
-    public static final int monitorNum = 4;
     @Autowired
     private ProxyCache proxyCache;
     @Autowired
@@ -37,8 +36,7 @@ public class ProxyPool {
         public static final int PROXY_CACHE_MAX_SIZE = 32; /* 1024 */
         public static final int DEFAULT_PROXY_CACHE_HIGH_THRESHOLD =  PROXY_CACHE_MAX_SIZE / 8 * 7;
         public static final int DEFAULT_PROXY_CACHE_LOW_THRESHOLD = PROXY_CACHE_MAX_SIZE / 8;
-        @Autowired
-        private WProxyUtil proxyUtil;
+
         private LinkedList<Proxy> pCache;
         private ReentrantLock cacheLock;
         private Condition notFull;
@@ -125,8 +123,11 @@ public class ProxyPool {
                 for(Proxy proxy : pCache) {
                     ids.add(proxy.getId());
                 }
-                /** 这里从数据库中取Proxy时，limit会有一个问题：cache需要的数量可能大于数据库中有的proxy数量 */
-                List<Proxy> proxies = proxyUtil.fetchProxy(CacheMonitor.PROXY_CACHE_MAX_SIZE / 2);
+                /** 如果数据库中的proxy总数小于需要填充的proxy总数,则把数据库中所有的proxy取出来进行填充 */
+                int totalNumber = WProxyUtil.countProxy();
+                int fillNumber = CacheMonitor.PROXY_CACHE_MAX_SIZE / 2;
+                int limit = totalNumber > fillNumber ? fillNumber : totalNumber;
+                List<Proxy> proxies = WProxyUtil.fetchProxy(limit);
                 for(Proxy proxy : proxies) {
                     if(!ids.contains(Integer.valueOf(proxy.getId()))) {
                         pCache.add(proxy);
@@ -154,7 +155,7 @@ public class ProxyPool {
                         saveDBProxies.add(proxy);
                     }
                 }
-                proxyUtil.saveProxy(saveDBProxies);
+                WProxyUtil.saveProxy(saveDBProxies);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
@@ -176,7 +177,7 @@ public class ProxyPool {
                     }
                 }
                 if (saveDBProxies.size() > 0) {
-                    proxyUtil.saveProxy(saveDBProxies);
+                    WProxyUtil.saveProxy(saveDBProxies);
                 }
             } finally {
                 cacheLock.unlock();
