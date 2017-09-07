@@ -191,7 +191,7 @@ public class WHttpClientUtil {
 		HttpResponse response = getHttpResponse(httpClient, requestBase);
 		if(response != null && isResponseOK(response)) {
 			try {
-				return EntityUtils.toString(response.getEntity());
+				return EntityUtils.toString(response.getEntity(), "utf-8");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
