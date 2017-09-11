@@ -27,12 +27,12 @@ public class ZHCrawler extends Crawler {
 
     @Override
     public void crawl(String url) {
-        LOG.info(url);
+        LOG.info("startUrl: " + url);
         String peopleHtml = WHttpClientUtil.getPage(url, true);
         Document peopleDoc = Jsoup.parse(peopleHtml);
         Element a = peopleDoc.getElementsByClass("FollowshipCard-counts").first().child(0);
         String followingUrl = a.absUrl("href");
-        LOG.info(followingUrl);
+        LOG.info("followingUrl: " + followingUrl);
         String followingHtml = WHttpClientUtil.getPage(followingUrl, true);
         Document followingDoc = Jsoup.parse(followingHtml);
         Elements items = followingDoc.getElementById("Profile-following").child(1).children();
