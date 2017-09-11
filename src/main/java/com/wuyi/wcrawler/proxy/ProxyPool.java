@@ -144,7 +144,7 @@ public class ProxyPool {
         public void flushCache() {
             cacheLock.lock();
             try {
-                while (pCache.size() <= DEFAULT_PROXY_CACHE_HIGH_THRESHOLD) {
+                while (cacheSize() <= DEFAULT_PROXY_CACHE_HIGH_THRESHOLD) {
                     notHighLevel.await();
                 }
                 List<Proxy> saveDBProxies = new ArrayList<Proxy>();
