@@ -2,14 +2,18 @@ package com.wuyi.wcrawler.proxy;
 
 import com.wuyi.wcrawler.bean.Proxy;
 
+import com.wuyi.wcrawler.proxy.monitor.cache.CacheHighLimitMonitor;
+import com.wuyi.wcrawler.proxy.monitor.cache.CacheLowLimitMonitor;
 import com.wuyi.wcrawler.proxy.monitor.cache.CacheMonitor;
-import com.wuyi.wcrawler.proxy.util.ProxyFilterUtil;
+import com.wuyi.wcrawler.proxy.monitor.cache.CacheSyncMonitor;
+import com.wuyi.wcrawler.proxy.monitor.core.CoreLowLimitMonitor;
 import com.wuyi.wcrawler.proxy.util.WProxyUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.*;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
@@ -21,11 +25,30 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 @Component(value = "proxyPool")
 public class ProxyPool {
-    private Log LOG = LogFactory.getLog(ProxyPool.class);
+    private static Log LOG = LogFactory.getLog(ProxyPool.class);
     @Autowired
     private ProxyCache proxyCache;
     @Autowired
     private ProxyCore proxyCore;
+    @Autowired
+    private CoreLowLimitMonitor coreLowLimitMonitor;
+    @Autowired
+    private CacheLowLimitMonitor cacheLowLimitMonitor;
+    @Autowired
+    private CacheHighLimitMonitor cacheHighLimitMonitor;
+    @Autowired
+    private CacheSyncMonitor cacheSyncMonitor;
+
+    public void init() {
+        LOG.info("CoreLowLimitMonitor started.");
+        new Thread(coreLowLimitMonitor).start();
+        LOG.info("CacheLowLimitMonitor started.");
+        new Thread(cacheLowLimitMonitor).start();
+        LOG.info("CacheHighLimitMonitor started.");
+        new Thread(cacheHighLimitMonitor).start();
+        LOG.info("CacheSyncMonitor started.");
+        new Thread(cacheSyncMonitor).start();
+    }
 
     public ProxyPool() {
 
@@ -92,8 +115,10 @@ public class ProxyPool {
             List<Proxy> proxies = null;
             try{
                 while(isEmpty()) {
+                    LOG.info("Waiting ProxyPool's cache to be not empty...");
                     notEmpty.await();
                 }
+                LOG.info("ProxyPool's cache is not empty, trying to get proxy from cache...");
                 proxies = new ArrayList<Proxy>();
                 Iterator it = pCache.iterator();
                 while(proxies.size() < fillNum && it.hasNext()) {
@@ -232,6 +257,7 @@ public class ProxyPool {
             coreLock.lock();
             Proxy proxy = null;
             try {
+                LOG.info("Waiting for ProxyPool's core not empty......");
                 while(isEmpty()) {
                     notEmpty.await();
                 }
@@ -243,6 +269,9 @@ public class ProxyPool {
                 e.printStackTrace();
             } finally {
                 coreLock.unlock();
+            }
+            if(proxy != null) {
+                LOG.info("Get proxy from ProxyPool, where proxy ip is " + proxy.getIp() + " and port is " + proxy.getPort() + ".");
             }
             return proxy;
         }
@@ -262,11 +291,12 @@ public class ProxyPool {
             coreLock.lock();
             try{
                 while(pCore.size() > DEFAULT_PROXY_CORE_THRESHOLD) {
+                    LOG.info("Waiting ProxyPool's core to be low level...");
                     notLowLevel.await();
                 }
 //                /** 一个静态内部类的私有变量在另一个静态内部类的方法中居然可见... **/
 //                Iterator<Proxy> it = cache.proxyCache.iterator();
-
+                LOG.info("ProxyPool's core is low level, trying to fill core...");
                 List<Proxy> proxies = cache.get(DEFAULT_PROXY_CORE_SIZE - pCore.size());
                 addProxy(proxies);
                 notEmpty.signalAll();

@@ -59,6 +59,7 @@ public class WHttpClientUtil {
 	@Autowired
 	public void setProxyPool(ProxyPool proxyPool) {
 		WHttpClientUtil.proxyPool = proxyPool;
+		WHttpClientUtil.proxyPool.init();
 	}
 
 	public static void init() {

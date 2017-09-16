@@ -38,7 +38,7 @@ public class ProxyServiceImpl implements ProxyService {
 	public void init() {
 		LOG.info("init");
 		threadPool = Executors.newFixedThreadPool(monitorNum + testNum);
-		monitorTask();
+//		monitorTask();
 		testTask();
 	}
 
