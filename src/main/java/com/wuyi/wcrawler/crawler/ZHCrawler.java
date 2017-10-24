@@ -21,6 +21,7 @@ public class ZHCrawler extends Crawler {
 
     public ZHCrawler() { super();}
 
+    @Override
     public void run() {
         crawl(this.getUrl());
     }

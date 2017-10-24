@@ -1,0 +1,491 @@
+20:12:45,196  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7382f612: startup date [Tue Sep 19 20:12:45 CST 2017]; root of context hierarchy
+20:12:45,368  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+20:12:45,770  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+20:12:45,856  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+20:12:48,350  INFO DruidDataSource:847 - {dataSource-1} inited
+20:12:52,109  INFO ProxyFilterUtil:50 - Redis connect: org.redisson.Redisson@11653e3b
+20:12:52,147  INFO ProxyPool:43 - CoreLowLimitMonitor started.
+20:12:52,147  INFO ProxyPool:45 - CacheLowLimitMonitor started.
+20:12:52,148  INFO ProxyPool:299 - ProxyPool's core is low level, trying to fill core...
+20:12:52,148  INFO ProxyPool:47 - CacheHighLimitMonitor started.
+20:12:52,149  INFO ProxyPool:49 - CacheSyncMonitor started.
+20:12:52,645  INFO ProxyPool:121 - ProxyPool's cache is not empty, trying to get proxy from cache...
+20:12:52,646  INFO ProxyPool:294 - Waiting ProxyPool's core to be low level...
+20:13:00,079  INFO ProxyJob:19 - ProxyJob started.
+20:13:00,079  INFO ProxyJob:22 - ProxyJob-shard-0 handling on site ip181.
+20:13:00,079  INFO ProxyServiceImpl:39 - init
+20:13:00,085  INFO ProxyServiceImpl:59 - Test-thread-1 started.
+20:13:00,086  INFO ProxyServiceImpl:59 - Test-thread-2 started.
+20:13:00,086  INFO ProxyServiceImpl:59 - Test-thread-3 started.
+20:13:00,087  INFO ProxyServiceImpl:59 - Test-thread-4 started.
+20:13:00,087  INFO ProxyServiceImpl:65 - ip181 download start.
+20:13:00,087  INFO Ip181Parser:30 - IP181
+20:13:00,087  INFO Ip181Parser:32 - http://www.ip181.com
+20:13:03,940  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:13:03,942  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:13:06,973  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:13:06,974  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:13:10,002  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:13:10,003  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:13:13,029 ERROR WHttpClientUtil:239 - get Response failed
+20:13:13,031  INFO WHttpClientUtil:210 - getPageRetry()--1
+20:13:13,031  INFO ProxyPool:260 - Waiting for ProxyPool's core not empty......
+20:13:13,031  INFO ProxyPool:274 - Get proxy from ProxyPool, where proxy ip is 116.196.67.84 and port is 3128.
+20:14:28,546  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://116.196.67.84:3128->http://www.ip181.com:80: Connect to 116.196.67.84:3128 [/116.196.67.84] failed: Operation timed out (Connection timed out)
+20:14:28,547  INFO RetryExec:113 - Retrying request to {}->http://116.196.67.84:3128->http://www.ip181.com:80
+20:15:43,789  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://116.196.67.84:3128->http://www.ip181.com:80: Connect to 116.196.67.84:3128 [/116.196.67.84] failed: Operation timed out (Connection timed out)
+20:15:43,789  INFO RetryExec:113 - Retrying request to {}->http://116.196.67.84:3128->http://www.ip181.com:80
+20:16:58,906  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://116.196.67.84:3128->http://www.ip181.com:80: Connect to 116.196.67.84:3128 [/116.196.67.84] failed: Operation timed out (Connection timed out)
+20:16:58,906  INFO RetryExec:113 - Retrying request to {}->http://116.196.67.84:3128->http://www.ip181.com:80
+20:17:42,592  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7382f612: startup date [Tue Sep 19 20:17:42 CST 2017]; root of context hierarchy
+20:17:42,735  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+20:17:43,025  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+20:17:43,112  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+20:17:45,163  INFO DruidDataSource:847 - {dataSource-1} inited
+20:17:47,628  INFO ProxyFilterUtil:50 - Redis connect: org.redisson.Redisson@1b9c1b51
+20:17:47,647  INFO ProxyPool:43 - CoreLowLimitMonitor started.
+20:17:47,648  INFO ProxyPool:299 - ProxyPool's core is low level, trying to fill core...
+20:17:47,648  INFO ProxyPool:118 - Waiting ProxyPool's cache to be not empty...
+20:17:47,648  INFO ProxyPool:45 - CacheLowLimitMonitor started.
+20:17:47,649  INFO ProxyPool:47 - CacheHighLimitMonitor started.
+20:17:47,650  INFO ProxyPool:49 - CacheSyncMonitor started.
+20:17:48,021  INFO ProxyPool:121 - ProxyPool's cache is not empty, trying to get proxy from cache...
+20:17:48,022  INFO ProxyPool:294 - Waiting ProxyPool's core to be low level...
+20:18:12,231  INFO ProxyJob:19 - ProxyJob started.
+20:18:12,231  INFO ProxyJob:22 - ProxyJob-shard-0 handling on site xicidaili.
+20:18:12,232  INFO ProxyServiceImpl:39 - init
+20:18:12,238  INFO ProxyServiceImpl:59 - Test-thread-1 started.
+20:18:12,239  INFO ProxyServiceImpl:59 - Test-thread-2 started.
+20:18:12,239  INFO ProxyServiceImpl:59 - Test-thread-3 started.
+20:18:12,240  INFO ProxyServiceImpl:59 - Test-thread-4 started.
+20:18:12,240  INFO ProxyServiceImpl:65 - xicidaili download start.
+20:18:12,240  INFO XicidailiParser:35 - XICIDAILI
+20:18:12,240  INFO XicidailiParser:39 - nn
+20:18:13,415  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://122.193.36.9:8118->https://www.zhihu.com:443: Connect to 122.193.36.9:8118 [/122.193.36.9] failed: Connection refused (Connection refused)
+20:18:13,417  INFO RetryExec:113 - Retrying request to {tls}->http://122.193.36.9:8118->https://www.zhihu.com:443
+20:18:13,513 ERROR WHttpClientUtil:239 - get Response failed
+20:18:14,402  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=849e7cddae1c4915a97dff4e61cfd1a6|1505823494000|1505823494000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:14 GMT
+20:18:14,402  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="ZjBkZThmZTcyYzg0NGViMzk4MzI3MjBiOGZjZjg0Yjg=|1505823494|bb3b64b9aec714bf8ad18050768427ea4ab3a685"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,403  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="ZTUyNTM0ZGVkNWMxNDVjYjhjYzk5NjI1Njc0ODJhNDM=|1505823494|57b1a4306512c70f95b49c479b8f3d9f618fdfa0"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,404  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="NzYxYTI2NWVmZGU3NDZkNDkzOGU5ZWQ2ZjMzMjM2MmY=|1505823494|3fe15bd1da23dbc7c42992d461f426ffc18fec7b"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,443  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=6c546bfb62434d1cad96018b5985d348|1505823494000|1505823494000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:14 GMT
+20:18:14,444  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="NTNkN2FhMTJlNjU2NDM1ZmIyYzI4OWYwNzk4NTYwYWY=|1505823494|7ece200e2bc5a0c2391d0a014cc5a35da087cde7"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,445  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="OTA5MjEzODAxNGMxNDFjM2IyZDM0YTlmNDU5NWE3ODQ=|1505823494|cf4030512b0629cc4d6d6c9e231f132d3c7c923f"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,445  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="ZmMzNmJjOTJjN2EyNDhmMTlkY2RlYzJjOWEwNDJiZGY=|1505823494|e213870ed8e253760a45a0e56d091f3f40ddc9d9"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,463  INFO ProxyTest:29 - Test Success: ip 122.193.36.9 port 8118
+20:18:14,531  INFO ProxyTest:29 - Test Success: ip 221.215.121.96 port 8118
+20:18:14,537  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=217cfd3e8f9b4306ba13bae42d23b3f8|1505823494000|1505823494000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:14 GMT
+20:18:14,538  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="NzhjZjg1MzM4MGU4NDU1ZWFlNDAxMzBhZWI2YmQ1Y2U=|1505823494|995d0d77fceab2efe803b6ebf4cf684243973c4a"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,540  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="NTk0YzhkMWEyNGNkNDBmMzhkNjJkOGY0ZmJiZWMzYWI=|1505823494|16e6de3df14a5433f5faf4b4b50ee85d748671e6"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,541  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="ZTM4NTRmZmNlMjA1NDE1NzhmZjY2MDk1ZDU2YThmYjI=|1505823494|20fecaa6a1b8e5a5237387bfcfa579c8d8e422bd"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:14 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:14 GMT
+20:18:14,611  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://221.202.248.27:8118->https://www.zhihu.com:443: Connect to 221.202.248.27:8118 [/221.202.248.27] failed: Connection refused (Connection refused)
+20:18:14,611  INFO RetryExec:113 - Retrying request to {tls}->http://221.202.248.27:8118->https://www.zhihu.com:443
+20:18:14,653  INFO ProxyTest:29 - Test Success: ip 182.35.68.87 port 8118
+20:18:14,740  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://221.202.248.27:8118->https://www.zhihu.com:443: Connect to 221.202.248.27:8118 [/221.202.248.27] failed: Connection refused (Connection refused)
+20:18:14,741  INFO RetryExec:113 - Retrying request to {tls}->http://221.202.248.27:8118->https://www.zhihu.com:443
+20:18:14,864  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://221.202.248.27:8118->https://www.zhihu.com:443: Connect to 221.202.248.27:8118 [/221.202.248.27] failed: Connection refused (Connection refused)
+20:18:14,864  INFO RetryExec:113 - Retrying request to {tls}->http://221.202.248.27:8118->https://www.zhihu.com:443
+20:18:14,980 ERROR WHttpClientUtil:239 - get Response failed
+20:18:16,161  INFO XicidailiParser:39 - nt
+20:18:16,361  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=dac2182508714c41bce58bbef116f71d|1505823496000|1505823496000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:16 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:16 GMT
+20:18:16,361  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="OGU4ZTk0ZTY2ODI4NDQ2YWE0MWRiYzM5OWJhMzdjMWI=|1505823496|fd5f4f6b01f68f058c23f251b49c77b3d54c95ad"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:16 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:16 GMT
+20:18:16,362  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="OWZjZjMyN2NmMTkwNGNkMjk1NTY4OTg5MjVjMjg4MTc=|1505823496|e5815474c1334dcf273d82fb53ae1b253fff96f4"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:16 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:16 GMT
+20:18:16,362  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="ZWQzMGRhM2E4NjI4NDAwZDhlNTZiNjMwNGUxZTI5MTc=|1505823496|789780cc579285b5be6c0cf48218d2bc23ccaece"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:16 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:16 GMT
+20:18:16,410  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443: Read timed out
+20:18:16,412  INFO RetryExec:113 - Retrying request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443
+20:18:16,906  INFO ProxyTest:29 - Test Success: ip 219.149.46.151 port 3129
+20:18:17,582  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443: Read timed out
+20:18:17,582  INFO RetryExec:113 - Retrying request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443
+20:18:17,930  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=0b8cafcff1674f1cae2dd88ae3e4bb18|1505823497000|1505823497000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:17 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:17 GMT
+20:18:17,930  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="MWYxMGFhMGRiNDZlNDJhNGE2MWQ1NmY3YzRmYTQyMWI=|1505823497|0000ee3815261f0f35bbd4202d39c9242eda047d"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:17 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:17 GMT
+20:18:17,931  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="YWVjNzk2MGZjOTJhNGZiZTkzNDNhN2U2YzVlNWJjYjA=|1505823497|30a99e85415bbc2d9e005a625d64200cd348831f"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:17 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:17 GMT
+20:18:17,931  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="MDU0M2QzYzMxYTZlNDhlMzgyMjk2MWFlZWJkNWM5MTU=|1505823497|b5bdd2b6f17f87a42e8f4ee043cb3d57e606023b"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:17 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:17 GMT
+20:18:18,039  INFO ProxyTest:29 - Test Success: ip 60.22.67.41 port 80
+20:18:18,226  INFO XicidailiParser:39 - wn
+20:18:19,487  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443: Read timed out
+20:18:19,487  INFO RetryExec:113 - Retrying request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443
+20:18:19,761  INFO XicidailiParser:39 - wt
+20:18:20,499  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=c3e38500d84d4bfba87dede186e58017|1505823500000|1505823500000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:20 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:20 GMT
+20:18:20,499  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="MjJhYmMzMDI1NTA1NGFkZTgxYjIzMTBhOTkwMzZiNDc=|1505823500|248023722d76dae905661c65ed82cf349ac9a16b"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:20 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:20 GMT
+20:18:20,500  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="NWZkOWNjMzVjNzA2NGJiY2FjNzJjZWY0NjE1OWM5M2M=|1505823500|c57c308c1adb4685047680aae85aa686d7c9cee9"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:20 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:20 GMT
+20:18:20,500  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="MjI2MWJiZDUwYTExNGNiYjkwMmEwNjVhM2JmNmU4ZTI=|1505823500|4efc9ce1abe916ba13f17b41ffd8aebff782cf66"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:20 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:20 GMT
+20:18:20,571  INFO ProxyTest:29 - Test Success: ip 120.78.15.63 port 80
+20:18:20,692  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.90.14:48888->https://www.zhihu.com:443: Connect to 113.128.90.14:48888 [/113.128.90.14] failed: Connection refused (Connection refused)
+20:18:20,693  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.90.14:48888->https://www.zhihu.com:443
+20:18:20,808  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.90.14:48888->https://www.zhihu.com:443: Connect to 113.128.90.14:48888 [/113.128.90.14] failed: Connection refused (Connection refused)
+20:18:20,808  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.90.14:48888->https://www.zhihu.com:443
+20:18:20,926  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.90.14:48888->https://www.zhihu.com:443: Connect to 113.128.90.14:48888 [/113.128.90.14] failed: Connection refused (Connection refused)
+20:18:20,926  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.90.14:48888->https://www.zhihu.com:443
+20:18:21,034 ERROR WHttpClientUtil:239 - get Response failed
+20:18:21,687  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443: Read timed out
+20:18:21,688  INFO RetryExec:113 - Retrying request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443
+20:18:22,567  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443: Read timed out
+20:18:22,568  INFO RetryExec:113 - Retrying request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443
+20:18:24,733  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443: Read timed out
+20:18:24,733  INFO RetryExec:113 - Retrying request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443
+20:18:25,635 ERROR WHttpClientUtil:239 - get Response failed
+20:18:25,670  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://183.93.159.29:808->https://www.zhihu.com:443: Read timed out
+20:18:25,670  INFO RetryExec:113 - Retrying request to {tls}->http://183.93.159.29:808->https://www.zhihu.com:443
+20:18:27,774 ERROR WHttpClientUtil:239 - get Response failed
+20:18:28,345  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=bb355532133f42d297a098b181db7b69|1505823508000|1505823508000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:28 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:28 GMT
+20:18:28,346  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="OGMzZTZiYmUyNTQ0NDBlZWFkYmY4YWM1NzY0NmQyNWQ=|1505823508|2af85b24b8fb6431319a4fc1be286ddb67f815c6"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:28 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:28 GMT
+20:18:28,346  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="NTU0YjM2YjRjNjA5NDYwNGI4ZmMwNGNiNmQ2YTFlZTU=|1505823508|55b4dafe49bd2aaea5e8eec49bde51ba5c6e20d7"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:28 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:28 GMT
+20:18:28,346  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="OTE5MzY5OGI0ZGNkNDZhZTkwMDI0ZjVhMjFhOTQxY2U=|1505823508|88e17ec5c315c5f97b7e4f9bfedccb54ccd18992"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:28 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:28 GMT
+20:18:28,411  INFO ProxyTest:29 - Test Success: ip 183.93.159.29 port 808
+20:18:28,532  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.91.60:48888->https://www.zhihu.com:443: Connect to 113.128.91.60:48888 [/113.128.91.60] failed: Connection refused (Connection refused)
+20:18:28,532  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.91.60:48888->https://www.zhihu.com:443
+20:18:28,658  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.91.60:48888->https://www.zhihu.com:443: Connect to 113.128.91.60:48888 [/113.128.91.60] failed: Connection refused (Connection refused)
+20:18:28,658  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.91.60:48888->https://www.zhihu.com:443
+20:18:28,784  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.91.60:48888->https://www.zhihu.com:443: Connect to 113.128.91.60:48888 [/113.128.91.60] failed: Connection refused (Connection refused)
+20:18:28,784  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.91.60:48888->https://www.zhihu.com:443
+20:18:28,905 ERROR WHttpClientUtil:239 - get Response failed
+20:18:30,977  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://124.172.138.113:808->https://www.zhihu.com:443: Read timed out
+20:18:30,977  INFO RetryExec:113 - Retrying request to {tls}->http://124.172.138.113:808->https://www.zhihu.com:443
+20:18:32,005  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://58.217.91.212:8118->https://www.zhihu.com:443: Read timed out
+20:18:32,006  INFO RetryExec:113 - Retrying request to {tls}->http://58.217.91.212:8118->https://www.zhihu.com:443
+20:18:32,732 ERROR WHttpClientUtil:239 - get Response failed
+20:18:32,800  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://110.73.6.162:8123->https://www.zhihu.com:443: Read timed out
+20:18:32,801  INFO RetryExec:113 - Retrying request to {tls}->http://110.73.6.162:8123->https://www.zhihu.com:443
+20:18:34,050 ERROR WHttpClientUtil:239 - get Response failed
+20:18:34,996 ERROR WHttpClientUtil:239 - get Response failed
+20:18:36,943  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://110.73.6.162:8123->https://www.zhihu.com:443: Read timed out
+20:18:36,944  INFO RetryExec:113 - Retrying request to {tls}->http://110.73.6.162:8123->https://www.zhihu.com:443
+20:18:37,373  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://124.172.138.113:808->https://www.zhihu.com:443: Read timed out
+20:18:37,374  INFO RetryExec:113 - Retrying request to {tls}->http://124.172.138.113:808->https://www.zhihu.com:443
+20:18:37,543  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=8b92472a0e3345b4b281b174f2aeca30|1505823517000|1505823517000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:37 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:37 GMT
+20:18:37,543  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="YWNlYjBjODhlZGQyNGFlNjg1ODc5MGZkZjhlMTI2OTg=|1505823517|64667f7d3a30509ad939e0ec6b124e5e6299c37e"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:37 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:37 GMT
+20:18:37,543  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="Mjk5M2RhZWE4ZmEwNDc3OWI5YmQ0ODkwODc3Y2UxOTc=|1505823517|92984ab849b21399be8d125c6f3511cb21611948"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:37 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:37 GMT
+20:18:37,544  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="NmJjODA4MjA2OTIxNDZlZjhjZTA3NmU3NTI5YzZhNGQ=|1505823517|774bad6f9696f8151b95e32564a0deec2014c8f7"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:37 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:37 GMT
+20:18:37,635  INFO ProxyTest:29 - Test Success: ip 121.225.84.49 port 8118
+20:18:40,839  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=f60d334e5f5a4ef791bd6e49650adc41|1505823520000|1505823520000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:40 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:40 GMT
+20:18:40,839  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="YmIxNDQ5ZGM4MzExNGU1OWIwMGEwN2I3MjAzYWY0ZDE=|1505823520|5b97520400c79bd7d63af1f48422f97d0d752181"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:40 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:40 GMT
+20:18:40,840  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="MmUyOGQ2YTFhODJjNGM4M2FjYTc4Njk3NjRkN2NiZmY=|1505823520|be565d3e2ceae88ed02591925a0b67df163bbbe9"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:40 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:40 GMT
+20:18:40,840  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="NzI0ZWFhMDQxMzJlNDdiMjkzMzNlMGUzMWFhMzljZmQ=|1505823520|2ab90dc408fb84d8bcdbda2141f212ec66447bf8"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:40 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:40 GMT
+20:18:40,948  INFO ProxyTest:29 - Test Success: ip 49.88.217.205 port 808
+20:18:41,076  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://110.73.6.162:8123->https://www.zhihu.com:443: Read timed out
+20:18:41,076  INFO RetryExec:113 - Retrying request to {tls}->http://110.73.6.162:8123->https://www.zhihu.com:443
+20:18:44,836  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=f77f5e7f749c4a199ed025c90ff729e0|1505823523000|1505823523000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:43 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:43 GMT
+20:18:44,837  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="NjhlYzI2ZThlNzNlNDFlYTlkMmRkYjU3ZTUyYjg4ZjQ=|1505823523|21e40fb50c2fe2cf41dfbf2de2083b63e9360bb0"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:43 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:43 GMT
+20:18:44,837  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="YzM2ZWQwZGQ4ZDNkNDRhYmFlZWMxZmJlYTQ4NjAyODM=|1505823523|6af181cdf62e1dbf98eb740b27ea937169f72b86"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:43 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:43 GMT
+20:18:44,838  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="MGUyMTFlMGYwOWQ0NGE0NTg4YTdiMzYwODhiMDZiZDI=|1505823523|f9244a2957812071ba2efbba19e8a49a153b20e9"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:43 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:43 GMT
+20:18:44,931  INFO ProxyTest:29 - Test Success: ip 115.223.163.112 port 8998
+20:18:46,228 ERROR WHttpClientUtil:239 - get Response failed
+20:18:47,464  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=01b4f39907214c77be40d6f69a62c77c|1505823527000|1505823527000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:47 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:47 GMT
+20:18:47,464  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="NWRhMTY0MzI1MTNlNDRjNTlmZWExMjM4ODMwYjMzMjk=|1505823527|24f509613497b20ce612c971661c27d87f64eb84"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:47 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:47 GMT
+20:18:47,465  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="MmI4YzNmNjdmYzA2NGQ2Zjk4ZTM4NWVlMjc4OGMxZTQ=|1505823527|30b8f5c15754130bd3dd578ca1f04a9bb6052926"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:47 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:47 GMT
+20:18:47,465  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="MWI3NjIzOGJiNzE3NGUzMDllNjg5MmI4ZjU1NjVlMmE=|1505823527|6beb9052bcd08e960b48d29228909ea6a63fe07d"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:47 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:47 GMT
+20:18:47,553  INFO ProxyTest:29 - Test Success: ip 123.130.48.147 port 8118
+20:18:47,796 ERROR WHttpClientUtil:239 - get Response failed
+20:18:47,909  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://27.159.126.158:8118->https://www.zhihu.com:443: Connect to 27.159.126.158:8118 [/27.159.126.158] failed: Connection refused (Connection refused)
+20:18:47,910  INFO RetryExec:113 - Retrying request to {tls}->http://27.159.126.158:8118->https://www.zhihu.com:443
+20:18:48,040  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://36.251.248.76:80->https://www.zhihu.com:443: Read timed out
+20:18:48,040  INFO RetryExec:113 - Retrying request to {tls}->http://36.251.248.76:80->https://www.zhihu.com:443
+20:18:48,045  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://27.159.126.158:8118->https://www.zhihu.com:443: Connect to 27.159.126.158:8118 [/27.159.126.158] failed: Connection refused (Connection refused)
+20:18:48,045  INFO RetryExec:113 - Retrying request to {tls}->http://27.159.126.158:8118->https://www.zhihu.com:443
+20:18:48,738  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://124.172.138.113:808->https://www.zhihu.com:443: Read timed out
+20:18:48,739  INFO RetryExec:113 - Retrying request to {tls}->http://124.172.138.113:808->https://www.zhihu.com:443
+20:18:49,168  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://27.159.126.158:8118->https://www.zhihu.com:443: Connect to 27.159.126.158:8118 [/27.159.126.158] failed: Connection refused (Connection refused)
+20:18:49,168  INFO RetryExec:113 - Retrying request to {tls}->http://27.159.126.158:8118->https://www.zhihu.com:443
+20:18:49,290 ERROR WHttpClientUtil:239 - get Response failed
+20:18:51,148  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://36.251.248.76:80->https://www.zhihu.com:443: Read timed out
+20:18:51,149  INFO RetryExec:113 - Retrying request to {tls}->http://36.251.248.76:80->https://www.zhihu.com:443
+20:18:52,062 ERROR WHttpClientUtil:239 - get Response failed
+20:18:53,199  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.81.231.246:8118->https://www.zhihu.com:443: Connect to 106.81.231.246:8118 [/106.81.231.246] failed: Connection refused (Connection refused)
+20:18:53,199  INFO RetryExec:113 - Retrying request to {tls}->http://106.81.231.246:8118->https://www.zhihu.com:443
+20:18:53,285  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=ce2d8be9aa7e41c383579bfb046afe9a|1505823533000|1505823533000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:18:53 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:18:53 GMT
+20:18:53,286  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="MGEzODE0ODJlM2M2NDE3YWI5NDA0NmExNjAzOTJiYzM=|1505823533|c0cc3c989036c46e11bca3ff74537d48e28e0d33"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:53 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:53 GMT
+20:18:53,286  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="MTNmYjdmMzQyM2E4NGM2Zjg0NDMxYTIwMjFlNzM4YmI=|1505823533|8cd44e5cebe6049894441e81ed44ad4a7eba1ee8"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:53 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:53 GMT
+20:18:53,287  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="NmE4NGUzNmQ1ZGJhNDY3MDkxMDZhODVlNjc1YTJjZWE=|1505823533|2d01ca301ea07abea9511c3625ebf0bab8d1ae2b"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:18:53 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:18:53 GMT
+20:18:53,379  INFO ProxyTest:29 - Test Success: ip 115.225.54.147 port 8118
+20:18:53,634 ERROR WHttpClientUtil:239 - get Response failed
+20:18:53,738  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://116.234.25.239:8118->https://www.zhihu.com:443: Connect to 116.234.25.239:8118 [/116.234.25.239] failed: Connection refused (Connection refused)
+20:18:53,738  INFO RetryExec:113 - Retrying request to {tls}->http://116.234.25.239:8118->https://www.zhihu.com:443
+20:18:53,839  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://116.234.25.239:8118->https://www.zhihu.com:443: Connect to 116.234.25.239:8118 [/116.234.25.239] failed: Connection refused (Connection refused)
+20:18:53,839  INFO RetryExec:113 - Retrying request to {tls}->http://116.234.25.239:8118->https://www.zhihu.com:443
+20:18:53,943  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://116.234.25.239:8118->https://www.zhihu.com:443: Connect to 116.234.25.239:8118 [/116.234.25.239] failed: Connection refused (Connection refused)
+20:18:53,943  INFO RetryExec:113 - Retrying request to {tls}->http://116.234.25.239:8118->https://www.zhihu.com:443
+20:18:54,055 ERROR WHttpClientUtil:239 - get Response failed
+20:18:54,258  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://36.251.248.76:80->https://www.zhihu.com:443: Read timed out
+20:18:54,259  INFO RetryExec:113 - Retrying request to {tls}->http://36.251.248.76:80->https://www.zhihu.com:443
+20:18:57,366 ERROR WHttpClientUtil:239 - get Response failed
+20:18:57,479  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.90.121:48888->https://www.zhihu.com:443: Connect to 113.128.90.121:48888 [/113.128.90.121] failed: Connection refused (Connection refused)
+20:18:57,480  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.90.121:48888->https://www.zhihu.com:443
+20:18:57,582  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.90.121:48888->https://www.zhihu.com:443: Connect to 113.128.90.121:48888 [/113.128.90.121] failed: Connection refused (Connection refused)
+20:18:57,582  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.90.121:48888->https://www.zhihu.com:443
+20:18:57,695  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.90.121:48888->https://www.zhihu.com:443: Connect to 113.128.90.121:48888 [/113.128.90.121] failed: Connection refused (Connection refused)
+20:18:57,696  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.90.121:48888->https://www.zhihu.com:443
+20:18:57,804 ERROR WHttpClientUtil:239 - get Response failed
+20:18:57,921  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.91.214:48888->https://www.zhihu.com:443: Connect to 113.128.91.214:48888 [/113.128.91.214] failed: Connection refused (Connection refused)
+20:18:57,921  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.91.214:48888->https://www.zhihu.com:443
+20:18:58,032  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.91.214:48888->https://www.zhihu.com:443: Connect to 113.128.91.214:48888 [/113.128.91.214] failed: Connection refused (Connection refused)
+20:18:58,033  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.91.214:48888->https://www.zhihu.com:443
+20:18:59,153  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.128.91.214:48888->https://www.zhihu.com:443: Connect to 113.128.91.214:48888 [/113.128.91.214] failed: Connection refused (Connection refused)
+20:18:59,153  INFO RetryExec:113 - Retrying request to {tls}->http://113.128.91.214:48888->https://www.zhihu.com:443
+20:18:59,270 ERROR WHttpClientUtil:239 - get Response failed
+20:19:00,391  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.81.231.246:8118->https://www.zhihu.com:443: Connect to 106.81.231.246:8118 [/106.81.231.246] failed: Connection refused (Connection refused)
+20:19:00,392  INFO RetryExec:113 - Retrying request to {tls}->http://106.81.231.246:8118->https://www.zhihu.com:443
+20:19:00,497  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.81.231.246:8118->https://www.zhihu.com:443: Connect to 106.81.231.246:8118 [/106.81.231.246] failed: Connection refused (Connection refused)
+20:19:00,497  INFO RetryExec:113 - Retrying request to {tls}->http://106.81.231.246:8118->https://www.zhihu.com:443
+20:19:00,703 ERROR WHttpClientUtil:239 - get Response failed
+20:19:00,789  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://39.81.18.85:8118->https://www.zhihu.com:443: Connect to 39.81.18.85:8118 [/39.81.18.85] failed: Connection refused (Connection refused)
+20:19:00,789  INFO RetryExec:113 - Retrying request to {tls}->http://39.81.18.85:8118->https://www.zhihu.com:443
+20:19:00,878  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://39.81.18.85:8118->https://www.zhihu.com:443: Connect to 39.81.18.85:8118 [/39.81.18.85] failed: Connection refused (Connection refused)
+20:19:00,878  INFO RetryExec:113 - Retrying request to {tls}->http://39.81.18.85:8118->https://www.zhihu.com:443
+20:19:00,965  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://39.81.18.85:8118->https://www.zhihu.com:443: Connect to 39.81.18.85:8118 [/39.81.18.85] failed: Connection refused (Connection refused)
+20:19:00,965  INFO RetryExec:113 - Retrying request to {tls}->http://39.81.18.85:8118->https://www.zhihu.com:443
+20:19:01,046 ERROR WHttpClientUtil:239 - get Response failed
+20:19:01,607 ERROR WHttpClientUtil:239 - get Response failed
+20:19:01,686  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://61.53.99.150:8118->https://www.zhihu.com:443: Connect to 61.53.99.150:8118 [/61.53.99.150] failed: Connection refused (Connection refused)
+20:19:01,686  INFO RetryExec:113 - Retrying request to {tls}->http://61.53.99.150:8118->https://www.zhihu.com:443
+20:19:01,765  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://61.53.99.150:8118->https://www.zhihu.com:443: Connect to 61.53.99.150:8118 [/61.53.99.150] failed: Connection refused (Connection refused)
+20:19:01,765  INFO RetryExec:113 - Retrying request to {tls}->http://61.53.99.150:8118->https://www.zhihu.com:443
+20:19:01,844  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://61.53.99.150:8118->https://www.zhihu.com:443: Connect to 61.53.99.150:8118 [/61.53.99.150] failed: Connection refused (Connection refused)
+20:19:01,844  INFO RetryExec:113 - Retrying request to {tls}->http://61.53.99.150:8118->https://www.zhihu.com:443
+20:19:01,930 ERROR WHttpClientUtil:239 - get Response failed
+20:19:02,773  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=0c0a98d2ac584aa7ba0029eca227ba56|1505823542000|1505823542000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:19:02 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:19:02 GMT
+20:19:02,774  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="MmU0ZWJjZGFiMzJiNDlkNjg0YjRlOWQwMzA1NzAyZDY=|1505823542|1dc97a700540d8999ce89a598cbfe27bde61e737"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:19:02 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:19:02 GMT
+20:19:02,774  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="MTYzZjFlYmU2YTY0NDE2MWE0NzRjNWRkMDM1ZDA2M2M=|1505823542|b67ffcc9cbc090252f8c42f8218469913cbd91c5"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:19:02 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:19:02 GMT
+20:19:02,775  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="N2E1OGRlODI1MWMxNDkyMDgzZTQ3MmJjMGU4YzBlMzE=|1505823542|4921effc74460376a8f3f991286539695c9932d0"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:19:02 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:19:02 GMT
+20:19:02,874  INFO ProxyTest:29 - Test Success: ip 183.136.218.40 port 808
+20:19:06,842 ERROR WHttpClientUtil:239 - get Response failed
+20:19:15,244  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7382f612: startup date [Tue Sep 19 20:19:15 CST 2017]; root of context hierarchy
+20:19:15,450  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+20:19:15,764  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+20:19:15,863  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+20:19:17,977  INFO DruidDataSource:847 - {dataSource-1} inited
+20:19:20,594  INFO ProxyFilterUtil:50 - Redis connect: org.redisson.Redisson@11653e3b
+20:19:20,615  INFO ProxyPool:43 - CoreLowLimitMonitor started.
+20:19:20,615  INFO ProxyPool:45 - CacheLowLimitMonitor started.
+20:19:20,615  INFO ProxyPool:299 - ProxyPool's core is low level, trying to fill core...
+20:19:20,616  INFO ProxyPool:47 - CacheHighLimitMonitor started.
+20:19:20,616  INFO ProxyPool:118 - Waiting ProxyPool's cache to be not empty...
+20:19:20,617  INFO ProxyPool:49 - CacheSyncMonitor started.
+20:19:21,005  INFO ProxyPool:121 - ProxyPool's cache is not empty, trying to get proxy from cache...
+20:19:21,005  INFO ProxyPool:294 - Waiting ProxyPool's core to be low level...
+20:20:00,276  INFO ProxyJob:19 - ProxyJob started.
+20:20:00,276  INFO ProxyJob:19 - ProxyJob started.
+20:20:00,276  INFO ProxyJob:22 - ProxyJob-shard-0 handling on site xicidaili.
+20:20:00,276  INFO ProxyJob:19 - ProxyJob started.
+20:20:00,279  INFO ProxyServiceImpl:39 - init
+20:20:00,278  INFO ProxyJob:22 - ProxyJob-shard-2 handling on site mimi.
+20:20:00,279  INFO ProxyJob:22 - ProxyJob-shard-1 handling on site ip181.
+20:20:00,280  INFO ProxyServiceImpl:39 - init
+20:20:00,279  INFO ProxyServiceImpl:39 - init
+20:20:00,289  INFO ProxyServiceImpl:59 - Test-thread-1 started.
+20:20:00,289  INFO ProxyServiceImpl:59 - Test-thread-1 started.
+20:20:00,289  INFO ProxyServiceImpl:59 - Test-thread-1 started.
+20:20:00,290  INFO ProxyServiceImpl:59 - Test-thread-2 started.
+20:20:00,290  INFO ProxyServiceImpl:59 - Test-thread-2 started.
+20:20:00,290  INFO ProxyServiceImpl:59 - Test-thread-2 started.
+20:20:00,291  INFO ProxyServiceImpl:59 - Test-thread-3 started.
+20:20:00,291  INFO ProxyServiceImpl:59 - Test-thread-3 started.
+20:20:00,291  INFO ProxyServiceImpl:59 - Test-thread-3 started.
+20:20:00,291  INFO ProxyServiceImpl:59 - Test-thread-4 started.
+20:20:00,292  INFO ProxyServiceImpl:65 - mimi download start.
+20:20:00,292  INFO MimiParser:34 - MINIIP
+20:20:00,292  INFO MimiParser:40 - http://www.mimiip.com/gngao/1
+20:20:00,292  INFO ProxyServiceImpl:59 - Test-thread-4 started.
+20:20:00,292  INFO ProxyServiceImpl:65 - xicidaili download start.
+20:20:00,292  INFO ProxyServiceImpl:59 - Test-thread-4 started.
+20:20:00,292  INFO XicidailiParser:35 - XICIDAILI
+20:20:00,292  INFO ProxyServiceImpl:65 - ip181 download start.
+20:20:00,293  INFO XicidailiParser:39 - nn
+20:20:00,293  INFO Ip181Parser:30 - IP181
+20:20:00,293  INFO Ip181Parser:32 - http://www.ip181.com
+20:20:01,040  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused (Connection refused)
+20:20:01,042  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+20:20:01,054 ERROR WHttpClientUtil:239 - get Response failed
+20:20:01,078  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused (Connection refused)
+20:20:01,078  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+20:20:01,082  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused (Connection refused)
+20:20:01,082  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+20:20:01,113  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443: Connect to 106.120.175.76:55336 [/106.120.175.76] failed: Connection refused (Connection refused)
+20:20:01,113  INFO RetryExec:113 - Retrying request to {tls}->http://106.120.175.76:55336->https://www.zhihu.com:443
+20:20:01,127  INFO MimiParser:40 - http://www.mimiip.com/gngao/2
+20:20:01,149 ERROR WHttpClientUtil:239 - get Response failed
+20:20:01,181  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused (Connection refused)
+20:20:01,182  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+20:20:01,249  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection refused (Connection refused)
+20:20:01,249  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+20:20:01,278  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443: Connect to 121.232.145.34:9000 [/121.232.145.34] failed: Connection refused (Connection refused)
+20:20:01,279  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.34:9000->https://www.zhihu.com:443
+20:20:01,343  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection refused (Connection refused)
+20:20:01,344  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+20:20:01,375 ERROR WHttpClientUtil:239 - get Response failed
+20:20:01,401  INFO MimiParser:40 - http://www.mimiip.com/gngao/3
+20:20:01,436  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443: Connect to 222.181.26.44:8998 [/222.181.26.44] failed: Connection refused (Connection refused)
+20:20:01,437  INFO RetryExec:113 - Retrying request to {tls}->http://222.181.26.44:8998->https://www.zhihu.com:443
+20:20:01,867  INFO MimiParser:40 - http://www.mimiip.com/gngao/4
+20:20:02,054  INFO MimiParser:40 - http://www.mimiip.com/gngao/5
+20:20:02,418  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=34db613a0840480ea234bd8bc6ef0174|1505823601000|1505823601000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:20:01 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:20:01 GMT
+20:20:02,419  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="ZDNiNzNlNzMxNWFkNDA1NTk1MGI3NzU4Zjg0YmZmYWU=|1505823601|e36714010eccd6b314745387b6d1d47a74f217b6"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:20:01 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:20:01 GMT
+20:20:02,419  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="NmUxODA3OWE0M2MyNGJiNWI5YWQyMDRjMDVkYjI3OGI=|1505823601|71edd9a5a91c54d9a5d3d6090aa36d98737fe781"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:20:01 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:20:01 GMT
+20:20:02,420  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="ZDk3ZjQ4MTIxMzU1NGRkMzlhM2Q0YTAxZDEzZTc2NTc=|1505823601|afedba042c2cc638157fdb9aa245c4446cc9fcab"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:20:01 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:20:01 GMT
+20:20:02,469  INFO MimiParser:40 - http://www.mimiip.com/gngao/6
+20:20:02,510  INFO ProxyTest:29 - Test Success: ip 153.34.202.68 port 80
+20:20:02,611 ERROR WHttpClientUtil:239 - get Response failed
+20:20:02,651  INFO MimiParser:40 - http://www.mimiip.com/gngao/7
+20:20:03,017  INFO MimiParser:40 - http://www.mimiip.com/gngao/8
+20:20:03,526  INFO MimiParser:40 - http://www.mimiip.com/gngao/9
+20:20:03,596  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:20:03,596  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:20:03,922  INFO MimiParser:40 - http://www.mimiip.com/gngao/10
+20:20:04,104  INFO MimiParser:40 - http://www.mimiip.com/gnpu/1
+20:20:04,169  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://221.202.248.27:8118->https://www.zhihu.com:443: Read timed out
+20:20:04,169  INFO RetryExec:113 - Retrying request to {tls}->http://221.202.248.27:8118->https://www.zhihu.com:443
+20:20:04,304  INFO MimiParser:40 - http://www.mimiip.com/gnpu/2
+20:20:04,309  INFO XicidailiParser:39 - nt
+20:20:04,497  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443: Read timed out
+20:20:04,497  INFO RetryExec:113 - Retrying request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443
+20:20:04,618  INFO MimiParser:40 - http://www.mimiip.com/gnpu/3
+20:20:04,932  INFO MimiParser:40 - http://www.mimiip.com/gnpu/4
+20:20:05,208  INFO MimiParser:40 - http://www.mimiip.com/gnpu/5
+20:20:05,491  INFO MimiParser:40 - http://www.mimiip.com/gnpu/6
+20:20:05,745  INFO MimiParser:40 - http://www.mimiip.com/gnpu/7
+20:20:05,878  INFO XicidailiParser:39 - wn
+20:20:06,014  INFO MimiParser:40 - http://www.mimiip.com/gnpu/8
+20:20:06,260  INFO MimiParser:40 - http://www.mimiip.com/gnpu/9
+20:20:06,500  INFO MimiParser:40 - http://www.mimiip.com/gnpu/10
+20:20:06,542  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443: Read timed out
+20:20:06,542  INFO RetryExec:113 - Retrying request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443
+20:20:06,623  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:20:06,623  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:20:07,473  INFO XicidailiParser:39 - wt
+20:20:07,565  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443: Read timed out
+20:20:07,566  INFO RetryExec:113 - Retrying request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443
+20:20:07,988  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=0bdbe0690d234d24b3eaf15d1a90ab3b|1505823607000|1505823607000; Domain=zhihu.com; expires=Fri, 18 Sep 2020 12:20:07 GMT; Path=/". Invalid 'expires' attribute: Fri, 18 Sep 2020 12:20:07 GMT
+20:20:07,988  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: r_cap_id="OGIzYjg5N2VmMGNkNDk2OGE4OGU2OTYxMjQ4ZTkyZDE=|1505823607|a36057bba4a019a1ebe0d2972aebe2618eaa8906"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:20:07 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:20:07 GMT
+20:20:07,989  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: cap_id="MzU2ODNmODEzOTIwNGRhN2E4NGExOWNkNTgzMDc2N2E=|1505823607|4016ec2a99ab3af84e9f201bfff011fbeca7be67"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:20:07 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:20:07 GMT
+20:20:07,989  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: l_cap_id="ZWFlOWRiODEyY2I5NDc3YTliOWFkMmQ2MWQ0OTBiODU=|1505823607|32171dbb772d3649222983ab23ccb8a6ad1b820d"; Domain=zhihu.com; expires=Thu, 19 Oct 2017 12:20:07 GMT; Path=/". Invalid 'expires' attribute: Thu, 19 Oct 2017 12:20:07 GMT
+20:20:08,106  INFO ProxyTest:29 - Test Success: ip 221.202.248.27 port 8118
+20:20:09,652  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:20:09,652  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:20:10,659  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443: Read timed out
+20:20:10,660  INFO RetryExec:113 - Retrying request to {tls}->http://122.72.32.88:80->https://www.zhihu.com:443
+20:20:10,660  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443: Read timed out
+20:20:10,660  INFO RetryExec:113 - Retrying request to {tls}->http://111.155.116.207:8123->https://www.zhihu.com:443
+20:20:12,676 ERROR WHttpClientUtil:239 - get Response failed
+20:20:12,677  INFO WHttpClientUtil:210 - getPageRetry()--1
+20:20:12,678  INFO ProxyPool:260 - Waiting for ProxyPool's core not empty......
+20:20:12,678  INFO ProxyPool:274 - Get proxy from ProxyPool, where proxy ip is 110.73.11.44 and port is 8123.
+20:20:13,734 ERROR WHttpClientUtil:239 - get Response failed
+20:23:43,983  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7382f612: startup date [Tue Sep 19 20:23:43 CST 2017]; root of context hierarchy
+20:23:44,089  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+20:23:44,432  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+20:23:44,569  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+20:23:46,663  INFO DruidDataSource:847 - {dataSource-1} inited
+20:23:47,656  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.dangdang.ddframe.job.lite.spring.api.SpringJobScheduler#0': Cannot create inner bean '(inner bean)#1fde5d22' of type [com.dangdang.ddframe.job.lite.config.LiteJobConfiguration] while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name '(inner bean)#1fde5d22': Unsatisfied dependency expressed through constructor parameter 6: Could not convert argument value of type [java.lang.String] to required type [boolean]: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [flase]
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name '(inner bean)#1fde5d22': Unsatisfied dependency expressed through constructor parameter 6: Could not convert argument value of type [java.lang.String] to required type [boolean]: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [flase]
+20:23:47,663  INFO DruidDataSource:1608 - {dataSource-1} closed
+20:24:43,604  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7382f612: startup date [Tue Sep 19 20:24:43 CST 2017]; root of context hierarchy
+20:24:43,736  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+20:24:43,996  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+20:24:44,105  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+20:24:46,170  INFO DruidDataSource:847 - {dataSource-1} inited
+20:24:47,001  WARN ClassPathXmlApplicationContext:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.dangdang.ddframe.job.lite.spring.api.SpringJobScheduler#0': Cannot create inner bean '(inner bean)#1fde5d22' of type [com.dangdang.ddframe.job.lite.config.LiteJobConfiguration] while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name '(inner bean)#1fde5d22': Unsatisfied dependency expressed through constructor parameter 6: Could not convert argument value of type [java.lang.String] to required type [boolean]: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [flase]
+Related cause: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name '(inner bean)#1fde5d22': Unsatisfied dependency expressed through constructor parameter 6: Could not convert argument value of type [java.lang.String] to required type [boolean]: Failed to convert value of type 'java.lang.String' to required type 'boolean'; nested exception is java.lang.IllegalArgumentException: Invalid boolean value [flase]
+20:24:47,010  INFO DruidDataSource:1608 - {dataSource-1} closed
+20:25:48,493  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7382f612: startup date [Tue Sep 19 20:25:48 CST 2017]; root of context hierarchy
+20:25:48,634  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+20:25:48,932  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+20:25:49,026  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+20:25:50,969  INFO DruidDataSource:847 - {dataSource-1} inited
+20:25:53,334  INFO ProxyFilterUtil:50 - Redis connect: org.redisson.Redisson@11653e3b
+20:25:53,351  INFO ProxyPool:43 - CoreLowLimitMonitor started.
+20:25:53,352  INFO ProxyPool:45 - CacheLowLimitMonitor started.
+20:25:53,352  INFO ProxyPool:299 - ProxyPool's core is low level, trying to fill core...
+20:25:53,353  INFO ProxyPool:47 - CacheHighLimitMonitor started.
+20:25:53,353  INFO ProxyPool:118 - Waiting ProxyPool's cache to be not empty...
+20:25:53,353  INFO ProxyPool:49 - CacheSyncMonitor started.
+20:25:53,705  INFO ProxyPool:121 - ProxyPool's cache is not empty, trying to get proxy from cache...
+20:25:53,706  INFO ProxyPool:294 - Waiting ProxyPool's core to be low level...
+20:26:00,098  INFO CrawlerUrlJob:23 - CrawlerUrlJob started.
+20:26:00,099  INFO CrawlerUrlJob:26 - ShardingItem(0)
+20:26:00,101  INFO ProxyJob:19 - ProxyJob started.
+20:26:00,101  INFO ProxyJob:22 - ProxyJob-shard-0 handling on site ip181.
+20:26:00,101  INFO ProxyServiceImpl:39 - init
+20:26:00,107  INFO ProxyServiceImpl:59 - Test-thread-1 started.
+20:26:00,108  INFO ProxyServiceImpl:59 - Test-thread-2 started.
+20:26:00,108  INFO ProxyServiceImpl:59 - Test-thread-3 started.
+20:26:00,109  INFO ProxyServiceImpl:59 - Test-thread-4 started.
+20:26:00,109  INFO ProxyServiceImpl:65 - ip181 download start.
+20:26:00,109  INFO Ip181Parser:30 - IP181
+20:26:00,109  INFO Ip181Parser:32 - http://www.ip181.com
+20:26:03,758  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:26:03,760  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:26:06,795  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:26:06,795  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:26:09,831  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:26:09,831  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:26:12,855 ERROR WHttpClientUtil:239 - get Response failed
+20:26:12,857  INFO WHttpClientUtil:210 - getPageRetry()--1
+20:26:12,858  INFO ProxyPool:260 - Waiting for ProxyPool's core not empty......
+20:26:12,858  INFO ProxyPool:274 - Get proxy from ProxyPool, where proxy ip is 183.62.196.10 and port is 3128.
+20:26:16,050  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://183.62.196.10:3128->http://www.ip181.com:80: Read timed out
+20:26:16,050  INFO RetryExec:113 - Retrying request to {}->http://183.62.196.10:3128->http://www.ip181.com:80
+20:26:19,266  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://183.62.196.10:3128->http://www.ip181.com:80: Read timed out
+20:26:19,267  INFO RetryExec:113 - Retrying request to {}->http://183.62.196.10:3128->http://www.ip181.com:80
+20:26:19,449 ERROR WHttpClientUtil:239 - get Response failed
+20:26:19,451  INFO WHttpClientUtil:210 - getPageRetry()--2
+20:26:19,451  INFO ProxyPool:260 - Waiting for ProxyPool's core not empty......
+20:26:19,451  INFO ProxyPool:274 - Get proxy from ProxyPool, where proxy ip is 222.141.9.62 and port is 8118.
+20:26:19,527  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://222.141.9.62:8118->http://www.ip181.com:80: Connect to 222.141.9.62:8118 [/222.141.9.62] failed: Connection refused (Connection refused)
+20:26:19,528  INFO RetryExec:113 - Retrying request to {}->http://222.141.9.62:8118->http://www.ip181.com:80
+20:26:19,621  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://222.141.9.62:8118->http://www.ip181.com:80: Connect to 222.141.9.62:8118 [/222.141.9.62] failed: Connection refused (Connection refused)
+20:26:19,622  INFO RetryExec:113 - Retrying request to {}->http://222.141.9.62:8118->http://www.ip181.com:80
+20:26:19,696  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://222.141.9.62:8118->http://www.ip181.com:80: Connect to 222.141.9.62:8118 [/222.141.9.62] failed: Connection refused (Connection refused)
+20:26:19,696  INFO RetryExec:113 - Retrying request to {}->http://222.141.9.62:8118->http://www.ip181.com:80
+20:26:19,776 ERROR WHttpClientUtil:239 - get Response failed
+20:26:19,778  INFO WHttpClientUtil:210 - getPageRetry()--3
+20:26:19,778  INFO ProxyPool:260 - Waiting for ProxyPool's core not empty......
+20:26:19,779  INFO ProxyPool:274 - Get proxy from ProxyPool, where proxy ip is 121.201.21.170 and port is 3128.
+20:26:23,907  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://121.201.21.170:3128->http://www.ip181.com:80: Read timed out
+20:26:23,908  INFO RetryExec:113 - Retrying request to {}->http://121.201.21.170:3128->http://www.ip181.com:80
+20:26:27,047  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://121.201.21.170:3128->http://www.ip181.com:80: Read timed out
+20:26:27,048  INFO RetryExec:113 - Retrying request to {}->http://121.201.21.170:3128->http://www.ip181.com:80
+20:26:30,180  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://121.201.21.170:3128->http://www.ip181.com:80: Read timed out
+20:26:30,181  INFO RetryExec:113 - Retrying request to {}->http://121.201.21.170:3128->http://www.ip181.com:80
+20:26:44,317 ERROR WHttpClientUtil:239 - get Response failed
+20:26:44,345  INFO ProxyJob:19 - ProxyJob started.
+20:26:44,345  INFO ProxyJob:22 - ProxyJob-shard-0 handling on site ip181.
+20:26:44,345  INFO ProxyServiceImpl:39 - init
+20:26:44,346  INFO ProxyServiceImpl:59 - Test-thread-1 started.
+20:26:44,346  INFO ProxyServiceImpl:59 - Test-thread-2 started.
+20:26:44,347  INFO ProxyServiceImpl:59 - Test-thread-3 started.
+20:26:44,347  INFO ProxyServiceImpl:59 - Test-thread-4 started.
+20:26:44,348  INFO ProxyServiceImpl:65 - ip181 download start.
+20:26:44,348  INFO Ip181Parser:30 - IP181
+20:26:44,348  INFO Ip181Parser:32 - http://www.ip181.com
+20:26:47,386  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:26:47,386  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:26:50,414  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:26:50,415  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:26:53,445  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {}->http://www.ip181.com:80: Read timed out
+20:26:53,445  INFO RetryExec:113 - Retrying request to {}->http://www.ip181.com:80
+20:26:56,475 ERROR WHttpClientUtil:239 - get Response failed
+20:26:56,476  INFO WHttpClientUtil:210 - getPageRetry()--1
+20:26:56,476  INFO ProxyPool:260 - Waiting for ProxyPool's core not empty......
+20:26:56,476  INFO ProxyPool:274 - Get proxy from ProxyPool, where proxy ip is 120.87.122.17 and port is 8998.
+20:28:11,599  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://120.87.122.17:8998->http://www.ip181.com:80: Connect to 120.87.122.17:8998 [/120.87.122.17] failed: Operation timed out (Connection timed out)
+20:28:11,599  INFO RetryExec:113 - Retrying request to {}->http://120.87.122.17:8998->http://www.ip181.com:80
+20:29:26,739  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://120.87.122.17:8998->http://www.ip181.com:80: Connect to 120.87.122.17:8998 [/120.87.122.17] failed: Operation timed out (Connection timed out)
+20:29:26,739  INFO RetryExec:113 - Retrying request to {}->http://120.87.122.17:8998->http://www.ip181.com:80
+20:30:42,032  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://120.87.122.17:8998->http://www.ip181.com:80: Connect to 120.87.122.17:8998 [/120.87.122.17] failed: Operation timed out (Connection timed out)
+20:30:42,033  INFO RetryExec:113 - Retrying request to {}->http://120.87.122.17:8998->http://www.ip181.com:80
+20:31:57,148 ERROR WHttpClientUtil:239 - get Response failed
+20:31:57,150  INFO WHttpClientUtil:210 - getPageRetry()--2
+20:31:57,150  INFO ProxyPool:260 - Waiting for ProxyPool's core not empty......
+20:31:57,150  INFO ProxyPool:274 - Get proxy from ProxyPool, where proxy ip is 101.129.17.33 and port is 8080.
+20:33:12,242  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://101.129.17.33:8080->http://www.ip181.com:80: Connect to 101.129.17.33:8080 [/101.129.17.33] failed: Operation timed out (Connection timed out)
+20:33:12,242  INFO RetryExec:113 - Retrying request to {}->http://101.129.17.33:8080->http://www.ip181.com:80
+20:33:12,311 ERROR WHttpClientUtil:239 - get Response failed
+20:33:12,312  INFO WHttpClientUtil:210 - getPageRetry()--3
+20:33:12,312  INFO ProxyPool:260 - Waiting for ProxyPool's core not empty......
+20:33:12,312  INFO ProxyPool:274 - Get proxy from ProxyPool, where proxy ip is 175.10.198.225 and port is 80.
+20:34:27,417  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://175.10.198.225:80->http://www.ip181.com:80: Connect to 175.10.198.225:80 [/175.10.198.225] failed: Operation timed out (Connection timed out)
+20:34:27,417  INFO RetryExec:113 - Retrying request to {}->http://175.10.198.225:80->http://www.ip181.com:80
+20:35:42,511  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://175.10.198.225:80->http://www.ip181.com:80: Connect to 175.10.198.225:80 [/175.10.198.225] failed: Operation timed out (Connection timed out)
+20:35:42,526  INFO RetryExec:113 - Retrying request to {}->http://175.10.198.225:80->http://www.ip181.com:80
+20:36:57,622  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {}->http://175.10.198.225:80->http://www.ip181.com:80: Connect to 175.10.198.225:80 [/175.10.198.225] failed: Operation timed out (Connection timed out)
+20:36:57,623  INFO RetryExec:113 - Retrying request to {}->http://175.10.198.225:80->http://www.ip181.com:80
+20:38:12,710 ERROR WHttpClientUtil:239 - get Response failed

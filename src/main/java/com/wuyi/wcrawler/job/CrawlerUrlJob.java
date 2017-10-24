@@ -12,13 +12,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
- * Created by wuyi5 on 2017/8/16.
+ *
+ * @author wuyi5
+ * @date 2017/8/16
  */
 public class CrawlerUrlJob implements SimpleJob {
     private static final Log LOG = LogFactory.getLog(CrawlerUrlJob.class);
     
     @Autowired
     private CrawlerUrlServiceImpl crawlerUrlService;
+    @Override
     public void execute(ShardingContext shardingContext) {
         LOG.info("CrawlerUrlJob started.");
         int shardingItem = shardingContext.getShardingItem();

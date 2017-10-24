@@ -61,6 +61,7 @@ public class ProxyServiceImpl implements ProxyService {
 		}
 	}
 
+	@Override
 	public void downLoadProxy(String siteParser) throws InterruptedException {
 		LOG.info(siteParser + " download start.");
 		SiteParser sp = (SiteParser) applicationContextUtil.getBean(siteParser);

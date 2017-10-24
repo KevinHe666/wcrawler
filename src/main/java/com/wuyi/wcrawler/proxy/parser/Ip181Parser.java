@@ -14,11 +14,14 @@ import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author wuyi
+ */
 @Component(value = "ip181")
 public class Ip181Parser extends SiteParser {
 	Log LOG = LogFactory.getLog(Ip181Parser.class);
 	@Autowired
-	private ProxyCollector pCollecotr;
+	private ProxyCollector pCollector;
 	public Ip181Parser() {
 		this(ProxySite.IP181.getSite());
 	}
@@ -44,7 +47,7 @@ public class Ip181Parser extends SiteParser {
 					continue;
 				}
 //				LOG.info(proxy.getIp() + " " + proxy.getPort());
-				pCollecotr.addProxy(proxy);
+				pCollector.addProxy(proxy);
 			}
 		}
 	}

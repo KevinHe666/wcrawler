@@ -1,7 +1,9 @@
 package com.wuyi.wcrawler.bean;
 
 /**
- * Created by wuyi5 on 2017/8/29.
+ *
+ * @author wuyi5
+ * @date 2017/8/29
  */
 public class CrawlerTask {
 
