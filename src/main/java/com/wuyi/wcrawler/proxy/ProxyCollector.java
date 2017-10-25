@@ -1,6 +1,6 @@
 package com.wuyi.wcrawler.proxy;
 
-import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.entity.Proxy;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;

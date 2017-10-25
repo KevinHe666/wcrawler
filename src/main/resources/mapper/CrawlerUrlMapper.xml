@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wuyi.wcrawler.dao.CrawlerUrlDao">
-    <resultMap id="BaseResultMap" type="com.wuyi.wcrawler.bean.CrawlerUrlBean">
+<mapper namespace="com.wuyi.wcrawler.mapper.CrawlerUrlMapper">
+    <resultMap id="BaseResultMap" type="com.wuyi.wcrawler.entity.CrawlerUrl">
         <!--注意这里的property对应了bean字段名称-->
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="name" property="name" jdbcType="VARCHAR"/>
@@ -10,7 +10,7 @@
         <result column="status" property="status" jdbcType="INTEGER"/>
     </resultMap>
 
-    <select id="select" parameterType="java.util.Map" resultMap="BaseResultMap">
+    <select id="selectBySharding" parameterType="java.util.Map" resultMap="BaseResultMap">
         SELECT * FROM crawler_url WHERE status = 0 AND mod(id, #{shardingTotalCount}) = #{shardingItem}
     </select>
 

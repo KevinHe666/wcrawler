@@ -1,6 +1,6 @@
 package com.wuyi.wcrawler.proxy;
 
-import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.entity.Proxy;
 
 import com.wuyi.wcrawler.proxy.monitor.cache.CacheHighLimitMonitor;
 import com.wuyi.wcrawler.proxy.monitor.cache.CacheLowLimitMonitor;
@@ -13,7 +13,6 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 import java.util.*;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;

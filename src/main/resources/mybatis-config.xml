@@ -23,7 +23,11 @@
         <setting name="useColumnLabel" value="true" />
         <setting name="defaultExecutorType" value="REUSE" />
         <setting name="defaultStatementTimeout" value="25000" />
-        <setting name="logImpl" value="LOG4J" />
+        <!-- 开启字段名和属性名驼峰似的匹配 -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+        <!-- 是否开启sql debug -->
+        <!--<setting name="logImpl" value="STDOUT_LOGGING" />-->
+        <!--<setting name="logImpl" value="LOG4J" />-->
     </settings>
 
     <!-- 查询对象别名配置 -->

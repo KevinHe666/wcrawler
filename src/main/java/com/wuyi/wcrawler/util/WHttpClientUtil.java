@@ -17,7 +17,7 @@ import java.security.cert.X509Certificate;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLException;
 
-import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.entity.Proxy;
 import com.wuyi.wcrawler.proxy.ProxyPool;
 import com.wuyi.wcrawler.proxy.util.UserAgent;
 import org.apache.commons.logging.Log;

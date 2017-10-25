@@ -1,4 +1,8 @@
-package com.wuyi.wcrawler.bean;
+package com.wuyi.wcrawler.entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * Created by wuyi5 on 2017/8/25.
@@ -9,7 +13,8 @@ public class Proxy implements Comparable<Proxy> {
     public static final int STORE_CORE = 2;
     public static final int STORE_DB = 3;
 
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     private int id;
     private String ip;
     private String port;

@@ -1,4 +1,4 @@
-package com.wuyi.wcrawler.bean;
+package com.wuyi.wcrawler.entity;
 
 /**
  *

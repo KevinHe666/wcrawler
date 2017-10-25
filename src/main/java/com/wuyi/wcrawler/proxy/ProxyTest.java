@@ -1,6 +1,6 @@
 package com.wuyi.wcrawler.proxy;
 
-import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.entity.Proxy;
 import com.wuyi.wcrawler.proxy.util.ProxyFilterUtil;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 import org.apache.commons.logging.Log;

@@ -1,6 +1,6 @@
 package com.wuyi.wcrawler.proxy.util;
 
-import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.entity.Proxy;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.redisson.Redisson;
@@ -9,7 +9,6 @@ import org.redisson.api.RSet;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;

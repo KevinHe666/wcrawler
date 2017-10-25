@@ -10,14 +10,6 @@
   <name>wcrawler</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <elastic-job-lite.version>2.1.4</elastic-job-lite.version>
-    <spring.version>4.3.9.RELEASE</spring.version>
-    <druid.version>1.1.0</druid.version>
-    <mybatis.version>3.2.8</mybatis.version>
-  </properties>
-
   <dependencies>
     <!--junit begin-->
     <dependency>
@@ -147,26 +139,37 @@
     </dependency>
     <!-- redisson e -->
 
+    <!-- fastjson b -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.39</version>
+    </dependency>
+    <!-- fastjson e -->
+
+    <!-- tk.mybatis b -->
+    <dependency>
+      <groupId>tk.mybatis</groupId>
+      <artifactId>mapper</artifactId>
+      <version>3.4.4</version>
+    </dependency>
+    <!-- tk.mybatis e -->
   </dependencies>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <elastic-job-lite.version>2.1.4</elastic-job-lite.version>
+    <spring.version>4.3.9.RELEASE</spring.version>
+    <druid.version>1.1.0</druid.version>
+    <mybatis.version>3.2.8</mybatis.version>
+  </properties>
 
 
   <build>
     <finalName>wcrawler</finalName>
     <resources>
       <resource>
-        <directory>src/main/java</directory>
-        <includes>
-          <include>**/*.xml</include>
-        </includes>
-        <filtering>true</filtering>
-      </resource>
-
-      <resource>
         <directory>src/main/resources</directory>
-        <!--<includes>-->
-          <!--<include>**/*.properties</include>-->
-          <!--<include>**/*.xml</include>-->
-        <!--</includes>-->
         <filtering>true</filtering>
       </resource>
     </resources>

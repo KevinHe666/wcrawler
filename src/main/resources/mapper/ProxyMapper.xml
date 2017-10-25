@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wuyi.wcrawler.dao.ProxyDao">
-    <resultMap id="BaseResultMap" type="com.wuyi.wcrawler.bean.Proxy">
+<mapper namespace="com.wuyi.wcrawler.mapper.ProxyMapper">
+    <resultMap id="BaseResultMap" type="com.wuyi.wcrawler.entity.Proxy">
         <!--注意这里的property对应了bean字段名称-->
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="ip" property="ip" jdbcType="VARCHAR"/>
@@ -14,11 +14,6 @@
         <result column="avgSuccessTimeConsume" property="avgSuccessTimeConsume" jdbcType="INTEGER"/>
         <result column="storeStatus" property="storeStatus" jdbcType="INTEGER"/>
     </resultMap>
-
-    <insert id="insert" parameterType="com.wuyi.wcrawler.bean.Proxy">
-        insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimeStamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
-        values(#{ip}, #{port}, #{quality}, #{successTimes}, #{failureTimes}, #{lastSuccessTimeStamp}, #{lastSuccessTimeConsume}, #{avgSuccessTimeConsume}, #{storeStatus})
-    </insert>
 	
 	<insert id="insertAll" parameterType="java.util.List">
         insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimeStamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
@@ -29,7 +24,7 @@
         </foreach>
     </insert>
 	
- 	<select id = "selectRand" resultType = "com.wuyi.wcrawler.bean.Proxy">
+ 	<select id = "selectRand" resultType = "com.wuyi.wcrawler.entity.Proxy">
         SELECT *
         FROM proxy t1
             JOIN (SELECT ROUND(RAND() * ((

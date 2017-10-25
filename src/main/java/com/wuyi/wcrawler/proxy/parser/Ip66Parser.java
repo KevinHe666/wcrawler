@@ -1,6 +1,6 @@
 package com.wuyi.wcrawler.proxy.parser;
 
-import com.wuyi.wcrawler.bean.Proxy;
+import com.wuyi.wcrawler.entity.Proxy;
 import com.wuyi.wcrawler.proxy.ProxyCollector;
 import com.wuyi.wcrawler.proxy.util.ProxyFilterUtil;
 import com.wuyi.wcrawler.proxy.util.ProxySite;

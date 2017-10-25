@@ -1,6 +1,6 @@
 package com.wuyi.wcrawler.crawler;
 
-import com.wuyi.wcrawler.bean.CrawlerTask;
+import com.wuyi.wcrawler.entity.CrawlerTask;
 
 /**
  * Created by wuyi5 on 2017/8/17.

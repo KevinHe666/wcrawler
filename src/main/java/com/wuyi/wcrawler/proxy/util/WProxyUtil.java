@@ -1,25 +1,22 @@
 package com.wuyi.wcrawler.proxy.util;
 
-import com.wuyi.wcrawler.bean.Proxy;
-import com.wuyi.wcrawler.dao.ProxyDao;
+import com.wuyi.wcrawler.entity.Proxy;
+import com.wuyi.wcrawler.mapper.ProxyMapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Component(value = "wProxyUtil")
 public class WProxyUtil {
 	private static Log LOG = LogFactory.getLog(WProxyUtil.class);
 
-	private static ProxyDao proxyDao;
+	private static ProxyMapper proxyDao;
 
 	@Autowired
-	public  void setProxyDao(ProxyDao proxyDao) {
+	public  void setProxyDao(ProxyMapper proxyDao) {
 		WProxyUtil.proxyDao = proxyDao;
 	}
 

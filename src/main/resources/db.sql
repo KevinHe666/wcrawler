@@ -25,3 +25,22 @@ CREATE TABLE `proxy` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `zh_user`;
+CREATE TABLE `zh_user` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `url_token` varchar(255) DEFAULT NULL,
+  `headline` varchar(255) DEFAULT NULL,
+  `business_name` varchar(255) DEFAULT NULL,
+  `educations_school_name` varchar(255) DEFAULT NULL,
+  `locations_name` varchar(255) DEFAULT NULL,
+  `follower_count` int(255) DEFAULT NULL,
+  `following_count` int(255) DEFAULT NULL,
+  `voteup_count` int(255) DEFAULT NULL,
+  `thanked_count` int(255) DEFAULT NULL,
+  `answer_count` int(255) DEFAULT NULL,
+  `question_count` int(255) DEFAULT NULL,
+  `articles_count` int(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

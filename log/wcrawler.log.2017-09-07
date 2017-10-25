@@ -1,0 +1,20 @@
+08:52:38,014  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@14899482: startup date [Thu Sep 07 08:52:38 CST 2017]; root of context hierarchy
+08:52:38,107  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+08:52:38,322  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+08:52:38,367  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+08:52:39,513  INFO DruidDataSource:847 - {dataSource-1} inited
+08:52:41,458  INFO ProxyFilterUtil:50 - Redis connect: org.redisson.Redisson@6872f9c8
+08:53:00,107  INFO ProxyJob:19 - ProxyJob started.
+08:53:00,107  INFO ProxyJob:22 - ProxyJob-shard-0 handling on site ip181.
+08:53:00,108  INFO ProxyServiceImpl:39 - init
+08:53:00,108  INFO ProxyServiceImpl:46 - CoreLowLimitMonitor started.
+08:53:00,108  INFO ProxyServiceImpl:48 - CacheLowLimitMonitor started.
+08:53:00,108  INFO ProxyServiceImpl:50 - CacheHighLimitMonitor started.
+08:53:00,109  INFO ProxyServiceImpl:52 - CacheSyncMonitor started.
+08:53:00,111  INFO ProxyServiceImpl:59 - Test-thread-1 started.
+08:53:00,112  INFO ProxyServiceImpl:59 - Test-thread-2 started.
+08:53:00,112  INFO ProxyServiceImpl:59 - Test-thread-3 started.
+08:53:00,113  INFO ProxyServiceImpl:59 - Test-thread-4 started.
+08:53:00,114  INFO ProxyServiceImpl:65 - ip181 download start.
+08:53:00,114  INFO Ip181Parser:30 - IP181
+08:53:00,114  INFO Ip181Parser:32 - http://www.ip181.com
