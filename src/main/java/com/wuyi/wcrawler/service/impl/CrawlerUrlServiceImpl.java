@@ -1,5 +1,6 @@
 package com.wuyi.wcrawler.service.impl;
 
+import com.wuyi.wcrawler.Config;
 import com.wuyi.wcrawler.entity.CrawlerTask;
 import com.wuyi.wcrawler.crawler.ZhCrawler;
 import com.wuyi.wcrawler.entity.ZhUser;
@@ -37,8 +38,6 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
     private ZhUserMapper zhUserMapper;
 	@Autowired
     private CrawlerUrlMapper crawlerUrlDao;
-	@Autowired
-    ApplicationContextUtil applicationContextUtil;
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, rollbackFor = Exception.class)
@@ -71,14 +70,17 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
          * 线程池，执行爬虫任务
          * */
         int nThreads = Math.max(1, users.size() / 2);
-        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(nThreads);
+        ExecutorService executorService = Executors.newFixedThreadPool(nThreads);
         for (ZhUser user: users) {
-            ZhCrawler zhCrawler = (ZhCrawler) applicationContextUtil.getBean("zhCrawler");
+            ZhCrawler zhCrawler = (ZhCrawler) ApplicationContextUtil.getBean("zhCrawler");
             zhCrawler.setStartTime(System.currentTimeMillis());
             zhCrawler.setStatus(CrawlerTask.CREATED);
             zhCrawler.setTarAmount(DEFAULT_TAR_AMOUNT);
             zhCrawler.setUrl(zhCrawler.getUrl().replace("urlToken", user.getUrlToken()));
-            fixedThreadPool.execute(zhCrawler);
+            executorService.execute(zhCrawler);
+            if (zhUserMapper.select(null).size() > Config.newInstance().tarAmount) {
+                executorService.shutdownNow();
+            }
         }
     }
 }

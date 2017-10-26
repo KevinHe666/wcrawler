@@ -48,11 +48,11 @@ public class ApplicationContextUtil implements ApplicationContextAware {
         ApplicationContextUtil.ctx = new ClassPathXmlApplicationContext(xmlPath);
     }
 
-    public Object getBean(String id) {
-        return ctx.getBean(id);
+    public static <T> T getBean(String id) {
+        return (T) ctx.getBean(id);
     }
 
-    public <T> T getBean(Class<T> requiredType) {
+    public static <T> T getBean(Class<T> requiredType) {
         return ctx.getBean(requiredType);
     }
 
