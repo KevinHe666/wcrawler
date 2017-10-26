@@ -15,7 +15,8 @@ public class CrawlerTask {
     public static final int ABNORMALEND = 3;
 
     private int id;
-    private String url = "http://localhost:8080/config/api/v4/members/urlToken/followees";
+//    private String url = "http://localhost:8080/config/api/v4/members/urlToken/followees";
+    private String url = "https://www.zhihu.com/api/v4/members/urlToken/followees";
     private String paramInclude = "data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics";
     private int paramOffset = 0;
     private int paramLimit = 20;

@@ -18,6 +18,7 @@ import java.util.concurrent.*;
 public class Wcrawler implements Runnable{
     private static final Log LOG = LogFactory.getLog(Wcrawler.class);
     private Config config;
+    private ZhUserMapper zhUserMapper;
     private long startTime;
     private WcrawlerStatus status = WcrawlerStatus.INIT;
     private ExecutorService executorService;
@@ -27,13 +28,18 @@ public class Wcrawler implements Runnable{
     public Wcrawler(Config config, ExecutorService executorService) {
         LOG.info("Wcrawler INIT !");
         this.config = config;
+        this.startTime = System.currentTimeMillis();
+        this.zhUserMapper = ApplicationContextUtil.getBean(ZhUserMapper.class);
         this.executorService = executorService;
     }
     public void start() {
         LOG.info("Wcrawler START !");
         // 加载配置文件, 默认启动job
         //classpath后面冒号不能有空格, 不然会FileNotFoundException
+        // 这里重复加载spring的配置的文件了(上面getBean时已经加载过一遍)
         new ClassPathXmlApplicationContext(config.xmlPaths);
+
+        executorService.execute(this);
     }
 
     public void setConfig(Config config) {
@@ -44,8 +50,6 @@ public class Wcrawler implements Runnable{
     }
     @Override
     public void run() {
-        start();
-        ZhUserMapper zhUserMapper = ApplicationContextUtil.getBean(ZhUserMapper.class);
         while (true) {
             try {
                 TimeUnit.MILLISECONDS.sleep(config.checkInterval);
@@ -84,6 +88,6 @@ public class Wcrawler implements Runnable{
         Config config = Config.newInstance();
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Wcrawler wcrawler = new Wcrawler(config, executorService);
-        executorService.execute(wcrawler);
+        wcrawler.start();
     }
 }

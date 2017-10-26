@@ -101,7 +101,7 @@ public class WHttpClientUtil {
 			 * http重试策略
 			 * */
 			HttpRequestRetryHandler retryHandler = new HttpRequestRetryHandler() {
-				
+				@Override
 				public boolean retryRequest(IOException exception, int executionCOunt, HttpContext ctx) {
 					// TODO Auto-generated method stub
 					if(executionCOunt > MAX_RETYR) {
@@ -153,6 +153,8 @@ public class WHttpClientUtil {
 
 	public static HttpRequestBase setUserAgent(HttpRequestBase requestBase, String value) {
 		requestBase.setHeader("User-Agent", value);
+		// TODO 删除
+//		requestBase.setHeader("authorization", "oauth c3cef7c66a1843f8b3a9e6a1e3160e20");
 		return requestBase;
 	}
 

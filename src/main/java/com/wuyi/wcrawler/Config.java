@@ -6,15 +6,15 @@ import org.apache.commons.logging.LogFactory;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @authort wuyi5
+ * @authort wuyi
  * @date 2017/10/26.
  */
 public class Config {
     private static final Log LOG = LogFactory.getLog(Config.class);
     public String [] xmlPaths = {"classpath:mybatis-druid.xml", "classpath:elastic-job-lite.xml", "spring.xml"};
-    public long checkInterval = 30;
-    public int tarAmount = 5;
-    public long runningTime = 15 * 1000;
+    public long checkInterval = 100;
+    public int tarAmount = 500;
+    public long runningTime = 300 * 1000;
     private static Config instance;
     public static Config newInstance() {
         if (instance == null) {
