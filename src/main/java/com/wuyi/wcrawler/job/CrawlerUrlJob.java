@@ -3,6 +3,7 @@ package com.wuyi.wcrawler.job;
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
 import com.wuyi.wcrawler.entity.CrawlerUrl;
+import com.wuyi.wcrawler.entity.ZhUser;
 import com.wuyi.wcrawler.service.impl.CrawlerUrlServiceImpl;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -26,12 +27,12 @@ public class CrawlerUrlJob implements SimpleJob {
         int shardingItem = shardingContext.getShardingItem();
         int shardingTotalCount = shardingContext.getShardingTotalCount();
         LOG.info("ShardingItem(" + shardingItem + ")");
-        List<CrawlerUrl> urls = crawlerUrlService.fetchUrl(shardingItem, shardingTotalCount);
-        if (urls.size() == 0 || urls == null) {
-            LOG.error("list<CrawlerUrl> is empty or null.");
+        List<ZhUser> users = crawlerUrlService.fetchUrl(shardingItem, shardingTotalCount);
+        if (users.size() == 0 || users == null) {
+            LOG.error("ZhUser list is empty or null.");
             System.exit(-1);
         }
-        LOG.info("List<CrawlerUrl> 's  size() is " + urls.size());
-        crawlerUrlService.crawler(urls);
+        LOG.info("ZhUser list's  size() is " + users.size());
+        crawlerUrlService.crawler(users);
     }
 }

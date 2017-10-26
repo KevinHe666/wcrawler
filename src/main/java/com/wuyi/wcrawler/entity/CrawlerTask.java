@@ -1,5 +1,7 @@
 package com.wuyi.wcrawler.entity;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  *
  * @author wuyi5
@@ -13,7 +15,11 @@ public class CrawlerTask {
     public static final int ABNORMALEND = 3;
 
     private int id;
-    private String url;
+    private String url = "http://localhost:8080/config/api/v4/members/urlToken/followees";
+    private String paramInclude = "data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics";
+    private int paramOffset = 0;
+    private int paramLimit = 20;
+
     /**
      * 0: 初始状态
      * 1: 正在爬取
@@ -24,7 +30,7 @@ public class CrawlerTask {
     /**
      * 当前爬取总数
      * */
-    private int curAmount;
+    private AtomicInteger curAmount = new AtomicInteger(0);
     /**
      * 目标爬取总数
      * */
@@ -49,6 +55,30 @@ public class CrawlerTask {
         this.url = url;
     }
 
+    public String getParamInclude() {
+        return paramInclude;
+    }
+
+    public void setParamInclude(String paramInclude) {
+        this.paramInclude = paramInclude;
+    }
+
+    public int getParamOffset() {
+        return paramOffset;
+    }
+
+    public void setParamOffset(int paramOffset) {
+        this.paramOffset = paramOffset;
+    }
+
+    public int getParamLimit() {
+        return paramLimit;
+    }
+
+    public void setParamLimit(int paramLimit) {
+        this.paramLimit = paramLimit;
+    }
+
     public int getStatus() {
         return status;
     }
@@ -57,11 +87,11 @@ public class CrawlerTask {
         this.status = status;
     }
 
-    public int getCurAmount() {
+    public AtomicInteger getCurAmount() {
         return curAmount;
     }
 
-    public void setCurAmount(int curAmount) {
+    public void setCurAmount(AtomicInteger curAmount) {
         this.curAmount = curAmount;
     }
 
@@ -102,6 +132,9 @@ public class CrawlerTask {
         return "CrawlerTask{" +
                 "id=" + id +
                 ", url='" + url + '\'' +
+                ", paramInclude='" + paramInclude + '\'' +
+                ", paramOffset=" + paramOffset +
+                ", paramLimit=" + paramLimit +
                 ", status=" + status +
                 ", curAmount=" + curAmount +
                 ", tarAmount=" + tarAmount +

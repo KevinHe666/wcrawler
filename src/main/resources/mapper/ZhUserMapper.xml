@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wuyi.wcrawler.mapper.ZhUserMapper">
+    <select id="selectBySharding" parameterType="java.util.Map" resultType="com.wuyi.wcrawler.entity.ZhUser">
+        SELECT * FROM zh_user WHERE status = 0 AND mod(id, #{shardingTotalCount}) = #{shardingItem}
+    </select>
 
+    <update id="updateUserStatus">
+        UPDATE zh_user SET status = 1 WHERE id IN
+        <foreach collection="list"  index="index"  item="item" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </update>
 </mapper>

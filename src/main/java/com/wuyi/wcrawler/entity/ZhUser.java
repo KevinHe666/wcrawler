@@ -25,6 +25,20 @@ public class ZhUser {
     private int answerCount;
     private int questionCount;
     private int articlesCount;
+    /**
+     * 0: 初始状态
+     * 1: 正在使用
+     * 2: 正常结束
+     * */
+    private int status;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -130,10 +144,19 @@ public class ZhUser {
         this.articlesCount = articlesCount;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "ZhUser{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", urlToken='" + urlToken + '\'' +
                 ", headline='" + headline + '\'' +
                 ", businessName='" + businessName + '\'' +
@@ -146,6 +169,7 @@ public class ZhUser {
                 ", answerCount=" + answerCount +
                 ", questionCount=" + questionCount +
                 ", articlesCount=" + articlesCount +
+                ", status=" + status +
                 '}';
     }
 }

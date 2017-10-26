@@ -3,6 +3,7 @@ package com.wuyi.wcrawler.crawler;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.wuyi.wcrawler.entity.CrawlerTask;
 import com.wuyi.wcrawler.mapper.ZhUserMapper;
 import com.wuyi.wcrawler.entity.ZhUser;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
@@ -26,18 +27,30 @@ public class ZhCrawler extends Crawler {
 
     private static final Log LOG = LogFactory.getLog(ZhCrawler.class);
     @Autowired
-    private ZhUserMapper zhUserDao;
+    private ZhUserMapper zhUserMapper;
     public ZhCrawler() { super();}
 
     @Override
     public void run() {
-        crawl(this.getUrl());
+        for (int offset = 0; offset < 1; offset ++) {
+            crawl(concatRequestUrl(this.getUrl(), this.getParamInclude(), this.getParamLimit() * offset, this.getParamLimit()));
+        }
+    }
+
+    private String concatRequestUrl(String url, String include, int offset, int limit) {
+        return url
+                .concat("?")
+                .concat("include=" + include)
+                .concat("&")
+                .concat("offset=" + offset)
+                .concat("&")
+                .concat("limit=" + limit);
     }
 
     @Override
-    public void crawl(String url) {
-        System.out.println("startUrl: " + url);
-        String followees = WHttpClientUtil.getPage(url, false);
+    public void crawl(String requestUrl) {
+        System.out.println("startUrl: " + requestUrl);
+        String followees = WHttpClientUtil.getPage(requestUrl, false);
         JSONArray dataArray = (JSONArray) JSON.parseObject(followees).get("data");
         for (Object object :dataArray) {
             JSONObject jsonObject = JSON.parseObject(object.toString());
@@ -77,9 +90,14 @@ public class ZhCrawler extends Crawler {
             // 这样的做法相率太低,暂时先这样写(之后可以考虑用LRU缓存提高效率)
             Example example = new Example(ZhUser.class);
             example.createCriteria().andEqualTo("urlToken", zhUser.getUrlToken());
-            List<ZhUser> zhUserList = zhUserDao.selectByExample(example);
+            List<ZhUser> zhUserList = zhUserMapper.selectByExample(example);
             if (zhUserList.size() == 0) {
-                zhUserDao.insert(zhUser);
+                zhUser.setStatus(0);
+                zhUserMapper.insert(zhUser);
+                int curAmount = this.getCurAmount().incrementAndGet();
+                if (curAmount >= this.getTarAmount()) {
+                    // TODO
+                }
                 System.out.println("User " + zhUser.getName() + "insert into table...");
             }
         }
