@@ -1,14 +1,11 @@
 package com.wuyi.wcrawler.entity;
 
 /**
- * Created by wuyi5 on 2017/8/16.
+ *
+ * @author wuyi5
+ * @date 2017/8/16
  */
 public class CrawlerUrl {
-
-    private static final int CREATED = 0;
-    private static final int USED = 1;
-    private static final int UNUSED = 2;
-
     private int id;
     private String name;
     private String url;

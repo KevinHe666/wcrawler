@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wuyi.wcrawler.mapper.ZhUserMapper">
+
+    <update id="insertList">
+        INSERT INTO zh_user VALUES
+        <foreach collection="list"  index="index"  item="item" separator=",">
+            (#{item.id}, #{item.status}, #{item.name}, #{item.urlToken}, #{item.headline}, #{item.businessName},
+            #{item.educationsSchoolName}, #{item.locationsName}, #{item.linkPerson}, #{item.followerCount},
+            #{item.followingCount}, #{item.voteupCount}, #{item.thankedCount}, #{item.answerCount}, #{item.questionCount},
+            #{item.articlesCount})
+        </foreach>
+    </update>
+
     <select id="selectBySharding" parameterType="java.util.Map" resultType="com.wuyi.wcrawler.entity.ZhUser">
-        SELECT * FROM zh_user WHERE status = 0 AND mod(id, #{shardingTotalCount}) = #{shardingItem}
+        SELECT
+            *
+        FROM
+            zh_user
+        WHERE
+            STATUS = 0
+        AND MOD (id, #{shardingTotalCount}) = #{shardingItem}
+        ORDER BY follower_count DESC
+        LIMIT 10
     </select>
 
     <update id="updateUserStatus">

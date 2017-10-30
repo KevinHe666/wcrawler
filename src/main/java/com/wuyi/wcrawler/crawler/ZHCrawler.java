@@ -14,7 +14,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -28,6 +31,9 @@ public class ZhCrawler extends Crawler {
     private static final Log LOG = LogFactory.getLog(ZhCrawler.class);
     @Autowired
     private ZhUserMapper zhUserMapper;
+    private ZhUser startUser;
+    private Set<ZhUser> crawlUserBuffer;
+    private int bufferThreshold = 512;
     private String paramInclude = "data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics";
     private int paramOffset = 0;
     private int paramLimit = 20;
@@ -36,9 +42,19 @@ public class ZhCrawler extends Crawler {
 
     @Override
     public void run() {
-        for (int offset = 0; offset < 1; offset ++) {
-            crawl(concatRequestUrl(this.getUrl(), this.getParamInclude(), this.getParamLimit() * offset, this.getParamLimit()));
+        try {
+            for (int offset = 0; offset < 1; offset ++) {
+                crawl(concatRequestUrl(this.getUrl(), this.getParamInclude(), this.getParamLimit() * offset, this.getParamLimit()));
+            }
+            if (crawlUserBuffer.size() > 0) {
+                flush();
+            }
+        } catch (Exception e) {
+            startUser.setStatus(CrawlerTask.ABNORMALEND);
+            e.printStackTrace();
         }
+        startUser.setStatus(CrawlerTask.NORMALEND);
+        zhUserMapper.updateByPrimaryKey(startUser);
     }
 
     private String concatRequestUrl(String url, String include, int offset, int limit) {
@@ -58,54 +74,97 @@ public class ZhCrawler extends Crawler {
         JSONArray dataArray = (JSONArray) JSON.parseObject(followees).get("data");
         for (Object object :dataArray) {
             JSONObject jsonObject = JSON.parseObject(object.toString());
-            ZhUser zhUser = new ZhUser();
-            zhUser.setLinkPerson(this.getUrlToken());
-            zhUser.setName((String) jsonObject.get("name"));
-            zhUser.setUrlToken((String) jsonObject.get("url_token"));
-            zhUser.setHeadline((String) jsonObject.get("headline"));
-            zhUser.setFollowerCount((Integer) jsonObject.get("follower_count"));
-            zhUser.setFollowingCount((Integer) jsonObject.get("following_count"));
-            zhUser.setVoteupCount((Integer) jsonObject.get("voteup_count"));
-            zhUser.setThankedCount((Integer) jsonObject.get("thanked_count"));
-            zhUser.setAnswerCount((Integer) jsonObject.get("answer_count"));
-            zhUser.setQuestionCount((Integer) jsonObject.get("question_count"));
-            zhUser.setArticlesCount((Integer) jsonObject.get("articles_count"));
-            String businessName = null;
-            String educationsSchoolName = null;
-            String locationsName = null;
+            ZhUser zhUser = parseUser(jsonObject);
+            addToBuffer(zhUser);
+        }
+    }
 
-            try {
-                businessName = (String) ((JSONObject) jsonObject.get("business")).get("name");
-            } catch (Exception e) {
-                businessName = "";
-            }
-            zhUser.setBusinessName(businessName);
-            try {
-                educationsSchoolName = (String) ((JSONObject)((JSONArray)jsonObject.get("educations")).get(0)).get("name");
-            } catch (Exception e) {
-                educationsSchoolName = "";
-            }
-            zhUser.setEducationsSchoolName(educationsSchoolName);
-            try {
-                locationsName = (String) (((JSONObject)((JSONArray)jsonObject.get("locations")).get(0)).get("name"));
-            } catch (Exception e) {
-                locationsName = "";
-            }
-            zhUser.setLocationsName(locationsName);
-            // 这样的做法相率太低,暂时先这样写(之后可以考虑用LRU缓存提高效率)
+    public ZhUser parseUser(JSONObject jsonObject) {
+        ZhUser zhUser = new ZhUser();
+        zhUser.setLinkPerson(this.getUrlToken());
+        zhUser.setName((String) jsonObject.get("name"));
+        zhUser.setUrlToken((String) jsonObject.get("url_token"));
+        zhUser.setHeadline((String) jsonObject.get("headline"));
+        zhUser.setFollowerCount((Integer) jsonObject.get("follower_count"));
+        zhUser.setFollowingCount((Integer) jsonObject.get("following_count"));
+        zhUser.setVoteupCount((Integer) jsonObject.get("voteup_count"));
+        zhUser.setThankedCount((Integer) jsonObject.get("thanked_count"));
+        zhUser.setAnswerCount((Integer) jsonObject.get("answer_count"));
+        zhUser.setQuestionCount((Integer) jsonObject.get("question_count"));
+        zhUser.setArticlesCount((Integer) jsonObject.get("articles_count"));
+        String businessName = null;
+        String educationsSchoolName = null;
+        String locationsName = null;
+
+        try {
+            businessName = (String) ((JSONObject) jsonObject.get("business")).get("name");
+        } catch (Exception e) {
+            businessName = "";
+        }
+        zhUser.setBusinessName(businessName);
+        try {
+            educationsSchoolName = (String) ((JSONObject)((JSONArray)jsonObject.get("educations")).get(0)).get("name");
+        } catch (Exception e) {
+            educationsSchoolName = "";
+        }
+        zhUser.setEducationsSchoolName(educationsSchoolName);
+        try {
+            locationsName = (String) (((JSONObject)((JSONArray)jsonObject.get("locations")).get(0)).get("name"));
+        } catch (Exception e) {
+            locationsName = "";
+        }
+        zhUser.setLocationsName(locationsName);
+
+        return zhUser;
+    }
+
+    public void addToBuffer(ZhUser zhUser) {
+        if (!crawlUserBuffer.contains(zhUser)) {
             Example example = new Example(ZhUser.class);
             example.createCriteria().andEqualTo("urlToken", zhUser.getUrlToken());
             List<ZhUser> zhUserList = zhUserMapper.selectByExample(example);
             if (zhUserList.size() == 0) {
-                zhUser.setStatus(0);
-                zhUserMapper.insert(zhUser);
-                int curAmount = this.getCurAmount().incrementAndGet();
-                if (curAmount >= this.getTarAmount()) {
-                    // TODO
+                synchronized (crawlUserBuffer) {
+                    crawlUserBuffer.add(zhUser);
                 }
-                System.out.println("User " + zhUser.getName() + "insert into table...");
             }
         }
+        if (crawlUserBuffer.size() > bufferThreshold) {
+            flush();
+        }
+    }
+
+    public void flush() {
+        synchronized (crawlUserBuffer) {
+            LOG.info("flush: " + crawlUserBuffer.size() + " users insert into db...");
+            zhUserMapper.insertList(new ArrayList<>(crawlUserBuffer));
+            crawlUserBuffer.clear();
+        }
+
+    }
+
+    public ZhUser getStartUser() {
+        return startUser;
+    }
+
+    public void setStartUser(ZhUser startUser) {
+        this.startUser = startUser;
+    }
+
+    public Set<ZhUser> getCrawlUserBuffer() {
+        return crawlUserBuffer;
+    }
+
+    public void setCrawlUserBuffer(Set<ZhUser> crawlUserBuffer) {
+        this.crawlUserBuffer = crawlUserBuffer;
+    }
+
+    public int getBufferThreshold() {
+        return bufferThreshold;
+    }
+
+    public void setBufferThreshold(int bufferThreshold) {
+        this.bufferThreshold = bufferThreshold;
     }
 
     public String getParamInclude() {

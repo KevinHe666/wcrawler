@@ -17,10 +17,7 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -38,6 +35,8 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
     private ZhUserMapper zhUserMapper;
 	@Autowired
     private CrawlerUrlMapper crawlerUrlDao;
+
+	private Set<ZhUser> crawlUserBuffer;
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, rollbackFor = Exception.class)
@@ -71,8 +70,11 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
          * */
         int nThreads = Math.max(1, users.size() / 2);
         ExecutorService executorService = Executors.newFixedThreadPool(nThreads);
+        crawlUserBuffer = new HashSet<>();
         for (ZhUser user: users) {
             ZhCrawler zhCrawler = (ZhCrawler) ApplicationContextUtil.getBean("zhCrawler");
+            zhCrawler.setStartUser(user);
+            zhCrawler.setCrawlUserBuffer(crawlUserBuffer);
             zhCrawler.setStartTime(System.currentTimeMillis());
             zhCrawler.setStatus(CrawlerTask.CREATED);
             zhCrawler.setTarAmount(DEFAULT_TAR_AMOUNT);

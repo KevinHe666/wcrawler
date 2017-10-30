@@ -1,5 +1,8 @@
 package com.wuyi.wcrawler;
 
+import com.wuyi.wcrawler.entity.ZhUser;
+import com.wuyi.wcrawler.mapper.ZhUserMapper;
+import com.wuyi.wcrawler.util.ApplicationContextUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -50,7 +53,9 @@ public class Config {
     }
 
     public Config setTarAmount(int tarAmount) {
-        this.tarAmount = tarAmount;
+        ZhUserMapper zhUserMapper = ApplicationContextUtil.getBean(ZhUserMapper.class);
+        // 爬取的目标数量等于用户设置目标数量加上当前数据库中已爬取的数量
+        this.tarAmount = tarAmount + zhUserMapper.selectCount(null);
         return this;
     }
 

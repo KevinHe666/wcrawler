@@ -20,6 +20,8 @@ public class Wcrawler implements Runnable{
     private Config config;
     private ZhUserMapper zhUserMapper;
     private long startTime;
+    private long preTotalUsers;
+    private long curTotalUsers;
     private WcrawlerStatus status = WcrawlerStatus.INIT;
     private ExecutorService executorService;
     public Wcrawler() {
@@ -28,8 +30,10 @@ public class Wcrawler implements Runnable{
     public Wcrawler(Config config, ExecutorService executorService) {
         LOG.info("Wcrawler INIT !");
         this.config = config;
-        this.startTime = System.currentTimeMillis();
-        this.zhUserMapper = ApplicationContextUtil.getBean(ZhUserMapper.class);
+        startTime = System.currentTimeMillis();
+        zhUserMapper = ApplicationContextUtil.getBean(ZhUserMapper.class);
+        preTotalUsers = zhUserMapper.selectCount(null);
+        curTotalUsers = preTotalUsers;
         this.executorService = executorService;
     }
     public void start() {
@@ -52,13 +56,13 @@ public class Wcrawler implements Runnable{
     public void run() {
         while (true) {
             try {
-                TimeUnit.MILLISECONDS.sleep(config.checkInterval);
+                Thread.sleep(config.checkInterval);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            List<ZhUser> zhUserList = zhUserMapper.select(null);
-            if (zhUserList.size() > config.tarAmount) {
-                LOG.info("Wcrawler scrap total user: " + zhUserList.size());
+            curTotalUsers = zhUserMapper.selectCount(null);
+            if (curTotalUsers > config.tarAmount) {
+                LOG.info("Yet, Wcrawler scrap total user: " + (curTotalUsers - preTotalUsers));
                 zhUserMapper = null;
                 status = WcrawlerStatus.STOPPING;
                 break;
@@ -81,12 +85,14 @@ public class Wcrawler implements Runnable{
             }
         }
         if (executorService.isTerminated()) {
+            status = WcrawlerStatus.STOP;
             LOG.info("Wcrawler STOP.");
+            System.exit(-1);
         }
     }
     public static void main(String[] args ) throws InterruptedException {
         Config config = Config.newInstance()
-                .setTarAmount(1000)
+                .setTarAmount(200)
                 .setRunningTime(3600 * 1000)
                 .setCheckInterval(500);
         ExecutorService executorService = Executors.newSingleThreadExecutor();
