@@ -71,6 +71,9 @@ public class ZhCrawler extends Crawler {
     public void crawl(String requestUrl) {
         System.out.println("startUrl: " + requestUrl);
         String followees = WHttpClientUtil.getPage(requestUrl, false);
+        if (followees == null) {
+            return;
+        }
         JSONArray dataArray = (JSONArray) JSON.parseObject(followees).get("data");
         for (Object object :dataArray) {
             JSONObject jsonObject = JSON.parseObject(object.toString());
@@ -126,11 +129,11 @@ public class ZhCrawler extends Crawler {
             if (zhUserList.size() == 0) {
                 synchronized (crawlUserBuffer) {
                     crawlUserBuffer.add(zhUser);
+                    if (crawlUserBuffer.size() > bufferThreshold) {
+                        flush();
+                    }
                 }
             }
-        }
-        if (crawlUserBuffer.size() > bufferThreshold) {
-            flush();
         }
     }
 

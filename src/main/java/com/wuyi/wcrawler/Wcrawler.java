@@ -41,7 +41,7 @@ public class Wcrawler implements Runnable{
         // 加载配置文件, 默认启动job
         //classpath后面冒号不能有空格, 不然会FileNotFoundException
         // 这里重复加载spring的配置的文件了(上面getBean时已经加载过一遍)
-        new ClassPathXmlApplicationContext(config.xmlPaths);
+//        new ClassPathXmlApplicationContext(config.xmlPaths);
 
         executorService.execute(this);
     }
@@ -75,24 +75,17 @@ public class Wcrawler implements Runnable{
         }
         if (status == WcrawlerStatus.STOPPING) {
             LOG.info("Wcrawler STOPPING...");
-            executorService.shutdownNow();
-        }
-        if (!executorService.isTerminated()) {
             try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                executorService.shutdownNow();
+            } catch (Exception e) {
+                LOG.info("Wcrawler STOP.");
+                System.exit(-1);
             }
-        }
-        if (executorService.isTerminated()) {
-            status = WcrawlerStatus.STOP;
-            LOG.info("Wcrawler STOP.");
-            System.exit(-1);
         }
     }
     public static void main(String[] args ) throws InterruptedException {
         Config config = Config.newInstance()
-                .setTarAmount(200)
+                .setTarAmount(20000)
                 .setRunningTime(3600 * 1000)
                 .setCheckInterval(500);
         ExecutorService executorService = Executors.newSingleThreadExecutor();

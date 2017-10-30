@@ -51,7 +51,7 @@ public class WHttpClientUtil {
 	private static ProxyPool proxyPool;
 	public static CloseableHttpClient httpClient;
 	public static PoolingHttpClientConnectionManager cm;
-	private static final int MAX_RETYR = 1;
+	private static final int MAX_RETYR = 2;
 	private static final int DEFAULT_MAXTOTAL = 200;
 	private static final int DEFAULT_MAXPERROUTE = 20;
 	private static final int DEFAULT_SOCKET_TIMEOUT = 3000;
