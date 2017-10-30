@@ -51,7 +51,7 @@ public class WHttpClientUtil {
 	private static ProxyPool proxyPool;
 	public static CloseableHttpClient httpClient;
 	public static PoolingHttpClientConnectionManager cm;
-	private static final int MAX_RETYR = 3;
+	private static final int MAX_RETYR = 1;
 	private static final int DEFAULT_MAXTOTAL = 200;
 	private static final int DEFAULT_MAXPERROUTE = 20;
 	private static final int DEFAULT_SOCKET_TIMEOUT = 3000;
@@ -153,14 +153,21 @@ public class WHttpClientUtil {
 
 	public static HttpRequestBase setUserAgent(HttpRequestBase requestBase, String value) {
 		requestBase.setHeader("User-Agent", value);
-		// TODO 删除
-//		requestBase.setHeader("authorization", "oauth c3cef7c66a1843f8b3a9e6a1e3160e20");
+		return requestBase;
+	}
+	public static HttpRequestBase setOauth(HttpRequestBase requestBase) {
+		return setOauth(requestBase, "c3cef7c66a1843f8b3a9e6a1e3160e20");
+	}
+
+	public static HttpRequestBase setOauth(HttpRequestBase requestBase, String value) {
+		requestBase.setHeader("authorization", "oauth " + value);
 		return requestBase;
 	}
 
 	public static HttpRequestBase createGet(String url, boolean proxyFlag) {
 		HttpGet get = new HttpGet(url);
 		get = (HttpGet) setUserAgent(get, UserAgent.getUA());
+		get = (HttpGet) setOauth(get);
 		if(proxyFlag) {
 			/** 设置代理 */
 			get = (HttpGet) setProxy(get, proxyPool.getProxy());

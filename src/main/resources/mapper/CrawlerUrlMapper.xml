@@ -11,7 +11,7 @@
     </resultMap>
 
     <select id="selectBySharding" parameterType="java.util.Map" resultMap="BaseResultMap">
-        SELECT * FROM crawler_url WHERE status = 0 AND mod(id, #{shardingTotalCount}) = #{shardingItem}
+        SELECT * FROM crawler_url WHERE status = 0 AND mod(id, #{shardingTotalCount}) = #{shardingItem} LIMIT 3
     </select>
 
     <update id="updateUrlStatus">
