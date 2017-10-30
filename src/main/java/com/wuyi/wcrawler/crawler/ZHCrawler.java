@@ -28,6 +28,10 @@ public class ZhCrawler extends Crawler {
     private static final Log LOG = LogFactory.getLog(ZhCrawler.class);
     @Autowired
     private ZhUserMapper zhUserMapper;
+    private String paramInclude = "data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics";
+    private int paramOffset = 0;
+    private int paramLimit = 20;
+    private String urlToken;
     public ZhCrawler() { super();}
 
     @Override
@@ -55,6 +59,7 @@ public class ZhCrawler extends Crawler {
         for (Object object :dataArray) {
             JSONObject jsonObject = JSON.parseObject(object.toString());
             ZhUser zhUser = new ZhUser();
+            zhUser.setLinkPerson(this.getUrlToken());
             zhUser.setName((String) jsonObject.get("name"));
             zhUser.setUrlToken((String) jsonObject.get("url_token"));
             zhUser.setHeadline((String) jsonObject.get("headline"));
@@ -103,4 +108,35 @@ public class ZhCrawler extends Crawler {
         }
     }
 
+    public String getParamInclude() {
+        return paramInclude;
+    }
+
+    public void setParamInclude(String paramInclude) {
+        this.paramInclude = paramInclude;
+    }
+
+    public int getParamOffset() {
+        return paramOffset;
+    }
+
+    public void setParamOffset(int paramOffset) {
+        this.paramOffset = paramOffset;
+    }
+
+    public int getParamLimit() {
+        return paramLimit;
+    }
+
+    public void setParamLimit(int paramLimit) {
+        this.paramLimit = paramLimit;
+    }
+
+    public String getUrlToken() {
+        return urlToken;
+    }
+
+    public void setUrlToken(String urlToken) {
+        this.urlToken = urlToken;
+    }
 }

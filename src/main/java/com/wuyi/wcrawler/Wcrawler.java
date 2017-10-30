@@ -85,7 +85,10 @@ public class Wcrawler implements Runnable{
         }
     }
     public static void main(String[] args ) throws InterruptedException {
-        Config config = Config.newInstance();
+        Config config = Config.newInstance()
+                .setTarAmount(1000)
+                .setRunningTime(3600 * 1000)
+                .setCheckInterval(500);
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Wcrawler wcrawler = new Wcrawler(config, executorService);
         wcrawler.start();

@@ -18,6 +18,7 @@ public class ZhUser {
     private String businessName;
     private String educationsSchoolName;
     private String locationsName;
+    private String linkPerson;
     private int followerCount;
     private int followingCount;
     private int voteupCount;
@@ -86,6 +87,14 @@ public class ZhUser {
 
     public void setLocationsName(String locationsName) {
         this.locationsName = locationsName;
+    }
+
+    public String getLinkPerson() {
+        return linkPerson;
+    }
+
+    public void setLinkPerson(String linkPerson) {
+        this.linkPerson = linkPerson;
     }
 
     public int getFollowerCount() {
@@ -162,6 +171,7 @@ public class ZhUser {
                 ", businessName='" + businessName + '\'' +
                 ", educationsSchoolName='" + educationsSchoolName + '\'' +
                 ", locationsName='" + locationsName + '\'' +
+                ", linkPerson='" + linkPerson + '\'' +
                 ", followerCount=" + followerCount +
                 ", followingCount=" + followingCount +
                 ", voteupCount=" + voteupCount +

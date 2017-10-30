@@ -77,6 +77,7 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
             zhCrawler.setStatus(CrawlerTask.CREATED);
             zhCrawler.setTarAmount(DEFAULT_TAR_AMOUNT);
             zhCrawler.setUrl(zhCrawler.getUrl().replace("urlToken", user.getUrlToken()));
+            zhCrawler.setUrlToken(user.getUrlToken());
             executorService.execute(zhCrawler);
             if (zhUserMapper.select(null).size() > Config.newInstance().tarAmount) {
                 executorService.shutdownNow();
