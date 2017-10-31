@@ -18,6 +18,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLException;
 
 import com.wuyi.wcrawler.entity.Proxy;
+import com.wuyi.wcrawler.mapper.ProxyMapper;
 import com.wuyi.wcrawler.proxy.ProxyPool;
 import com.wuyi.wcrawler.proxy.util.UserAgent;
 import org.apache.commons.logging.Log;
@@ -51,6 +52,7 @@ public class WHttpClientUtil {
 	private static ProxyPool proxyPool;
 	public static CloseableHttpClient httpClient;
 	public static PoolingHttpClientConnectionManager cm;
+	private static ProxyMapper proxyMapper;
 	private static final int MAX_RETYR = 2;
 	private static final int DEFAULT_MAXTOTAL = 200;
 	private static final int DEFAULT_MAXPERROUTE = 20;
@@ -59,6 +61,7 @@ public class WHttpClientUtil {
 	@Autowired
 	public void setProxyPool(ProxyPool proxyPool) {
 		WHttpClientUtil.proxyPool = proxyPool;
+		proxyMapper = ApplicationContextUtil.getBean(ProxyMapper.class);
 		WHttpClientUtil.proxyPool.init();
 	}
 
@@ -164,14 +167,10 @@ public class WHttpClientUtil {
 		return requestBase;
 	}
 
-	public static HttpRequestBase createGet(String url, boolean proxyFlag) {
+	public static HttpRequestBase createGet(String url) {
 		HttpGet get = new HttpGet(url);
 		get = (HttpGet) setUserAgent(get, UserAgent.getUA());
 		get = (HttpGet) setOauth(get);
-		if(proxyFlag) {
-			/** 设置代理 */
-			get = (HttpGet) setProxy(get, proxyPool.getProxy());
-		}
 		return get;
 	}
 
@@ -193,18 +192,26 @@ public class WHttpClientUtil {
 
 	public static String getPage(String url, boolean proxyFlag) {
 		httpClient = createHttpClient();
-		HttpGet get = (HttpGet) createGet(url, proxyFlag);
+		HttpGet get = (HttpGet) createGet(url);
 		return getPage(httpClient, get, proxyFlag);
 	}
 
 	public static String getPage(CloseableHttpClient httpClient, HttpRequestBase requestBase, boolean proxyFlag) {
+		/* 设置代理 */
+		Proxy proxy = proxyPool.getProxy();
+		requestBase = proxyFlag ? (HttpGet) setProxy(requestBase, proxy) : requestBase;
 		HttpResponse response = getHttpResponse(httpClient, requestBase);
 		if(response != null && isResponseOK(response)) {
 			try {
+				if (proxyFlag) {
+					proxySuccess(proxy);
+				}
 				return EntityUtils.toString(response.getEntity(), "utf-8");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+		} else if (proxyFlag){
+			proxyFail(proxy);
 		}
 		/** 失败重试 */
 		return getPageRetry(httpClient, requestBase, proxyFlag);
@@ -220,10 +227,14 @@ public class WHttpClientUtil {
 			/**
 			 * 每次重试,都重新获取代理
 			 * */
-			requestBase = setProxy(requestBase, proxyPool.getProxy());
+			Proxy proxy = proxyPool.getProxy();
+			requestBase = setProxy(requestBase, proxy);
 			if((response = getHttpResponse(httpClient, requestBase)) != null && isResponseOK(response)) {
 				ok = true;
+				proxySuccess(proxy);
 				break;
+			} else {
+				proxyFail(proxy);
 			}
 		}
 		/**
@@ -291,5 +302,15 @@ public class WHttpClientUtil {
 			
 		}
 		return null;
+	}
+
+	public static void proxySuccess(Proxy proxy) {
+		proxy.setSuccessTimes(proxy.getSuccessTimes() + 1);
+		proxyMapper.updateByPrimaryKey(proxy);
+	}
+
+	public static void proxyFail(Proxy proxy) {
+		proxy.setFailureTimes(proxy.getFailureTimes() + 1);
+		proxyMapper.updateByPrimaryKey(proxy);
 	}
 }
