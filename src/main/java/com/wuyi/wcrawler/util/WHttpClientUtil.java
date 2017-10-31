@@ -200,11 +200,13 @@ public class WHttpClientUtil {
 		/* 设置代理 */
 		Proxy proxy = proxyPool.getProxy();
 		requestBase = proxyFlag ? (HttpGet) setProxy(requestBase, proxy) : requestBase;
+		long proxyStartTimestamp = System.currentTimeMillis();
 		HttpResponse response = getHttpResponse(httpClient, requestBase);
+		long proxyEndTimestamp = System.currentTimeMillis();
 		if(response != null && isResponseOK(response)) {
 			try {
 				if (proxyFlag) {
-					proxySuccess(proxy);
+					proxySuccess(proxy, proxyStartTimestamp, proxyEndTimestamp);
 				}
 				return EntityUtils.toString(response.getEntity(), "utf-8");
 			} catch (IOException e) {
@@ -229,9 +231,12 @@ public class WHttpClientUtil {
 			 * */
 			Proxy proxy = proxyPool.getProxy();
 			requestBase = setProxy(requestBase, proxy);
+			long proxyStartTimestamp = System.currentTimeMillis();
+			long proxyEndTimestamp;
 			if((response = getHttpResponse(httpClient, requestBase)) != null && isResponseOK(response)) {
+				proxyEndTimestamp = System.currentTimeMillis();
 				ok = true;
-				proxySuccess(proxy);
+				proxySuccess(proxy, proxyStartTimestamp, proxyEndTimestamp);
 				break;
 			} else {
 				proxyFail(proxy);
@@ -304,8 +309,13 @@ public class WHttpClientUtil {
 		return null;
 	}
 
-	public static void proxySuccess(Proxy proxy) {
-		proxy.setSuccessTimes(proxy.getSuccessTimes() + 1);
+	public static void proxySuccess(Proxy proxy, long startStmp, long endStmp) {
+		int oldSuccessTimes = proxy.getSuccessTimes();
+		proxy.setSuccessTimes(oldSuccessTimes + 1);
+		proxy.setSuccessProbability((oldSuccessTimes * 1.0) / (oldSuccessTimes + proxy.getFailureTimes()));
+		proxy.setLastSuccessTimestamp(endStmp);
+		proxy.setLastSuccessTimeConsume(endStmp - startStmp);
+		proxy.setAvgSuccessTimeConsume((proxy.getAvgSuccessTimeConsume() * oldSuccessTimes + proxy.getLastSuccessTimeConsume()) / (oldSuccessTimes + 1));
 		proxyMapper.updateByPrimaryKey(proxy);
 	}
 

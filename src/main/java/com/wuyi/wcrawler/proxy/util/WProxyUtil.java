@@ -13,25 +13,25 @@ import java.util.List;
 public class WProxyUtil {
 	private static Log LOG = LogFactory.getLog(WProxyUtil.class);
 
-	private static ProxyMapper proxyDao;
+	private static ProxyMapper proxyMapper;
 
 	@Autowired
 	public  void setProxyDao(ProxyMapper proxyDao) {
-		WProxyUtil.proxyDao = proxyDao;
+		WProxyUtil.proxyMapper = proxyDao;
 	}
 
 	public static void saveProxy(List<Proxy> proxies) {
 		if(proxies.size() == 1) {
-			proxyDao.insert(proxies.get(0));
+			proxyMapper.insert(proxies.get(0));
 		} else {
-			proxyDao.insertAll(proxies);
+			proxyMapper.insertAll(proxies);
 		}
 	}
 	public static List<Proxy> fetchProxy(int limit) {
-		return proxyDao.selectRand(limit);
+		return proxyMapper.selectRand(limit);
 	}
 
 	public static int countProxy() {
-		return proxyDao.count().intValue();
+		return proxyMapper.count().intValue();
 	}
 }

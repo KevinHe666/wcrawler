@@ -31,6 +31,11 @@ public class Proxy implements Comparable<Proxy> {
      * */
     private double quality;
     /**
+     * 代理成功率
+     */
+    private double successProbability;
+
+    /**
      * 访问网页成功次数
      * */
     private int successTimes;
@@ -90,6 +95,14 @@ public class Proxy implements Comparable<Proxy> {
         this.quality = quality;
     }
 
+    public double getSuccessProbability() {
+        return successProbability;
+    }
+
+    public void setSuccessProbability(double successProbability) {
+        this.successProbability = successProbability;
+    }
+
     public int getSuccessTimes() {
         return successTimes;
     }
@@ -145,6 +158,7 @@ public class Proxy implements Comparable<Proxy> {
                 ", ip='" + ip + '\'' +
                 ", port='" + port + '\'' +
                 ", quality=" + quality +
+                ", successProbability=" + successProbability +
                 ", successTimes=" + successTimes +
                 ", failureTimes=" + failureTimes +
                 ", lastSuccessTimestamp=" + lastSuccessTimestamp +
@@ -154,64 +168,47 @@ public class Proxy implements Comparable<Proxy> {
                 '}';
     }
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (int) (avgSuccessTimeConsume ^ (avgSuccessTimeConsume >>> 32));
-		result = prime * result + failureTimes;
-		result = prime * result + id;
-		result = prime * result + ((ip == null) ? 0 : ip.hashCode());
-		result = prime * result + (int) (lastSuccessTimeConsume ^ (lastSuccessTimeConsume >>> 32));
-		result = prime * result + (int) (lastSuccessTimestamp ^ (lastSuccessTimestamp >>> 32));
-		result = prime * result + ((port == null) ? 0 : port.hashCode());
-		long temp;
-		temp = Double.doubleToLongBits(quality);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + storeStatus;
-		result = prime * result + successTimes;
-		return result;
-	}
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Proxy other = (Proxy) obj;
-		if (avgSuccessTimeConsume != other.avgSuccessTimeConsume)
-			return false;
-		if (failureTimes != other.failureTimes)
-			return false;
-		if (id != other.id)
-			return false;
-		if (ip == null) {
-			if (other.ip != null)
-				return false;
-		} else if (!ip.equals(other.ip))
-			return false;
-		if (lastSuccessTimeConsume != other.lastSuccessTimeConsume)
-			return false;
-		if (lastSuccessTimestamp != other.lastSuccessTimestamp)
-			return false;
-		if (port == null) {
-			if (other.port != null)
-				return false;
-		} else if (!port.equals(other.port))
-			return false;
-		if (Double.doubleToLongBits(quality) != Double.doubleToLongBits(other.quality))
-			return false;
-		if (storeStatus != other.storeStatus)
-			return false;
-		if (successTimes != other.successTimes)
-			return false;
-		return true;
-	}
+        Proxy proxy = (Proxy) o;
 
-	@Override
+        if (id != proxy.id) return false;
+        if (Double.compare(proxy.quality, quality) != 0) return false;
+        if (Double.compare(proxy.successProbability, successProbability) != 0) return false;
+        if (successTimes != proxy.successTimes) return false;
+        if (failureTimes != proxy.failureTimes) return false;
+        if (lastSuccessTimestamp != proxy.lastSuccessTimestamp) return false;
+        if (lastSuccessTimeConsume != proxy.lastSuccessTimeConsume) return false;
+        if (avgSuccessTimeConsume != proxy.avgSuccessTimeConsume) return false;
+        if (storeStatus != proxy.storeStatus) return false;
+        if (!ip.equals(proxy.ip)) return false;
+        return port.equals(proxy.port);
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = id;
+        result = 31 * result + ip.hashCode();
+        result = 31 * result + port.hashCode();
+        temp = Double.doubleToLongBits(quality);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(successProbability);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + successTimes;
+        result = 31 * result + failureTimes;
+        result = 31 * result + (int) (lastSuccessTimestamp ^ (lastSuccessTimestamp >>> 32));
+        result = 31 * result + (int) (lastSuccessTimeConsume ^ (lastSuccessTimeConsume >>> 32));
+        result = 31 * result + (int) (avgSuccessTimeConsume ^ (avgSuccessTimeConsume >>> 32));
+        result = 31 * result + storeStatus;
+        return result;
+    }
+
+    @Override
     public int compareTo(Proxy o) {
 		// TODO Auto-generated method stub
 		if(quality > o.getQuality()) {

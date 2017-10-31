@@ -49,6 +49,7 @@ public class ApplicationContextUtil implements ApplicationContextAware {
     }
 
     public static <T> T getBean(String id) {
+        assertContextInjected();
         return (T) ctx.getBean(id);
     }
 
