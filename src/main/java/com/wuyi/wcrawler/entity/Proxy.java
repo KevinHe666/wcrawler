@@ -41,7 +41,7 @@ public class Proxy implements Comparable<Proxy> {
     /**
      * 最近一次访问成功时间
      * */
-    private long lastSuccessTimeStamp;
+    private long lastSuccessTimestamp;
     /**
      * 最近一次访问成功时间消耗
      * */
@@ -106,12 +106,12 @@ public class Proxy implements Comparable<Proxy> {
         this.failureTimes = failureTimes;
     }
 
-    public long getLastSuccessTimeStamp() {
-        return lastSuccessTimeStamp;
+    public long getLastSuccessTimestamp() {
+        return lastSuccessTimestamp;
     }
 
-    public void setLastSuccessTimeStamp(long lastSuccessTimeStamp) {
-        this.lastSuccessTimeStamp = lastSuccessTimeStamp;
+    public void setLastSuccessTimestamp(long lastSuccessTimestamp) {
+        this.lastSuccessTimestamp = lastSuccessTimestamp;
     }
 
     public long getLastSuccessTimeConsume() {
@@ -147,7 +147,7 @@ public class Proxy implements Comparable<Proxy> {
                 ", quality=" + quality +
                 ", successTimes=" + successTimes +
                 ", failureTimes=" + failureTimes +
-                ", lastSuccessTimeStamp=" + lastSuccessTimeStamp +
+                ", lastSuccessTimestamp=" + lastSuccessTimestamp +
                 ", lastSuccessTimeConsume=" + lastSuccessTimeConsume +
                 ", avgSuccessTimeConsume=" + avgSuccessTimeConsume +
                 ", storeStatus=" + storeStatus +
@@ -163,7 +163,7 @@ public class Proxy implements Comparable<Proxy> {
 		result = prime * result + id;
 		result = prime * result + ((ip == null) ? 0 : ip.hashCode());
 		result = prime * result + (int) (lastSuccessTimeConsume ^ (lastSuccessTimeConsume >>> 32));
-		result = prime * result + (int) (lastSuccessTimeStamp ^ (lastSuccessTimeStamp >>> 32));
+		result = prime * result + (int) (lastSuccessTimestamp ^ (lastSuccessTimestamp >>> 32));
 		result = prime * result + ((port == null) ? 0 : port.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(quality);
@@ -195,7 +195,7 @@ public class Proxy implements Comparable<Proxy> {
 			return false;
 		if (lastSuccessTimeConsume != other.lastSuccessTimeConsume)
 			return false;
-		if (lastSuccessTimeStamp != other.lastSuccessTimeStamp)
+		if (lastSuccessTimestamp != other.lastSuccessTimestamp)
 			return false;
 		if (port == null) {
 			if (other.port != null)
@@ -211,7 +211,8 @@ public class Proxy implements Comparable<Proxy> {
 		return true;
 	}
 
-	public int compareTo(Proxy o) {
+	@Override
+    public int compareTo(Proxy o) {
 		// TODO Auto-generated method stub
 		if(quality > o.getQuality()) {
 			return 1;

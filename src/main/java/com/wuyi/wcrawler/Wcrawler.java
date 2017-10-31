@@ -36,7 +36,7 @@ public class Wcrawler implements Runnable{
         curTotalUsers = preTotalUsers;
         this.executorService = executorService;
     }
-    public void start() {
+    public void init() {
         LOG.info("Wcrawler START !");
         // 加载配置文件, 默认启动job
         //classpath后面冒号不能有空格, 不然会FileNotFoundException
@@ -75,21 +75,18 @@ public class Wcrawler implements Runnable{
         }
         if (status == WcrawlerStatus.STOPPING) {
             LOG.info("Wcrawler STOPPING...");
-            try {
-                executorService.shutdownNow();
-            } catch (Exception e) {
-                LOG.info("Wcrawler STOP.");
-                System.exit(-1);
-            }
+            executorService.shutdownNow();
+            LOG.info("Wcrawler STOP.");
+            System.exit(-1);
         }
     }
     public static void main(String[] args ) throws InterruptedException {
         Config config = Config.newInstance()
-                .setTarAmount(3702)
+                .setTarAmount(100)
                 .setRunningTime(3600 * 1000)
                 .setCheckInterval(500);
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Wcrawler wcrawler = new Wcrawler(config, executorService);
-        wcrawler.start();
+        wcrawler.init();
     }
 }

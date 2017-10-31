@@ -18,7 +18,7 @@ CREATE TABLE `proxy` (
   `quality` double DEFAULT NULL,
   `successTimes` int(11) DEFAULT NULL,
   `failureTimes` int(11) DEFAULT NULL,
-  `lastSuccessTimeStamp` bigint(20) DEFAULT NULL,
+  `lastSuccessTimestamp` bigint(20) DEFAULT NULL,
   `lastSuccessTimeConsume` bigint(20) DEFAULT NULL,
   `avgSuccessTimeConsume` bigint(20) DEFAULT NULL,
   `storeStatus` int(11) DEFAULT NULL,

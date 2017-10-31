@@ -9,18 +9,18 @@
         <result column="quality" property="quality" jdbcType="DOUBLE"/>
         <result column="successTimes" property="successTimes" jdbcType="INTEGER"/>
         <result column="failureTimes" property="failureTimes" jdbcType="INTEGER"/>
-        <result column="lastSuccessTimeStamp" property="lastSuccessTimeStamp" jdbcType="INTEGER"/>
+        <result column="lastSuccessTimestamp" property="lastSuccessTimestamp" jdbcType="INTEGER"/>
         <result column="lastSuccessTimeConsume" property="lastSuccessTimeConsume" jdbcType="INTEGER"/>
         <result column="avgSuccessTimeConsume" property="avgSuccessTimeConsume" jdbcType="INTEGER"/>
         <result column="storeStatus" property="storeStatus" jdbcType="INTEGER"/>
     </resultMap>
 	
 	<insert id="insertAll" parameterType="java.util.List">
-        insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimeStamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
+        insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimestamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
         values
         <foreach collection ="list" item="item" index= "index" separator =",">
         (#{item.ip}, #{item.port}, #{item.quality}, #{item.successTimes}, #{item.failureTimes}, 
-        #{item.lastSuccessTimeStamp}, #{item.lastSuccessTimeConsume}, #{item.avgSuccessTimeConsume}, #{item.storeStatus})
+        #{item.lastSuccessTimestamp}, #{item.lastSuccessTimeConsume}, #{item.avgSuccessTimeConsume}, #{item.storeStatus})
         </foreach>
     </insert>
 	
