@@ -18,6 +18,8 @@ public class Config {
     public long checkInterval = 100;
     public int tarAmount = 500;
     public long runningTime = 300 * 1000;
+    // TODO 从数据库中根据不同代理的属性记录, 制定选择代理的策略
+    public int proxySelectProxy;
     private static Config instance;
     public static Config newInstance() {
         if (instance == null) {
