@@ -38,7 +38,7 @@ public class Ip66Parser extends SiteParser {
         String fullSite;
         for (int page = 1; page <= pages; page++) {
             fullSite = this.site + page + ".html";
-            String html = WHttpClientUtil.getPage(fullSite, false);
+            String html = WHttpClientUtil.getPage(fullSite, false, false);
             Document doc = Jsoup.parse(html);
             Elements trs = doc.select("table tr:gt(2)");
             for (Element tr : trs) {

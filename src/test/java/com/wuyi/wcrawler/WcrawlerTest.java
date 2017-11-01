@@ -37,7 +37,7 @@ public class WcrawlerTest extends TestCase
         String miniipUrl = "http://www.mimiip.com/gnpu/"; // ok
         String ip181Url = "http://www.ip181.com"; // not open
 
-        String page = WHttpClientUtil.getPage(ip181Url, false);
+        String page = WHttpClientUtil.getPage(ip181Url, false, false);
         System.out.println(page);
         assertTrue( true );
     }

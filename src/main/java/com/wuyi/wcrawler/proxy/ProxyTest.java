@@ -21,6 +21,7 @@ public class ProxyTest implements Runnable {
     ProxyCollector proxyCollector;
     @Autowired
     ProxyPool proxyPool;
+    @Override
     public void run() {
         /** 循环检测下载的代理是否可用 */
         while(true) {

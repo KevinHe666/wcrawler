@@ -22,9 +22,7 @@ public class ProxyServiceImpl implements ProxyService {
 	private Log LOG = LogFactory.getLog(ProxyServiceImpl.class);
 	private static final int monitorNum = 4;
 	private static final int testNum = 4;
-
-	@Autowired
-	ApplicationContextUtil applicationContextUtil;
+	
 	@Autowired
 	private CoreLowLimitMonitor coreLowLimitMonitor;
 	@Autowired
@@ -55,7 +53,7 @@ public class ProxyServiceImpl implements ProxyService {
 
 	private void testTask() {
 		for(int i = 0; i < testNum; i++) {
-			ProxyTest pt = (ProxyTest) applicationContextUtil.getBean("proxyTest");
+			ProxyTest pt = (ProxyTest) ApplicationContextUtil.getBean("proxyTest");
 			LOG.info("Test-thread-" + (i + 1) + " started.");
 			threadPool.execute(pt);
 		}
@@ -64,7 +62,7 @@ public class ProxyServiceImpl implements ProxyService {
 	@Override
 	public void downLoadProxy(String siteParser) throws InterruptedException {
 		LOG.info(siteParser + " download start.");
-		SiteParser sp = (SiteParser) applicationContextUtil.getBean(siteParser);
+		SiteParser sp = (SiteParser) ApplicationContextUtil.getBean(siteParser);
 		sp.parse();
 
 		TimeUnit.MINUTES.sleep(5);

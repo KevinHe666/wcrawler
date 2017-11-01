@@ -75,6 +75,7 @@ public class WHttpClientUtil {
 					KeyStore.getInstance(KeyStore.getDefaultType()),
 					new TrustStrategy() {
 						
+						@Override
 						public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
 							// TODO Auto-generated method stub
 							return true;
@@ -167,17 +168,18 @@ public class WHttpClientUtil {
 		return requestBase;
 	}
 
-	public static HttpRequestBase createGet(String url) {
+	public static HttpRequestBase createGet(String url, boolean oauthFlag) {
 		HttpGet get = new HttpGet(url);
 		get = (HttpGet) setUserAgent(get, UserAgent.getUA());
-		get = (HttpGet) setOauth(get);
+		get = oauthFlag ? (HttpGet) setOauth(get) : get;
 		return get;
 	}
 
 	/** only for test */
 	public static String getPage(String url, Proxy proxy) {
 		httpClient = createHttpClient();
-		HttpGet get = (HttpGet) setProxy(new HttpGet(url), proxy);
+		HttpRequestBase get = (HttpRequestBase) setProxy(new HttpGet(url), proxy);
+		get = setOauth(get);
 		HttpResponse response = getHttpResponse(httpClient, get);
 		if(response != null && isResponseOK(response)) {
 			try {
@@ -190,16 +192,19 @@ public class WHttpClientUtil {
 		return null;
 	}
 
-	public static String getPage(String url, boolean proxyFlag) {
+	public static String getPage(String url, boolean proxyFlag, boolean oauthFlag) {
 		httpClient = createHttpClient();
-		HttpGet get = (HttpGet) createGet(url);
+		HttpGet get = (HttpGet) createGet(url, oauthFlag);
 		return getPage(httpClient, get, proxyFlag);
 	}
 
 	public static String getPage(CloseableHttpClient httpClient, HttpRequestBase requestBase, boolean proxyFlag) {
 		/* 设置代理 */
-		Proxy proxy = proxyPool.getProxy();
-		requestBase = proxyFlag ? (HttpGet) setProxy(requestBase, proxy) : requestBase;
+		Proxy proxy = null;
+		if (proxyFlag) {
+			proxy = proxyPool.getProxy();
+			requestBase = setProxy(requestBase, proxy);
+		}
 		long proxyStartTimestamp = System.currentTimeMillis();
 		HttpResponse response = getHttpResponse(httpClient, requestBase);
 		long proxyEndTimestamp = System.currentTimeMillis();

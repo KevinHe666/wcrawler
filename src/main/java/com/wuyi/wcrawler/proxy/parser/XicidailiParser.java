@@ -39,7 +39,7 @@ public class XicidailiParser extends SiteParser {
 			LOG.info(domain);
 			for(int page = 1; page <= pages;  page++){
 				fullSite = getFullSite(this.site, domain, page);
-				String html = WHttpClientUtil.getPage(fullSite, false);
+				String html = WHttpClientUtil.getPage(fullSite, false, false);
 				Document doc = Jsoup.parse(html);
 				Elements trs = doc.getElementsByTag("tr");
 				for(Element tr : trs) {

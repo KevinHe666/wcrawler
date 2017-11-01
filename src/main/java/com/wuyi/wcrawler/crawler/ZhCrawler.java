@@ -70,7 +70,7 @@ public class ZhCrawler extends Crawler {
     @Override
     public void crawl(String requestUrl) {
         LOG.info("startUrl: " + requestUrl);
-        String followees = WHttpClientUtil.getPage(requestUrl, true);
+        String followees = WHttpClientUtil.getPage(requestUrl, true, true);
         if (followees == null) {
             return;
         }
