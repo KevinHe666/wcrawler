@@ -175,18 +175,17 @@ public class WHttpClientUtil {
 		return get;
 	}
 
-	/** only for test */
+	/** only for proxy test */
 	public static String getPage(String url, Proxy proxy) {
 		httpClient = createHttpClient();
-		HttpRequestBase get = (HttpRequestBase) setProxy(new HttpGet(url), proxy);
-		get = setOauth(get);
+		HttpGet get = (HttpGet) createGet(url, true);
+		get = (HttpGet) setProxy(get, proxy);
 		HttpResponse response = getHttpResponse(httpClient, get);
 		if(response != null && isResponseOK(response)) {
 			try {
 				return EntityUtils.toString(response.getEntity());
 			} catch (IOException e) {
-				LOG.error("test getPage() failed...");
-				e.printStackTrace();
+				LOG.error("Test getPage() failed...");
 			}
 		}
 		return null;
@@ -215,16 +214,16 @@ public class WHttpClientUtil {
 				}
 				return EntityUtils.toString(response.getEntity(), "utf-8");
 			} catch (IOException e) {
-				e.printStackTrace();
+				LOG.error("EntityUtils.toString failed.");
 			}
 		} else if (proxyFlag){
 			proxyFail(proxy);
 		}
 		/** 失败重试 */
-		return getPageRetry(httpClient, requestBase, proxyFlag);
+		return getPageRetry(httpClient, requestBase);
 	}
 
-	public static String getPageRetry(CloseableHttpClient httpClient, HttpRequestBase requestBase, boolean proxyFlag) {
+	public static String getPageRetry(CloseableHttpClient httpClient, HttpRequestBase requestBase) {
 		int tries = 0;
 		boolean ok = false;
 		HttpResponse response = null;
@@ -248,9 +247,10 @@ public class WHttpClientUtil {
 			}
 		}
 		/**
-		 * 如果3次重试后,还是没有返回OK(200状态码)
+		 * 如果MAX_RETYR次重试后,还是没有返回OK(200状态码)
 		 * */
 		if(!ok) {
+			LOG.error("Get page retry failed after " + MAX_RETYR + " times' try.");
 			return null;
 		} else {
 			try {
@@ -266,52 +266,13 @@ public class WHttpClientUtil {
 		try {
 			return httpClient.execute(requestBase);
 		} catch (IOException e) {
-			LOG.error("get Response failed");
-			e.printStackTrace();
+			LOG.error("Get response failed.");
 		}
 		return null;
 	}
 
 	public static boolean isResponseOK(HttpResponse response) {
 		return response.getStatusLine().getStatusCode() == HttpStatus.SC_OK;
-	}
-
-	public static String getPageTest(String url) {
-		if(httpClient == null) {
-			init();
-		}
-		HttpGet httpGet = new HttpGet(url);
-		HttpResponse response = null;
-		try {
-			response = httpClient.execute(httpGet);
-		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		if(response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
-			HttpEntity entity = response.getEntity();
-			try {
-				InputStream in = entity.getContent();
-				BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-				String line;
-				while((line = reader.readLine()) != null) {
-					System.out.println(line);
-				}
-				reader.close();
-				return new String("");
-			} catch (UnsupportedOperationException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		}
-		return null;
 	}
 
 	public static void proxySuccess(Proxy proxy, long startStmp, long endStmp) {
