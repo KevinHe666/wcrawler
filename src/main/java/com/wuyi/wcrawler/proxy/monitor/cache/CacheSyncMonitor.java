@@ -14,7 +14,7 @@ public class CacheSyncMonitor extends CacheMonitor implements Runnable {
     public void run() {
         while(true) {
             try {
-                TimeUnit.MINUTES.sleep(5);
+                TimeUnit.MINUTES.sleep(2);
                 proxyPool.getProxyCache().flushTimer();
             } catch (InterruptedException e) {
                 e.printStackTrace();

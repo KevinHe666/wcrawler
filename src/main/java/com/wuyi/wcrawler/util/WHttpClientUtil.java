@@ -178,7 +178,7 @@ public class WHttpClientUtil {
 	/** only for proxy test */
 	public static String getPage(String url, Proxy proxy) {
 		httpClient = createHttpClient();
-		HttpGet get = (HttpGet) createGet(url, true);
+		HttpGet get = (HttpGet) createGet(url, false);
 		get = (HttpGet) setProxy(get, proxy);
 		HttpResponse response = getHttpResponse(httpClient, get);
 		if(response != null && isResponseOK(response)) {
@@ -256,7 +256,7 @@ public class WHttpClientUtil {
 			try {
 				return EntityUtils.toString(response.getEntity());
 			} catch (IOException e) {
-				e.printStackTrace();
+				LOG.info("java.net.SocketTimeoutException: Read timed out");
 			}
 		}
 		return null;
@@ -278,15 +278,15 @@ public class WHttpClientUtil {
 	public static void proxySuccess(Proxy proxy, long startStmp, long endStmp) {
 		int oldSuccessTimes = proxy.getSuccessTimes();
 		proxy.setSuccessTimes(oldSuccessTimes + 1);
-		proxy.setSuccessProbability((oldSuccessTimes * 1.0) / (oldSuccessTimes + proxy.getFailureTimes()));
+		proxy.setSuccessProbability(((oldSuccessTimes + 1) * 1.0) / (oldSuccessTimes + 1 + proxy.getFailureTimes()));
 		proxy.setLastSuccessTimestamp(endStmp);
 		proxy.setLastSuccessTimeConsume(endStmp - startStmp);
 		proxy.setAvgSuccessTimeConsume((proxy.getAvgSuccessTimeConsume() * oldSuccessTimes + proxy.getLastSuccessTimeConsume()) / (oldSuccessTimes + 1));
-		proxyMapper.updateByPrimaryKey(proxy);
+		proxyMapper.updateByPrimaryKeySelective(proxy);
 	}
 
 	public static void proxyFail(Proxy proxy) {
 		proxy.setFailureTimes(proxy.getFailureTimes() + 1);
-		proxyMapper.updateByPrimaryKey(proxy);
+		proxyMapper.updateByPrimaryKeySelective(proxy);
 	}
 }

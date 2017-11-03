@@ -16,7 +16,9 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class ProxyTest implements Runnable {
     private static Log LOG = LogFactory.getLog(ProxyTest.class);
-    public static final String SITE = "https://www.zhihu.com/api/v4/members/wu-yi-26-57/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20er,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20";
+//    public static final String SITE = "https://www.zhihu.com/api/v4/members/wu-yi-26-57/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20er,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20";
+    public static final String SITE = "https://www.zhihu.com";
+
     @Autowired
     ProxyCollector proxyCollector;
     @Autowired
@@ -34,6 +36,8 @@ public class ProxyTest implements Runnable {
                     proxyPool.getProxyCache().add(proxy);
                 }
             } else {
+                // TODO 一定要记得删除这行
+                proxyPool.getProxyCache().add(proxy);
                 LOG.error(String.format("Test Failed: ip %s port %s", proxy.getIp(), proxy.getPort()));
             }
         }

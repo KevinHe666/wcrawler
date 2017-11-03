@@ -48,7 +48,6 @@ public class Ip66Parser extends SiteParser {
                     Proxy proxy = new Proxy();
                     proxy.setIp(ip);
                     proxy.setPort(tds.get(1).text());
-                    LOG.info("ip66 parse: " + ip + " " + tds.get(1).text());
                     if (ProxyFilterUtil.contains(proxy)) {
                         continue;
                     }
