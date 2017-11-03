@@ -1,10 +1,8 @@
 package com.wuyi.wcrawler.service.impl;
 
-import com.wuyi.wcrawler.Config;
 import com.wuyi.wcrawler.entity.CrawlerTask;
 import com.wuyi.wcrawler.crawler.ZhCrawler;
 import com.wuyi.wcrawler.entity.ZhUser;
-import com.wuyi.wcrawler.mapper.CrawlerUrlMapper;
 import com.wuyi.wcrawler.mapper.ZhUserMapper;
 import com.wuyi.wcrawler.service.CrawlerUrlService;
 
@@ -33,9 +31,6 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
     private static final int DEFAULT_TAR_AMOUNT = 20;
     @Autowired
     private ZhUserMapper zhUserMapper;
-	@Autowired
-    private CrawlerUrlMapper crawlerUrlDao;
-
 	private Set<ZhUser> crawlUserBuffer;
 
     @Override

@@ -3,6 +3,7 @@ package com.wuyi.wcrawler.crawler;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.wuyi.wcrawler.Config;
 import com.wuyi.wcrawler.entity.CrawlerTask;
 import com.wuyi.wcrawler.mapper.ZhUserMapper;
 import com.wuyi.wcrawler.entity.ZhUser;
@@ -70,7 +71,7 @@ public class ZhCrawler extends Crawler {
     @Override
     public void crawl(String requestUrl) {
         LOG.info("startUrl: " + requestUrl);
-        String followees = WHttpClientUtil.getPage(requestUrl, true, true);
+        String followees = WHttpClientUtil.getPage(requestUrl, Config.getInstance().getProxyFlag(), true);
         if (followees == null) {
             return;
         }

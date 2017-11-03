@@ -27,10 +27,6 @@ public class Proxy implements Comparable<Proxy> {
     }
 
     /**
-     * 代理的质量评分
-     * */
-    private double quality;
-    /**
      * 代理成功率
      */
     private double successProbability;
@@ -85,14 +81,6 @@ public class Proxy implements Comparable<Proxy> {
 
     public void setPort(String port) {
         this.port = port;
-    }
-
-    public double getQuality() {
-        return quality;
-    }
-
-    public void setQuality(double quality) {
-        this.quality = quality;
     }
 
     public double getSuccessProbability() {
@@ -157,7 +145,6 @@ public class Proxy implements Comparable<Proxy> {
                 "id=" + id +
                 ", ip='" + ip + '\'' +
                 ", port='" + port + '\'' +
-                ", quality=" + quality +
                 ", successProbability=" + successProbability +
                 ", successTimes=" + successTimes +
                 ", failureTimes=" + failureTimes +
@@ -176,7 +163,6 @@ public class Proxy implements Comparable<Proxy> {
         Proxy proxy = (Proxy) o;
 
         if (id != proxy.id) return false;
-        if (Double.compare(proxy.quality, quality) != 0) return false;
         if (Double.compare(proxy.successProbability, successProbability) != 0) return false;
         if (successTimes != proxy.successTimes) return false;
         if (failureTimes != proxy.failureTimes) return false;
@@ -184,8 +170,8 @@ public class Proxy implements Comparable<Proxy> {
         if (lastSuccessTimeConsume != proxy.lastSuccessTimeConsume) return false;
         if (avgSuccessTimeConsume != proxy.avgSuccessTimeConsume) return false;
         if (storeStatus != proxy.storeStatus) return false;
-        if (!ip.equals(proxy.ip)) return false;
-        return port.equals(proxy.port);
+        if (ip != null ? !ip.equals(proxy.ip) : proxy.ip != null) return false;
+        return port != null ? port.equals(proxy.port) : proxy.port == null;
     }
 
     @Override
@@ -193,10 +179,8 @@ public class Proxy implements Comparable<Proxy> {
         int result;
         long temp;
         result = id;
-        result = 31 * result + ip.hashCode();
-        result = 31 * result + port.hashCode();
-        temp = Double.doubleToLongBits(quality);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (ip != null ? ip.hashCode() : 0);
+        result = 31 * result + (port != null ? port.hashCode() : 0);
         temp = Double.doubleToLongBits(successProbability);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + successTimes;
@@ -210,8 +194,7 @@ public class Proxy implements Comparable<Proxy> {
 
     @Override
     public int compareTo(Proxy o) {
-		// TODO Auto-generated method stub
-		if(quality > o.getQuality()) {
+		if(successProbability > o.getSuccessProbability()) {
 			return 1;
 		}
 		return 0;

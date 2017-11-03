@@ -1,5 +1,6 @@
 package com.wuyi.wcrawler;
 
+import com.wuyi.wcrawler.common.ProxySelectPolicy;
 import com.wuyi.wcrawler.entity.ZhUser;
 import com.wuyi.wcrawler.mapper.ZhUserMapper;
 import com.wuyi.wcrawler.util.ApplicationContextUtil;
@@ -14,12 +15,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class Config {
     private static final Log LOG = LogFactory.getLog(Config.class);
-    public String [] xmlPaths = {"classpath:mybatis-druid.xml", "classpath:elastic-job-lite.xml", "spring.xml"};
-    public long checkInterval = 100;
-    public int tarAmount = 500;
-    public long runningTime = 300 * 1000;
-    // TODO 从数据库中根据不同代理的属性记录, 制定选择代理的策略
-    public int proxySelectProxy;
+    private String [] xmlPaths = {"classpath:mybatis-druid.xml", "classpath:elastic-job-lite.xml", "spring.xml"};
+    private long checkInterval = 100;
+    private int tarAmount = 100;
+    private long runningTime = 500 * 1000;
+    private String startUserToken = "wu-yi-26-57";
+    private boolean proxyFlag = true;
+    private ProxySelectPolicy proxySelectPolicy = ProxySelectPolicy.RANDOM;
+    private ZhUserMapper zhUserMapper = ApplicationContextUtil.getBean(ZhUserMapper.class);
     private static Config instance;
     public static Config newInstance() {
         if (instance == null) {
@@ -30,6 +33,10 @@ public class Config {
             }
         }
         return instance;
+    }
+
+    public static Config getInstance() {
+        return instance == null ? newInstance() : instance;
     }
 
     public Config setXMLPaths(String[] newXMLPaths) {
@@ -55,7 +62,7 @@ public class Config {
     }
 
     public Config setTarAmount(int tarAmount) {
-        ZhUserMapper zhUserMapper = ApplicationContextUtil.getBean(ZhUserMapper.class);
+
         // 爬取的目标数量等于用户设置目标数量加上当前数据库中已爬取的数量
         this.tarAmount = tarAmount + zhUserMapper.selectCount(null);
         return this;
@@ -66,4 +73,50 @@ public class Config {
         return this;
     }
 
+    public Config setProxySelectPolicy(ProxySelectPolicy proxySelectPolicy) {
+        this.proxySelectPolicy = proxySelectPolicy;
+        return this;
+    }
+
+    public Config setProxyFlag(boolean proxyFlag) {
+        this.proxyFlag = proxyFlag;
+        return this;
+    }
+
+    public boolean getProxyFlag() {
+        return proxyFlag;
+    }
+
+    //    public Config setStartUserToken(String startUserToken) {
+//        this.startUserToken = startUserToken;
+//        ZhUser zhUser = new ZhUser();
+//        zhUser.setStatus(0);
+//        zhUser.setUrlToken(startUserToken);
+//        zhUserMapper.insert(zhUser);
+//        return this;
+//    }
+
+    public String[] getXmlPaths() {
+        return xmlPaths;
+    }
+
+    public long getCheckInterval() {
+        return checkInterval;
+    }
+
+    public int getTarAmount() {
+        return tarAmount;
+    }
+
+    public long getRunningTime() {
+        return runningTime;
+    }
+
+    public String getStartUserToken() {
+        return startUserToken;
+    }
+
+    public ProxySelectPolicy getProxySelectPolicy() {
+        return proxySelectPolicy;
+    }
 }

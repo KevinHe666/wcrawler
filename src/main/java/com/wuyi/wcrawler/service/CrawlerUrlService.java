@@ -1,6 +1,5 @@
 package com.wuyi.wcrawler.service;
 
-import com.wuyi.wcrawler.entity.CrawlerUrl;
 import com.wuyi.wcrawler.entity.ZhUser;
 
 import java.util.List;

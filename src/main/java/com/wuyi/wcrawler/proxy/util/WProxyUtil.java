@@ -1,5 +1,6 @@
 package com.wuyi.wcrawler.proxy.util;
 
+import com.wuyi.wcrawler.Config;
 import com.wuyi.wcrawler.entity.Proxy;
 import com.wuyi.wcrawler.mapper.ProxyMapper;
 import org.apache.commons.logging.Log;
@@ -28,7 +29,20 @@ public class WProxyUtil {
 		}
 	}
 	public static List<Proxy> fetchProxy(int limit) {
-		return proxyMapper.selectRand(limit);
+		switch (Config.getInstance().getProxySelectPolicy()) {
+			case SEQUENCE:
+				return proxyMapper.selectBySequence(limit);
+			case RANDOM:
+				return proxyMapper.selectByRand(limit);
+			case SUCCESS_PROBABILITY_PRIORITY:
+				return proxyMapper.selectBySuccessProbabilityPriority(limit);
+			case SUCCESS_TIMES_PRIORITY:
+				return proxyMapper.selectBySuccessTimesPriority(limit);
+			case SUCCESS_TIME_CONSUME_LEAST_PRIORITY:
+				return proxyMapper.selectBySuccessTimeConsumeLeastPriority(limit);
+			default:
+				return proxyMapper.selectByRand(limit);
+		}
 	}
 
 	public static int countProxy() {

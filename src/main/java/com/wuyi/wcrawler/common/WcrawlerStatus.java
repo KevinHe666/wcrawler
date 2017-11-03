@@ -1,4 +1,4 @@
-package com.wuyi.wcrawler.util;
+package com.wuyi.wcrawler.common;
 
 /**
  * @authort wuyi

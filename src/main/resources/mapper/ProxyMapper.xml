@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wuyi.wcrawler.mapper.ProxyMapper">
-    <resultMap id="BaseResultMap" type="com.wuyi.wcrawler.entity.Proxy">
-        <!--注意这里的property对应了bean字段名称-->
-        <id column="id" property="id" jdbcType="INTEGER"/>
-        <result column="ip" property="ip" jdbcType="VARCHAR"/>
-        <result column="port" property="port" jdbcType="VARCHAR"/>
-        <result column="quality" property="quality" jdbcType="DOUBLE"/>
-        <result column="successTimes" property="successTimes" jdbcType="INTEGER"/>
-        <result column="failureTimes" property="failureTimes" jdbcType="INTEGER"/>
-        <result column="lastSuccessTimestamp" property="lastSuccessTimestamp" jdbcType="INTEGER"/>
-        <result column="lastSuccessTimeConsume" property="lastSuccessTimeConsume" jdbcType="INTEGER"/>
-        <result column="avgSuccessTimeConsume" property="avgSuccessTimeConsume" jdbcType="INTEGER"/>
-        <result column="storeStatus" property="storeStatus" jdbcType="INTEGER"/>
-    </resultMap>
-	
 	<insert id="insertAll" parameterType="java.util.List">
         insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimestamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
         values
@@ -24,7 +10,7 @@
         </foreach>
     </insert>
 	
- 	<select id = "selectRand" resultType = "com.wuyi.wcrawler.entity.Proxy">
+ 	<select id = "selectByRand" resultType = "com.wuyi.wcrawler.entity.Proxy">
         SELECT *
         FROM proxy t1
             JOIN (SELECT ROUND(RAND() * ((
@@ -40,6 +26,33 @@
                 ) t2
         WHERE t1.id >= t2.id
         ORDER BY t1.id
+        LIMIT #{limit};
+    </select>
+
+    <select id = "selectBySequence" resultType = "com.wuyi.wcrawler.entity.Proxy">
+        SELECT *
+        FROM proxy
+        LIMIT #{limit};
+    </select>
+
+    <select id = "selectBySuccessProbabilityPriority" resultType = "com.wuyi.wcrawler.entity.Proxy">
+        SELECT *
+        FROM proxy
+        ORDER BY success_probability DESC
+        LIMIT #{limit};
+    </select>
+
+    <select id = "selectBySuccessTimesPriority" resultType = "com.wuyi.wcrawler.entity.Proxy">
+        SELECT *
+        FROM proxy
+        ORDER BY success_times DESC
+        LIMIT #{limit};
+    </select>
+
+    <select id = "selectBySuccessTimeConsumeLeastPriority" resultType = "com.wuyi.wcrawler.entity.Proxy">
+        SELECT *
+        FROM proxy WHERE avg_success_time_consume != 0
+        ORDER BY avg_success_time_consume
         LIMIT #{limit};
     </select>
 

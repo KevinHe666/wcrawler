@@ -2,7 +2,6 @@ package com.wuyi.wcrawler.job;
 
 import com.dangdang.ddframe.job.api.ShardingContext;
 import com.dangdang.ddframe.job.api.simple.SimpleJob;
-import com.wuyi.wcrawler.entity.CrawlerUrl;
 import com.wuyi.wcrawler.entity.ZhUser;
 import com.wuyi.wcrawler.service.impl.CrawlerUrlServiceImpl;
 import org.apache.commons.logging.Log;
@@ -16,14 +15,14 @@ import java.util.List;
  * @author wuyi5
  * @date 2017/8/16
  */
-public class CrawlerUrlJob implements SimpleJob {
-    private static final Log LOG = LogFactory.getLog(CrawlerUrlJob.class);
+public class CrawlerJob implements SimpleJob {
+    private static final Log LOG = LogFactory.getLog(CrawlerJob.class);
     
     @Autowired
     private CrawlerUrlServiceImpl crawlerUrlService;
     @Override
     public void execute(ShardingContext shardingContext) {
-        LOG.info("CrawlerUrlJob started.");
+        LOG.info("CrawlerJob started.");
         int shardingItem = shardingContext.getShardingItem();
         int shardingTotalCount = shardingContext.getShardingTotalCount();
         LOG.info("ShardingItem(" + shardingItem + ")");
