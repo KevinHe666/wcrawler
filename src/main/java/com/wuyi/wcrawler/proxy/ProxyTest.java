@@ -33,6 +33,8 @@ public class ProxyTest implements Runnable {
                     ProxyFilterUtil.add(proxy);
                     proxyPool.getProxyCache().add(proxy);
                 }
+            } else {
+                LOG.error(String.format("Test Failed: ip %s port %s", proxy.getIp(), proxy.getPort()));
             }
         }
     }
