@@ -37,7 +37,8 @@ public class ProxyTest implements Runnable {
                 }
             } else {
                 // TODO 一定要记得删除这行
-                proxyPool.getProxyCache().add(proxy);
+                // 可以考虑先把代理下载下来，然后在使用过程中剔除不好的代理
+//                proxyPool.getProxyCache().add(proxy);
                 LOG.error(String.format("Test Failed: ip %s port %s", proxy.getIp(), proxy.getPort()));
             }
         }
