@@ -3,8 +3,10 @@ package com.wuyi.wcrawler.proxy;
 import com.wuyi.wcrawler.entity.Proxy;
 import org.springframework.stereotype.Component;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Set;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -15,13 +17,13 @@ import java.util.concurrent.locks.ReentrantLock;
 @Component("proxyCollector")
 public class ProxyCollector {
 
-    private Queue<Proxy> collector;
+    private Set<Proxy> collector;
     private ReentrantLock lock;
     private Condition notEmpty;
     private Condition notFull;
 
     public ProxyCollector() {
-        collector = new LinkedList<Proxy>();
+        collector = new HashSet<Proxy>();
         lock = new ReentrantLock();
         notEmpty = lock.newCondition();
         notFull = lock.newCondition();
@@ -42,21 +44,22 @@ public class ProxyCollector {
         }
     }
 
-    public Proxy getProxy() {
+    public Set<Proxy> getProxy() {
         lock.lock();
-        Proxy proxy =null;
+        Set<Proxy> proxySet =null;
         try {
             while(isEmpty()) {
                 notEmpty.await();
             }
-            proxy = collector.poll();
+            proxySet = collector;
+            collector.clear();
             notFull.signalAll();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             lock.unlock();
         }
-        return proxy;
+        return proxySet;
     }
 
     public int collectorSize() {

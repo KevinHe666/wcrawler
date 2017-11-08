@@ -1,0 +1,1034 @@
+14:37:17,759  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+14:37:17,793  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 14:37:17 CST 2017]; root of context hierarchy
+14:37:17,837  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:37:17,975  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:37:18,004  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+14:37:19,275  INFO DruidDataSource:847 - {dataSource-1} inited
+14:37:24,348 ERROR ProxyFilterUtil:51 - Redis connect failed.
+14:37:24,366  INFO ProxyPool:42 - CoreLowLimitMonitor started.
+14:37:24,366  INFO ProxyPool:44 - CacheLowLimitMonitor started.
+14:37:24,366  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:37:24,366  INFO ProxyPool:46 - CacheHighLimitMonitor started.
+14:37:24,366  INFO ProxyPool:48 - CacheSyncMonitor started.
+14:37:24,611  INFO Wcrawler:31 - Wcrawler INIT !
+14:37:24,614  INFO Wcrawler:40 - Wcrawler START !
+14:37:24,642  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:37:24,642  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:38:19,289  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+14:38:19,320  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 14:38:19 CST 2017]; root of context hierarchy
+14:38:19,385  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:38:19,512  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:38:19,600  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+14:38:20,503  INFO DruidDataSource:847 - {dataSource-1} inited
+14:38:25,306 ERROR ProxyFilterUtil:51 - Redis connect failed.
+14:38:25,333  INFO ProxyPool:42 - CoreLowLimitMonitor started.
+14:38:25,333  INFO ProxyPool:44 - CacheLowLimitMonitor started.
+14:38:25,333  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:38:25,334  INFO ProxyPool:46 - CacheHighLimitMonitor started.
+14:38:25,334  INFO ProxyPool:117 - Waiting ProxyPool's cache to be not empty...
+14:38:25,334  INFO ProxyPool:48 - CacheSyncMonitor started.
+14:38:25,469  INFO Wcrawler:31 - Wcrawler INIT !
+14:38:25,472  INFO Wcrawler:40 - Wcrawler START !
+14:38:25,496  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:38:25,497  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:41:22,245  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+14:41:22,279  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 14:41:22 CST 2017]; root of context hierarchy
+14:41:22,325  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+14:41:22,447  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+14:41:22,476  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+14:41:23,446  INFO DruidDataSource:847 - {dataSource-1} inited
+14:41:28,131 ERROR ProxyFilterUtil:51 - Redis connect failed.
+14:41:28,149  INFO ProxyPool:42 - CoreLowLimitMonitor started.
+14:41:28,150  INFO ProxyPool:44 - CacheLowLimitMonitor started.
+14:41:28,151  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:41:28,151  INFO ProxyPool:117 - Waiting ProxyPool's cache to be not empty...
+14:41:28,151  INFO ProxyPool:46 - CacheHighLimitMonitor started.
+14:41:28,152  INFO ProxyPool:48 - CacheSyncMonitor started.
+14:41:28,308  INFO Wcrawler:31 - Wcrawler INIT !
+14:41:28,313  INFO Wcrawler:40 - Wcrawler START !
+14:41:28,342  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:41:28,343  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:41:30,071  INFO CrawlerJob:25 - CrawlerJob started.
+14:41:30,071  INFO CrawlerJob:28 - ShardingItem(0)
+14:41:30,113  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+14:41:30,117  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/zhong-wen-71/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:30,118  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/AlexGreeno/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:30,119  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/podotoxin/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:30,120  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/li-bing-xi-11/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:30,119  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/xuxing/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:30,308  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:30,308  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.11.254.37 and port is 80.
+14:41:30,309  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:30,309  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 123.59.51.130 and port is 8080.
+14:41:30,309  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:30,309  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.76.77.152 and port is 9999.
+14:41:30,309  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:30,309  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.196.88.57 and port is 8080.
+14:41:30,309  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:30,309  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 222.185.106.169 and port is 808.
+14:41:30,438  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:30,438  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:30,438  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 115.194.172.116 and port is 8118.
+14:41:31,715  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=e3676989c478496990e15ef70ebbaaba|1509691314000|1509691314000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:41:54 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:41:54 GMT
+14:41:32,051  INFO ZhCrawler:142 - flush: 13 users insert into db...
+14:41:32,069  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/su-zhong-yan/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:32,069  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:32,069  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 121.248.112.20 and port is 3128.
+14:41:32,070  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:41:32,070  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:41:32,070  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:41:32,575  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:32,575  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:32,576  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.199.153.129 and port is 3128.
+14:41:34,585  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:34,585  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:34,585  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 61.155.164.106 and port is 3128.
+14:41:35,115  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443: Read timed out
+14:41:35,116  INFO RetryExec:113 - Retrying request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443
+14:41:38,162  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443: Read timed out
+14:41:38,163  INFO RetryExec:113 - Retrying request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443
+14:41:41,210 ERROR WHttpClientUtil:269 - Get response failed.
+14:41:41,237  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:41,238  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:41,238  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 110.73.4.250 and port is 8123.
+14:41:43,012  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://61.155.164.106:3128->https://www.zhihu.com:443: Read timed out
+14:41:43,013  INFO RetryExec:113 - Retrying request to {tls}->http://61.155.164.106:3128->https://www.zhihu.com:443
+14:41:45,014  INFO CrawlerJob:25 - CrawlerJob started.
+14:41:45,014  INFO CrawlerJob:28 - ShardingItem(0)
+14:41:45,038  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+14:41:45,039  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/ou-yang-hong/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:45,039  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:45,039  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 59.50.68.34 and port is 53281.
+14:41:45,041  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/carol-xia-yan/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:45,041  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:45,041  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.35.45.142 and port is 8088.
+14:41:45,043  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/wu-wen-10-46-3/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:45,043  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:45,043  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 183.56.131.87 and port is 3128.
+14:41:45,043  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/yumengguo/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:45,043  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:45,044  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 47.94.23.128 and port is 8888.
+14:41:45,045  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:41:45,045  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:41:45,045  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:41:45,045  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/qiaoyisheng/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:45,046  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:45,046  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.236.142.103 and port is 8888.
+14:41:45,598  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:45,599  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:45,599  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 166.111.77.32 and port is 3128.
+14:41:45,608  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:45,608  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:45,609  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 39.108.6.49 and port is 3128.
+14:41:46,212  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=c36976f3bef44111aef2437c0722c1b2|1509691328000|1509691328000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:08 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:08 GMT
+14:41:46,415  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://183.56.131.87:3128->https://www.zhihu.com:443: Connect to 183.56.131.87:3128 [/183.56.131.87] failed: Connection refused: connect
+14:41:46,415  INFO RetryExec:113 - Retrying request to {tls}->http://183.56.131.87:3128->https://www.zhihu.com:443
+14:41:46,465  INFO ZhCrawler:142 - flush: 8 users insert into db...
+14:41:46,477  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/sui-xin-er-an/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:46,477  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:46,477  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 113.89.58.5 and port is 8118.
+14:41:46,704  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=183e98fb16854f2bace34af1aa9bec77|1509691329000|1509691329000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:09 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:09 GMT
+14:41:46,933  INFO ZhCrawler:142 - flush: 7 users insert into db...
+14:41:46,941  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/Jerk/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:46,941  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:46,941  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 47.94.152.253 and port is 8080.
+14:41:47,036  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:47,036  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:47,037  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 103.21.116.85 and port is 3128.
+14:41:47,250  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:47,251  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:47,251  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 223.110.241.130 and port is 8080.
+14:41:47,251  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:41:47,252  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:41:47,252  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:41:47,309  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:41:47,309  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:47,309  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.199.2.197 and port is 80.
+14:41:47,498  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://183.56.131.87:3128->https://www.zhihu.com:443: Connect to 183.56.131.87:3128 [/183.56.131.87] failed: Connection refused: connect
+14:41:47,498  INFO RetryExec:113 - Retrying request to {tls}->http://183.56.131.87:3128->https://www.zhihu.com:443
+14:41:48,528  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=286a3c96503547bfb292b41493686bab|1509691331000|1509691331000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:11 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:11 GMT
+14:41:48,732  INFO ZhCrawler:142 - flush: 7 users insert into db...
+14:41:48,743  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/jokeplayer/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:41:48,743  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:48,743  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.196.88.57 and port is 8080.
+14:41:48,782 ERROR WHttpClientUtil:269 - Get response failed.
+14:41:48,786  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:48,786  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:48,786  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 222.185.106.169 and port is 808.
+14:41:49,908  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443: Read timed out
+14:41:49,909  INFO RetryExec:113 - Retrying request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443
+14:41:51,344  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443: Connect to 222.185.106.169:808 [/222.185.106.169] failed: Connection timed out: connect
+14:41:51,345  INFO RetryExec:113 - Retrying request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443
+14:41:51,444  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443: Connect to 115.194.172.116:8118 [/115.194.172.116] failed: Connection timed out: connect
+14:41:51,444  INFO RetryExec:113 - Retrying request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443
+14:41:52,121  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://116.196.88.57:8080->https://www.zhihu.com:443: Read timed out
+14:41:52,122  INFO RetryExec:113 - Retrying request to {tls}->http://116.196.88.57:8080->https://www.zhihu.com:443
+14:41:53,580  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443: Connect to 111.199.153.129:3128 [/111.199.153.129] failed: Connection timed out: connect
+14:41:53,580  INFO RetryExec:113 - Retrying request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443
+14:41:54,761  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443: Read timed out
+14:41:54,761  INFO RetryExec:113 - Retrying request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443
+14:41:55,455  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://116.196.88.57:8080->https://www.zhihu.com:443: Read timed out
+14:41:55,455  INFO RetryExec:113 - Retrying request to {tls}->http://116.196.88.57:8080->https://www.zhihu.com:443
+14:41:58,054 ERROR WHttpClientUtil:269 - Get response failed.
+14:41:58,063  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:41:58,063  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:58,063  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 115.194.172.116 and port is 8118.
+14:41:59,830 ERROR WHttpClientUtil:269 - Get response failed.
+14:41:59,840  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:41:59,841  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:41:59,841  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 121.248.112.20 and port is 3128.
+14:42:00,042  INFO CrawlerJob:25 - CrawlerJob started.
+14:42:00,043  INFO CrawlerJob:28 - ShardingItem(0)
+14:42:00,056  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+14:42:00,057  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/seven721/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:00,057  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/gnap/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:00,057  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:00,057  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.199.153.129 and port is 3128.
+14:42:00,058  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:00,058  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.11.254.37 and port is 80.
+14:42:00,058  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/tu-chong-29/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:00,059  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:00,059  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:00,059  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:00,059  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:00,059  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 122.205.19.6 and port is 8088.
+14:42:00,060  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/icenoreen/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:00,060  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:00,060  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.199.115.78 and port is 80.
+14:42:00,060  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/XMedia2015/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:00,060  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:00,060  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 180.153.58.154 and port is 8088.
+14:42:00,137  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:00,137  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:00,137  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 103.235.246.107 and port is 3128.
+14:42:01,201  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=e80a29fe149e4d64b36183f5badb9a87|1509691343000|1509691343000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:23 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:23 GMT
+14:42:01,267  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=81304276ddf345789512b9496dce36ab|1509691343000|1509691343000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:23 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:23 GMT
+14:42:01,430  INFO ZhCrawler:142 - flush: 12 users insert into db...
+14:42:01,441  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/manuel-schulz/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:01,441  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:01,441  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 117.78.37.198 and port is 8000.
+14:42:01,462  INFO ZhCrawler:142 - flush: 1 users insert into db...
+14:42:01,467  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/jaehn/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:01,467  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:01,467  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.236.142.103 and port is 8888.
+14:42:01,510 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:01,514  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:01,515  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:01,515  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 123.59.51.130 and port is 8080.
+14:42:01,515  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:01,515  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:01,516  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:02,029  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:02,030  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:02,030  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.76.77.152 and port is 9999.
+14:42:02,099  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:02,100  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:02,100  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 122.205.19.6 and port is 8088.
+14:42:02,240  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://110.73.4.250:8123->https://www.zhihu.com:443: Connect to 110.73.4.250:8123 [/110.73.4.250] failed: Connection timed out: connect
+14:42:02,240  INFO RetryExec:113 - Retrying request to {tls}->http://110.73.4.250:8123->https://www.zhihu.com:443
+14:42:02,887  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443: Read timed out
+14:42:02,887  INFO RetryExec:113 - Retrying request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443
+14:42:03,363  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://103.235.246.107:3128->https://www.zhihu.com:443: Read timed out
+14:42:03,363  INFO RetryExec:113 - Retrying request to {tls}->http://103.235.246.107:3128->https://www.zhihu.com:443
+14:42:05,273  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:05,273  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:05,273  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 166.111.77.32 and port is 3128.
+14:42:05,935  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443: Read timed out
+14:42:05,935  INFO RetryExec:113 - Retrying request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443
+14:42:06,046  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://59.50.68.34:53281->https://www.zhihu.com:443: Connect to 59.50.68.34:53281 [/59.50.68.34] failed: Connection timed out: connect
+14:42:06,046  INFO RetryExec:113 - Retrying request to {tls}->http://59.50.68.34:53281->https://www.zhihu.com:443
+14:42:06,215  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=6c2c95aa9ea5437a8542d4e930dea417|1509691348000|1509691348000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:28 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:28 GMT
+14:42:06,485  INFO ZhCrawler:142 - flush: 13 users insert into db...
+14:42:06,492  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/scottdong/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:06,492  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:06,492  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 39.108.6.49 and port is 3128.
+14:42:07,477  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.89.58.5:8118->https://www.zhihu.com:443: Connect to 113.89.58.5:8118 [/113.89.58.5] failed: Connection timed out: connect
+14:42:07,477  INFO RetryExec:113 - Retrying request to {tls}->http://113.89.58.5:8118->https://www.zhihu.com:443
+14:42:08,046  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443: Connect to 103.21.116.85:3128 [/103.21.116.85] failed: Connection timed out: connect
+14:42:08,046  INFO RetryExec:113 - Retrying request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443
+14:42:09,007 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:09,012  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:09,012  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:09,012  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 113.89.58.5 and port is 8118.
+14:42:09,794  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443: Connect to 222.185.106.169:808 [/222.185.106.169] failed: Connection timed out: connect
+14:42:09,794  INFO RetryExec:113 - Retrying request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443
+14:42:10,405  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://103.235.246.107:3128->https://www.zhihu.com:443: Read timed out
+14:42:10,406  INFO RetryExec:113 - Retrying request to {tls}->http://103.235.246.107:3128->https://www.zhihu.com:443
+14:42:10,747  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443: Read timed out
+14:42:10,747  INFO RetryExec:113 - Retrying request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443
+14:42:11,066  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443: Read timed out
+14:42:11,066  INFO RetryExec:113 - Retrying request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443
+14:42:12,351  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443: Connect to 222.185.106.169:808 [/222.185.106.169] failed: Connection timed out: connect
+14:42:12,351  INFO RetryExec:113 - Retrying request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443
+14:42:12,456  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443: Connect to 115.194.172.116:8118 [/115.194.172.116] failed: Connection timed out: connect
+14:42:12,456  INFO RetryExec:113 - Retrying request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443
+14:42:13,763 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:13,768  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:13,769  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:13,769  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 47.94.152.253 and port is 8080.
+14:42:13,857 ERROR WHttpClientUtil:253 - Get page retry failed after 2 times' try.
+14:42:13,862  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/ying-yang-xiao-lv/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:13,863  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:13,863  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 103.21.116.85 and port is 3128.
+14:42:13,863  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:13,863  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:13,863  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:14,082 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:14,086  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:14,087  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:14,087  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 223.110.241.130 and port is 8080.
+14:42:14,139 ERROR WHttpClientUtil:253 - Get page retry failed after 2 times' try.
+14:42:14,144  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/jiangweihang/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:14,144  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:14,145  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 222.185.106.169 and port is 808.
+14:42:14,584  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443: Connect to 111.199.153.129:3128 [/111.199.153.129] failed: Connection timed out: connect
+14:42:14,584  INFO RetryExec:113 - Retrying request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443
+14:42:14,970  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443: Read timed out
+14:42:14,971  INFO RetryExec:113 - Retrying request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443
+14:42:15,015  INFO CrawlerJob:25 - CrawlerJob started.
+14:42:15,015  INFO CrawlerJob:28 - ShardingItem(0)
+14:42:15,037  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+14:42:15,038  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/ni-ke-la-82/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:15,038  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/xu-zhou-75/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:15,038  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/shi-tu-zi/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:15,039  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/fittimeji-ke-yun-dong-39/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:15,039  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/liu-yang-5-22/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:15,038  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:15,039  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 115.194.172.116 and port is 8118.
+14:42:15,040  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:15,040  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 121.248.112.20 and port is 3128.
+14:42:15,040  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:15,040  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.199.153.129 and port is 3128.
+14:42:15,040  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:15,041  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.11.254.37 and port is 80.
+14:42:15,041  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:15,041  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:15,042  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:15,042  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:15,042  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 223.110.241.130 and port is 8080.
+14:42:15,110  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:15,111  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:15,111  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.11.254.37 and port is 80.
+14:42:15,222  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=f973821fa32a494d8a1d0a3e4f32b020|1509691358000|1509691358000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:38 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:38 GMT
+14:42:15,240  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/c_savor/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:15,241  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:15,241  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 122.205.19.6 and port is 8088.
+14:42:16,033  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=684a3844f2564e33be623a95db3f1ec5|1509691358000|1509691358000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:38 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:38 GMT
+14:42:16,250  INFO ZhCrawler:142 - flush: 9 users insert into db...
+14:42:16,257  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/yun-tu-dong-man/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:16,258  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:16,258  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 166.111.77.32 and port is 3128.
+14:42:16,876  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443: Read timed out
+14:42:16,876  INFO RetryExec:113 - Retrying request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443
+14:42:18,096  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443: Read timed out
+14:42:18,096  INFO RetryExec:113 - Retrying request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443
+14:42:18,379  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=6c1f358c892948d191117314250bbdb7|1509691359000|1509691359000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:39 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:39 GMT
+14:42:18,528  INFO ZhCrawler:142 - flush: 3 users insert into db...
+14:42:18,534  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/liu-miao-74-80/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:18,534  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:18,535  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 39.108.6.49 and port is 3128.
+14:42:19,058  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443: Connect to 115.194.172.116:8118 [/115.194.172.116] failed: Connection timed out: connect
+14:42:19,058  INFO RetryExec:113 - Retrying request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443
+14:42:19,221 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:19,226  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:19,227  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:19,227  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 113.89.58.5 and port is 8118.
+14:42:19,890  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443: Read timed out
+14:42:19,890  INFO RetryExec:113 - Retrying request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443
+14:42:21,064  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443: Connect to 122.205.19.6:8088 [/122.205.19.6] failed: Connection timed out: connect
+14:42:21,064  INFO RetryExec:113 - Retrying request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443
+14:42:21,065  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443: Connect to 111.199.153.129:3128 [/111.199.153.129] failed: Connection timed out: connect
+14:42:21,065  INFO RetryExec:113 - Retrying request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443
+14:42:21,143  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443: Read timed out
+14:42:21,143  INFO RetryExec:113 - Retrying request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443
+14:42:22,788  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443: Read timed out
+14:42:22,789  INFO RetryExec:113 - Retrying request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443
+14:42:22,904 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:22,908  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:22,909  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:22,909  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 47.94.152.253 and port is 8080.
+14:42:22,909  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:22,909  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:22,909  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:22,998  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:22,998  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:22,998  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 103.21.116.85 and port is 3128.
+14:42:23,100  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443: Connect to 122.205.19.6:8088 [/122.205.19.6] failed: Connection timed out: connect
+14:42:23,100  INFO RetryExec:113 - Retrying request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443
+14:42:23,238  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://110.73.4.250:8123->https://www.zhihu.com:443: Connect to 110.73.4.250:8123 [/110.73.4.250] failed: Connection timed out: connect
+14:42:23,238  INFO RetryExec:113 - Retrying request to {tls}->http://110.73.4.250:8123->https://www.zhihu.com:443
+14:42:24,190 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:24,195  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:24,195  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:24,195  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 123.59.51.130 and port is 8080.
+14:42:25,878  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443: Read timed out
+14:42:25,878  INFO RetryExec:113 - Retrying request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443
+14:42:27,054  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://59.50.68.34:53281->https://www.zhihu.com:443: Connect to 59.50.68.34:53281 [/59.50.68.34] failed: Connection timed out: connect
+14:42:27,055  INFO RetryExec:113 - Retrying request to {tls}->http://59.50.68.34:53281->https://www.zhihu.com:443
+14:42:28,480  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.89.58.5:8118->https://www.zhihu.com:443: Connect to 113.89.58.5:8118 [/113.89.58.5] failed: Connection timed out: connect
+14:42:28,480  INFO RetryExec:113 - Retrying request to {tls}->http://113.89.58.5:8118->https://www.zhihu.com:443
+14:42:28,909  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:28,910  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:28,910  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.76.77.152 and port is 9999.
+14:42:28,985 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:28,991  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:28,991  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:28,991  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.196.88.57 and port is 8080.
+14:42:29,589  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:29,590  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:29,590  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 222.185.106.169 and port is 808.
+14:42:29,638 ERROR WHttpClientUtil:253 - Get page retry failed after 2 times' try.
+14:42:29,642  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/liu-leon-36/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:29,642  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:29,642  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 115.194.172.116 and port is 8118.
+14:42:30,013  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.89.58.5:8118->https://www.zhihu.com:443: Connect to 113.89.58.5:8118 [/113.89.58.5] failed: Connection timed out: connect
+14:42:30,013  INFO RetryExec:113 - Retrying request to {tls}->http://113.89.58.5:8118->https://www.zhihu.com:443
+14:42:30,014  INFO CrawlerJob:25 - CrawlerJob started.
+14:42:30,015  INFO CrawlerJob:28 - ShardingItem(0)
+14:42:30,072  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+14:42:30,073  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/taotaotravelling/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:30,073  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:30,073  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/shen-ke-er-bu-si-ban/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:30,073  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:30,073  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:30,073  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 121.248.112.20 and port is 3128.
+14:42:30,073  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/Jinglee/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:30,073  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/micropower/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:30,073  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:30,074  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/zhu-yan-11-22/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:30,074  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:30,074  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.199.153.129 and port is 3128.
+14:42:30,074  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:30,074  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 101.254.185.156 and port is 8080.
+14:42:30,074  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:30,074  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 118.114.77.47 and port is 8080.
+14:42:30,074  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:30,074  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 220.231.155.241 and port is 8080.
+14:42:30,794  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443: Connect to 222.185.106.169:808 [/222.185.106.169] failed: Connection timed out: connect
+14:42:30,794  INFO RetryExec:113 - Retrying request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443
+14:42:31,176  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://101.254.185.156:8080->https://www.zhihu.com:443: Connect to 101.254.185.156:8080 [/101.254.185.156] failed: Connection refused: connect
+14:42:31,176  INFO RetryExec:113 - Retrying request to {tls}->http://101.254.185.156:8080->https://www.zhihu.com:443
+14:42:32,271  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://101.254.185.156:8080->https://www.zhihu.com:443: Connect to 101.254.185.156:8080 [/101.254.185.156] failed: Connection refused: connect
+14:42:32,271  INFO RetryExec:113 - Retrying request to {tls}->http://101.254.185.156:8080->https://www.zhihu.com:443
+14:42:33,120  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443: Read timed out
+14:42:33,120  INFO RetryExec:113 - Retrying request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443
+14:42:33,355 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:33,363  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:33,363  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:33,364  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.112.37.87 and port is 9999.
+14:42:33,465 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:33,472  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:33,472  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:33,472  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 14.221.164.82 and port is 9797.
+14:42:34,553  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://14.221.164.82:9797->https://www.zhihu.com:443: Connect to 14.221.164.82:9797 [/14.221.164.82] failed: Connection refused: connect
+14:42:34,554  INFO RetryExec:113 - Retrying request to {tls}->http://14.221.164.82:9797->https://www.zhihu.com:443
+14:42:35,151  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443: Connect to 222.185.106.169:808 [/222.185.106.169] failed: Connection timed out: connect
+14:42:35,151  INFO RetryExec:113 - Retrying request to {tls}->http://222.185.106.169:808->https://www.zhihu.com:443
+14:42:35,474  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://118.114.77.47:8080->https://www.zhihu.com:443: Read timed out
+14:42:35,474  INFO RetryExec:113 - Retrying request to {tls}->http://118.114.77.47:8080->https://www.zhihu.com:443
+14:42:35,581 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:35,585  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:35,585  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:35,585  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 42.51.26.79 and port is 3128.
+14:42:35,585  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:35,585  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:35,585  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:35,637  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://14.221.164.82:9797->https://www.zhihu.com:443: Connect to 14.221.164.82:9797 [/14.221.164.82] failed: Connection refused: connect
+14:42:35,637  INFO RetryExec:113 - Retrying request to {tls}->http://14.221.164.82:9797->https://www.zhihu.com:443
+14:42:35,842 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:35,847  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:35,847  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:35,847  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.236.142.103 and port is 8888.
+14:42:36,008 ERROR WHttpClientUtil:253 - Get page retry failed after 2 times' try.
+14:42:36,013  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/tan-cheng-jian-yu/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:36,013  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:36,013  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.199.115.79 and port is 80.
+14:42:36,045  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443: Connect to 115.194.172.116:8118 [/115.194.172.116] failed: Connection timed out: connect
+14:42:36,045  INFO RetryExec:113 - Retrying request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443
+14:42:36,045  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443: Connect to 111.199.153.129:3128 [/111.199.153.129] failed: Connection timed out: connect
+14:42:36,046  INFO RetryExec:113 - Retrying request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443
+14:42:36,168  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443: Read timed out
+14:42:36,168  INFO RetryExec:113 - Retrying request to {tls}->http://121.248.112.20:3128->https://www.zhihu.com:443
+14:42:36,238  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443: Connect to 122.205.19.6:8088 [/122.205.19.6] failed: Connection timed out: connect
+14:42:36,238  INFO RetryExec:113 - Retrying request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443
+14:42:36,412  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:36,412  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:36,412  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 113.140.25.4 and port is 81.
+14:42:36,704 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:36,708 ERROR WHttpClientUtil:253 - Get page retry failed after 2 times' try.
+14:42:36,713  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/shellyqulei/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:36,714  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:36,714  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.35.45.141 and port is 8088.
+14:42:36,794  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:36,794  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:36,794  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 218.201.98.196 and port is 3128.
+14:42:37,036  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=b3d057805348457cb35a3db9f2c42337|1509691379000|1509691379000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:42:59 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:42:59 GMT
+14:42:37,244  INFO ZhCrawler:142 - flush: 13 users insert into db...
+14:42:37,254  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/lishuhang/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:37,254  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:37,254  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.26.58.27 and port is 3128.
+14:42:37,577  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:37,578  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:37,578  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.25.164.134 and port is 8118.
+14:42:37,578  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:37,578  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:37,578  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:37,938  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=f3ef4524e28a4dae800061ee58899ad5|1509691380000|1509691380000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:43:00 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:43:00 GMT
+14:42:38,383  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:38,383  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:38,383  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.78.167.70 and port is 3128.
+14:42:39,010 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:39,015  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:39,015  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:39,016  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 125.37.175.144 and port is 8118.
+14:42:39,472  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://120.78.167.70:3128->https://www.zhihu.com:443: Connect to 120.78.167.70:3128 [/120.78.167.70] failed: Connection refused: connect
+14:42:39,473  INFO RetryExec:113 - Retrying request to {tls}->http://120.78.167.70:3128->https://www.zhihu.com:443
+14:42:39,794  INFO ZhCrawler:142 - flush: 14 users insert into db...
+14:42:39,800  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/nan-gong-wan-ning/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:39,800  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:39,800  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 27.40.146.26 and port is 61234.
+14:42:39,807  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=f183ffb27c494f6d885c3f0968bcf0a5|1509691382000|1509691382000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:43:02 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:43:02 GMT
+14:42:40,057  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443: Connect to 115.194.172.116:8118 [/115.194.172.116] failed: Connection timed out: connect
+14:42:40,057  INFO RetryExec:113 - Retrying request to {tls}->http://115.194.172.116:8118->https://www.zhihu.com:443
+14:42:40,233  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://113.89.58.5:8118->https://www.zhihu.com:443: Connect to 113.89.58.5:8118 [/113.89.58.5] failed: Connection timed out: connect
+14:42:40,233  INFO RetryExec:113 - Retrying request to {tls}->http://113.89.58.5:8118->https://www.zhihu.com:443
+14:42:40,765  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://120.78.167.70:3128->https://www.zhihu.com:443: Connect to 120.78.167.70:3128 [/120.78.167.70] failed: Connection refused: connect
+14:42:40,765  INFO RetryExec:113 - Retrying request to {tls}->http://120.78.167.70:3128->https://www.zhihu.com:443
+14:42:42,065  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443: Connect to 122.205.19.6:8088 [/122.205.19.6] failed: Connection timed out: connect
+14:42:42,065  INFO RetryExec:113 - Retrying request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443
+14:42:42,066  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443: Connect to 111.199.153.129:3128 [/111.199.153.129] failed: Connection timed out: connect
+14:42:42,066  INFO RetryExec:113 - Retrying request to {tls}->http://111.199.153.129:3128->https://www.zhihu.com:443
+14:42:43,999  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443: Connect to 103.21.116.85:3128 [/103.21.116.85] failed: Connection timed out: connect
+14:42:43,999  INFO RetryExec:113 - Retrying request to {tls}->http://103.21.116.85:3128->https://www.zhihu.com:443
+14:42:44,100  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443: Connect to 122.205.19.6:8088 [/122.205.19.6] failed: Connection timed out: connect
+14:42:44,100  INFO RetryExec:113 - Retrying request to {tls}->http://122.205.19.6:8088->https://www.zhihu.com:443
+14:42:44,239 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:44,243  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:44,243  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:44,243  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.81.143.245 and port is 8118.
+14:42:45,014  INFO CrawlerJob:25 - CrawlerJob started.
+14:42:45,014  INFO CrawlerJob:28 - ShardingItem(0)
+14:42:45,034  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+14:42:45,035  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/bing-quan-23/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:45,036  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:45,036  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/yuan-shou-31/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:45,036  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.178.14.131 and port is 8081.
+14:42:45,036  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/li-meng-35/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:45,036  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:45,037  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 47.93.193.1 and port is 3128.
+14:42:45,038  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/jaylo/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:45,038  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:45,038  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 61.155.164.107 and port is 3128.
+14:42:45,038  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/david-du/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:45,038  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:45,038  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.26.78.81 and port is 3128.
+14:42:45,039  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:45,039  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+14:42:45,039  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+14:42:45,039  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+14:42:45,039  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.76.55.49 and port is 8088.
+14:42:46,061  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://60.178.14.131:8081->https://www.zhihu.com:443: Connect to 60.178.14.131:8081 [/60.178.14.131] failed: Connection refused: connect
+14:42:46,061  INFO RetryExec:113 - Retrying request to {tls}->http://60.178.14.131:8081->https://www.zhihu.com:443
+14:42:47,085  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://60.178.14.131:8081->https://www.zhihu.com:443: Connect to 60.178.14.131:8081 [/60.178.14.131] failed: Connection refused: connect
+14:42:47,085  INFO RetryExec:113 - Retrying request to {tls}->http://60.178.14.131:8081->https://www.zhihu.com:443
+14:42:47,517 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:47,521  INFO WHttpClientUtil:232 - getPageRetry()--2
+14:42:47,522  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:47,522  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.199.153.129 and port is 3128.
+14:42:48,062 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:48,066  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:48,066  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:48,066  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.11.254.37 and port is 80.
+14:42:48,113 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:48,117  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:48,117  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:48,117  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 122.205.19.6 and port is 8088.
+14:42:48,284  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://120.26.78.81:3128->https://www.zhihu.com:443: Read timed out
+14:42:48,284  INFO RetryExec:113 - Retrying request to {tls}->http://120.26.78.81:3128->https://www.zhihu.com:443
+14:42:48,386  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://61.155.164.107:3128->https://www.zhihu.com:443: Read timed out
+14:42:48,386  INFO RetryExec:113 - Retrying request to {tls}->http://61.155.164.107:3128->https://www.zhihu.com:443
+14:42:49,015  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://120.76.55.49:8088->https://www.zhihu.com:443: Read timed out
+14:42:49,016  INFO RetryExec:113 - Retrying request to {tls}->http://120.76.55.49:8088->https://www.zhihu.com:443
+14:42:49,256  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://47.93.193.1:3128->https://www.zhihu.com:443: Read timed out
+14:42:49,257  INFO RetryExec:113 - Retrying request to {tls}->http://47.93.193.1:3128->https://www.zhihu.com:443
+14:42:49,424  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=a8950c6f781e48e2b0d9aee8f43cbe74|1509691391000|1509691391000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 06:43:11 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 06:43:11 GMT
+14:42:49,484 ERROR WHttpClientUtil:269 - Get response failed.
+14:42:49,489  INFO WHttpClientUtil:232 - getPageRetry()--1
+14:42:49,489  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:49,489  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 166.111.77.32 and port is 3128.
+14:42:49,621  INFO ZhCrawler:142 - flush: 8 users insert into db...
+14:42:49,626  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/yu-yang-24-50/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+14:42:49,627  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+14:42:49,627  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 39.108.6.49 and port is 3128.
+14:42:49,926  INFO Wcrawler:65 - Yet, Wcrawler scrap total user: 108
+14:42:49,927  INFO Wcrawler:77 - Wcrawler STOPPING...
+14:42:49,927  INFO Wcrawler:79 - Wcrawler STOP.
+15:17:26,938  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+15:17:26,971  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 15:17:26 CST 2017]; root of context hierarchy
+15:17:27,015  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:17:27,143  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:17:27,174  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+15:17:28,133  INFO DruidDataSource:847 - {dataSource-1} inited
+15:17:39,965  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+15:17:40,003  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 15:17:40 CST 2017]; root of context hierarchy
+15:17:40,049  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:17:40,161  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:17:40,191  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+15:17:41,100  INFO DruidDataSource:847 - {dataSource-1} inited
+15:17:45,069  INFO CrawlerJob:25 - CrawlerJob started.
+15:17:45,069  INFO CrawlerJob:28 - ShardingItem(0)
+15:17:45,796 ERROR ProxyFilterUtil:51 - Redis connect failed.
+15:17:45,824  INFO ProxyPool:42 - CoreLowLimitMonitor started.
+15:17:45,824  INFO ProxyPool:44 - CacheLowLimitMonitor started.
+15:17:45,824  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:17:45,825  INFO ProxyPool:117 - Waiting ProxyPool's cache to be not empty...
+15:17:45,825  INFO ProxyPool:46 - CacheHighLimitMonitor started.
+15:17:45,825  INFO ProxyPool:48 - CacheSyncMonitor started.
+15:17:45,977  INFO Wcrawler:28 - Wcrawler INIT !
+15:17:45,984  INFO Wcrawler:37 - Wcrawler START !
+15:17:45,989  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:17:45,989  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:17:45,994  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+15:17:45,997  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/bian-yu-xin-58/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:45,998  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/jiangshu1998/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:45,998  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/lalvo/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:45,998  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/sang-wen-feng/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:45,998  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/nathan-duan/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:46,067  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:46,067  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:46,067  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 183.2.208.35 and port is 80.
+15:17:46,067  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:46,067  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 118.114.77.47 and port is 8080.
+15:17:46,067  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 1.119.184.216 and port is 3128.
+15:17:46,068  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:46,068  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.199.115.78 and port is 80.
+15:17:46,068  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:46,068  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.76.79.21 and port is 80.
+15:17:46,754  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=dade276927774109833772dd8b1858df|1509693490000|1509693490000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:10 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:10 GMT
+15:17:46,882  INFO ZhCrawler:142 - flush: 1 users insert into db...
+15:17:46,892  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/luan-shiyu/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:46,892  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:46,892  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 166.111.77.32 and port is 3128.
+15:17:47,211  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=2c8d942d172543459d9df5c3f7a039f2|1509693489000|1509693489000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:09 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:09 GMT
+15:17:47,260  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=83a57fe9b94a48649f28fdc4462be9a2|1509693490000|1509693490000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:10 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:10 GMT
+15:17:47,299  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=fb912c06cdd54ddca2251901eeefea07|1509693490000|1509693490000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:10 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:10 GMT
+15:17:47,477  INFO ZhCrawler:142 - flush: 17 users insert into db...
+15:17:47,511  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/zhutianyu/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:47,511  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:47,511  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 42.51.26.79 and port is 3128.
+15:17:47,511  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:17:47,511  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:17:47,511  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:17:47,522  INFO ZhCrawler:142 - flush: 3 users insert into db...
+15:17:47,528  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/dao-bi/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:47,529  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:47,529  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.2.148.253 and port is 80.
+15:17:47,539  INFO ZhCrawler:142 - flush: 1 users insert into db...
+15:17:47,545  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/jian-jia-42-94/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:47,545  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:47,545  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 115.159.50.52 and port is 80.
+15:17:47,958  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:17:47,959  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:47,959  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 47.94.100.76 and port is 3128.
+15:17:48,056  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://166.111.77.32:3128->https://www.zhihu.com:443: Connect to 166.111.77.32:3128 [/166.111.77.32] failed: Connection refused: connect
+15:17:48,057  INFO RetryExec:113 - Retrying request to {tls}->http://166.111.77.32:3128->https://www.zhihu.com:443
+15:17:48,435  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=300c5b50563c48e4b958972237ef45e5|1509693491000|1509693491000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:11 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:11 GMT
+15:17:48,604  INFO ZhCrawler:142 - flush: 12 users insert into db...
+15:17:48,613  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/amiamiamia/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:17:48,613  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:48,613  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.208.44.228 and port is 80.
+15:17:48,733  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=523a65f8cbaf41ff976c53c8e0f726e8|1509693491000|1509693491000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:11 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:11 GMT
+15:17:48,930  INFO ZhCrawler:142 - flush: 3 users insert into db...
+15:17:49,193  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://166.111.77.32:3128->https://www.zhihu.com:443: Connect to 166.111.77.32:3128 [/166.111.77.32] failed: Connection refused: connect
+15:17:49,193  INFO RetryExec:113 - Retrying request to {tls}->http://166.111.77.32:3128->https://www.zhihu.com:443
+15:17:49,563  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=b7648dc6032e4dba943ee6db82a6e7f4|1509693491000|1509693491000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:11 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:11 GMT
+15:17:49,778  INFO ZhCrawler:142 - flush: 12 users insert into db...
+15:17:49,796  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=57512f8cc8c04034a12a4113afdc0521|1509693492000|1509693492000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:12 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:12 GMT
+15:17:50,019  INFO ZhCrawler:142 - flush: 12 users insert into db...
+15:17:50,068  INFO Wcrawler:62 - Yet, Wcrawler scrap total user: 61
+15:17:50,069  INFO Wcrawler:74 - Wcrawler STOPPING...
+15:17:50,069  INFO Wcrawler:76 - Wcrawler STOP.
+15:17:50,285 ERROR WHttpClientUtil:269 - Get response failed.
+15:17:50,291  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:17:50,291  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:17:50,291  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.13.109.27 and port is 80.
+15:17:50,312  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://1.119.184.216:3128->https://www.zhihu.com:443: Read timed out
+15:17:50,312  INFO RetryExec:113 - Retrying request to {tls}->http://1.119.184.216:3128->https://www.zhihu.com:443
+15:18:11,998  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+15:18:12,034  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 15:18:12 CST 2017]; root of context hierarchy
+15:18:12,076  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:18:12,197  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:18:12,235  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+15:18:13,149  INFO DruidDataSource:847 - {dataSource-1} inited
+15:18:15,068  INFO CrawlerJob:25 - CrawlerJob started.
+15:18:15,068  INFO CrawlerJob:28 - ShardingItem(0)
+15:18:17,821 ERROR ProxyFilterUtil:51 - Redis connect failed.
+15:18:17,860  INFO ProxyPool:42 - CoreLowLimitMonitor started.
+15:18:17,861  INFO ProxyPool:44 - CacheLowLimitMonitor started.
+15:18:17,861  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:18:17,861  INFO ProxyPool:117 - Waiting ProxyPool's cache to be not empty...
+15:18:17,862  INFO ProxyPool:46 - CacheHighLimitMonitor started.
+15:18:17,862  INFO ProxyPool:48 - CacheSyncMonitor started.
+15:18:18,027  INFO Wcrawler:28 - Wcrawler INIT !
+15:18:18,036  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:18:18,036  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:18:18,040  INFO Wcrawler:37 - Wcrawler START !
+15:18:18,042  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+15:18:18,046  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/wang-zi-jian-33/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:18,050  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/liu-de-hua-83-98/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:18,051  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/qiu-lei-ping/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:18,052  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/xiaodiyi/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:18,057  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/halcyonall/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:18,190  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,190  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,190  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 47.94.100.76 and port is 3128.
+15:18:18,190  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,190  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.76.79.21 and port is 80.
+15:18:18,190  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,190  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.2.148.253 and port is 80.
+15:18:18,190  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,190  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.199.2.197 and port is 80.
+15:18:18,190  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.13.109.27 and port is 80.
+15:18:18,518  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:18:18,519  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,519  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.208.44.228 and port is 80.
+15:18:18,680  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=3f4c0f8e8a0946ef9f452775f26b8de2|1509693522000|1509693522000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:42 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:42 GMT
+15:18:18,772  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/chuang-ye-bang-75/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:18,772  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,772  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 42.51.26.79 and port is 3128.
+15:18:18,772  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:18:18,772  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:18:18,772  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:18:18,780  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=c1356d5cc6194fa69bd1783ceba54334|1509693522000|1509693522000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:42 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:42 GMT
+15:18:18,789  INFO WHttpClientUtil:232 - getPageRetry()--2
+15:18:18,789  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,789  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 124.238.97.154 and port is 8080.
+15:18:18,826  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/feng-xi-fan-90/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:18,827  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:18,827  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 1.119.184.216 and port is 3128.
+15:18:19,251  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:18:19,251  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:19,251  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 115.159.50.52 and port is 80.
+15:18:19,296  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=3b622e23e2ae44f58f678ce7fcc8ada0|1509693522000|1509693522000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:42 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:42 GMT
+15:18:19,387  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=f4eed8e0613c4e3885510881af2d4ef6|1509693522000|1509693522000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:42 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:42 GMT
+15:18:19,519  INFO ZhCrawler:142 - flush: 11 users insert into db...
+15:18:19,536  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/liangwen/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:19,536  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:19,537  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.13.7.42 and port is 80.
+15:18:19,584  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/fanpingyu/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:19,584  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:19,584  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 125.37.175.144 and port is 8118.
+15:18:20,370  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=5a4b3fe454bb4cb9863f5368b5d2a476|1509693522000|1509693522000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:42 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:42 GMT
+15:18:20,484  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=3d8f469052f34859a07b688949bce31a|1509693523000|1509693523000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:43 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:43 GMT
+15:18:20,499  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=02ec763ef6734127954511636f52af45|1509693523000|1509693523000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:43 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:43 GMT
+15:18:20,688  INFO ZhCrawler:142 - flush: 32 users insert into db...
+15:18:20,717  INFO ZhCrawler:142 - flush: 2 users insert into db...
+15:18:20,718  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/eon88/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:20,718  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:20,718  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 166.111.77.32 and port is 3128.
+15:18:21,818  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://166.111.77.32:3128->https://www.zhihu.com:443: Connect to 166.111.77.32:3128 [/166.111.77.32] failed: Connection refused: connect
+15:18:21,819  INFO RetryExec:113 - Retrying request to {tls}->http://166.111.77.32:3128->https://www.zhihu.com:443
+15:18:21,830  INFO ZhCrawler:142 - flush: 3 users insert into db...
+15:18:22,957  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://166.111.77.32:3128->https://www.zhihu.com:443: Connect to 166.111.77.32:3128 [/166.111.77.32] failed: Connection refused: connect
+15:18:22,958  INFO RetryExec:113 - Retrying request to {tls}->http://166.111.77.32:3128->https://www.zhihu.com:443
+15:18:24,089 ERROR WHttpClientUtil:269 - Get response failed.
+15:18:24,098  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:18:24,098  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:24,099  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 39.108.6.49 and port is 3128.
+15:18:24,099  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:18:24,099  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:18:24,099  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:18:29,855  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443: Read timed out
+15:18:29,855  INFO RetryExec:113 - Retrying request to {tls}->http://39.108.6.49:3128->https://www.zhihu.com:443
+15:18:30,016  INFO CrawlerJob:25 - CrawlerJob started.
+15:18:30,016  INFO CrawlerJob:28 - ShardingItem(0)
+15:18:30,043  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+15:18:30,043  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/zhu-qian-dai/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:30,044  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:30,044  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.199.115.78 and port is 80.
+15:18:30,045  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/ma-wen-bin-30/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:30,045  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:30,045  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 111.13.109.27 and port is 80.
+15:18:30,050  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/wang-han-53/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:30,051  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:30,051  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 116.199.2.197 and port is 80.
+15:18:30,050  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/timbernord/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:30,052  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:30,053  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.208.44.228 and port is 80.
+15:18:30,051  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/nfsking2/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:30,053  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:30,053  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 42.51.26.79 and port is 3128.
+15:18:30,504  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=c4cbc93ff8074c1b8da6369362111a51|1509693533000|1509693533000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:18:53 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:18:53 GMT
+15:18:30,550  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:18:30,551  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:30,551  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 124.238.97.154 and port is 8080.
+15:18:30,610  INFO ZhCrawler:142 - flush: 8 users insert into db...
+15:18:30,620  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/fengR/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:18:30,620  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:18:30,621  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 47.94.100.76 and port is 3128.
+15:18:30,621  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:18:30,621  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:18:30,622  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:18:30,710  INFO Wcrawler:62 - Yet, Wcrawler scrap total user: 56
+15:18:30,711  INFO Wcrawler:74 - Wcrawler STOPPING...
+15:18:30,712  INFO Wcrawler:76 - Wcrawler STOP.
+15:29:15,753  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+15:29:15,790  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 15:29:15 CST 2017]; root of context hierarchy
+15:29:15,831  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:29:15,955  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:29:15,983  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+15:29:16,916  INFO DruidDataSource:847 - {dataSource-1} inited
+15:29:21,593 ERROR ProxyFilterUtil:51 - Redis connect failed.
+15:29:21,621  INFO ProxyPool:42 - CoreLowLimitMonitor started.
+15:29:21,621  INFO ProxyPool:44 - CacheLowLimitMonitor started.
+15:29:21,621  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:29:21,622  INFO ProxyPool:46 - CacheHighLimitMonitor started.
+15:29:21,622  INFO ProxyPool:117 - Waiting ProxyPool's cache to be not empty...
+15:29:21,622  INFO ProxyPool:48 - CacheSyncMonitor started.
+15:29:21,769  INFO Wcrawler:28 - Wcrawler INIT !
+15:29:21,773  INFO Wcrawler:37 - Wcrawler START !
+15:29:30,080  INFO CrawlerJob:25 - CrawlerJob started.
+15:29:30,082  INFO CrawlerJob:28 - ShardingItem(0)
+15:29:30,136  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+15:29:30,140  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/wu-37/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:29:30,141  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/kiking/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:29:30,141  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/drweagon/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:29:30,141  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/Chinito/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:29:30,146  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/weixin_qiu/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:30:25,086  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+15:30:25,117  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 15:30:25 CST 2017]; root of context hierarchy
+15:30:25,157  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:30:25,288  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:30:25,327  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+15:30:26,297  INFO DruidDataSource:847 - {dataSource-1} inited
+15:30:30,056  INFO CrawlerJob:25 - CrawlerJob started.
+15:30:30,057  INFO CrawlerJob:28 - ShardingItem(0)
+15:30:31,204 ERROR ProxyFilterUtil:51 - Redis connect failed.
+15:30:31,228  INFO ProxyPool:42 - CoreLowLimitMonitor started.
+15:30:31,228  INFO ProxyPool:44 - CacheLowLimitMonitor started.
+15:30:31,229  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:30:31,229  INFO ProxyPool:46 - CacheHighLimitMonitor started.
+15:30:31,229  INFO ProxyPool:117 - Waiting ProxyPool's cache to be not empty...
+15:30:31,229  INFO ProxyPool:48 - CacheSyncMonitor started.
+15:30:31,392  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+15:30:31,393  INFO Wcrawler:28 - Wcrawler INIT !
+15:30:31,396  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/dreamcog/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:30:31,397  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/chen-rui-53-46/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:30:31,397  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/fanfun/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:30:31,404  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:30:31,408  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:30:31,399  INFO Wcrawler:37 - Wcrawler START !
+15:30:31,399  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/kumamao/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:30:31,398  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/zengeryounke/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:30:31,544  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:30:31,544  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:30:31,544  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 61.155.164.112 and port is 3128.
+15:30:31,544  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:30:31,544  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.199.115.184 and port is 8118.
+15:30:31,545  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:30:31,545  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.76.55.49 and port is 8088.
+15:30:31,545  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:30:31,545  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 27.40.146.26 and port is 61234.
+15:30:31,545  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 125.37.175.144 and port is 8118.
+15:30:31,669 ERROR WHttpClientUtil:269 - Get response failed.
+15:30:31,705  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+15:30:31,731  INFO SQLErrorCodesFactory:127 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+15:30:31,743  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/man-man-2-87-76/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:30:31,743  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:30:31,743  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.81.143.245 and port is 8118.
+15:30:32,619  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://120.199.115.184:8118->https://www.zhihu.com:443: Connect to 120.199.115.184:8118 [/120.199.115.184] failed: Connection refused: connect
+15:30:32,620  INFO RetryExec:113 - Retrying request to {tls}->http://120.199.115.184:8118->https://www.zhihu.com:443
+15:30:33,676  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://120.199.115.184:8118->https://www.zhihu.com:443: Connect to 120.199.115.184:8118 [/120.199.115.184] failed: Connection refused: connect
+15:30:33,677  INFO RetryExec:113 - Retrying request to {tls}->http://120.199.115.184:8118->https://www.zhihu.com:443
+15:34:08,981  WARN ApplicationContextUtil:42 - ApplicaitonContext is not initialized yet, initializing it now...
+15:34:09,016  INFO ClassPathXmlApplicationContext:583 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e31ee: startup date [Fri Nov 03 15:34:09 CST 2017]; root of context hierarchy
+15:34:09,064  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [mybatis-druid.xml]
+15:34:09,182  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [elastic-job-lite.xml]
+15:34:09,219  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring.xml]
+15:34:10,224  INFO DruidDataSource:847 - {dataSource-1} inited
+15:34:14,855 ERROR ProxyFilterUtil:51 - Redis connect failed.
+15:34:14,891  INFO ProxyPool:42 - CoreLowLimitMonitor started.
+15:34:14,891  INFO ProxyPool:44 - CacheLowLimitMonitor started.
+15:34:14,892  INFO ProxyPool:46 - CacheHighLimitMonitor started.
+15:34:14,892  INFO ProxyPool:48 - CacheSyncMonitor started.
+15:34:14,894  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:34:14,894  INFO ProxyPool:117 - Waiting ProxyPool's cache to be not empty...
+15:34:15,056  INFO Wcrawler:28 - Wcrawler INIT !
+15:34:15,059  INFO Wcrawler:37 - Wcrawler START !
+15:34:15,075  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:34:15,076  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:34:15,107  INFO CrawlerJob:25 - CrawlerJob started.
+15:34:15,107  INFO CrawlerJob:28 - ShardingItem(0)
+15:34:15,143  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+15:34:15,145  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/yediot/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:15,146  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/liu-xiao-fu-9/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:15,146  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/multivac/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:15,146  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/jory/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:15,149  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/xuehongyan/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:15,313  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:15,314  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:15,314  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 123.56.12.242 and port is 3128.
+15:34:15,314  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:15,314  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 114.215.103.121 and port is 8081.
+15:34:15,314  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:15,314  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 221.7.1.99 and port is 8080.
+15:34:15,314  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:15,314  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.35.48.142 and port is 8088.
+15:34:15,314  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 118.180.7.30 and port is 9000.
+15:34:15,434  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:15,435  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:15,435  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.178.15.165 and port is 8081.
+15:34:15,611  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:15,612  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:15,612  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.23.41.194 and port is 8118.
+15:34:15,612  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:34:15,612  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:34:15,612  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:34:15,661  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:15,661  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:15,661  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 123.170.246.35 and port is 8118.
+15:34:16,449  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.56.12.242:3128->https://www.zhihu.com:443: Connect to 123.56.12.242:3128 [/123.56.12.242] failed: Connection refused: connect
+15:34:16,450  INFO RetryExec:113 - Retrying request to {tls}->http://123.56.12.242:3128->https://www.zhihu.com:443
+15:34:17,563  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.56.12.242:3128->https://www.zhihu.com:443: Connect to 123.56.12.242:3128 [/123.56.12.242] failed: Connection refused: connect
+15:34:17,563  INFO RetryExec:113 - Retrying request to {tls}->http://123.56.12.242:3128->https://www.zhihu.com:443
+15:34:18,375  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://118.180.7.30:9000->https://www.zhihu.com:443: Read timed out
+15:34:18,376  INFO RetryExec:113 - Retrying request to {tls}->http://118.180.7.30:9000->https://www.zhihu.com:443
+15:34:18,421  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=6e4e2e76f1904d4a85513fa06848aca0|1509694480000|1509694480000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:34:40 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:34:40 GMT
+15:34:18,475  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/liu-wei-liang/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:18,475  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:18,475  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 222.169.193.162 and port is 8099.
+15:34:18,489 ERROR WHttpClientUtil:269 - Get response failed.
+15:34:18,493  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:18,493  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:18,493  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 183.136.232.149 and port is 9999.
+15:34:18,683 ERROR WHttpClientUtil:269 - Get response failed.
+15:34:18,688  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:18,688  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:18,688  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 110.73.6.133 and port is 8123.
+15:34:30,017  INFO CrawlerJob:25 - CrawlerJob started.
+15:34:30,017  INFO CrawlerJob:28 - ShardingItem(0)
+15:34:30,060  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+15:34:30,063  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/yu-zi-xu-15/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:30,064  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:30,064  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 124.238.97.154 and port is 8080.
+15:34:30,065  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/bigbossjiang/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:30,065  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:30,065  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.204.85.29 and port is 3128.
+15:34:30,066  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/viciaestellie/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:30,066  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:30,066  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.2.148.253 and port is 80.
+15:34:30,066  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/zhang-yi-92-62-89/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:30,066  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:30,066  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 183.2.208.35 and port is 80.
+15:34:30,067  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/dongshuting/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:30,067  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:30,067  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:34:30,067  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:34:30,067  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:34:30,067  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 139.224.24.26 and port is 8888.
+15:34:31,051  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=6731213e8fd445d487ca772d2134f1b8|1509694493000|1509694493000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:34:53 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:34:53 GMT
+15:34:31,205  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=19ff8c89c51d4ef28bee71ec36c8cfc1|1509694493000|1509694493000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:34:53 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:34:53 GMT
+15:34:31,212  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=2fd8f9f1111f4e16968e5afa37e9c3bc|1509694493000|1509694493000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:34:53 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:34:53 GMT
+15:34:31,485  INFO ZhCrawler:142 - flush: 16 users insert into db...
+15:34:31,499  INFO ZhCrawler:142 - flush: 1 users insert into db...
+15:34:31,502  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/redrain-root/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:31,502  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:31,502  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 121.232.145.139 and port is 9000.
+15:34:31,506  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/luna-li-71/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:31,506  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:31,506  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 115.159.219.156 and port is 8080.
+15:34:31,545 ERROR WHttpClientUtil:269 - Get response failed.
+15:34:31,551  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:31,551  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:31,551  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.35.29.57 and port is 8088.
+15:34:31,647  INFO WHttpClientUtil:232 - getPageRetry()--2
+15:34:31,647  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:31,647  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.204.85.29 and port is 3128.
+15:34:31,817  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=9e382f8f289d49e49e9ec928b53b067c|1509694494000|1509694494000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:34:54 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:34:54 GMT
+15:34:32,072  INFO ZhCrawler:142 - flush: 10 users insert into db...
+15:34:32,081  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/wei-an-mu-mu/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:32,081  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:32,081  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 121.42.198.60 and port is 808.
+15:34:32,536  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.139:9000->https://www.zhihu.com:443: Connect to 121.232.145.139:9000 [/121.232.145.139] failed: Connection refused: connect
+15:34:32,537  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.139:9000->https://www.zhihu.com:443
+15:34:33,568  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://121.232.145.139:9000->https://www.zhihu.com:443: Connect to 121.232.145.139:9000 [/121.232.145.139] failed: Connection refused: connect
+15:34:33,568  INFO RetryExec:113 - Retrying request to {tls}->http://121.232.145.139:9000->https://www.zhihu.com:443
+15:34:33,863  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=12dfaf97baae4a489ac32395611474b1|1509694496000|1509694496000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:34:56 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:34:56 GMT
+15:34:34,060 ERROR WHttpClientUtil:217 - EntityUtils.toString failed.
+15:34:34,060  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:34,060  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:34,060  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.2.148.253 and port is 80.
+15:34:34,061  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:34:34,062  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:34:34,062  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:34:34,129  INFO ZhCrawler:142 - flush: 2 users insert into db...
+15:34:34,140  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/bei-mei-kao-shi-testdaily/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:34,140  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:34,140  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.255.186.169 and port is 8888.
+15:34:34,678 ERROR WHttpClientUtil:269 - Get response failed.
+15:34:34,681  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:34,681  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:34,681  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 183.13.37.16 and port is 3128.
+15:34:35,107  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.42.198.60:808->https://www.zhihu.com:443: Read timed out
+15:34:35,107  INFO RetryExec:113 - Retrying request to {tls}->http://121.42.198.60:808->https://www.zhihu.com:443
+15:34:35,481  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=097de0e095f748e7b7552954f8a09b3c|1509694497000|1509694497000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:34:57 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:34:57 GMT
+15:34:35,718  INFO ZhCrawler:142 - flush: 14 users insert into db...
+15:34:35,729  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/zhang-da-bao-38-15/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:35,729  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:35,729  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 27.40.146.26 and port is 61234.
+15:34:36,433  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://60.178.15.165:8081->https://www.zhihu.com:443: Connect to 60.178.15.165:8081 [/60.178.15.165] failed: Connection timed out: connect
+15:34:36,433  INFO RetryExec:113 - Retrying request to {tls}->http://60.178.15.165:8081->https://www.zhihu.com:443
+15:34:36,663  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://123.170.246.35:8118->https://www.zhihu.com:443: Connect to 123.170.246.35:8118 [/123.170.246.35] failed: Connection timed out: connect
+15:34:36,663  INFO RetryExec:113 - Retrying request to {tls}->http://123.170.246.35:8118->https://www.zhihu.com:443
+15:34:38,131  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://121.42.198.60:808->https://www.zhihu.com:443: Read timed out
+15:34:38,131  INFO RetryExec:113 - Retrying request to {tls}->http://121.42.198.60:808->https://www.zhihu.com:443
+15:34:39,475  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://222.169.193.162:8099->https://www.zhihu.com:443: Connect to 222.169.193.162:8099 [/222.169.193.162] failed: Connection timed out: connect
+15:34:39,475  INFO RetryExec:113 - Retrying request to {tls}->http://222.169.193.162:8099->https://www.zhihu.com:443
+15:34:39,495  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://183.136.232.149:9999->https://www.zhihu.com:443: Connect to 183.136.232.149:9999 [/183.136.232.149] failed: Connection timed out: connect
+15:34:39,495  INFO RetryExec:113 - Retrying request to {tls}->http://183.136.232.149:9999->https://www.zhihu.com:443
+15:34:39,685  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://110.73.6.133:8123->https://www.zhihu.com:443: Connect to 110.73.6.133:8123 [/110.73.6.133] failed: Connection timed out: connect
+15:34:39,685  INFO RetryExec:113 - Retrying request to {tls}->http://110.73.6.133:8123->https://www.zhihu.com:443
+15:34:40,197  INFO RetryExec:97 - I/O exception (java.net.SocketTimeoutException) caught when processing request to {tls}->http://60.255.186.169:8888->https://www.zhihu.com:443: Read timed out
+15:34:40,197  INFO RetryExec:113 - Retrying request to {tls}->http://60.255.186.169:8888->https://www.zhihu.com:443
+15:34:41,156 ERROR WHttpClientUtil:269 - Get response failed.
+15:34:41,161  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:41,162  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:41,162  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 125.37.175.144 and port is 8118.
+15:34:45,016  INFO CrawlerJob:25 - CrawlerJob started.
+15:34:45,017  INFO CrawlerJob:28 - ShardingItem(0)
+15:34:45,039  INFO CrawlerJob:34 - ZhUser list's  size() is 10
+15:34:45,040  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/stormzhang/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:45,040  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:45,040  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/moogee/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:45,040  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 112.81.143.245 and port is 8118.
+15:34:45,040  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/liujian-bragood/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:45,040  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:45,041  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 60.178.14.131 and port is 8081.
+15:34:45,041  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:45,042  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 120.76.55.49 and port is 8088.
+15:34:45,042  INFO ProxyPool:298 - ProxyPool's core is low level, trying to fill core...
+15:34:45,043  INFO ProxyPool:120 - ProxyPool's cache is not empty, trying to get proxy from cache...
+15:34:45,043  INFO ProxyPool:293 - Waiting ProxyPool's core to be low level...
+15:34:45,046  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/zhu-yao-98-57/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:45,046  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:45,046  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 61.155.164.112 and port is 3128.
+15:34:45,047  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/xielei/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:45,047  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:45,047  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 183.136.232.149 and port is 9999.
+15:34:46,072  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://60.178.14.131:8081->https://www.zhihu.com:443: Connect to 60.178.14.131:8081 [/60.178.14.131] failed: Connection refused: connect
+15:34:46,073  INFO RetryExec:113 - Retrying request to {tls}->http://60.178.14.131:8081->https://www.zhihu.com:443
+15:34:47,105  INFO RetryExec:97 - I/O exception (org.apache.http.conn.HttpHostConnectException) caught when processing request to {tls}->http://60.178.14.131:8081->https://www.zhihu.com:443: Connect to 60.178.14.131:8081 [/60.178.14.131] failed: Connection refused: connect
+15:34:47,105  INFO RetryExec:113 - Retrying request to {tls}->http://60.178.14.131:8081->https://www.zhihu.com:443
+15:34:47,117  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=0dac11fb12c14f888084c5b94f99ec56|1509694509000|1509694509000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:35:09 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:35:09 GMT
+15:34:47,314  WARN ResponseProcessCookies:130 - Invalid cookie header: "Set-Cookie: q_c1=15fd1833d7e44476b5bb258bc5e5b462|1509694509000|1509694509000; Domain=zhihu.com; expires=Mon, 02 Nov 2020 07:35:09 GMT; Path=/". Invalid 'expires' attribute: Mon, 02 Nov 2020 07:35:09 GMT
+15:34:47,401  INFO ZhCrawler:142 - flush: 10 users insert into db...
+15:34:47,411  INFO ZhCrawler:72 - startUrl: https://www.zhihu.com/api/v4/members/tinfood/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20
+15:34:47,411  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:47,411  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 118.180.7.30 and port is 9000.
+15:34:47,519 ERROR WHttpClientUtil:269 - Get response failed.
+15:34:47,519  INFO Wcrawler:62 - Yet, Wcrawler scrap total user: 53
+15:34:47,520  INFO Wcrawler:74 - Wcrawler STOPPING...
+15:34:47,520  INFO Wcrawler:76 - Wcrawler STOP.
+15:34:47,523  INFO WHttpClientUtil:232 - getPageRetry()--1
+15:34:47,523  INFO ProxyPool:259 - Waiting for ProxyPool's core not empty......
+15:34:47,523  INFO ProxyPool:273 - Get proxy from ProxyPool, where proxy ip is 222.169.193.162 and port is 8099.

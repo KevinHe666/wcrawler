@@ -2,7 +2,6 @@ package com.wuyi.wcrawler.proxy.parser;
 
 import com.wuyi.wcrawler.entity.Proxy;
 import com.wuyi.wcrawler.proxy.ProxyCollector;
-import com.wuyi.wcrawler.proxy.util.ProxyFilterUtil;
 import com.wuyi.wcrawler.proxy.util.ProxySite;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 import org.apache.commons.logging.Log;
@@ -43,10 +42,6 @@ public class Ip181Parser extends SiteParser {
 				Proxy proxy = new Proxy();
 				proxy.setIp(ip);
 				proxy.setPort(tds.get(1).text());
-				if(ProxyFilterUtil.contains(proxy)) {
-					continue;
-				}
-//				LOG.info(proxy.getIp() + " " + proxy.getPort());
 				pCollector.addProxy(proxy);
 			}
 		}

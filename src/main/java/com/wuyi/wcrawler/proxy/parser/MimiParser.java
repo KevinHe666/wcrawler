@@ -2,7 +2,6 @@ package com.wuyi.wcrawler.proxy.parser;
 
 import com.wuyi.wcrawler.entity.Proxy;
 import com.wuyi.wcrawler.proxy.ProxyCollector;
-import com.wuyi.wcrawler.proxy.util.ProxyFilterUtil;
 import com.wuyi.wcrawler.proxy.util.ProxySite;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
 import org.apache.commons.logging.Log;
@@ -12,8 +11,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 @Component(value = "mimi")
@@ -48,22 +45,10 @@ public class MimiParser extends SiteParser {
 						Proxy proxy = new Proxy();
 						proxy.setIp(ip);
 						proxy.setPort(tds.get(1).text());
-						if(ProxyFilterUtil.contains(proxy)) {
-							continue;
-						}
-//						LOG.info(proxy.getIp() + " " + proxy.getPort());
 						pCollector.addProxy(proxy);
 					}
 				}
 			}
 		}
-	}
-
-	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:mybatis-druid.xml",
-				"classpath:spring.xml");
-		MimiParser xp = (MimiParser) ctx.getBean("mimi");
-		xp.parse();
-		LOG.info("MimiParser ended");
 	}
 }

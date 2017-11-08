@@ -7,6 +7,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -43,6 +44,16 @@ public class WProxyUtil {
 			default:
 				return proxyMapper.selectByRand(limit);
 		}
+	}
+
+	public static boolean contains(Proxy proxy) {
+		Example example = new Example(Proxy.class);
+		example.createCriteria().andEqualTo("ip", proxy.getIp()).andEqualTo("port", proxy.getPort());
+		List<Proxy> existProxies = proxyMapper.selectByExample(example);
+		if (existProxies != null && existProxies.size() > 0) {
+			return false;
+		}
+		return true;
 	}
 
 	public static int countProxy() {
