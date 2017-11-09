@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wuyi.wcrawler.mapper.ProxyMapper">
 	<insert id="insertAll" parameterType="java.util.List">
-        insert into proxy (ip, port, quality, successTimes, failureTimes, lastSuccessTimestamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
+        insert into proxy (ip, port, successTimes, failureTimes, lastSuccessTimestamp, lastSuccessTimeConsume, avgSuccessTimeConsume, storeStatus)
         values
         <foreach collection ="list" item="item" index= "index" separator =",">
-        (#{item.ip}, #{item.port}, #{item.quality}, #{item.successTimes}, #{item.failureTimes}, 
+        (#{item.ip}, #{item.port}, #{item.successTimes}, #{item.failureTimes},
         #{item.lastSuccessTimestamp}, #{item.lastSuccessTimeConsume}, #{item.avgSuccessTimeConsume}, #{item.storeStatus})
         </foreach>
     </insert>
