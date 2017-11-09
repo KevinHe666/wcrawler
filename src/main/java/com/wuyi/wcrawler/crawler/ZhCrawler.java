@@ -5,6 +5,8 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.wuyi.wcrawler.Config;
 import com.wuyi.wcrawler.entity.CrawlerTask;
+import com.wuyi.wcrawler.entity.FollowRelation;
+import com.wuyi.wcrawler.mapper.FollowRelationMapper;
 import com.wuyi.wcrawler.mapper.ZhUserMapper;
 import com.wuyi.wcrawler.entity.ZhUser;
 import com.wuyi.wcrawler.util.WHttpClientUtil;
@@ -13,12 +15,11 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.lang.reflect.ParameterizedType;
+import java.util.*;
 
 /**
  *
@@ -32,14 +33,22 @@ public class ZhCrawler extends Crawler {
     private static final Log LOG = LogFactory.getLog(ZhCrawler.class);
     @Autowired
     private ZhUserMapper zhUserMapper;
+    @Autowired
+    private FollowRelationMapper followRelationMapper;
     private ZhUser startUser;
     private Set<ZhUser> crawlUserBuffer;
-    private int bufferThreshold = 512;
+    private Set<FollowRelation> followRelationBuffer;
+    // TODO 改回512
+    private int bufferThreshold = 128;
     private String paramInclude = "data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics";
     private int paramOffset = 0;
     private int paramLimit = 20;
     private String urlToken;
-    public ZhCrawler() { super();}
+    public ZhCrawler() {
+        super();
+        crawlUserBuffer = new HashSet<>();
+        followRelationBuffer = new HashSet<>();
+    }
 
     @Override
     public void run() {
@@ -48,7 +57,7 @@ public class ZhCrawler extends Crawler {
                 crawl(concatRequestUrl(this.getUrl(), this.getParamInclude(), this.getParamLimit() * offset, this.getParamLimit()));
             }
             if (crawlUserBuffer.size() > 0) {
-                flush();
+                flush(crawlUserBuffer, zhUserMapper, ZhUser.class);
             }
         } catch (Exception e) {
             startUser.setStatus(CrawlerTask.ABNORMALEND);
@@ -85,7 +94,6 @@ public class ZhCrawler extends Crawler {
 
     public ZhUser parseUser(JSONObject jsonObject) {
         ZhUser zhUser = new ZhUser();
-        zhUser.setLinkPerson(this.getUrlToken());
         zhUser.setName((String) jsonObject.get("name"));
         zhUser.setUrlToken((String) jsonObject.get("url_token"));
         zhUser.setHeadline((String) jsonObject.get("headline"));
@@ -119,7 +127,30 @@ public class ZhCrawler extends Crawler {
         }
         zhUser.setLocationsName(locationsName);
 
+        // 插入关注关系
+        addFollowRelationToBuffer(this.urlToken, (String) jsonObject.get("url_token"));
         return zhUser;
+    }
+
+    public void addFollowRelationToBuffer(String follower, String followee) {
+        FollowRelation followRelation = new FollowRelation();
+        followRelation.setFollower(follower);
+        followRelation.setFollowee(followee);
+        if (!followRelationBuffer.contains(followRelation)) {
+            Example example = new Example(FollowRelation.class);
+            example.createCriteria()
+                    .andEqualTo("follower", followRelation.getFollower())
+                    .andEqualTo("followee", followRelation.getFollowee());
+            List<FollowRelation> followRelationList = followRelationMapper.selectByExample(example);
+            if (followRelationList == null || followRelationList.size() == 0) {
+                synchronized (followRelationBuffer) {
+                    followRelationBuffer.add(followRelation);
+                    if (followRelationBuffer.size() > bufferThreshold) {
+                        flush(followRelationBuffer, followRelationMapper, FollowRelation.class);
+                    }
+                }
+            }
+        }
     }
 
     public void addToBuffer(ZhUser zhUser) {
@@ -131,20 +162,24 @@ public class ZhCrawler extends Crawler {
                 synchronized (crawlUserBuffer) {
                     crawlUserBuffer.add(zhUser);
                     if (crawlUserBuffer.size() > bufferThreshold) {
-                        flush();
+                        flush(crawlUserBuffer, zhUserMapper, ZhUser.class);
                     }
                 }
             }
         }
     }
 
-    public void flush() {
-        synchronized (crawlUserBuffer) {
-            LOG.info("flush: " + crawlUserBuffer.size() + " users insert into db...");
-            zhUserMapper.insertList(new ArrayList<>(crawlUserBuffer));
-            crawlUserBuffer.clear();
+    public <T> void flush(Set<T> buffer, Mapper<T> mapper, Class<T> clazz) {
+        synchronized (buffer) {
+            if (buffer.getClass().getSimpleName().contains("User")) {
+                ((ZhUserMapper)mapper).insertList(new ArrayList<ZhUser>((Collection<? extends ZhUser>) buffer));
+                LOG.info("buffer flush: " + buffer.size() + "users insert into db...");
+            } else if (buffer.getClass().getSimpleName().contains("Relation")) {
+                ((FollowRelationMapper)mapper).insertList(new ArrayList<FollowRelation>((Collection<? extends FollowRelation>) buffer));
+                LOG.info("buffer flush: " + buffer.size() + "relations insert into db...");
+            }
+            buffer.clear();
         }
-
     }
 
     public ZhUser getStartUser() {

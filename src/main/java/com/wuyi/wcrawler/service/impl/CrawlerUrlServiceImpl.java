@@ -65,11 +65,9 @@ public class CrawlerUrlServiceImpl implements CrawlerUrlService {
          * */
         int nThreads = Math.max(1, users.size() / 2);
         ExecutorService executorService = Executors.newFixedThreadPool(nThreads);
-        crawlUserBuffer = new HashSet<>();
         for (ZhUser user: users) {
-            ZhCrawler zhCrawler = (ZhCrawler) ApplicationContextUtil.getBean("zhCrawler");
+            ZhCrawler zhCrawler = ApplicationContextUtil.getBean("zhCrawler");
             zhCrawler.setStartUser(user);
-            zhCrawler.setCrawlUserBuffer(crawlUserBuffer);
             zhCrawler.setStartTime(System.currentTimeMillis());
             zhCrawler.setStatus(CrawlerTask.CREATED);
             zhCrawler.setTarAmount(DEFAULT_TAR_AMOUNT);
