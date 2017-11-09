@@ -1,51 +1,51 @@
 package com.wuyi.wcrawler.proxy;
 
 import com.wuyi.wcrawler.entity.Proxy;
-import com.wuyi.wcrawler.proxy.util.ProxyFilterUtil;
-import com.wuyi.wcrawler.util.WHttpClientUtil;
+import com.wuyi.wcrawler.proxy.util.WProxyUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
 /**
- * Created by wuyi5 on 2017/8/30.
+ * ProxyTest的功能变更：之前ProxyTest对象用于检测下载的代理是否可用。实际使用发现，有些检测未通过的代理在实际运用中是
+ * 可用的。所以，现在的流程调整为：proxy下载到collector中，proxyTest取出collector中的proxy，然后将其存储到数据库中。
+ * 后期需要做的是，定期检测数据库中不可用的僵尸代理。
+ * @author wuyi5
+ * @date 2017/8/30
  */
 @Component(value = "proxyTest")
 @Scope("prototype")
 public class ProxyTest implements Runnable {
     private static Log LOG = LogFactory.getLog(ProxyTest.class);
-//    public static final String SITE = "https://www.zhihu.com/api/v4/members/wu-yi-26-57/followees?include=data[*].educations,employments,answer_count,business,locations,articles_count,follower_count,gender,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20er,following_count,question_count,voteup_count,thanked_count,is_followed,is_following,badge[?(type=best_answerer)].topics&offset=0&limit=20";
-    public static final String SITE = "https://www.zhihu.com";
-
     @Autowired
-    ProxyCollector proxyCollector;
+    private ProxyCollector proxyCollector;
     @Autowired
-    ProxyPool proxyPool;
+    private ProxyPool proxyPool;
     @Override
     public void run() {
-        /** 循环检测下载的代理是否可用 */
         while(true) {
-            Proxy proxy = proxyCollector.getProxy();
-            if(testProxy(SITE, proxy)) {
-                LOG.info(String.format("Test Success: ip %s port %s", proxy.getIp(), proxy.getPort()));
-                /** 再次检测是否已经下载了该proxy  */
-                if(!ProxyFilterUtil.contains(proxy)) {
-                    ProxyFilterUtil.add(proxy);
-                    proxyPool.getProxyCache().add(proxy);
-                }
-            } else {
-                // TODO 一定要记得删除这行
-                // 可以考虑先把代理下载下来，然后在使用过程中剔除不好的代理
-//                proxyPool.getProxyCache().add(proxy);
-                LOG.error(String.format("Test Failed: ip %s port %s", proxy.getIp(), proxy.getPort()));
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+            Set<Proxy> proxySet = proxyCollector.getProxy();
+            Iterator<Proxy> it = proxySet.iterator();
+            List<Proxy> saveDBProxies = new ArrayList<Proxy>();
+            while (it.hasNext()) {
+                Proxy proxy = it.next();
+                if (!WProxyUtil.contains(proxy)) {
+                    saveDBProxies.add(proxy);
+                }
+            }
+            WProxyUtil.saveProxy(saveDBProxies);
         }
-    }
-
-    public boolean testProxy(String site, Proxy proxy) {
-        String html = WHttpClientUtil.getPage(site, proxy);
-        return html != null;
     }
 }
