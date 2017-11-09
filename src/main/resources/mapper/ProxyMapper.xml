@@ -5,7 +5,7 @@
         insert into proxy (ip, port, success_probability, success_times, failure_times, last_success_timestamp, last_success_time_consume, avg_success_time_consume, store_status)
         values
         <foreach collection ="list" item="item" index= "index" separator =",">
-        (#{item.ip}, #{item.port}, #{item.successProbability}, #{item.successTimes}, #{item.failureTimes},
+        (#{item.ip, jdbcType=VARCHAR}, #{item.port, jdbcType=VARCHAR}, #{item.successProbability}, #{item.successTimes}, #{item.failureTimes},
         #{item.lastSuccessTimestamp}, #{item.lastSuccessTimeConsume}, #{item.avgSuccessTimeConsume}, #{item.storeStatus})
         </foreach>
     </insert>
