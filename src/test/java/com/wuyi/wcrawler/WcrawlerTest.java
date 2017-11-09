@@ -17,7 +17,7 @@ import java.util.concurrent.Executors;
 public class WcrawlerTest {
     public static void main(String[] args ) throws InterruptedException {
         Config config = Config.newInstance()
-                .setTarAmount(50)
+                .setTarAmount(3000)
                 .setRunningTime(3600 * 1000)
                 .setCheckInterval(500)
                 .setProxyFlag(true)
