@@ -32,7 +32,7 @@ public class ProxyTest implements Runnable {
     public void run() {
         while(true) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(10000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -45,7 +45,11 @@ public class ProxyTest implements Runnable {
                     saveDBProxies.add(proxy);
                 }
             }
-            WProxyUtil.saveProxy(saveDBProxies);
+            if (saveDBProxies.size() > 0) {
+                WProxyUtil.saveProxy(saveDBProxies);
+                LOG.info(saveDBProxies.size() + "new proxies saved into database...");
+                saveDBProxies.clear();
+            }
         }
     }
 }
