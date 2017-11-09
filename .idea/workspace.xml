@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff38697a-0ae6-4d34-829e-dc92d0d7a973" name="Default" comment="清空target，for merge">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/entity/FollowRelation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/mapper/FollowRelationMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/FollowRelationMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/crawler/ZhCrawler.java" afterPath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/crawler/ZhCrawler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/entity/ZhUser.java" afterPath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/entity/ZhUser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/service/impl/CrawlerUrlServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/service/impl/CrawlerUrlServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/ZhUserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ZhUserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db.sql" afterPath="$PROJECT_DIR$/src/main/resources/db.sql" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,13 +31,13 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="179">
-              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WcrawlerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WcrawlerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/wuyi/wcrawler/WcrawlerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -54,11 +47,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="db.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ZhCrawler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/crawler/ZhCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="193">
-              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+              <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -102,9 +105,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ZhUserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="13" />
+              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="13" />
               <folding>
-                <marker date="1510210279345" expanded="true" signature="862:1068" ph="SELECT * FRO... zh_user" />
+                <marker date="1510211456290" expanded="true" signature="862:1068" ph="SELECT * FRO... zh_user" />
               </folding>
             </state>
           </provider>
@@ -125,16 +128,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="166">
               <caret line="735" column="0" lean-forward="false" selection-start-line="735" selection-start-column="0" selection-end-line="735" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassRepository.class" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/reflect/generics/repository/ClassRepository.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -211,7 +204,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/common/ProxySelectPolicy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/monitor/cache/CacheLowLimitMonitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/mapper/ProxyMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/Wcrawler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/entity/Proxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/Config.java" />
@@ -235,6 +227,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/FollowRelationMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/crawler/ZhCrawler.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/wuyi/wcrawler/WcrawlerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db.sql" />
       </list>
     </option>
   </component>
@@ -1278,7 +1271,7 @@
       <workItem from="1509929918145" duration="14000" />
       <workItem from="1510129500967" duration="2847000" />
       <workItem from="1510190521233" duration="763000" />
-      <workItem from="1510192657333" duration="11069000" />
+      <workItem from="1510192657333" duration="11332000" />
     </task>
     <servers />
   </component>
@@ -1315,7 +1308,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270533000" />
+    <option name="totallyTimeSpent" value="270796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1402,13 +1395,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/parser/SiteParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="25" column="16" lean-forward="false" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/proxy/parser/XicidailiParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1590,7 +1576,7 @@
         <state relative-caret-position="180">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1795,7 +1781,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wuyi/wcrawler/crawler/ZhCrawler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1803,9 +1789,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ZhUserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="13" />
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="12" selection-end-column="13" />
           <folding>
-            <marker date="1510210279345" expanded="true" signature="862:1068" ph="SELECT * FRO... zh_user" />
+            <marker date="1510211456290" expanded="true" signature="862:1068" ph="SELECT * FRO... zh_user" />
           </folding>
         </state>
       </provider>
@@ -1813,7 +1799,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1822,6 +1808,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>

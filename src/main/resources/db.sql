@@ -47,3 +47,13 @@ CREATE TABLE `zh_user` (
   `articles_count` int(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11679 DEFAULT CHARSET=utf8;
+
+-- Table structure for follow_relation
+-- ----------------------------
+DROP TABLE IF EXISTS `follow_relation`;
+CREATE TABLE `follow_relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `follower` varchar(1024) NOT NULL DEFAULT '',
+  `followee` varchar(1024) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
