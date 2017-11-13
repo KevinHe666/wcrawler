@@ -127,10 +127,10 @@ public class WHttpClientUtil {
 			        return false;  
 				}
 			};
-			HttpClientBuilder httpClientBuilder = 
+			HttpClientBuilder httpClientBuilder =
 					HttpClients.custom().setConnectionManager(cm)
 					.setRetryHandler(retryHandler);
-			
+
 			httpClient = httpClientBuilder.build();
 		} catch (KeyManagementException e) {
 			// TODO Auto-generated catch block

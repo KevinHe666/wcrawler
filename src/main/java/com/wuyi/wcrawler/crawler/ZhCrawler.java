@@ -59,6 +59,9 @@ public class ZhCrawler extends Crawler {
             if (crawlUserBuffer.size() > 0) {
                 flush(crawlUserBuffer, zhUserMapper, ZhUser.class);
             }
+            if (followRelationBuffer.size() > 0) {
+                flush(followRelationBuffer, followRelationMapper, FollowRelation.class);
+            }
         } catch (Exception e) {
             startUser.setStatus(CrawlerTask.ABNORMALEND);
             e.printStackTrace();
@@ -79,7 +82,7 @@ public class ZhCrawler extends Crawler {
 
     @Override
     public void crawl(String requestUrl) {
-        LOG.info("startUrl: " + requestUrl);
+        LOG.info("start user: " + this.getStartUser().getUrlToken());
         String followees = WHttpClientUtil.getPage(requestUrl, Config.getInstance().getProxyFlag(), true);
         if (followees == null) {
             return;
@@ -171,12 +174,12 @@ public class ZhCrawler extends Crawler {
 
     public <T> void flush(Set<T> buffer, Mapper<T> mapper, Class<T> clazz) {
         synchronized (buffer) {
-            if (buffer.getClass().getSimpleName().contains("User")) {
+            if (clazz.equals(ZhUser.class)) {
                 ((ZhUserMapper)mapper).insertList(new ArrayList<ZhUser>((Collection<? extends ZhUser>) buffer));
-                LOG.info("buffer flush: " + buffer.size() + "users insert into db...");
-            } else if (buffer.getClass().getSimpleName().contains("Relation")) {
+                LOG.info("ZhUser Buffer Flush: " + buffer.size() + " users insert into db...");
+            } else if (clazz.equals(FollowRelation.class)) {
                 ((FollowRelationMapper)mapper).insertList(new ArrayList<FollowRelation>((Collection<? extends FollowRelation>) buffer));
-                LOG.info("buffer flush: " + buffer.size() + "relations insert into db...");
+                LOG.info("FollowRelation Buffer Flush: " + buffer.size() + " relations insert into db...");
             }
             buffer.clear();
         }
