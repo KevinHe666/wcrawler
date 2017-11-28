@@ -23,7 +23,7 @@ public class Config {
     private boolean proxyFlag = true;
     private ProxySelectPolicy proxySelectPolicy = ProxySelectPolicy.RANDOM;
     private ZhUserMapper zhUserMapper = ApplicationContextUtil.getBean(ZhUserMapper.class);
-    private static Config instance;
+    private static volatile Config instance;
     public static Config newInstance() {
         if (instance == null) {
             synchronized (Config.class) {
